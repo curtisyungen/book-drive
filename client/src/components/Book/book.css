@@ -1,0 +1,28 @@
+.book {
+    border: 1px solid lightgray;
+    cursor: pointer;
+    display: inline-block;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.bookCover {
+    height: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.bookTitle {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bookAuthor {
+    font-size: 12px;
+}
+
+.detailBookCover {
+    width: 300px;
+}
