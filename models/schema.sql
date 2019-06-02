@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS books;
+CREATE DATABASE books;
+
+SET GLOBAL sql_mode="";
