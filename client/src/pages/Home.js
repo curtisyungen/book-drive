@@ -54,11 +54,14 @@ class Home extends Component {
                         <Book
                             key={book.title + Math.random()}
                             title={book.title}
-                            author={book.author}
+                            authorFirst={book.authorFirst}
+                            authorLast={book.authorLast}
                             price={book.price}
                             avail={book.avail}
-                            tags={book.tags}
+                            cover={book.cover}
+                            condition={book.condition}
                             imageURL={book.imageURL}
+                            tags={book.tags}
                         />
                     ))
                 ) : (
