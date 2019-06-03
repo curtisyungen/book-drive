@@ -10,7 +10,12 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
         },
 
-        author: {
+        authorFirst: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
+        authorLast: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -23,6 +28,14 @@ module.exports = function(sequelize, DataTypes) {
         avail: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
+        },
+
+        cover: {
+            type: DataTypes.STRING,
+        },
+
+        condition: {
+            type: DataTypes.STRING,
         },
 
         imageURL: {
