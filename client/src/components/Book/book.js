@@ -49,7 +49,7 @@ class Book extends Component {
                     className="book"
                     onClick={this.openDetailView}
                 >
-                    <img className="bookCover" src={this.state.imageURL} alt="Book Cover" />
+                    <img className="bookCover" src={this.state.imageURL} alt={this.state.title} />
                 </div>
 
                 <Modal
@@ -57,7 +57,7 @@ class Book extends Component {
                     onClose={this.closeDetailView}
                     className="detailView"
                 >
-                    <img className="detailBookCover" src={this.state.imageURL} alt="Book Cover" />
+                    <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
                 </Modal>
             </span> 
         )
