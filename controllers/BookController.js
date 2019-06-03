@@ -3,14 +3,14 @@ const db = require("../models/index.js");
 class BookController {
 
     getAllBooks(req, res) {
-        db.books.findAll({})
+        db.Books.findAll({})
             .then(books => {
                 res.json(books);
             });
     }
 
     getBookByTitle(req, res) {
-        db.books.findAll({
+        db.Books.findAll({
             where: {
                 title: req.body.title,
             }
@@ -21,7 +21,7 @@ class BookController {
     }
 
     getBookByAuthor(req, res) {
-        db.books.findAll({
+        db.Books.findAll({
             where: {
                 author: req.body.author,
             }
@@ -32,14 +32,14 @@ class BookController {
     }
 
     addBook(req, res) {
-        db.books.create(req.body)
+        db.Books.create(req.body)
             .then(function(book) {
                 res.json(book);
             });
     }
 
     update(req, res) {
-        db.books.update(req.body, { where: req.params })
+        db.Books.update(req.body, { where: req.params })
             .then(book => 
                 res.json(book));
     }
