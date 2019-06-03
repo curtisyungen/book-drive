@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-let API_KEY="AIzaSyB7V5XONdn57paMHq5VJhqWwrzZ7IvK86g";
+let API_KEY=process.env.GOOGLE_BOOKS_API_KEY;
 
 export default {
 
