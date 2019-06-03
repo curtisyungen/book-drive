@@ -25,13 +25,13 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
         },
 
+        imageURL: {
+            type: DataTypes.STRING,
+        },
+
         tags: {
             type: DataTypes.STRING(2000),
         },
-
-        imageURL: {
-            type: DataTypes.STRING,
-        }
     });
 
     return Books;
