@@ -34,10 +34,10 @@ id,Title,Author First,Author Last,Price,Avail,Cover,ImageURL,Tags,createdAt,upda
 33,The Disease to Please,Harriet,Braiker,5.00,TRUE,,https://images-na.ssl-images-amazon.com/images/I/51g5HRwTPVL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 34,Six Pillars of Self-Esteem,Nathaniel,Branden,5.00,TRUE,,https://images-na.ssl-images-amazon.com/images/I/91V6ecz6GML.jpg,,6/2/2019 21:12,6/2/2019 21:12
 35,One Click,Richard,Brandt,5.00,TRUE,,"https://images-na.ssl-images-amazon.com/images/I/415xQDlEREL._SX355_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-36,"Screw It, Let's Do It!",Richard,Branson,5.00,TRUE,,"https://res.cloudinary.com/www-virgin-com/w_400,c_scale,dpr_3.0,f_auto,fl_lossy,q_auto/virgin-com-prod/sites/virgin.com/files/Books/Screwit-325x500.jpg",,6/2/2019 21:12,6/2/2019 21:12
-37,Losing My Virginity,Richard,Branson,5.00,TRUE,,https://images-na.ssl-images-amazon.com/images/I/91226J51nmL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-38,Top Dog,Po,Bronson,5.00,TRUE,,"https://images-na.ssl-images-amazon.com/images/I/51K0KIg1rJL._SX323_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-39,Daring Greatly,Brene,Brown,5.00,TRUE,,https://images-na.ssl-images-amazon.com/images/I/916RK2K817L.jpg,,6/2/2019 21:12,6/2/2019 21:12
+36,"Screw It, Let's Do It!",Richard,Branson,5.00,TRUE,soft,"https://res.cloudinary.com/www-virgin-com/w_400,c_scale,dpr_3.0,f_auto,fl_lossy,q_auto/virgin-com-prod/sites/virgin.com/files/Books/Screwit-325x500.jpg",,6/2/2019 21:12,6/2/2019 21:12
+37,Losing My Virginity,Richard,Branson,5.00,TRUE,soft,https://images-na.ssl-images-amazon.com/images/I/91226J51nmL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+38,Top Dog,Po,Bronson,5.00,TRUE,hard,"https://images-na.ssl-images-amazon.com/images/I/51K0KIg1rJL._SX323_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+39,Daring Greatly,Brene,Brown,5.00,TRUE,soft,https://images-na.ssl-images-amazon.com/images/I/916RK2K817L.jpg,,6/2/2019 21:12,6/2/2019 21:12
 40,A Few Lessons for Investors and Managers,Warren,Buffett,5.00,TRUE,,https://images-na.ssl-images-amazon.com/images/I/81ki7FfFpwL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 41,The Motivation Manifesto,Brendon,Burchard,5.00,TRUE,,https://images-na.ssl-images-amazon.com/images/I/81-WBC%2Bx0jL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 42,The Art of Persuasion,Bob,Burg,5.00,TRUE,,"https://images-na.ssl-images-amazon.com/images/I/51E28XvpxSL._SX322_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
