@@ -39,22 +39,22 @@ id,Title,Author First,Author Last,Price,Avail,Cover,Condition,ImageURL,Tags,crea
 38,Top Dog,Po,Bronson,5.00,TRUE,hard,,"https://images-na.ssl-images-amazon.com/images/I/51K0KIg1rJL._SX323_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
 39,Daring Greatly,Brene,Brown,5.00,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/916RK2K817L.jpg,,6/2/2019 21:12,6/2/2019 21:12
 40,A Few Lessons for Investors and Managers,Warren,Buffett,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81ki7FfFpwL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-41,The Motivation Manifesto,Brendon,Burchard,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81-WBC%2Bx0jL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-42,The Art of Persuasion,Bob,Burg,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51E28XvpxSL._SX322_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+41,The Motivation Manifesto,Brendon,Burchard,5.00,TRUE,hard,,https://images-na.ssl-images-amazon.com/images/I/81-WBC%2Bx0jL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+42,The Art of Persuasion,Bob,Burg,5.00,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51E28XvpxSL._SX322_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
 43,The Go-Giver,Bob,Burg,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81L9YSR1qYL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 44,Intimate Connections,David,Burns,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81--AKwSBSL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 45,Overcoming Social Anxiety and Shyness,Gillian,Butler,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/71mjA2VxNvL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 46,The Charisma Myth,Olivia,Cabane,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81DNOY393kL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-47,I Dare Me,LuAnn,Cain,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41ZaJ6Z1h%2BL._SX329_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-48,Quiet,Susan,Cain,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81vOO4hRh0L.jpg,,6/2/2019 21:12,6/2/2019 21:12
-49,Winners,Alastair,Campbell,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51mLHnIfQ1L._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+47,I Dare Me,LuAnn,Cain,5.00,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/41ZaJ6Z1h%2BL._SX329_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+48,Quiet,Susan,Cain,5.00,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/81vOO4hRh0L.jpg,,6/2/2019 21:12,6/2/2019 21:12
+49,Winners,Alastair,Campbell,5.00,TRUE,hard,,"https://images-na.ssl-images-amazon.com/images/I/51mLHnIfQ1L._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
 50,Timing the Real Estate Market,Robert,Campbell,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51MAKCNDJML._SX317_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-51,Sell or Be Sold,Grant,Cardone,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41jVx9H8-QL._SX322_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-52,The 10X Rule,Grant,Cardone,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41wkGWTxo7L._SX329_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-53,"If You're Not First, You're Last",Grant,Cardone,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/519I-YELQvL._SX330_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-54,The Closer's Survival Guide,Grant,Cardone,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51vqO1dLeFL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-55,Be Obsessed or Be Average,Grant,Cardone,5.00,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81SbC-kLmXL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-56,The Millionaire Booklet,Grant,Cardone,5.00,TRUE,,,http://onestoppeshoppe.com/wp/wp-content/uploads/2016/08/The-millionaire-Booklet1.jpg,,6/2/2019 21:12,6/2/2019 21:12
+51,Sell or Be Sold,Grant,Cardone,5.00,TRUE,hard,,"https://images-na.ssl-images-amazon.com/images/I/41jVx9H8-QL._SX322_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+52,The 10X Rule,Grant,Cardone,5.00,TRUE,hard,,"https://images-na.ssl-images-amazon.com/images/I/41wkGWTxo7L._SX329_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+53,"If You're Not First, You're Last",Grant,Cardone,5.00,TRUE,hard,,"https://images-na.ssl-images-amazon.com/images/I/519I-YELQvL._SX330_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+54,The Closer's Survival Guide,Grant,Cardone,5.00,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/51vqO1dLeFL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+55,Be Obsessed or Be Average,Grant,Cardone,5.00,TRUE,hard,,https://images-na.ssl-images-amazon.com/images/I/81SbC-kLmXL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+56,The Millionaire Booklet,Grant,Cardone,5.00,TRUE,soft,,http://onestoppeshoppe.com/wp/wp-content/uploads/2016/08/The-millionaire-Booklet1.jpg,,6/2/2019 21:12,6/2/2019 21:12
 57,How to Win Friends and Influence People,Dale,Carnegie,5.00,TRUE,,,https://dynamic.indigoimages.ca/books/0671027034.jpg?altimages=false&scaleup=true&maxheight=515&width=380&quality=85&sale=38&lang=en,,6/2/2019 21:12,6/2/2019 21:12
 58,How to Stop Worrying and Start Living,Dale,Carnegie,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51StUBlb0rL._SX302_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
 59,How to Enjoy Your Life and Your Job,Dale,Carnegie,5.00,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51WMQadC%2BxL._SX288_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
