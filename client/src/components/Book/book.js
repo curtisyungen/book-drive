@@ -9,7 +9,8 @@ class Book extends Component {
 
         this.state = {
             title: null,
-            author: null,
+            authorFirst: null,
+            authorLast: null,
             price: null,
             avail: null,
             tags: [],
@@ -21,7 +22,8 @@ class Book extends Component {
     componentDidMount = () => {
         this.setState({
             title: this.props.title,
-            author: this.props.author,
+            authorFirst: this.props.authorFirst,
+            authorLast: this.props.authorLast,
             price: this.props.price,
             avail: this.props.avail,
             tags: this.props.tags,
@@ -41,6 +43,11 @@ class Book extends Component {
         });
     }
 
+    searchOnAmazon = (event) => {
+        event.preventDefault();
+        window.open(`https://www.amazon.com/s?k=${this.state.title}`)
+    }
+
     render() {
         return (
             <span>
@@ -57,6 +64,25 @@ class Book extends Component {
                     className="detailView"
                 >
                     <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
+
+                    <div id="buttons">
+                        {this.state.avail ? (
+                            <button
+                                className="btn btn-primary btn-sm button"
+                            >
+                                Take
+                            </button>
+                        ) : (
+                            <></>
+                        )}
+                        
+                        <button
+                            className="btn btn-success btn-sm button"
+                            onClick={this.searchOnAmazon}
+                        >
+                            Amazon
+                        </button>
+                    </div>
                 </Modal>
             </span> 
         )

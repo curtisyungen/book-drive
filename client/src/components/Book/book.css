@@ -25,6 +25,17 @@
     font-size: 12px;
 }
 
+.button {
+    margin: 5px;
+    width: 100px;
+}
+
 .detailBookCover {
     width: 300px;
+}
+
+#buttons {
+    display: block;
+    margin: 10px;
+    text-align: center;
 }
