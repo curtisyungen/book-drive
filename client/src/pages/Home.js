@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Container from "../components/Container/container";
 import Book from "../components/Book/book";
-import API from "../utils/API";
 import "./Home.css";
 
 class Home extends Component {
@@ -11,39 +10,22 @@ class Home extends Component {
 
         this.state = {
             books: null,
+            message: "Loading...",
         }
     }
 
     componentDidMount = () => {
-
-        this.getBooks();
-        this.getCover();
-
         this.setState({
-            books: [],
+            books: this.props.books,
         });
     }
 
-    getBooks = () => {
-        API.getAllBooks()
-            .then((res) => {
-                this.setState({
-                    books: res.data,
-                });
-            })
-            .catch((err) => {
-                console.log(err);
+    componentDidUpdate = (prevProps) => {
+        if (prevProps !== this.props) {
+            this.setState({
+                books: this.props.books,
             });
-    }
-
-    getCover = () => {
-        API.getCoverByTitleAndAuthor("Speaker 2.0", "Atkinson")
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        }
     }
 
     render() {
@@ -65,7 +47,7 @@ class Home extends Component {
                         />
                     ))
                 ) : (
-                        <div>No books found.</div>
+                        <div>{this.state.message}</div>
                     )}
             </Container>
         )

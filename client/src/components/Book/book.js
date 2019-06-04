@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Modal from "react-responsive-modal";
-// import API from "../../utils/API";
 import "./book.css";
 
 class Book extends Component {
