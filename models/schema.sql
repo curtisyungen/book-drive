@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS hjq7hmimworb05qv;
-CREATE DATABASE hjq7hmimworb05qv;
+DROP DATABASE IF EXISTS books;
+CREATE DATABASE books;
 
 SET GLOBAL sql_mode="";
