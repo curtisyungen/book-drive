@@ -31,24 +31,37 @@ class Home extends Component {
     render() {
         return (
             <Container>
-                {this.state.books && this.state.books.length > 0 ? (
-                    this.state.books.map(book => (
-                        <Book
-                            key={book.title + Math.random()}
-                            title={book.title}
-                            authorFirst={book.authorFirst}
-                            authorLast={book.authorLast}
-                            price={book.price}
-                            avail={book.avail}
-                            cover={book.cover}
-                            condition={book.condition}
-                            imageURL={book.imageURL}
-                            tags={book.tags}
-                        />
-                    ))
-                ) : (
+
+                <form className="searchForm">
+                    <input 
+                        className="searchBox"
+                        placeholder="Search"
+                        type="text"
+                    />
+                </form>
+
+                <div
+                    className="bookList"    
+                >
+                    {this.state.books && this.state.books.length > 0 ? (
+                        this.state.books.map(book => (
+                            <Book
+                                key={book.title + Math.random()}
+                                title={book.title}
+                                authorFirst={book.authorFirst}
+                                authorLast={book.authorLast}
+                                price={book.price}
+                                avail={book.avail}
+                                cover={book.cover}
+                                condition={book.condition}
+                                imageURL={book.imageURL}
+                                tags={book.tags}
+                            />
+                        ))
+                    ) : (
                         <div>{this.state.message}</div>
                     )}
+                </div>
             </Container>
         )
     }
