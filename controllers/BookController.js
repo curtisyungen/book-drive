@@ -9,6 +9,50 @@ class BookController {
             });
     }
 
+    getAvailableBooks(req, res) {
+        db.Books.findAll({
+            where: {
+                Avail: 0,
+            }
+        })
+        .then(books => {
+            res.json(books);
+        });
+    }
+
+    getUnavailableBooks(req, res) {
+        db.Books.findAll({
+            where: {
+                Avail: 1,
+            }
+        })
+        .then(books => {
+            res.json(books);
+        });
+    }
+
+    getBooksSortedByTitle(req, res) {
+        db.Books.findAll({
+            order: [
+                ['title', 'ASC'],
+              ],
+        })
+        .then(books => {
+            res.json(books);
+        });
+    }
+
+    getBooksSortedByAuthor(req, res) {
+        db.Books.findAll({
+            order: [
+                ['authorLast', 'ASC'],
+              ],
+        })
+        .then(books => {
+            res.json(books);
+        });
+    }
+
     getBookByTitle(req, res) {
         db.Books.findAll({
             where: {
