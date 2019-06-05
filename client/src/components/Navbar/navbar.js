@@ -47,7 +47,7 @@ class Navbar extends Component {
                         className="searchBox"
                         placeholder="Search Title or Author"
                         type="text"
-                        autoComplete="off"
+//                         autoComplete="off"
                         name="bookSearch"
                         onChange={this.handleInputChange}
                         onFocus={this.handleInputChange}
