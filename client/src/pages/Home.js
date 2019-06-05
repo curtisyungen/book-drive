@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Container from "../components/Container/container";
 import Book from "../components/Book/book";
+import Sidebar from "../components/Sidebar/sidebar";
 import "./Home.css";
 
 class Home extends Component {
@@ -31,6 +32,14 @@ class Home extends Component {
     render() {
         return (
             <Container>
+
+            <Sidebar 
+                getAllBooks={this.props.getAllBooks}
+                getAvailableBooks={this.props.getAvailableBooks}
+                getUnavailableBooks={this.props.getUnavailableBooks}
+                sortByTitle={this.props.sortByTitle}
+                sortByAuthor={this.props.sortByAuthor}
+            />
 
                 {/* BOOK LIST */}
 

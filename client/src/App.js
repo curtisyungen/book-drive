@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
-import Sidebar from "./components/Sidebar/sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -111,19 +110,16 @@ class App extends Component {
         <span>
 
           <Navbar />
-
-          <Sidebar 
-            getAllBooks={this.getAllBooks}
-            getAvailableBooks={this.getAvailableBooks}
-            getUnavailableBooks={this.getUnavailableBooks}
-            sortByTitle={this.sortByTitle}
-            sortByAuthor={this.sortByAuthor}
-          />
           
           <Switch>
             <Route exact path="/" render={() => 
               <Home
                 books={this.state.books}
+                getAllBooks={this.getAllBooks}
+                getAvailableBooks={this.getAvailableBooks}
+                getUnavailableBooks={this.getUnavailableBooks}
+                sortByTitle={this.sortByTitle}
+                sortByAuthor={this.sortByAuthor}
               />
             }/>
             <Route exact path="/about" component={About} />
