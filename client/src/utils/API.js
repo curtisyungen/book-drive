@@ -3,12 +3,16 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-let API_KEY=process.env.GOOGLE_BOOKS_API_KEY;
+// let API_KEY=process.env.GOOGLE_BOOKS_API_KEY;
 
 export default {
 
     getAllBooks: function() {
         return axios.get("/api/books/getAllBooks/");
+    },
+
+    searchForBook: function(userInput) {
+        return axios.get("/api/books/searchForBook/" + userInput);
     },
 
     getAvailableBooks: function() {
@@ -25,25 +29,5 @@ export default {
 
     getBooksSortedByAuthor: function() {
         return axios.get("/api/books/getBooksSortedByAuthor/");
-    },
-
-    getBookByTitle: function(title) {
-        return axios.get("/api/books/getBookByTitle/" + title);
-    },
-
-    getBookByAuthor: function(author) {
-        return axios.get("/api/books/getBookByAuthor/" + author);
-    },
-
-    addBook: function(title, author, price, avail, imageURL, tags) {
-        let book = {
-            title: title,
-            author: author,
-            price: price,
-            avail: avail, 
-            imageURL: imageURL, 
-            tags: tags,
-        }
-        return axios.post("/api/books/addBook/" + book);
     },
 };

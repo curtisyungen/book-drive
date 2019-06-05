@@ -15,6 +15,7 @@ class App extends Component {
 
     this.state = {
       books: [],
+      bookSearch: "",
       message: "",
     }
   }
@@ -42,6 +43,24 @@ class App extends Component {
           message: "Error loading books.",
         });
       });
+  }
+
+  searchForBook = (userInput) => {
+    if (userInput !== "" && userInput !== null) {
+      API.searchForBook(userInput)
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+
+    else {
+      this.getAllBooks();
+    }
   }
 
   getAvailableBooks = () => {
@@ -109,7 +128,12 @@ class App extends Component {
       <Router>
         <span>
 
-          <Navbar />
+          <Navbar 
+            bookSearch={this.state.bookSearch}
+            handleInputChange={this.handleInputChange}
+            searchForBook={this.searchForBook}
+            getAllBooks={this.getAllBooks}
+          />
           
           <Switch>
             <Route exact path="/" render={() => 

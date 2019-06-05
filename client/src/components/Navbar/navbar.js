@@ -12,12 +12,20 @@ class Navbar extends Component {
         super(props);
 
         this.state = {
-
+            bookSearch: "",
         }
     }
 
     componentDidMount = () => {
 
+    }
+    
+    handleInputChange = (event) => {
+        const { name, value } = event.target;
+
+        this.setState({
+            [name]: value,
+        });
     }
 
     render() {
@@ -37,11 +45,20 @@ class Navbar extends Component {
                 <form className="searchForm">
                     <input
                         className="searchBox"
-                        placeholder="Search"
+                        placeholder="Search Title or Author"
                         type="text"
+                        autoComplete="off"
+                        name="bookSearch"
+                        onChange={this.handleInputChange}
+                        onFocus={this.handleInputChange}
+                        value={this.bookSearch}
                     />
                     <button
                         className="searchBtn"
+                        onClick={(event) => {
+                            event.preventDefault();
+                            this.props.searchForBook(this.state.bookSearch);
+                        }}
                     >
                         <FontAwesomeIcon icon="search" />
                     </button>
@@ -51,7 +68,7 @@ class Navbar extends Component {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item active">
+                        <li className="nav-item">
                             <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
