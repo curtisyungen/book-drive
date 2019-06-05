@@ -34,4 +34,8 @@ router.get("/getHardcovers", (req, res) => {
     controller.getHardcovers(req, res);
 });
 
+router.get("/getSubject/:subject", (req, res) => {
+    controller.getSubject(req, res);
+});
+
 module.exports = router;

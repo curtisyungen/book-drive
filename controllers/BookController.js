@@ -104,6 +104,19 @@ class BookController {
         });
     }
 
+    getSubject(req, res) {
+        db.Books.findAll({
+            where: {
+                tags: {
+                    [Op.like]: '%' + req.params.subject + '%',
+                },
+            }
+        })
+        .then(books => {
+            res.json(books);
+        });
+    }
+
     update(req, res) {
         db.Books.update(req.body, { where: req.params })
             .then(book => 
