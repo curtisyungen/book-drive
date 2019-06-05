@@ -7,12 +7,24 @@ class Sidebar extends Component {
         super(props);
 
         this.state = {
-
+            filter: false,
         }
     }
 
     componentDidMount = () => {
 
+    }
+
+    filterBooks = () => {
+        this.setState({
+            filter: true,
+        });
+    }
+
+    unfilterBooks = () => {
+        this.setState({
+            filter: false,
+        });
     }
 
     render() {
@@ -26,20 +38,28 @@ class Sidebar extends Component {
                     <span className="title">Sort By</span><br/>
 
                     <ul>
-                        <li 
-                            className="option"
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.getAllBooks();
-                            }}
-                        >
-                            Show All Books
-                        </li>  
+
+                        {this.state.filter ? (
+                            <li 
+                                className="option"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.props.getAllBooks();
+                                    this.unfilterBooks();
+                                }}
+                            >
+                                Show All Books
+                            </li>  
+                        ) : (
+                            <></>
+                        )}
+
                         <li 
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault(); 
                                 this.props.getAvailableBooks();
+                                this.filterBooks();
                             }}
                         >
                             Available
@@ -49,6 +69,7 @@ class Sidebar extends Component {
                             onClick={(event) => {
                                 event.preventDefault(); 
                                 this.props.getUnavailableBooks();
+                                this.filterBooks();
                             }}
                         >
                             Unavailable
