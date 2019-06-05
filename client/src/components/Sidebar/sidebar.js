@@ -167,6 +167,8 @@ class Sidebar extends Component {
 
                 {/* SUBJECT OPTIONS */}
                 <div id="subjectOptions">
+                    <span className="title">Subject</span><br/>
+
                     <ul>
                         {this.state.filterSubject ? (
                             <li 
@@ -182,7 +184,17 @@ class Sidebar extends Component {
                         ) : (
                             <></>
                         )}
-
+                     
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("biography");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Biography
+                        </li>
                         <li 
                             className="option"
                             onClick={(event) => {
@@ -192,46 +204,16 @@ class Sidebar extends Component {
                             }}
                         >
                             Business
-                        </li>
+                        </li> 
                         <li 
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("psychology");
+                                this.props.getSubject("comedy");
                                 this.filterBooks("subject");
                             }}
                         >
-                            Psychology
-                        </li>
-                        <li 
-                            className="option"
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.getSubject("health");
-                                this.filterBooks("subject");
-                            }}
-                        >
-                            Health
-                        </li>
-                        <li 
-                            className="option"
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.getSubject("philosophy");
-                                this.filterBooks("subject");
-                            }}
-                        >
-                            Philosophy
-                        </li>
-                        <li 
-                            className="option"
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.getSubject("sex");
-                                this.filterBooks("subject");
-                            }}
-                        >
-                            Sex
+                            Comedy
                         </li>
                         <li 
                             className="option"
@@ -247,12 +229,72 @@ class Sidebar extends Component {
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
+                                this.props.getSubject("health");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Health
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
                                 this.props.getSubject("money");
                                 this.filterBooks("subject");
                             }}
                         >
-                            Money
+                            Money/Investing
                         </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("philosophy");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Philosophy
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("psychology");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Psychology
+                        </li> 
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("speaking");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Public Speaking
+                        </li>  
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("selfhelp");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Self Help
+                        </li> 
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("sex");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Sex
+                        </li>                       
                     </ul>
                 </div>
 
