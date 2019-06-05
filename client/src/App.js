@@ -21,10 +21,10 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.getBooks();
+    this.getAllBooks();
   }
 
-  getBooks = () => {
+  getAllBooks = () => {
 
     this.setState({
       message: "Loading...",
@@ -45,6 +45,66 @@ class App extends Component {
       });
   }
 
+  getAvailableBooks = () => {
+    API.getAvailableBooks()
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
+  getUnavailableBooks = () => {
+    API.getUnavailableBooks()
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
+  sortByTitle = () => {
+    API.getBooksSortedByTitle()
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
+  sortByAuthor = () => {
+    API.getBooksSortedByAuthor()
+    .then((res) => {
+      this.setState({
+        books: res.data,
+      });
+    })
+    .catch((err) => {
+      this.setState({
+        message: "Error loading books.",
+      });
+    });
+  }
+
   render() {
     return (
       <Router>
@@ -52,7 +112,13 @@ class App extends Component {
 
           <Navbar />
 
-          <Sidebar />
+          <Sidebar 
+            getAllBooks={this.getAllBooks}
+            getAvailableBooks={this.getAvailableBooks}
+            getUnavailableBooks={this.getUnavailableBooks}
+            sortByTitle={this.sortByTitle}
+            sortByAuthor={this.sortByAuthor}
+          />
           
           <Switch>
             <Route exact path="/" render={() => 

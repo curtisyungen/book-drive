@@ -1,6 +1,6 @@
 .option {
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .option:hover {
@@ -10,11 +10,11 @@
 .sidebar {
     border-right: 1px solid lightgray;
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     height: 100vh;
     left: 0;
     padding: 10px;
-    position: fixed;
+    position: absolute;
     width: 210px;
 }
 

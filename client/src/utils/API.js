@@ -11,6 +11,22 @@ export default {
         return axios.get("/api/books/getAllBooks/");
     },
 
+    getAvailableBooks: function() {
+        return axios.get("/api/books/getAvailableBooks/");
+    },
+
+    getUnavailableBooks: function() {
+        return axios.get("/api/books/getUnavailableBooks/");
+    },
+
+    getBooksSortedByTitle: function() {
+        return axios.get("/api/books/getBooksSortedByTitle/");
+    },
+
+    getBooksSortedByAuthor: function() {
+        return axios.get("/api/books/getBooksSortedByAuthor/");
+    },
+
     getBookByTitle: function(title) {
         return axios.get("/api/books/getBookByTitle/" + title);
     },
@@ -30,18 +46,4 @@ export default {
         }
         return axios.post("/api/books/addBook/" + book);
     },
-
-    getCoverByTitleAndAuthor: function(title, author) {
-
-        let URL = `https://www.googleapis.com/books/v1/volumes?q=${title}+inauthor:${author}&key=${API_KEY}`;
-
-        return axios.get(URL, {})
-            .then((res) => {
-                console.log(res);
-                return res;
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }
 };

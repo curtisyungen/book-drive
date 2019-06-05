@@ -26,10 +26,51 @@ class Sidebar extends Component {
                     <span className="title">Sort By</span><br/>
 
                     <ul>
-                        <li className="option">Available</li>
-                        <li className="option">Unavailable</li>
-                        <li className="option">Alphabetical by Title</li>
-                        <li className="option">Alphabetical by Author Last</li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getAllBooks();
+                            }}
+                        >
+                            Show All Books
+                        </li>  
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault(); 
+                                this.props.getAvailableBooks();
+                            }}
+                        >
+                            Available
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault(); 
+                                this.props.getUnavailableBooks();
+                            }}
+                        >
+                            Unavailable
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault(); 
+                                this.props.sortByTitle();
+                            }}
+                        >
+                            Alphabetical by Title
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault(); 
+                                this.props.sortByAuthor();
+                            }}
+                        >
+                            Alphabetical by Author Last
+                        </li>
                     </ul>
                 </div>
 
