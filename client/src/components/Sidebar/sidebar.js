@@ -279,6 +279,16 @@ class Sidebar extends Component {
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
+                                this.props.getSubject("realestate");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Real Estate
+                        </li> 
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
                                 this.props.getSubject("selfhelp");
                                 this.filterBooks("subject");
                             }}
@@ -289,12 +299,32 @@ class Sidebar extends Component {
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
+                                this.props.getSubject("selling");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Selling
+                        </li> 
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
                                 this.props.getSubject("sex");
                                 this.filterBooks("subject");
                             }}
                         >
                             Sex
-                        </li>                       
+                        </li>     
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("social");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Social Skills
+                        </li>                   
                     </ul>
                 </div>
 
