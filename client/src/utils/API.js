@@ -30,4 +30,12 @@ export default {
     getBooksSortedByAuthor: function() {
         return axios.get("/api/books/getBooksSortedByAuthor/");
     },
+
+    getPaperbacks: function() {
+        return axios.get("/api/books/getPaperbacks/");
+    },
+
+    getHardcovers: function() {
+        return axios.get("/api/books/getHardcovers/");
+    },
 };

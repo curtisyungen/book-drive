@@ -100,8 +100,26 @@ class Sidebar extends Component {
                     <span className="title">Format</span><br/>
 
                     <ul>
-                        <li className="option">Small Icons</li>
-                        <li className="option">Large Icons</li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getPaperbacks();
+                                this.filterBooks();
+                            }}
+                        >
+                            Paperback
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getHardcovers();
+                                this.filterBooks();
+                            }}
+                        >
+                            Hardcover
+                        </li>
                     </ul>
                 </div>
 

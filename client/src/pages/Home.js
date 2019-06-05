@@ -39,6 +39,8 @@ class Home extends Component {
                 getUnavailableBooks={this.props.getUnavailableBooks}
                 sortByTitle={this.props.sortByTitle}
                 sortByAuthor={this.props.sortByAuthor}
+                getPaperbacks={this.props.getPaperbacks}
+                getHardcovers={this.props.getHardcovers}
             />
 
                 {/* BOOK LIST */}

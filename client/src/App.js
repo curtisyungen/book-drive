@@ -123,6 +123,34 @@ class App extends Component {
     });
   }
 
+  getPaperbacks = () => {
+    API.getPaperbacks()
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
+  getHardcovers = () => {
+    API.getHardcovers()
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
   render() {
     return (
       <Router>
@@ -144,6 +172,8 @@ class App extends Component {
                 getUnavailableBooks={this.getUnavailableBooks}
                 sortByTitle={this.sortByTitle}
                 sortByAuthor={this.sortByAuthor}
+                getPaperbacks={this.getPaperbacks}
+                getHardcovers={this.getHardcovers}
               />
             }/>
             <Route exact path="/about" component={About} />
