@@ -1,46 +1,46 @@
 id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,createdAt,updatedAt
-1,Getting Everything You Can Out of All You've Got,Jay,Abraham,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-2,Speaking Up Without Freaking Out,Matt,Abrahams,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/5139YMLM4qL._SX355_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-3,The Wall Street MBA,Reuben,Advani,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/513Fv0RriZL._SX332_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+1,Getting Everything You Can Out of All You've Got,Jay,Abraham,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg,business,6/2/2019 21:12,6/2/2019 21:12
+2,Speaking Up Without Freaking Out,Matt,Abrahams,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/5139YMLM4qL._SX355_BO1,204,203,200_.jpg",speaking,6/2/2019 21:12,6/2/2019 21:12
+3,The Wall Street MBA,Reuben,Advani,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/513Fv0RriZL._SX332_BO1,204,203,200_.jpg",business,6/2/2019 21:12,6/2/2019 21:12
 4,Getting Things Done,David,Allen,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81Sna4a0jPL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-5,Idea Man,Paul,Allen,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/91K-6mNlvRL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+5,Idea Man,Paul,Allen,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/91K-6mNlvRL.jpg,biography,6/2/2019 21:12,6/2/2019 21:12
 6,The Credibility Code,Cara Hale,Alter,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41jb-ReFH%2BL._SX332_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-7,The Man Who Wasn't There,Anil,Ananthaswamy,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51u6z6aG5yL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-8,Feed,M. T.,Anderson,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51Ch8sDZ6BL._SX300_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+7,The Man Who Wasn't There,Anil,Ananthaswamy,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51u6z6aG5yL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+8,Feed,M. T.,Anderson,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51Ch8sDZ6BL._SX300_BO1,204,203,200_.jpg",fiction,6/2/2019 21:12,6/2/2019 21:12
 9,"Think Like a Billionaire, Become a Billionaire",Scot,Anderson,2,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51Lqkh327qL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-10,Modern Romance,Aziz,Ansari,5,TRUE,hard,,https://images-na.ssl-images-amazon.com/images/I/81p047toiVL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-11,It's Not How Good You Are; It's How Good You Want to Be,Paul,Arden,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51h6PJXKS%2BL._SX335_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-12,The (Honest) Truth About Dishonesty,Dan,Ariely,5,TRUE,,,https://images.gr-assets.com/books/1331070373l/13426114.jpg,,6/2/2019 21:12,6/2/2019 21:12
-13,The Social Animal,Elliot,Aronson,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51QxvVOjrhL._SX329_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-14,The Answer,John,Assaraf,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/81VNKegzYgL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-15,The Wealthy Speaker 2.0,Jane,Atkinson,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/5110LE7Y2oL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-16,The Meditations of Marcus Aurelius,Marcus,Aurelius,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51cQEdN9KuL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-17,Speaker Leader Champion,Ryan,Avery,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51EVY74TMDL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-18,The Science of Evil,Simon,Baron-Cohen,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51ZgJrf5spL._SX330_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-19,Making Sense of People,Samuel,Barondes,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41EFbyFTWQL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-20,Secrets of Mental Math,Arthur,Benjamin,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81YXNRTPJQL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-21,Emotional Utopia,Leah,Benson,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41lwkqWYUdL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-22,Contagious,Jonah,Berger,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/41FJ2mIlxgL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-23,Confessions of a Public Speaker,Scott,Berkun,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41lZxPKMZuL._SX324_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-24,The Four Pillars of Investing,William,Bernstein,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51hlBGKZJzL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-25,The One Minute Manager,Ken,Blanchard,5,TRUE,,,https://dynamic.indigoimages.ca/books/0688014291.jpg?altimages=false&scaleup=true&maxheight=515&width=380&quality=85&sale=0&lang=en,,6/2/2019 21:12,6/2/2019 21:12
-26,Radical Honesty,Brad,Blanton,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51NisCKHNOL._SX383_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-27,Fanatical Prospecting,Jeb,Blount,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/41leOaqpoyL._SY445_QL70_.jpg,,6/2/2019 21:12,6/2/2019 21:12
-28,Faking It,Amir,Blumenfield,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51B6QlfsNCL._SX331_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-29,The Art of Conversation,Catherine,Blyth,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/71KQkex9PBL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+10,Modern Romance,Aziz,Ansari,5,TRUE,hard,,https://images-na.ssl-images-amazon.com/images/I/81p047toiVL.jpg,comedy,6/2/2019 21:12,6/2/2019 21:12
+11,It's Not How Good You Are; It's How Good You Want to Be,Paul,Arden,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51h6PJXKS%2BL._SX335_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
+12,The (Honest) Truth About Dishonesty,Dan,Ariely,5,TRUE,,,https://images.gr-assets.com/books/1331070373l/13426114.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+13,The Social Animal,Elliot,Aronson,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51QxvVOjrhL._SX329_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
+14,The Answer,John,Assaraf,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/81VNKegzYgL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
+15,The Wealthy Speaker 2.0,Jane,Atkinson,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/5110LE7Y2oL._SX331_BO1,204,203,200_.jpg",speaking,6/2/2019 21:12,6/2/2019 21:12
+16,The Meditations of Marcus Aurelius,Marcus,Aurelius,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51cQEdN9KuL._SX331_BO1,204,203,200_.jpg",philosophy,6/2/2019 21:12,6/2/2019 21:12
+17,Speaker Leader Champion,Ryan,Avery,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51EVY74TMDL._SX331_BO1,204,203,200_.jpg",speaking,6/2/2019 21:12,6/2/2019 21:12
+18,The Science of Evil,Simon,Baron-Cohen,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51ZgJrf5spL._SX330_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
+19,Making Sense of People,Samuel,Barondes,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41EFbyFTWQL._SX331_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
+20,Secrets of Mental Math,Arthur,Benjamin,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81YXNRTPJQL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+21,Emotional Utopia,Leah,Benson,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41lwkqWYUdL._SX331_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
+22,Contagious,Jonah,Berger,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/41FJ2mIlxgL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+23,Confessions of a Public Speaker,Scott,Berkun,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41lZxPKMZuL._SX324_BO1,204,203,200_.jpg",speaking,6/2/2019 21:12,6/2/2019 21:12
+24,The Four Pillars of Investing,William,Bernstein,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51hlBGKZJzL.jpg,money,6/2/2019 21:12,6/2/2019 21:12
+25,The One Minute Manager,Ken,Blanchard,5,TRUE,,,https://dynamic.indigoimages.ca/books/0688014291.jpg?altimages=false&scaleup=true&maxheight=515&width=380&quality=85&sale=0&lang=en,selfhelp,6/2/2019 21:12,6/2/2019 21:12
+26,Radical Honesty,Brad,Blanton,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51NisCKHNOL._SX383_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
+27,Fanatical Prospecting,Jeb,Blount,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/41leOaqpoyL._SY445_QL70_.jpg,selling,6/2/2019 21:12,6/2/2019 21:12
+28,Faking It,Amir,Blumenfield,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51B6QlfsNCL._SX331_BO1,204,203,200_.jpg","psychology,  comedy",6/2/2019 21:12,6/2/2019 21:12
+29,The Art of Conversation,Catherine,Blyth,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/71KQkex9PBL.jpg,social,6/2/2019 21:12,6/2/2019 21:12
 30,Work Rules! ,Laslo,Bock,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/51Df4YVLvbL._SX329_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-31,The Power of Others,Michael,Bond,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41LTqQORf9L._SX324_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-32,Radical Acceptance,Tara,Brach,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/61O5gqgXH9L.jpg,,6/2/2019 21:12,6/2/2019 21:12
-33,The Disease to Please,Harriet,Braiker,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51g5HRwTPVL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-34,Six Pillars of Self-Esteem,Nathaniel,Branden,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/91V6ecz6GML.jpg,,6/2/2019 21:12,6/2/2019 21:12
-35,One Click,Richard,Brandt,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/415xQDlEREL._SX355_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-36,"Screw It, Let's Do It!",Richard,Branson,5,TRUE,soft,,"https://res.cloudinary.com/www-virgin-com/w_400,c_scale,dpr_3.0,f_auto,fl_lossy,q_auto/virgin-com-prod/sites/virgin.com/files/Books/Screwit-325x500.jpg",,6/2/2019 21:12,6/2/2019 21:12
-37,Losing My Virginity,Richard,Branson,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/91226J51nmL.jpg,,6/2/2019 21:12,6/2/2019 21:12
+31,The Power of Others,Michael,Bond,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/41LTqQORf9L._SX324_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
+32,Radical Acceptance,Tara,Brach,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/61O5gqgXH9L.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+33,The Disease to Please,Harriet,Braiker,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/51g5HRwTPVL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+34,Six Pillars of Self-Esteem,Nathaniel,Branden,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/91V6ecz6GML.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+35,One Click,Richard,Brandt,5,TRUE,,,"https://images-na.ssl-images-amazon.com/images/I/415xQDlEREL._SX355_BO1,204,203,200_.jpg",business,6/2/2019 21:12,6/2/2019 21:12
+36,"Screw It, Let's Do It!",Richard,Branson,5,TRUE,soft,,"https://res.cloudinary.com/www-virgin-com/w_400,c_scale,dpr_3.0,f_auto,fl_lossy,q_auto/virgin-com-prod/sites/virgin.com/files/Books/Screwit-325x500.jpg","business, biography",6/2/2019 21:12,6/2/2019 21:12
+37,Losing My Virginity,Richard,Branson,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/91226J51nmL.jpg,"business, biography",6/2/2019 21:12,6/2/2019 21:12
 38,Top Dog,Po,Bronson,5,TRUE,hard,,"https://images-na.ssl-images-amazon.com/images/I/51K0KIg1rJL._SX323_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
-39,Daring Greatly,Brene,Brown,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/916RK2K817L.jpg,,6/2/2019 21:12,6/2/2019 21:12
-40,A Few Lessons for Investors and Managers,Warren,Buffett,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81ki7FfFpwL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-41,The Motivation Manifesto,Brendon,Burchard,5,TRUE,hard,,https://images-na.ssl-images-amazon.com/images/I/81-WBC%2Bx0jL.jpg,,6/2/2019 21:12,6/2/2019 21:12
-42,The Art of Persuasion,Bob,Burg,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51E28XvpxSL._SX322_BO1,204,203,200_.jpg",,6/2/2019 21:12,6/2/2019 21:12
+39,Daring Greatly,Brene,Brown,5,TRUE,soft,,https://images-na.ssl-images-amazon.com/images/I/916RK2K817L.jpg,"selfhelp, psychology",6/2/2019 21:12,6/2/2019 21:12
+40,A Few Lessons for Investors and Managers,Warren,Buffett,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81ki7FfFpwL.jpg,"business, selfhelp",6/2/2019 21:12,6/2/2019 21:12
+41,The Motivation Manifesto,Brendon,Burchard,5,TRUE,hard,,https://images-na.ssl-images-amazon.com/images/I/81-WBC%2Bx0jL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
+42,The Art of Persuasion,Bob,Burg,5,TRUE,soft,,"https://images-na.ssl-images-amazon.com/images/I/51E28XvpxSL._SX322_BO1,204,203,200_.jpg","selfhelp, social",6/2/2019 21:12,6/2/2019 21:12
 43,The Go-Giver,Bob,Burg,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81L9YSR1qYL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 44,Intimate Connections,David,Burns,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/81--AKwSBSL.jpg,,6/2/2019 21:12,6/2/2019 21:12
 45,Overcoming Social Anxiety and Shyness,Gillian,Butler,5,TRUE,,,https://images-na.ssl-images-amazon.com/images/I/71mjA2VxNvL.jpg,,6/2/2019 21:12,6/2/2019 21:12
