@@ -209,16 +209,6 @@ class Sidebar extends Component {
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("comedy");
-                                this.filterBooks("subject");
-                            }}
-                        >
-                            Comedy
-                        </li>
-                        <li 
-                            className="option"
-                            onClick={(event) => {
-                                event.preventDefault();
                                 this.props.getSubject("fiction");
                                 this.filterBooks("subject");
                             }}
@@ -234,6 +224,16 @@ class Sidebar extends Component {
                             }}
                         >
                             Health
+                        </li>
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("humor");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Humor
                         </li>
                         <li 
                             className="option"
