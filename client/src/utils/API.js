@@ -38,4 +38,8 @@ export default {
     getHardcovers: function() {
         return axios.get("/api/books/getHardcovers/");
     },
+
+    getSubject: function(subject) {
+        return axios.get("/api/books/getSubject/" + subject);
+    },
 };

@@ -48,14 +48,14 @@ class App extends Component {
   searchForBook = (userInput) => {
     if (userInput !== "" && userInput !== null) {
       API.searchForBook(userInput)
-      .then((res) => {
-        this.setState({
-          books: res.data,
+        .then((res) => {
+          this.setState({
+            books: res.data,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
     }
 
     else {
@@ -111,16 +111,16 @@ class App extends Component {
 
   sortByAuthor = () => {
     API.getBooksSortedByAuthor()
-    .then((res) => {
-      this.setState({
-        books: res.data,
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          message: "Error loading books.",
+        });
       });
-    })
-    .catch((err) => {
-      this.setState({
-        message: "Error loading books.",
-      });
-    });
   }
 
   getPaperbacks = () => {
@@ -151,20 +151,34 @@ class App extends Component {
       });
   }
 
+  getSubject = (subject) => {
+    API.getSubject(subject)
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
   render() {
     return (
       <Router>
         <span>
 
-          <Navbar 
+          <Navbar
             bookSearch={this.state.bookSearch}
             handleInputChange={this.handleInputChange}
             searchForBook={this.searchForBook}
             getAllBooks={this.getAllBooks}
           />
-          
+
           <Switch>
-            <Route exact path="/" render={() => 
+            <Route exact path="/" render={() =>
               <Home
                 books={this.state.books}
                 getAllBooks={this.getAllBooks}
@@ -174,8 +188,9 @@ class App extends Component {
                 sortByAuthor={this.sortByAuthor}
                 getPaperbacks={this.getPaperbacks}
                 getHardcovers={this.getHardcovers}
+                getSubject={this.getSubject}
               />
-            }/>
+            } />
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />

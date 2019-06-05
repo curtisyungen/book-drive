@@ -41,6 +41,7 @@ class Home extends Component {
                 sortByAuthor={this.props.sortByAuthor}
                 getPaperbacks={this.props.getPaperbacks}
                 getHardcovers={this.props.getHardcovers}
+                getSubject={this.props.getSubject}
             />
 
                 {/* BOOK LIST */}
