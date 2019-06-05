@@ -1,4 +1,6 @@
 const db = require("../models/index.js");
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op
 
 class BookController {
 
@@ -7,6 +9,33 @@ class BookController {
             .then(books => {
                 res.json(books);
             });
+    }
+
+    searchForBook(req, res) {
+        db.Books.findAll({
+            where: {
+                [Op.or]: [
+                    {
+                        Title: {
+                            [Op.like]: '%' + req.params.userInput + '%'
+                        }
+                    },
+                    {
+                        authorFirst: {
+                            [Op.like]: '%' + req.params.userInput + '%'
+                        }
+                    },
+                    {
+                        authorLast: {
+                            [Op.like]: '%' + req.params.userInput + '%'
+                        }
+                    }
+                ]
+            }
+        })
+        .then(books => {
+            res.json(books);
+        });
     }
 
     getAvailableBooks(req, res) {
@@ -53,33 +82,26 @@ class BookController {
         });
     }
 
-    getBookByTitle(req, res) {
+    getPaperbacks(req, res) {
         db.Books.findAll({
             where: {
-                title: req.body.title,
+                Cover: "soft",
             }
         })
-        .then(function(book) {
-            res.json(book);
+        .then(books => {
+            res.json(books);
         });
     }
 
-    getBookByAuthor(req, res) {
+    getHardcovers(req, res) {
         db.Books.findAll({
             where: {
-                author: req.body.author,
+                Cover: "hard",
             }
         })
-        .then(function(book) {
-            res.json(book);
+        .then(books => {
+            res.json(books);
         });
-    }
-
-    addBook(req, res) {
-        db.Books.create(req.body)
-            .then(function(book) {
-                res.json(book);
-            });
     }
 
     update(req, res) {
