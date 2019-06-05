@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import "./navbar.css";
+
+library.add(faSearch);
 
 class Navbar extends Component {
 
@@ -18,10 +23,32 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">Book Drive</a>
+
+                {/* SITE TITLE */}
+
+                <a className="navbar-brand logo" href="/">congo</a>
+
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+
+                {/* SEARCH BOX */}
+
+                <form className="searchForm">
+                    <input
+                        className="searchBox"
+                        placeholder="Search"
+                        type="text"
+                    />
+                    <button
+                        className="searchBtn"
+                    >
+                        <FontAwesomeIcon icon="search" />
+                    </button>
+                </form>
+
+                {/* NAV MENU */}
+
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">

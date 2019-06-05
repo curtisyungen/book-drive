@@ -21,16 +21,6 @@ class Sidebar extends Component {
                 className="sidebar"
             >
 
-                {/* SEARCH BOX */}
-
-                <form className="searchForm">
-                    <input 
-                        className="searchBox"
-                        placeholder="Search"
-                        type="text"
-                    />
-                </form>
-
                 {/* SORTING OPTIONS */}
                 <div id="sortingOptions">
                     <span className="title">Sort By</span><br/>

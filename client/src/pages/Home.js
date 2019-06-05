@@ -32,6 +32,8 @@ class Home extends Component {
         return (
             <Container>
 
+                {/* BOOK LIST */}
+
                 <div
                     className="bookList"    
                 >
