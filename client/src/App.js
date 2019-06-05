@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
+import Sidebar from "./components/Sidebar/sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -49,7 +50,9 @@ class App extends Component {
       <Router>
         <span>
 
-          <Navbar />
+          {/* <Navbar /> */}
+
+          <Sidebar />
           
           <Switch>
             <Route exact path="/" render={() => 

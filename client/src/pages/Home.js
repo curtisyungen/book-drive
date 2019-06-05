@@ -32,14 +32,6 @@ class Home extends Component {
         return (
             <Container>
 
-                <form className="searchForm">
-                    <input 
-                        className="searchBox"
-                        placeholder="Search"
-                        type="text"
-                    />
-                </form>
-
                 <div
                     className="bookList"    
                 >

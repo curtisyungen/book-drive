@@ -1,17 +1,9 @@
 .bookList {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
-.searchBox {
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 5px;
-    position: relative;
-    width: 500px;
-}
-
-.searchForm {
-    margin-left: 5px;
-    margin-top: 5px;
-    width: 100%;
+.container {
+    margin: 0px 250px;
+    padding-left: 5px;
+    padding-right: 5px;
 }

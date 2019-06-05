@@ -2,18 +2,18 @@
     border: 1px solid lightgray;
     cursor: pointer;
     display: inline-block;
-    height: 150px;
+    height: 270px;
     margin: 5px;
     padding: 5px;
     text-align: center;
-    width: 102px;
+    width: 202px;
 }
 
 .bookCover {
-    height: 138px;
+    height: 258px;
     margin: 0;
     padding: 0;
-    width: 90px;
+    width: 180px;
 }
 
 .bookTitle {
