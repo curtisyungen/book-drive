@@ -134,6 +134,7 @@ class Sidebar extends Component {
 
                         {this.state.filterFormat ? (
                             <li 
+                                className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
@@ -309,7 +310,7 @@ class Sidebar extends Component {
                                 event.preventDefault();
                                 this.props.getSubject("philosophy");
                                 this.filterBooks("subject");
-                                this.setActiveOption("philsophy");
+                                this.setActiveOption("philosophy");
 
                             }}
                         >
