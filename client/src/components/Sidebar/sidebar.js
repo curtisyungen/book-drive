@@ -153,6 +153,7 @@ class Sidebar extends Component {
                                 event.preventDefault();
                                 this.props.getPaperbacks();
                                 this.filterBooks("format");
+                                this.setActiveOption("paperback");
                             }}
                         >
                             Paperback
@@ -163,6 +164,7 @@ class Sidebar extends Component {
                                 event.preventDefault();
                                 this.props.getHardcovers();
                                 this.filterBooks("format");
+                                this.setActiveOption("hardcover");
                             }}
                         >
                             Hardcover
@@ -192,191 +194,219 @@ class Sidebar extends Component {
                         )}
                      
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "biography"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("biography");
                                 this.filterBooks("subject");
+                                this.setActiveOption("biography");
                             }}
                         >
                             Biography
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "business"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("business");
                                 this.filterBooks("subject");
+                                this.setActiveOption("business");
                             }}
                         >
                             Business
                         </li> 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "economics"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("economics");
                                 this.filterBooks("subject");
+                                this.setActiveOption("economics");
                             }}
                         >
                             Economics
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "fiction"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("fiction");
                                 this.filterBooks("subject");
+                                this.setActiveOption("fiction");
                             }}
                         >
                             Fiction
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "health"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("health");
                                 this.filterBooks("subject");
+                                this.setActiveOption("health");
                             }}
                         >
                             Health
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "history"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("history");
                                 this.filterBooks("subject");
+                                this.setActiveOption("history");
                             }}
                         >
                             History
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "humor"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("humor");
                                 this.filterBooks("subject");
+                                this.setActiveOption("humor");
                             }}
                         >
                             Humor
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "leadership"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("leadership");
                                 this.filterBooks("subject");
+                                this.setActiveOption("leadership");
                             }}
                         >
                             Leadership
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "marketing"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("market");
                                 this.filterBooks("subject");
+                                this.setActiveOption("marketing");
                             }}
                         >
                             Marketing
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "money"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("money");
                                 this.filterBooks("subject");
+                                this.setActiveOption("money");
                             }}
                         >
                             Money/Investing
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "philosophy"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("philosophy");
                                 this.filterBooks("subject");
+                                this.setActiveOption("philsophy");
+
                             }}
                         >
                             Philosophy
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "political"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("political");
                                 this.filterBooks("subject");
+                                this.setActiveOption("political");
+
                             }}
                         >
                             Political
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "psychology"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("psychology");
                                 this.filterBooks("subject");
+                                this.setActiveOption("psychology");
+
                             }}
                         >
                             Psychology
                         </li> 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "speaking"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("speaking");
                                 this.filterBooks("subject");
+                                this.setActiveOption("speaking");
+
                             }}
                         >
                             Public Speaking
                         </li>  
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "real estate"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("real estate");
                                 this.filterBooks("subject");
+                                this.setActiveOption("real estate");
+
                             }}
                         >
                             Real Estate
                         </li> 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "selfhelp"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("selfhelp");
                                 this.filterBooks("subject");
+                                this.setActiveOption("selfhelp");
+
                             }}
                         >
                             Self Help
                         </li> 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "selling"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("selling");
                                 this.filterBooks("subject");
+                                this.setActiveOption("selling");
+
                             }}
                         >
                             Selling
                         </li> 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "sex"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("sex");
                                 this.filterBooks("subject");
+                                this.setActiveOption("sex");
+
                             }}
                         >
                             Sex
                         </li>     
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "social"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getSubject("social");
                                 this.filterBooks("subject");
+                                this.setActiveOption("social");
+
                             }}
                         >
                             Social Skills
