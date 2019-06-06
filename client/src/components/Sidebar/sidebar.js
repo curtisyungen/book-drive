@@ -23,12 +23,12 @@ class Sidebar extends Component {
         let filterFormat = false;
         let filterSubject = false;
 
-        switch (key) {
-            case "avail": filterAvail = true; break;
-            case "format": filterFormat = true; break;
-            case "subject": filterSubject = true; break;
-            default: ""; 
-        }
+        // switch (key) {
+        //     case "avail": filterAvail = true; break;
+        //     case "format": filterFormat = true; break;
+        //     case "subject": filterSubject = true; break;
+        //     default: ""; 
+        // }
 
         this.setState({
             filterAvail: filterAvail,
