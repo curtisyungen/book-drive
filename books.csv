@@ -14,7 +14,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 13,The Social Animal,Elliot,Aronson,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51QxvVOjrhL._SX329_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 14,The Answer,John,Assaraf,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/81VNKegzYgL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 15,The Wealthy Speaker 2.0,Jane,Atkinson,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/5110LE7Y2oL._SX331_BO1,204,203,200_.jpg",speaking,6/2/2019 21:12,6/2/2019 21:12
-16,The Meditations of Marcus Aurelius,Marcus,Aurelius,5,0,,,"https://images-na.ssl-images-amazon.com/images/I/51cQEdN9KuL._SX331_BO1,204,203,200_.jpg",philosophy,6/2/2019 21:12,6/2/2019 21:12
+16,The Meditations of Marcus Aurelius,Marcus,Aurelius,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51cQEdN9KuL._SX331_BO1,204,203,200_.jpg",philosophy,6/2/2019 21:12,6/2/2019 21:12
 17,Speaker Leader Champion,Ryan,Avery,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51EVY74TMDL._SX331_BO1,204,203,200_.jpg",speaking,6/2/2019 21:12,6/2/2019 21:12
 18,The Science of Evil,Simon,Baron-Cohen,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51ZgJrf5spL._SX330_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 19,Making Sense of People,Samuel,Barondes,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/41EFbyFTWQL._SX331_BO1,204,203,200_.jpg","psychology, selfhelp, social",6/2/2019 21:12,6/2/2019 21:12
@@ -98,7 +98,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 97,Incognito,David,Eagleman,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/41LyhPGxl9L._SX322_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 98,Secrets of the Millionaire Mind,T. Harv,Eker,5,0,hard,,https://images-na.ssl-images-amazon.com/images/I/81vYGLy7JPL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 99,The Sell,Fredik,Eklund,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51MvSr57QXL._SX330_BO1,204,203,200_.jpg","selling, biography",6/2/2019 21:12,6/2/2019 21:12
-100,How Not to be Wrong,Jordan,Ellenberg,5,1,,,https://images-na.ssl-images-amazon.com/images/I/81HKXp4F6bL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
+100,How Not to be Wrong: The Power of Mathematical Thinking,Jordan,Ellenberg,5,1,soft,,https://images-na.ssl-images-amazon.com/images/I/81HKXp4F6bL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
 101,The Power of Eye Contact,Michael,Ellsberg,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51i7SeUV%2BYL._SX330_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 102,The Education of Millionaires,Michael,Ellsberg,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/81xrTTYh7nL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 103,Miracle Morning,Hal,Elrod,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/41GPIof19sL._SX320_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
@@ -106,7 +106,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 105,Mindwise,Nicholas,Epley,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/41SBUgapWpL._SX322_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 106,Alibaba's World,Porter,Erisman,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/51GGGvmuaVL.jpg,business,6/2/2019 21:12,6/2/2019 21:12
 107,Controlling People,Patricia,Evans,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51ohSJzNKKL._SX336_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
-108,Hooked,Nir,Eyal,5,1,,,https://images-na.ssl-images-amazon.com/images/I/71iTueU1pBL.jpg,"psychology, selfhelp",6/2/2019 21:12,6/2/2019 21:12
+108,Hooked,Nir,Eyal,5,1,hard,,https://images-na.ssl-images-amazon.com/images/I/71iTueU1pBL.jpg,"psychology, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 109,Engineer Your Own Success,Anthony,Fasano,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51HXJjpf-ML._SX310_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 110,Job + Real Estate = Wealth,Francis,Fernando,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/41VYgmtO8gL._SX326_BO1,204,203,200_.jpg","real estate, money, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 111,Who's Got Your Back,Keith,Ferrazzi,5,0,hard,,https://images-na.ssl-images-amazon.com/images/I/812%2BEpSKyPL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
@@ -418,7 +418,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 417,Resucceed,James,Colburn,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/41RG7CpxcGL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 418,The Sky is Not the Limit,Neil DeGrasse,Tyson,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/81wecP5UUhL.jpg,"biography, nonfiction",6/2/2019 21:12,6/2/2019 21:12
 419,The 10 Pillars of Wealth,Alex,Becker,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/6158dXhhmBL.jpg,money,6/2/2019 21:12,6/2/2019 21:12
-420,The Art of Living Consciously,Nathaniel,Branden,5,0,,,"https://images-na.ssl-images-amazon.com/images/I/518FAFdBA8L._SX312_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
+420,The Art of Living Consciously,Nathaniel,Branden,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/518FAFdBA8L._SX312_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 421,The Little Prince,Antoine,De Saint-Exupery,5,1,soft,,"https://images-na.ssl-images-amazon.com/images/I/4186P0mACWL._SX336_BO1,204,203,200_.jpg",fiction,6/2/2019 21:12,6/2/2019 21:12
 422,The Last Temptation of Christ,Nikos,Kazantzakis,5,1,soft,,https://images-na.ssl-images-amazon.com/images/I/71Vj0dpZmeL.jpg,fiction,6/2/2019 21:12,6/2/2019 21:12
 423,How to be Ultra Spiritual,JP,Sears,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/91Zn8vIydaL.jpg,humor,6/2/2019 21:12,6/2/2019 21:12
@@ -436,7 +436,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 435,The Sirens of Titan,Kurt,Vonnegut,5,0,soft,,https://images.gr-assets.com/books/1371234637l/13144087.jpg,fiction,6/2/2019 21:12,6/2/2019 21:12
 436,Silk,Alessandro,Baricco,5,0,soft,,https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Alessandro_baricco_silk_pb.jpg/220px-Alessandro_baricco_silk_pb.jpg,fiction,6/2/2019 21:12,6/2/2019 21:12
 437,Fire and Fury in the White House,Michael,Wolff,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/51AEI3isFiL._SX327_BO1,204,203,200_.jpg",political,6/2/2019 21:12,6/2/2019 21:12
-438,Critical Thinking,Jennifer,Wilson,5,0,,,https://images-na.ssl-images-amazon.com/images/I/51n1NtA6hzL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
+438,Critical Thinking,Jennifer,Wilson,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/51n1NtA6hzL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 439,The Age of Reason Begins,William,Durant,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/51cMP6efwVL._SX344_BO1,204,203,200_.jpg",philosophy,6/2/2019 21:12,6/2/2019 21:12
 440,12 Rules for Life,Jordan,Peterson,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/41xrGjLlM0L._SX329_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 441,Dead Set on Living,Chris,Grosso,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51yOcH9N2wL._SX326_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
