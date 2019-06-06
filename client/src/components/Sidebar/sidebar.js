@@ -319,7 +319,7 @@ class Sidebar extends Component {
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("realestate");
+                                this.props.getSubject("real estate");
                                 this.filterBooks("subject");
                             }}
                         >
