@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
+import Login from "./pages/Login";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -17,6 +18,8 @@ class App extends Component {
       books: [],
       bookSearch: "",
       message: "",
+      userLoggedIn: false,
+      useAsGuest: true,
     }
   }
 
@@ -170,14 +173,20 @@ class App extends Component {
       <Router>
         <span>
 
+          {window.location.pathname !== "/login" ? (
+
           <Navbar
             bookSearch={this.state.bookSearch}
             handleInputChange={this.handleInputChange}
             searchForBook={this.searchForBook}
             getAllBooks={this.getAllBooks}
           />
+          ) : ( 
+            <></>
+          )}
 
           <Switch>
+            <Route exact path="/login" component={Login} />
             <Route exact path="/" render={() =>
               <Home
                 books={this.state.books}
@@ -195,7 +204,6 @@ class App extends Component {
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
-
         </span>
       </Router>
     )

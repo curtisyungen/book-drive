@@ -1,0 +1,55 @@
+.congoLogo {
+    left: 50%;
+    position: absolute;
+    top: 10px;
+    transform: translate(-50%);
+}
+
+.disclaimer {
+    font-size: 12px;
+}
+
+.formHeader {
+    font-family: "Arial";
+    font-size: 26px;
+}
+
+.formInput {
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    height: 30px;
+    width: 100%;
+}
+
+.formLabel {
+    font-family: "Arial";
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.login {
+    border: 1px solid rgb(230, 227, 227);
+    border-radius: 3px;
+    height: 400px;
+    margin: 60px auto;
+    padding: 25px;
+    width: 350px;
+}
+
+.loginBtn {
+    background: rgb(239, 195, 88);
+    border: 1px solid rgb(131, 105, 41);
+    border-radius: 2px;
+    color: black;
+    font-family: "Arial";
+    font-size: 12px;
+    height: 30px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.loginPage {
+    border-bottom: 1px solid gray;
+}
