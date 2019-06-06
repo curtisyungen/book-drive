@@ -38,7 +38,7 @@ class Home extends Component {
     }
 
     checkScrollPos = () => {
-        if (window.pageYOffset > 800) {
+        if (window.pageYOffset > 600) {
             this.showScrollToTopBtn();
         }
         else {
