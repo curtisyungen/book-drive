@@ -61,62 +61,23 @@ class Sidebar extends Component {
 
                 {/* SORTING OPTIONS */}
                 <div id="sortingOptions">
-                    <span className="title">Sort By</span><br/>
+                    <span className="title">Sort By</span><br />
 
                     <ul>
-
-                        {this.state.filterAvail ? (
-                            <li 
-                                className="option"
-                                onClick={(event) => {
-                                    event.preventDefault();
-                                    this.props.getAllBooks();
-                                    this.unfilterBooks();
-                                    this.setActiveOption(null);
-                                }}
-                            >
-                                {`< All Books`}
-                            </li>  
-                        ) : (
-                            <></>
-                        )}
-
-                        <li 
-                            className={`option bold-${this.state.activeOption === "avail"}`}
-                            onClick={(event) => {
-                                event.preventDefault(); 
-                                this.props.getAvailableBooks();
-                                this.filterBooks("avail");
-                                this.setActiveOption("avail");
-                            }}
-                        >
-                            Available
-                        </li>
-                        <li 
-                            className={`option bold-${this.state.activeOption === "unavail"}`}
-                            onClick={(event) => {
-                                event.preventDefault(); 
-                                this.props.getUnavailableBooks();
-                                this.filterBooks("avail");
-                                this.setActiveOption("unavail");
-                            }}
-                        >
-                            Unavailable
-                        </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "alphaByTitle"}`}
                             onClick={(event) => {
-                                event.preventDefault(); 
+                                event.preventDefault();
                                 this.props.sortByTitle();
                                 this.setActiveOption("alphaByTitle");
                             }}
                         >
                             Alphabetical by Title
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "alphaByAuthor"}`}
                             onClick={(event) => {
-                                event.preventDefault(); 
+                                event.preventDefault();
                                 this.props.sortByAuthor();
                                 this.setActiveOption("alphaByAuthor");
                             }}
@@ -126,14 +87,60 @@ class Sidebar extends Component {
                     </ul>
                 </div>
 
+                {/* AVAILABILITY OPTIONS */}
+
+                <div id="availabilityOptions">
+                    <span className="title">Availability</span><br />
+                    <ul>
+                        {this.state.filterAvail ? (
+                            <li
+                                className="option"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.props.getAllBooks();
+                                    this.unfilterBooks();
+                                    this.setActiveOption(null);
+                                }}
+                            >
+                                {`< All Books`}
+                            </li>
+                        ) : (
+                            <></>
+                        )}
+
+                        <li
+                            className={`option bold-${this.state.activeOption === "avail"}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getAvailableBooks();
+                                this.filterBooks("avail");
+                                this.setActiveOption("avail");
+                            }}
+                        >
+                            Available
+                        </li>
+                        <li
+                            className={`option bold-${this.state.activeOption === "unavail"}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getUnavailableBooks();
+                                this.filterBooks("avail");
+                                this.setActiveOption("unavail");
+                            }}
+                        >
+                            Unavailable
+                        </li>
+                    </ul>
+                </div>
+
                 {/* FORMAT OPTIONS */}
                 <div id="formatOptions">
-                    <span className="title">Format</span><br/>
+                    <span className="title">Format</span><br />
 
                     <ul>
 
                         {this.state.filterFormat ? (
-                            <li 
+                            <li
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
@@ -143,12 +150,12 @@ class Sidebar extends Component {
                                 }}
                             >
                                 {`< All Formats`}
-                            </li>  
+                            </li>
                         ) : (
-                            <></>
-                        )}
+                                <></>
+                            )}
 
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "paperback"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -159,7 +166,7 @@ class Sidebar extends Component {
                         >
                             Paperback
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "hardcover"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -175,11 +182,11 @@ class Sidebar extends Component {
 
                 {/* SUBJECT OPTIONS */}
                 <div id="subjectOptions">
-                    <span className="title">Subject</span><br/>
+                    <span className="title">Subject/Genre</span><br />
 
                     <ul>
                         {this.state.filterSubject ? (
-                            <li 
+                            <li
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
@@ -189,12 +196,12 @@ class Sidebar extends Component {
                                 }}
                             >
                                 {`< All Subjects`}
-                            </li>  
+                            </li>
                         ) : (
-                            <></>
-                        )}
-                     
-                        <li 
+                                <></>
+                            )}
+
+                        <li
                             className={`option bold-${this.state.activeOption === "biography"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -205,7 +212,7 @@ class Sidebar extends Component {
                         >
                             Biography
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "business"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -215,8 +222,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Business
-                        </li> 
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "economics"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -227,7 +234,7 @@ class Sidebar extends Component {
                         >
                             Economics
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "fiction"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -238,7 +245,7 @@ class Sidebar extends Component {
                         >
                             Fiction
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "health"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -249,7 +256,7 @@ class Sidebar extends Component {
                         >
                             Health
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "history"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -260,7 +267,7 @@ class Sidebar extends Component {
                         >
                             History
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "humor"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -271,7 +278,7 @@ class Sidebar extends Component {
                         >
                             Humor
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "leadership"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -282,7 +289,7 @@ class Sidebar extends Component {
                         >
                             Leadership
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "marketing"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -293,7 +300,7 @@ class Sidebar extends Component {
                         >
                             Marketing
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "money"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -304,7 +311,19 @@ class Sidebar extends Component {
                         >
                             Money/Investing
                         </li>
-                        <li 
+                        <li
+                            className={`option bold-${this.state.activeOption === "nonfiction"}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("nonfiction");
+                                this.filterBooks("subject");
+                                this.setActiveOption("nonfiction");
+
+                            }}
+                        >
+                            Non-fiction
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "philosophy"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -316,7 +335,7 @@ class Sidebar extends Component {
                         >
                             Philosophy
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "political"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -328,7 +347,7 @@ class Sidebar extends Component {
                         >
                             Political
                         </li>
-                        <li 
+                        <li
                             className={`option bold-${this.state.activeOption === "programming"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -339,8 +358,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Programming
-                        </li> 
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "psychology"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -351,8 +370,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Psychology
-                        </li> 
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "speaking"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -363,8 +382,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Public Speaking
-                        </li>  
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "real estate"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -375,20 +394,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Real Estate
-                        </li> 
-                        <li 
-                            className={`option bold-${this.state.activeOption === "science"}`}
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.getSubject("science");
-                                this.filterBooks("subject");
-                                this.setActiveOption("science");
-
-                            }}
-                        >
-                            Science
-                        </li> 
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "selfhelp"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -399,8 +406,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Self Help
-                        </li> 
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "selling"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -411,8 +418,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Selling
-                        </li> 
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "sex"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -423,8 +430,8 @@ class Sidebar extends Component {
                             }}
                         >
                             Sex
-                        </li>     
-                        <li 
+                        </li>
+                        <li
                             className={`option bold-${this.state.activeOption === "social"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -435,7 +442,7 @@ class Sidebar extends Component {
                             }}
                         >
                             Social Skills
-                        </li>                   
+                        </li>
                     </ul>
                 </div>
 
