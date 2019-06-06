@@ -10,11 +10,8 @@ class Sidebar extends Component {
             filterAvail: false,
             filterFormat: false,
             filterSubject: false,
+            activeOption: null,
         }
-    }
-
-    componentDidMount = () => {
-
     }
 
     filterBooks = (key) => {
@@ -50,6 +47,12 @@ class Sidebar extends Component {
         });
     }
 
+    setActiveOption = (key) => {
+        this.setState({
+            activeOption: key,
+        });
+    }
+
     render() {
         return (
             <div
@@ -69,6 +72,7 @@ class Sidebar extends Component {
                                     event.preventDefault();
                                     this.props.getAllBooks();
                                     this.unfilterBooks();
+                                    this.setActiveOption(null);
                                 }}
                             >
                                 {`< All Books`}
@@ -78,39 +82,43 @@ class Sidebar extends Component {
                         )}
 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "avail"}`}
                             onClick={(event) => {
                                 event.preventDefault(); 
                                 this.props.getAvailableBooks();
                                 this.filterBooks("avail");
+                                this.setActiveOption("avail");
                             }}
                         >
                             Available
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "unavail"}`}
                             onClick={(event) => {
                                 event.preventDefault(); 
                                 this.props.getUnavailableBooks();
                                 this.filterBooks("avail");
+                                this.setActiveOption("unavail");
                             }}
                         >
                             Unavailable
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "alphaByTitle"}`}
                             onClick={(event) => {
                                 event.preventDefault(); 
                                 this.props.sortByTitle();
+                                this.setActiveOption("alphaByTitle");
                             }}
                         >
                             Alphabetical by Title
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "alphaByAuthor"}`}
                             onClick={(event) => {
                                 event.preventDefault(); 
                                 this.props.sortByAuthor();
+                                this.setActiveOption("alphaByAuthor");
                             }}
                         >
                             Alphabetical by Author Last
@@ -126,11 +134,11 @@ class Sidebar extends Component {
 
                         {this.state.filterFormat ? (
                             <li 
-                                className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
                                     this.unfilterBooks();
+                                    this.setActiveOption(null);
                                 }}
                             >
                                 {`< All Formats`}
@@ -140,7 +148,7 @@ class Sidebar extends Component {
                         )}
 
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "paperback"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getPaperbacks();
@@ -150,7 +158,7 @@ class Sidebar extends Component {
                             Paperback
                         </li>
                         <li 
-                            className="option"
+                            className={`option bold-${this.state.activeOption === "hardcover"}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.props.getHardcovers();
@@ -174,6 +182,7 @@ class Sidebar extends Component {
                                     event.preventDefault();
                                     this.props.getAllBooks();
                                     this.unfilterBooks();
+                                    this.setActiveOption(null);
                                 }}
                             >
                                 {`< All Subjects`}

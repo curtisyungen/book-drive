@@ -1,3 +1,11 @@
+.bold-false {
+    font-weight: 400;
+}
+
+.bold-true {
+    font-weight: 600;
+}
+
 .option {
     cursor: pointer;
     font-size: 14px;
