@@ -27,7 +27,7 @@ class Sidebar extends Component {
             case "avail": filterAvail = true; break;
             case "format": filterFormat = true; break;
             case "subject": filterSubject = true; break;
-            default: ""; break;
+            default: ""; 
         }
 
         this.setState({
