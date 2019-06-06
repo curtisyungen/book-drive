@@ -18,39 +18,31 @@ class Sidebar extends Component {
     }
 
     filterBooks = (key) => {
-        if (key === "avail") {
-            this.setState({
-                filterAvail: true,
-            });
+
+        let filterAvail = false;
+        let filterFormat = false;
+        let filterSubject = false;
+
+        switch (key) {
+            case "avail": filterAvail = true; break;
+            case "format": filterFormat = true; break;
+            case "subject": filterSubject = true; break;
+            default: ""; break;
         }
-        if (key === "format") {
-            this.setState({
-                filterFormat: true,
-            });
-        }
-        if (key === "subject") {
-            this.setState({
-                filterSubject: true,
-            });
-        }
+
+        this.setState({
+            filterAvail: filterAvail,
+            filterFormat: filterFormat,
+            filterSubject: filterSubject,
+        });
     }
 
-    unfilterBooks = (key) => {
-        if (key === "avail") {
-            this.setState({
-                filterAvail: false,
-            });
-        }
-        if (key === "format") {
-            this.setState({
-                filterFormat: false,
-            });
-        }
-        if (key === "subject") {
-            this.setState({
-                filterSubject: false,
-            });
-        }
+    unfilterBooks = () => {
+        this.setState({
+            filterAvail: false,
+            filterFormat: false,
+            filterSubject: false,
+        });
     }
 
     render() {
@@ -71,10 +63,10 @@ class Sidebar extends Component {
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
-                                    this.unfilterBooks("avail");
+                                    this.unfilterBooks();
                                 }}
                             >
-                                All Books
+                                {`< All Books`}
                             </li>  
                         ) : (
                             <></>
@@ -133,10 +125,10 @@ class Sidebar extends Component {
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
-                                    this.unfilterBooks("format");
+                                    this.unfilterBooks();
                                 }}
                             >
-                                All Formats
+                                {`< All Formats`}
                             </li>  
                         ) : (
                             <></>
@@ -176,10 +168,10 @@ class Sidebar extends Component {
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
-                                    this.unfilterBooks("subject");
+                                    this.unfilterBooks();
                                 }}
                             >
-                                All Subjects
+                                {`< All Subjects`}
                             </li>  
                         ) : (
                             <></>
@@ -205,6 +197,16 @@ class Sidebar extends Component {
                         >
                             Business
                         </li> 
+                        <li 
+                            className="option"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("fiction");
+                                this.filterBooks("subject");
+                            }}
+                        >
+                            Economics
+                        </li>
                         <li 
                             className="option"
                             onClick={(event) => {
