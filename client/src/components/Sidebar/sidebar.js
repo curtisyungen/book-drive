@@ -329,6 +329,18 @@ class Sidebar extends Component {
                             Political
                         </li>
                         <li 
+                            className={`option bold-${this.state.activeOption === "programming"}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("programming");
+                                this.filterBooks("subject");
+                                this.setActiveOption("programming");
+
+                            }}
+                        >
+                            Programming
+                        </li> 
+                        <li 
                             className={`option bold-${this.state.activeOption === "psychology"}`}
                             onClick={(event) => {
                                 event.preventDefault();
@@ -363,6 +375,18 @@ class Sidebar extends Component {
                             }}
                         >
                             Real Estate
+                        </li> 
+                        <li 
+                            className={`option bold-${this.state.activeOption === "science"}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.props.getSubject("science");
+                                this.filterBooks("subject");
+                                this.setActiveOption("science");
+
+                            }}
+                        >
+                            Science
                         </li> 
                         <li 
                             className={`option bold-${this.state.activeOption === "selfhelp"}`}
