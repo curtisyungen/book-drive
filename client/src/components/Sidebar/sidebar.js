@@ -23,12 +23,17 @@ class Sidebar extends Component {
         let filterFormat = false;
         let filterSubject = false;
 
-        // switch (key) {
-        //     case "avail": filterAvail = true; break;
-        //     case "format": filterFormat = true; break;
-        //     case "subject": filterSubject = true; break;
-        //     default: ""; 
-        // }
+        if (key === "avail") {
+            filterAvail = true;
+        }
+
+        if (key === "format") {
+            filterFormat = true;
+        }
+
+        if (key === "subject") {
+            filterSubject = true;
+        }
 
         this.setState({
             filterAvail: filterAvail,
@@ -201,7 +206,7 @@ class Sidebar extends Component {
                             className="option"
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("fiction");
+                                this.props.getSubject("economics");
                                 this.filterBooks("subject");
                             }}
                         >
