@@ -16,8 +16,16 @@ class Home extends Component {
     }
 
     componentDidMount = () => {
+
+        let message = "";
+
+        if (this.props.books.length === 0) {
+            message = "No books found.";
+        }
+
         this.setState({
             books: this.props.books,
+            message: message,
         });
     }
 
