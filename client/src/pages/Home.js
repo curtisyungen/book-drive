@@ -65,9 +65,7 @@ class Home extends Component {
 
     render() {
         return (
-            <Container
-                onScroll={this.checkScrollPos}
-            >
+            <Container>
 
             <Sidebar 
                 getAllBooks={this.props.getAllBooks}
@@ -84,7 +82,7 @@ class Home extends Component {
 
                 <div
                     className="bookList"    
-                    
+                    onScroll={this.checkScrollPos}
                 >
                     {this.state.books && this.state.books.length > 0 ? (
                         this.state.books.map(book => (
