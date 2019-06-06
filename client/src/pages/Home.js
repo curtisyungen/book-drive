@@ -82,7 +82,7 @@ class Home extends Component {
 
                 <div
                     className="bookList"    
-                    onWheel={this.checkScrollPos()}
+                    onWheel={this.checkScrollPos}
                 >
                     {this.state.books && this.state.books.length > 0 ? (
                         this.state.books.map(book => (
