@@ -37,6 +37,32 @@ class Home extends Component {
         }
     }
 
+    checkScrollPos = () => {
+        if (window.pageYOffset > 800) {
+            this.showScrollToTopBtn();
+        }
+        else {
+            this.hideScrollToTopBtn();
+        }
+    }
+
+    showScrollToTopBtn = () => {
+        this.setState({
+            showScrollToTopBtn: true,
+        });
+    }
+
+    hideScrollToTopBtn = () => {
+        this.setState({
+            showScrollToTopBtn: false,
+        });
+    }
+
+    scrollToTop = () => {
+        window.scrollTo(0, 0);
+        this.hideScrollToTopBtn();
+    }
+
     render() {
         return (
             <Container>
@@ -56,6 +82,7 @@ class Home extends Component {
 
                 <div
                     className="bookList"    
+                    onWheel={this.checkScrollPos(event)}
                 >
                     {this.state.books && this.state.books.length > 0 ? (
                         this.state.books.map(book => (
@@ -74,6 +101,17 @@ class Home extends Component {
                         ))
                     ) : (
                         <div>{this.state.message}</div>
+                    )}
+
+                    {this.state.showScrollToTopBtn ? (
+                        <div
+                            id="scrollToTopBtn"
+                            onClick={this.scrollToTop}
+                        >
+                            Back to Top
+                        </div>
+                    ) : (
+                        <></>
                     )}
                 </div>
             </Container>
