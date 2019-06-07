@@ -6,3 +6,5 @@ router.post("/createNewUser", (req, res) => {
     controller.createNewUser(req, res);
 });
 
+module.exports = router;
+
