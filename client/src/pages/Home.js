@@ -36,6 +36,7 @@ class Home extends Component {
             message: "Loading...",
             activeFilter: "books",
             userSearch: "",
+            sortOption: "",
         }
     }
 
@@ -95,6 +96,19 @@ class Home extends Component {
         });
     }
 
+    handleSortOption = (event) => {
+        this.setState({
+            sortOption: event.target.value,
+        }, () => {
+            if (event.target.value === "title") {
+                this.props.sortByTitle();
+            }
+            else if (event.target.value === "author") {
+                this.props.sortByAuthor();
+            }
+        })
+    }
+
     render() {
         return (
             <Container>
@@ -113,7 +127,10 @@ class Home extends Component {
 
                 <select
                     className="sortBy"
+                    onChange={this.handleSortOption}
+                    value={this.state.sortOption}
                 >
+                    <option value="" disabled selected>Sort by: </option>
                     <option value="title">Alpabetical by Title</option>
                     <option value="author">Alpabetical by Author</option>
                 </select>
