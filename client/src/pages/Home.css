@@ -8,6 +8,14 @@
     padding-right: 5px;
 }
 
+.resultsSummary {
+    color: black;
+    height: 35px;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+}
+
 #scrollToTopBtn {
     background: lightgray;
     border: 1px solid darkgray;

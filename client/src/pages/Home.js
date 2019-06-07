@@ -100,6 +100,16 @@ class Home extends Component {
                 getSubject={this.props.getSubject}
             />
 
+                {/* RESULTS SUMMARY */}
+
+                <div
+                    className="resultsSummary"
+                >
+                    <span>
+                        {this.state.books.length} results
+                    </span>
+                </div>
+
                 {/* BOOK LIST */}
 
                 <div
