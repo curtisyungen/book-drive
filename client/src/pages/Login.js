@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import Container from "../components/Container/container";
+import API from "../utils/API";
 import "./Login.css";
 
 class Login extends Component {
@@ -27,6 +28,18 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+
+        this.createNewUser();
+    }
+
+    createNewUser = () => {
+        API.createNewUser(this.state.email, this.state.password)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 
     render() {
@@ -37,7 +50,7 @@ class Login extends Component {
                 </div>
 
                 <div className="login">
-                    <form onSubmit={this.handleSubmit}>
+                    <form>
                         <h4 className="formHeader">Sign in</h4>
                         <p className="formLabel">Email</p>
                         <input
@@ -60,10 +73,11 @@ class Login extends Component {
                         <button
                             className="loginBtn"
                             disabled={!this.validateForm()}
+                            onClick={this.handleSubmit}
                             type="submit"
                         >
                             Sign in
-                    </button>
+                        </button>
                         <p className="disclaimer">
                             By continuing, you agree to Congo's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a>
                         </p>

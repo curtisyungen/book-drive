@@ -42,4 +42,13 @@ export default {
     getSubject: function(subject) {
         return axios.get("/api/books/getSubject/" + subject);
     },
+
+    createNewUser: function(email, password) {
+        let user = {
+            email: email,
+            password: password,
+        }
+        
+        return axios.post("/api/users/createNewUser/" + user);
+    },
 };
