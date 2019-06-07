@@ -115,7 +115,7 @@ class Home extends Component {
     sortByTitle = () => {
         let books = this.state.books;
 
-        books.sort(compare);
+        books.sort(this.compare);
     }
 
     compare = (a, b) => {
