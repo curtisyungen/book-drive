@@ -52,6 +52,7 @@ class Home extends Component {
             books: this.props.books,
             message: message,
             userSearch: this.props.userSearch,
+            sortOption: "",
         });
     }
 
