@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -26,6 +27,18 @@ class App extends Component {
 
   componentDidMount = () => {
     this.getAllBooks();
+  }
+
+  loginUser = (email, password) => {
+    API.loginUser(email, password)
+      .then((res) => {
+        this.setState({
+          userLoggedIn: true,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   createNewUser = (email, password) => {
@@ -186,7 +199,7 @@ class App extends Component {
       <Router>
         <span>
 
-          {window.location.pathname !== "/login" ? (
+          {window.location.pathname !== "/login" && window.location.pathname !== "/signup" ? (
 
           <Navbar
             bookSearch={this.state.bookSearch}
@@ -201,10 +214,14 @@ class App extends Component {
           <Switch>
             <Route exact path="/login" render={() => 
               <Login 
+                loginUser={this.loginUser}
+              />
+            }/>
+            <Route exact path="/signup" render={() => 
+              <Signup
                 createNewUser={this.createNewUser}
               />
-            }
-            />
+            }/>
             <Route exact path="/" render={() =>
               <Home
                 books={this.state.books}

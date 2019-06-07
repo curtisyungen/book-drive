@@ -1,3 +1,7 @@
+.alreadyHaveAccount {
+    font-size: 14px;
+}
+
 .congoLogo {
     left: 50%;
     position: absolute;
@@ -47,7 +51,7 @@
     margin-top: 15px;
 }
 
-.login {
+.signup {
     border: 1px solid rgb(230, 227, 227);
     border-radius: 3px;
     height: 400px;
@@ -56,7 +60,7 @@
     width: 350px;
 }
 
-.loginBtn {
+.signupBtn {
     background: rgb(239, 195, 88);
     border: 1px solid rgb(131, 105, 41);
     border-radius: 2px;
@@ -69,7 +73,7 @@
     width: 100%;
 }
 
-.loginPage {
+.signupPage {
     border-bottom: 1px solid gray;
 }
 

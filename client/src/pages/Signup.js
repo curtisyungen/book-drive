@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import "./Login.css";
+import "./Signup.css";
 
-class Login extends Component {
+class Signup extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
+            name: "",
             email: "",
             password: "",
+            verifyPassword: "",
         }
     }
 
@@ -26,22 +28,31 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.loginUser(this.state.email, this.state.password);
+        this.props.createNewUser(this.state.email, this.state.password);
     }
 
     render() {
         return (
-            <span className="loginPage">
+            <span className="signupPage">
                 <div className="congoLogo">
                     <img src="" alt="Congo Logo" />
                 </div>
 
-                <div className="login">
+                <div className="signup">
                     <form>
-                        <h4 className="formHeader">Sign in</h4>
+                        <h4 className="formHeader">Create account</h4>
+                        <p className="formLabel">Your name</p>
+                        <input 
+                            autoFocus
+                            className="formInput"
+                            name="name"
+                            type="text"
+                            value={this.state.name}
+                            onChange={this.handleInputChange}
+                        />
+
                         <p className="formLabel">Email</p>
                         <input
-                            autoFocus
                             className="formInput"
                             name="email"
                             type="email"
@@ -57,30 +68,40 @@ class Login extends Component {
                             value={this.state.password}
                             onChange={this.handleInputChange}
                         />
+
+                        <p className="formLabel">Re-enter password</p>
+                        <input
+                            className="formInput"
+                            name="password"
+                            type="password"
+                            value={this.state.verifyPassword}
+                            onChange={this.handleInputChange}
+                        />
+
                         <button
-                            className="loginBtn"
+                            className="signupBtn"
                             disabled={!this.validateForm()}
                             onClick={this.handleSubmit}
                             type="submit"
                         >
-                            Sign in
+                            Create your Congo account
                         </button>
+
                         <p className="disclaimer">
                             By continuing, you agree to Congo's <a href="/">Conditions of Use</a> and <a href="/">Privacy Notice.</a>
                         </p>
+
+                        <p className="separator"></p>
+
+                        <div className="alreadyHaveAccount">
+                            <span>Already have an account?</span>
+                            <a href="/login">{` Sign in`}</a>
+                        </div>
                     </form>
-
-                    <p className="newToCongo">New to Congo?</p>
-
-                    <button
-                        className="btn btn-light createAccountBtn"
-                    >
-                        <a className="createAccountAnchor" href="/signup">Create your Congo account</a>
-                    </button>
                 </div>
             </span>
         )
     }
 }
 
-export default Login;
+export default Signup;

@@ -43,6 +43,15 @@ export default {
         return axios.get("/api/books/getSubject/" + subject);
     },
 
+    loginUser: function(email, password) {
+        let user = {
+            email: email, 
+            password: password,
+        }
+
+        return axios.get("/api/users/loginUser", user);
+    },
+    
     createNewUser: function(email, password) {
         let user = {
             email: email,
