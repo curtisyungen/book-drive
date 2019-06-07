@@ -60,35 +60,6 @@ class Sidebar extends Component {
             <div
                 className="sidebar"
             >
-
-                {/* SORTING OPTIONS */}
-                <div id="sortingOptions">
-                    <span className="title">Sort By</span><br />
-
-                    <ul>
-                        <li
-                            className={`option bold-${this.state.activeOption === "alphaByTitle"}`}
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.sortByTitle();
-                                this.setActiveOption("alphaByTitle");
-                            }}
-                        >
-                            Alphabetical by Title
-                        </li>
-                        <li
-                            className={`option bold-${this.state.activeOption === "alphaByAuthor"}`}
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.props.sortByAuthor();
-                                this.setActiveOption("alphaByAuthor");
-                            }}
-                        >
-                            Alphabetical by Author Last
-                        </li>
-                    </ul>
-                </div>
-
                 {/* AVAILABILITY OPTIONS */}
 
                 <div id="availabilityOptions">

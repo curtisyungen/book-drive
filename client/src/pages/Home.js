@@ -144,8 +144,6 @@ class Home extends Component {
                 getAllBooks={this.props.getAllBooks}
                 getAvailableBooks={this.props.getAvailableBooks}
                 getUnavailableBooks={this.props.getUnavailableBooks}
-                sortByTitle={this.props.sortByTitle}
-                sortByAuthor={this.props.sortByAuthor}
                 getPaperbacks={this.props.getPaperbacks}
                 getHardcovers={this.props.getHardcovers}
                 getSubject={this.props.getSubject}
