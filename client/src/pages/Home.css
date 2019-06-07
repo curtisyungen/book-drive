@@ -1,5 +1,5 @@
 .bookList {
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .container {
@@ -12,10 +12,11 @@
     background: white;
     box-shadow: 0px 0px 2px 0px;
     color: black;
-    height: 35px;
+    font-size: 14px;
+    height: 40px;
     left: 0;
     margin: 0;
-    margin-top: -40px;
+    margin-top: -45px;
     padding: 5px;
     padding-left: 20px;
     position: absolute;
