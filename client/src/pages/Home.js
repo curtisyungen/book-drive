@@ -138,7 +138,7 @@ class Home extends Component {
         });
     }
 
-    compareTitle = (a, b) => {
+    compareAuthor = (a, b) => {
         if (a.authorLast === b.authorLast) {
             return 0;
         }
