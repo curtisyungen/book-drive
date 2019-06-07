@@ -18,14 +18,6 @@ router.get("/getUnavailableBooks", (req, res) => {
     controller.getUnavailableBooks(req, res);
 });
 
-router.get("/getBooksSortedByTitle", (req, res) => {
-    controller.getBooksSortedByTitle(req, res);
-});
-
-router.get("/getBooksSortedByAuthor", (req, res) => {
-    controller.getBooksSortedByAuthor(req, res);
-});
-
 router.get("/getPaperbacks", (req, res) => {
     controller.getPaperbacks(req, res);
 });

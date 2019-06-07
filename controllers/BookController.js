@@ -60,28 +60,6 @@ class BookController {
         });
     }
 
-    getBooksSortedByTitle(req, res) {
-        db.Books.findAll({
-            order: [
-                ['title', 'ASC'],
-              ],
-        })
-        .then(books => {
-            res.json(books);
-        });
-    }
-
-    getBooksSortedByAuthor(req, res) {
-        db.Books.findAll({
-            order: [
-                ['authorLast', 'ASC'],
-              ],
-        })
-        .then(books => {
-            res.json(books);
-        });
-    }
-
     getPaperbacks(req, res) {
         db.Books.findAll({
             where: {
