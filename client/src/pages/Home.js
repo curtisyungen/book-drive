@@ -107,8 +107,8 @@ class Home extends Component {
                 <span>
                     {this.state.books.length} 
                     &nbsp;results for&nbsp;
-                    {this.state.activeFilter ? (this.state.activeFilter):(null)}: 
-                    {this.state.userSearch ? (`"${this.state.userSearch}"`):(null)}
+                    {this.state.activeFilter ? (this.state.activeFilter):(null)}
+                    {this.state.userSearch ? (`: "${this.state.userSearch}"`):(null)}
                 </span>
             </div>
 
