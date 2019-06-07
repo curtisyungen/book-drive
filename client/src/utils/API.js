@@ -23,14 +23,6 @@ export default {
         return axios.get("/api/books/getUnavailableBooks/");
     },
 
-    getBooksSortedByTitle: function() {
-        return axios.get("/api/books/getBooksSortedByTitle/");
-    },
-
-    getBooksSortedByAuthor: function() {
-        return axios.get("/api/books/getBooksSortedByAuthor/");
-    },
-
     getPaperbacks: function() {
         return axios.get("/api/books/getPaperbacks/");
     },

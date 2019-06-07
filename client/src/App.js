@@ -126,34 +126,6 @@ class App extends Component {
       });
   }
 
-  sortByTitle = () => {
-    API.getBooksSortedByTitle()
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
-
-  sortByAuthor = () => {
-    API.getBooksSortedByAuthor()
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
-
   getPaperbacks = () => {
     API.getPaperbacks()
       .then((res) => {
@@ -230,8 +202,6 @@ class App extends Component {
                 getAllBooks={this.getAllBooks}
                 getAvailableBooks={this.getAvailableBooks}
                 getUnavailableBooks={this.getUnavailableBooks}
-                sortByTitle={this.sortByTitle}
-                sortByAuthor={this.sortByAuthor}
                 getPaperbacks={this.getPaperbacks}
                 getHardcovers={this.getHardcovers}
                 getSubject={this.getSubject}
