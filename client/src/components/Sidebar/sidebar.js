@@ -312,12 +312,12 @@ class Sidebar extends Component {
                             Money/Investing
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "nonfiction"}`}
+                            className={`option bold-${this.state.activeOption === "nonfict"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("nonfiction");
+                                this.props.getSubject("nonfict");
                                 this.filterBooks("subject");
-                                this.setActiveOption("nonfiction");
+                                this.setActiveOption("nonfict");
 
                             }}
                         >
