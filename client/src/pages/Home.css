@@ -22,6 +22,13 @@
     width: 100%;
 }
 
+.sortBy {
+    font-size: 10px; 
+    height: 20px;
+    margin: 5px auto;
+    right: 100px;
+}
+
 #scrollToTopBtn {
     background: lightgray;
     border: 1px solid darkgray;

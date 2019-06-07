@@ -110,6 +110,13 @@ class Home extends Component {
                     {this.state.activeFilter ? (this.state.activeFilter):(null)}
                     {this.state.userSearch ? (`: "${this.state.userSearch}"`):(null)}
                 </span>
+
+                <select
+                    className="sortBy"
+                >
+                    <option value="title">Alpabetical by Title</option>
+                    <option value="author">Alpabetical by Author</option>
+                </select>
             </div>
 
             <Sidebar 
