@@ -5,8 +5,12 @@ class UserController {
 
     createNewUser(req, res) {
 
-        bcrypt.hash(req.body.password, 10)
+        bcrypt
+            .hash(req.body.password, 10)
             .then(hash => {
+
+                console.log("Hash", hash);
+
                 db.Users.findOrCreate({
                     where: {
                         email: req.body.email,
@@ -16,12 +20,9 @@ class UserController {
                         password: hash,
                     }
                 })
-                    .spread((user) => {
-                        res.json(user);
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                    });
+                .spread((user) => {
+                    res.json(user);
+                });
             })
             .catch((err) => {
                 console.log(err);
