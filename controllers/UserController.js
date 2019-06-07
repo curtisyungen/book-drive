@@ -4,10 +4,10 @@ const bcrypt = require("bcrypt");
 class UserController {
 
     createNewUser(req, res) {
-        bcrypt.hash(req.params.password, 10, function(err, hash) {
+        bcrypt.hash(req.body.password, 10, function(err, hash) {
             db.Users.findOrCreate({
                 where: {
-                    email: req.params.email,
+                    email: req.body.email,
                     password: hash,
                 }
             })
