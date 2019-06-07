@@ -4,14 +4,13 @@ const db = require("../models/index.js");
 class UserController {
 
     createNewUser(req, res) {
-        console.log("Create", req);
         db.Users.findOrCreate({
             where: {
                 email: req.body.email,
             },
             defaults: {
                 email: req.body.email,
-                password: hash,
+                password: req.body.password,
             }
         })
         .spread((user) => {
