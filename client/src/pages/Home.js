@@ -89,6 +89,16 @@ class Home extends Component {
         return (
             <Container>
 
+            {/* RESULTS SUMMARY */}
+
+            <div
+                className="resultsSummary"
+            >
+                <span>
+                    {this.state.books.length} results
+                </span>
+            </div>
+
             <Sidebar 
                 getAllBooks={this.props.getAllBooks}
                 getAvailableBooks={this.props.getAvailableBooks}
@@ -99,17 +109,6 @@ class Home extends Component {
                 getHardcovers={this.props.getHardcovers}
                 getSubject={this.props.getSubject}
             />
-
-                {/* RESULTS SUMMARY */}
-
-                <div
-                    className="resultsSummary"
-                >
-                    <span>
-                        {this.state.books.length} results
-                    </span>
-                </div>
-
                 {/* BOOK LIST */}
 
                 <div
