@@ -34,9 +34,9 @@ class Signup extends Component {
     render() {
         return (
             <span className="signupPage">
-                <div className="congoLogo">
+                <a className="congoLogo" href="/">
                     <img src="" alt="Congo Logo" />
-                </div>
+                </a>
 
                 <div className="signup">
                     <form>
