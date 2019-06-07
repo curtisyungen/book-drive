@@ -97,13 +97,16 @@ class Home extends Component {
     }
 
     handleSortOption = (event) => {
+
+        console.log(event.target);
+
         this.setState({
             sortOption: event.target.value,
         }, () => {
-            if (event.target.value === "title") {
+            if (this.state.sortOption === "title") {
                 this.props.sortByTitle();
             }
-            else if (event.target.value === "author") {
+            else if (this.state.sortOption === "author") {
                 this.props.sortByAuthor();
             }
         })
@@ -130,7 +133,7 @@ class Home extends Component {
                     onChange={this.handleSortOption}
                     value={this.state.sortOption}
                 >
-                    <option value="" disabled selected>Sort by: </option>
+                    <option value="" disabled selected>Sort by:</option>
                     <option value="title">Alpabetical by Title</option>
                     <option value="author">Alpabetical by Author</option>
                 </select>
