@@ -357,7 +357,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 356,Oh Myyy!,George,Takei,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/41tbf6EnmgL.jpg,biography,6/2/2019 21:12,6/2/2019 21:12
 357,Fooled by Randomness,Nassim Nicholas,Taleb,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/61kyvPqcQbL.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
 358,The Rules of Wealth,Richard,Templar,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/413Cqg%2BYACL._SX317_BO1,204,203,200_.jpg",money,6/2/2019 21:12,6/2/2019 21:12
-359,Nudge,Richard,Thaler,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/41S6hyKV9uL._SX324_BO1,204,203,200_.jpg",nonfict,6/2/2019 21:12,6/2/2019 21:12
+359,Nudge,Richard,Thaler,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/41S6hyKV9uL._SX324_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 360,Zero to One,Peter,Thiel,5,0,hard,,https://images-na.ssl-images-amazon.com/images/I/41PZRSHF-NL.jpg,business,6/2/2019 21:12,6/2/2019 21:12
 361,How to Think Like Einstein,Scott,Thorpe,5,0,soft,,"https://images-na.ssl-images-amazon.com/images/I/51eorWptH6L._SX331_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 362,Leadership,Brian,Tracy,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/41EM0ud7pWL._SX344_BO1,204,203,200_.jpg","leadership, selfhelp",6/2/2019 21:12,6/2/2019 21:12
@@ -394,7 +394,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 393,Money Talks,Alan,Weiss,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/51uOyDfwc7L._SX332_BO1,204,203,200_.jpg",money,6/2/2019 21:12,6/2/2019 21:12
 394,The Creator's Code,Amy,Wilkinson,5,0,hard,,https://images-na.ssl-images-amazon.com/images/I/71vSlwbKp6L.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 395,Extreme Ownership,Jocko,Willink,5,1,hard,,"https://images-na.ssl-images-amazon.com/images/I/41wsgvkoW2L._SX331_BO1,204,203,200_.jpg",biography,6/2/2019 21:12,6/2/2019 21:12
-396,The Good News About What's Bad For You…,Jeff,Wilser,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/51KVtODQA8L._SX328_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
+396,The Good News About What's Bad For YouÂ…,Jeff,Wilser,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/51KVtODQA8L._SX328_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 397,Wooden on Leadership,John,Wooden,5,0,hard,,"https://images-na.ssl-images-amazon.com/images/I/51h12syOgML._SX338_BO1,204,203,200_.jpg",leadership,6/2/2019 21:12,6/2/2019 21:12
 398,Mess,Barry,Yourgrau,5,0,hard,,https://images-na.ssl-images-amazon.com/images/I/61rMJTqxT1L.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
 399,I Am Malala,Malala,Yousafzai,5,0,soft,,https://images-na.ssl-images-amazon.com/images/I/91jj%2BOWbC1L.jpg,biography,6/2/2019 21:12,6/2/2019 21:12
