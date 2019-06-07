@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+// import { findIconDefinition } from '@fortawesome/fontawesome-svg-core'
 import "./navbar.css";
 
 library.add(faSearch);
@@ -82,6 +83,9 @@ class Navbar extends Component {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/login">Login</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/cart">Cart</a>
                         </li>
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import Container from "../components/Container/container";
-import API from "../utils/API";
+// import API from "../utils/API";
 import "./Login.css";
 
 class Login extends Component {
@@ -68,7 +68,7 @@ class Login extends Component {
                             Sign in
                         </button>
                         <p className="disclaimer">
-                            By continuing, you agree to Congo's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a>
+                            By continuing, you agree to Congo's <a href="/">Conditions of Use</a> and <a href="/">Privacy Notice.</a>
                         </p>
                     </form>
                 </div>

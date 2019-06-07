@@ -7,7 +7,7 @@
 .navbar-nav {
     background: none;
     position: absolute;
-    right: 220px;
+    right: 200px;
 }
 
 .searchBox {
@@ -15,8 +15,10 @@
     border-right: none;
     border-radius: 5px 0px 0px 5px;
     height: 38px;
+    min-width: 400px;
+    max-width: 700px;
     padding: 5px;
-    width: 700px;
+    width: auto;
 }
 
 .searchBox:focus {
@@ -34,6 +36,6 @@
 }
 
 .searchForm {
-    margin: 10px 110px;
+    margin: 10px 100px;
     width: 1000px;
 }

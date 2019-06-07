@@ -1,0 +1,34 @@
+.cartAuthor {
+    font-size: 13px;
+}
+
+.cartCover {
+    height: 150px;
+}
+
+.cartItem {
+    border: 1px solid lightgray;
+    border-left: none;
+    border-right: none;
+    font-family: "Arial";
+    min-height: 75px;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+.cartPrice {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.cartTitle {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.cartTitle:hover {
+    color: brown;
+}

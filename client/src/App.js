@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
 import API from "./utils/API";
 import './App.css';
 
@@ -30,7 +31,9 @@ class App extends Component {
   createNewUser = (email, password) => {
     API.createNewUser(email, password)
         .then((res) => {
-            console.log(res);
+            this.setState({
+              userLoggedIn: true,
+            });
         })
         .catch((err) => {
             console.log(err);
@@ -218,6 +221,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/cart" component={Cart} />
           </Switch>
         </span>
       </Router>

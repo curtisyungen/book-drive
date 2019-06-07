@@ -10,7 +10,29 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            books: null,
+            books: [
+                // {
+                //     title: "Test",
+                //     author: "Test", 
+                //     price: "0.00",
+                //     avail: 0,
+                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
+                // },
+                // {
+                //     title: "Test",
+                //     author: "Test", 
+                //     price: "0.00",
+                //     avail: 0,
+                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
+                // },
+                // {
+                //     title: "Test",
+                //     author: "Test", 
+                //     price: "0.00",
+                //     avail: 0,
+                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
+                // }
+            ],
             message: "Loading...",
         }
     }
