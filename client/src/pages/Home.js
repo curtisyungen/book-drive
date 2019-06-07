@@ -101,7 +101,7 @@ class Home extends Component {
             sortOption: event.target.value,
         }, () => {
             if (this.state.sortOption === "title") {
-                this.props.sortByTitle();
+                this.sortByTitle();
             }
             else if (this.state.sortOption === "author") {
                 this.props.sortByAuthor();
@@ -110,6 +110,21 @@ class Home extends Component {
                 this.props.getAllBooks();
             }
         });
+    }
+
+    sortByTitle = () => {
+        let books = this.state.books;
+
+        books.sort(compare);
+    }
+
+    compare = (a, b) => {
+        if (a.title === b.title) {
+            return 0;
+        }
+        else {
+            return (a.title < b.title) ? -1 : 1;
+        }
     }
 
     render() {
@@ -136,7 +151,7 @@ class Home extends Component {
                     <option value="" disabled selected>Sort by:</option>
                     <option value="default">Default</option>
                     <option value="title">Alpabetical by Title</option>
-                    <option value="author">Alpabetical by Author</option>
+                    <option value="author">Alpabetical by Author Last</option>
                 </select>
             </div>
 
