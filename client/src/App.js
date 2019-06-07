@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -19,12 +19,22 @@ class App extends Component {
       bookSearch: "",
       message: "",
       userLoggedIn: false,
-      useAsGuest: true,
+      useAsGuest: true
     }
   }
 
   componentDidMount = () => {
     this.getAllBooks();
+  }
+
+  createNewUser = (email, password) => {
+    API.createNewUser(email, password)
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
   }
 
   getAllBooks = () => {
@@ -186,7 +196,12 @@ class App extends Component {
           )}
 
           <Switch>
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/login" render={() => 
+              <Login 
+                createNewUser={this.createNewUser}
+              />
+            }
+            />
             <Route exact path="/" render={() =>
               <Home
                 books={this.state.books}

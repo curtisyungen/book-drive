@@ -48,7 +48,7 @@ export default {
             email: email,
             password: password,
         }
-        
-        return axios.post("/api/users/createNewUser/" + user);
+
+        return axios.post("/api/users/createNewUser", user);
     },
 };

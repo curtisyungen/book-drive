@@ -28,18 +28,7 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
-        this.createNewUser();
-    }
-
-    createNewUser = () => {
-        API.createNewUser(this.state.email, this.state.password)
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        this.props.createNewUser(this.state.email, this.state.password);
     }
 
     render() {
