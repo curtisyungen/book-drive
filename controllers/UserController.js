@@ -1,5 +1,5 @@
 const db = require("../models/index.js");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 class UserController {
 
@@ -22,4 +22,4 @@ class UserController {
     }
 }
 
-export default UserController;
+module.exports = UserController;
