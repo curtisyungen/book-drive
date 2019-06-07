@@ -8,6 +8,9 @@ class UserController {
             db.Users.findOrCreate({
                 where: {
                     email: req.body.email,
+                },
+                defaults: {
+                    email: req.body.email,
                     password: hash,
                 }
             })
