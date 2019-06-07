@@ -1,12 +1,12 @@
 const db = require("../models/index.js");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 class UserController {
 
     createNewUser(req, res) {
 
-        bcrypt.hash(req.body.password, 10)
-            .then(hash => {
+        // bcrypt.hash(req.body.password, 10)
+        //     .then(hash => {
                 db.Users.findOrCreate({
                     where: {
                         email: req.body.email,
@@ -22,10 +22,10 @@ class UserController {
                     .catch((err) => {
                         console.log(err);
                     });
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+            // })
+            // .catch((err) => {
+            //     console.log(err);
+            // });
     }
 }
 
