@@ -23,10 +23,11 @@
 }
 
 .sortBy {
-    font-size: 10px; 
+    font-size: 12px; 
     height: 20px;
     position: absolute;
-    right: 100px;
+    right: 190px;
+    width: 200px;
 }
 
 #scrollToTopBtn {
