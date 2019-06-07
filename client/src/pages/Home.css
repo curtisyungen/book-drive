@@ -1,5 +1,5 @@
 .bookList {
-    margin-top: 0px;
+    margin-top: 40px;
 }
 
 .container {
@@ -14,7 +14,9 @@
     height: 35px;
     left: 0;
     margin: 0;
+    margin-top: -40px;
     padding: 5px;
+    padding-left: 20px;
     width: 100%;
 }
 
