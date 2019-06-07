@@ -16,10 +16,6 @@ class Navbar extends Component {
             bookSearch: "",
         }
     }
-
-    componentDidMount = () => {
-
-    }
     
     handleInputChange = (event) => {
         const { name, value } = event.target;

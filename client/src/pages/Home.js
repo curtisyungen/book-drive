@@ -34,6 +34,7 @@ class Home extends Component {
                 // }
             ],
             message: "Loading...",
+            activeFilter: null,
         }
     }
 
@@ -84,6 +85,12 @@ class Home extends Component {
         window.scrollTo(0, 0);
         this.hideScrollToTopBtn();
     }
+      
+    getActiveFilter = (key) => {
+        this.setState({
+            activeFilter: key,
+        });
+    }
 
     render() {
         return (
@@ -95,7 +102,7 @@ class Home extends Component {
                 className="resultsSummary"
             >
                 <span>
-                    {this.state.books.length} results
+                    {this.state.books.length} results for:{this.state.activeFilter}
                 </span>
             </div>
 
@@ -108,6 +115,7 @@ class Home extends Component {
                 getPaperbacks={this.props.getPaperbacks}
                 getHardcovers={this.props.getHardcovers}
                 getSubject={this.props.getSubject}
+                getActiveFilter={this.getActiveFilter}
             />
                 {/* BOOK LIST */}
 

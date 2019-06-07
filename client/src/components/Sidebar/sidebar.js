@@ -50,6 +50,8 @@ class Sidebar extends Component {
     setActiveOption = (key) => {
         this.setState({
             activeOption: key,
+        }, () => {
+            this.props.getActiveFilter(key);
         });
     }
 
