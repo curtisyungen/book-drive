@@ -21,7 +21,8 @@ class App extends Component {
       bookSearch: "",
       message: "",
       userLoggedIn: false,
-      useAsGuest: true
+      useAsGuest: true,
+      userSearch: "",
     }
   }
 
@@ -80,6 +81,7 @@ class App extends Component {
         .then((res) => {
           this.setState({
             books: res.data,
+            userSearch: userInput,
           });
         })
         .catch((err) => {
@@ -233,6 +235,7 @@ class App extends Component {
                 getPaperbacks={this.getPaperbacks}
                 getHardcovers={this.getHardcovers}
                 getSubject={this.getSubject}
+                userSearch={this.state.userSearch}
               />
             } />
             <Route exact path="/about" component={About} />

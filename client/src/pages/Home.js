@@ -34,7 +34,8 @@ class Home extends Component {
                 // }
             ],
             message: "Loading...",
-            activeFilter: null,
+            activeFilter: "books",
+            userSearch: "",
         }
     }
 
@@ -49,6 +50,7 @@ class Home extends Component {
         this.setState({
             books: this.props.books,
             message: message,
+            userSearch: this.props.userSearch,
         });
     }
 
@@ -56,6 +58,7 @@ class Home extends Component {
         if (prevProps !== this.props) {
             this.setState({
                 books: this.props.books,
+                userSearch: this.props.userSearch,
             });
         }
     }
@@ -86,9 +89,9 @@ class Home extends Component {
         this.hideScrollToTopBtn();
     }
       
-    getActiveFilter = (key) => {
+    getActiveFilter = (filter) => {
         this.setState({
-            activeFilter: key,
+            activeFilter: filter,
         });
     }
 
@@ -102,7 +105,10 @@ class Home extends Component {
                 className="resultsSummary"
             >
                 <span>
-                    {this.state.books.length} results for:{this.state.activeFilter}
+                    {this.state.books.length} 
+                    results for 
+                    {this.state.activeFilter ? (this.state.activeFilter):("")} : 
+                    "{this.state.userSearch ? (this.state.userSearch):("")}"
                 </span>
             </div>
 
