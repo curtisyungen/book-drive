@@ -17,7 +17,7 @@ class UserController {
                     },
                     defaults: {
                         email: req.body.email,
-                        password: hash,
+                        password: req.body.password,
                     }
                 })
                 .spread((user) => {
