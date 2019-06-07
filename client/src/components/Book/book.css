@@ -1,12 +1,14 @@
 .book {
     border: 1px solid lightgray;
+    border-bottom: 0px;
+    border-top: 0px;
     cursor: pointer;
     display: inline-block;
     height: 270px;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
-    width: 202px;
+    width: 222px;
 }
 
 .bookCover {
