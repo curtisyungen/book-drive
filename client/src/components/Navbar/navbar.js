@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import SearchSuggestions from "../SearchSuggestions/searchSuggestions";
+import API from "../../utils/API";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-// import { findIconDefinition } from '@fortawesome/fontawesome-svg-core'
 import "./navbar.css";
 
 library.add(faSearch);
@@ -14,6 +15,17 @@ class Navbar extends Component {
 
         this.state = {
             bookSearch: "",
+            isLoggedIn: false,
+            showSearchSuggestions: false,
+            suggestions: [],
+        }
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.isLoggedIn !== this.props.isLoggedIn) {
+            this.setState({
+                isLoggedIn: this.props.isLoggedIn,
+            });
         }
     }
     
@@ -21,7 +33,34 @@ class Navbar extends Component {
         const { name, value } = event.target;
 
         this.setState({
-            [name]: value,
+            [name]: value
+        }, () => {
+            this.showSearchSuggestions();
+            this.getSearchSuggestions();
+        });
+    }
+
+    getSearchSuggestions = () => {
+        API.getSearchSuggestions(this.state.bookSearch)
+            .then((res) => {
+                console.log("Get Suggestions", res);
+                this.setState({
+                    suggestions: res.data,
+                });
+            });
+    }
+
+    showSearchSuggestions = () => {
+        if (this.state.bookSearch && this.state.bookSearch.length > 0 && this.state.suggestions.length > 0) {
+            this.setState({
+                showSearchSuggestions: true,
+            });
+        }
+    }
+
+    hideSearchSuggestions = () => {
+        this.setState({
+            showSearchSuggestions: false,
         });
     }
 
@@ -41,12 +80,14 @@ class Navbar extends Component {
 
                 <form className="searchForm">
                     <input
+                        autoComplete="off"
                         className="searchBox"
                         placeholder="Search Title or Author"
                         type="text"
 //                         autoComplete="off"
                         name="bookSearch"
                         onChange={this.handleInputChange}
+                        onBlur={this.hideSearchSuggestions}
                         onFocus={this.handleInputChange}
                         value={this.bookSearch}
                     />
@@ -59,7 +100,18 @@ class Navbar extends Component {
                     >
                         <FontAwesomeIcon icon="search" />
                     </button>
+                    {/* SEARCH SUGGESTIONS */}
+
+                    {this.state.showSearchSuggestions ? (
+                        <SearchSuggestions 
+                            suggestions={this.state.suggestions}
+                        />
+                    ) : (
+                        <></>
+                    )}
                 </form>
+
+                
 
                 {/* NAV MENU */}
 
@@ -78,7 +130,12 @@ class Navbar extends Component {
                             <a className="nav-link" href="/contact">Contact</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/login">Login</a>
+                            {this.state.isLoggedIn ? (
+                                <a className="nav-link" href="/login">Login</a>
+                            ) : (
+                                <a className="nav-link" href="/">Logout</a>
+                            )}
+                            
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/cart">Cart</a>

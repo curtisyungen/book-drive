@@ -15,6 +15,10 @@ export default {
         return axios.get("/api/books/searchForBook/" + userInput);
     },
 
+    getSearchSuggestions: function(bookSearch) {
+        return axios.get("/api/books/getSearchSuggestions/" + bookSearch);
+    },
+
     getAvailableBooks: function() {
         return axios.get("/api/books/getAvailableBooks/");
     },
