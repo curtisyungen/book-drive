@@ -44,8 +44,9 @@ class Navbar extends Component {
         this.setState({
             [name]: value
         }, () => {
-            this.getSearchSuggestions();
-            this.showSearchSuggestions();
+            if (this.state.bookSearch !== "" && this.state.bookSearch.length > 0) {
+                this.getSearchSuggestions(); 
+            }
         });
     }
 
@@ -55,12 +56,14 @@ class Navbar extends Component {
                 console.log("Get Suggestions", res);
                 this.setState({
                     suggestions: res.data,
+                }, () => {
+                    this.showSearchSuggestions();
                 });
             });
     }
 
     showSearchSuggestions = () => {
-        if (this.state.bookSearch && this.state.bookSearch.length > 0 && this.state.suggestions.length > 0) {
+        if (this.state.suggestions.length > 0) {
             this.setState({
                 showSearchSuggestions: true,
             });
@@ -96,7 +99,6 @@ class Navbar extends Component {
                         className="searchBox"
                         placeholder="Search Title or Author"
                         type="text"
-//                         autoComplete="off"
                         name="bookSearch"
                         onChange={this.handleInputChange}
                         onBlur={this.hideSearchSuggestions}
