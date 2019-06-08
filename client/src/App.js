@@ -40,6 +40,15 @@ class App extends Component {
     this.getAllBooks();
   }
 
+  componentDidUpdate = (prevState) => {
+    if (prevState.redirectToHome || prevState.redirectToLogin) {
+      this.setState({
+        redirectToHome: false,
+        redirectToLogin: false,
+      });
+    }
+  }
+
   // REDIRECT HANDLING
   // ========================================= 
 
