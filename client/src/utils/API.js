@@ -44,12 +44,17 @@ export default {
         return axios.get("/api/users/loginUser", user);
     },
     
-    createNewUser: function(email, password) {
+    createNewUser: function(name, email, password) {
         let user = {
+            name: name,
             email: email,
             password: password,
         }
 
         return axios.post("/api/users/createNewUser", user);
     },
+
+    addBookToCart: function(email, book) {
+        return axios.post("/api/users/addBookToCart", email, book);
+    }
 };

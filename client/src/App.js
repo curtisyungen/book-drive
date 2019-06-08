@@ -23,6 +23,7 @@ class App extends Component {
       userLoggedIn: false,
       useAsGuest: true,
       userSearch: "",
+      cart: [],
     }
   }
 
@@ -33,6 +34,7 @@ class App extends Component {
   loginUser = (email, password) => {
     API.loginUser(email, password)
       .then((res) => {
+        console.log(res);
         this.setState({
           userLoggedIn: true,
         });
@@ -42,8 +44,8 @@ class App extends Component {
       });
   }
 
-  createNewUser = (email, password) => {
-    API.createNewUser(email, password)
+  createNewUser = (name, email, password) => {
+    API.createNewUser(name, email, password)
         .then((res) => {
             this.setState({
               userLoggedIn: true,
@@ -168,6 +170,26 @@ class App extends Component {
       });
   }
 
+  sendToCart = (book) => {
+
+    let cart = this.state.cart;
+    cart.push(book);
+
+    API.addBookToCart()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    this.setState({
+      cart: cart,
+    }, () => {
+      alert("Added!");
+    });
+  }
+
   render() {
     return (
       <Router>
@@ -206,12 +228,17 @@ class App extends Component {
                 getHardcovers={this.getHardcovers}
                 getSubject={this.getSubject}
                 userSearch={this.state.userSearch}
+                sendToCart={this.sendToCart}
               />
             } />
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/cart" render={() =>
+              <Cart 
+                cart={this.state.cart}
+              />
+            } />
           </Switch>
         </span>
       </Router>

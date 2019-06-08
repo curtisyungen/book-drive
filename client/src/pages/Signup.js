@@ -15,7 +15,10 @@ class Signup extends Component {
     }
 
     validateForm = () => {
-        return this.state.email.length > 0 && this.state.password.length > 0;
+        return (
+            this.state.email.length > 0 && this.state.password.length > 0 &&
+            this.state.password === this.state.verifyPassword
+        );
     }
 
     handleInputChange = (event) => {
@@ -28,7 +31,7 @@ class Signup extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.createNewUser(this.state.email, this.state.password);
+        this.props.createNewUser(this.state.name, this.state.email, this.state.password);
     }
 
     render() {
@@ -72,7 +75,7 @@ class Signup extends Component {
                         <p className="formLabel">Re-enter password</p>
                         <input
                             className="formInput"
-                            name="password"
+                            name="verifyPassword"
                             type="password"
                             value={this.state.verifyPassword}
                             onChange={this.handleInputChange}

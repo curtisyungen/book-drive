@@ -48,6 +48,18 @@ class Book extends Component {
         window.open(`https://www.amazon.com/s?k=${this.state.title}`)
     }
 
+    addToCart = () => {
+        let book = {
+            title: this.state.title,
+            authorFirst: this.state.authorFirst,
+            authorLast: this.state.authorLast,
+            price: this.state.price, 
+            imageURL: this.state.imageURL,
+        }
+
+        this.props.sendToCart(book);
+    }
+
     render() {
         return (
             <span>
@@ -66,11 +78,15 @@ class Book extends Component {
                     <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
 
                     <div id="buttons">
-                        {this.state.avail || this.state.avail === 1 ? (
+                        {this.state.avail && this.state.avail === "0" ? (
                             <button
-                                className="btn btn-primary btn-sm button"
+                                className="btn btn-warning btn-sm button"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.addToCart();
+                                }}
                             >
-                                Take
+                                Add to Cart
                             </button>
                         ) : (
                             <></>

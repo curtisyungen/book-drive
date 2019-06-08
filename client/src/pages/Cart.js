@@ -9,21 +9,27 @@ class Cart extends Component {
         super(props);
 
         this.state = {
-            books: [
-                {
-                    title: "Test",
-                    author: "Test", 
-                    price: 5,
-                    avail: 0,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                },
-            ],
+            books: [],
             subtotal: 0,
         }
     }
 
     componentDidMount = () => {
-        this.getSubtotal();
+        this.setState({
+            books: this.props.cart,
+        }, () => {
+            this.getSubtotal();
+        });
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (prevProps !== this.props) {
+            this.setState({
+                books: this.props.cart,
+            }, () => {
+                console.log(this.state.books);
+            });
+        }
     }
 
     getSubtotal = () => {

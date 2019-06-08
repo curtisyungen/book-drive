@@ -11,27 +11,27 @@ class Home extends Component {
 
         this.state = {
             books: [
-                // {
-                //     title: "Test",
-                //     author: "Test", 
-                //     price: "0.00",
-                //     avail: 0,
-                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                // },
-                // {
-                //     title: "Test",
-                //     author: "Test", 
-                //     price: "0.00",
-                //     avail: 0,
-                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                // },
-                // {
-                //     title: "Test",
-                //     author: "Test", 
-                //     price: "0.00",
-                //     avail: 0,
-                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                // }
+                {
+                    title: "Test",
+                    author: "Test", 
+                    price: "0.00",
+                    avail: "0",
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
+                },
+                {
+                    title: "Test",
+                    author: "Test", 
+                    price: "0.00",
+                    avail: "0",
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
+                },
+                {
+                    title: "Test",
+                    author: "Test", 
+                    price: "0.00",
+                    avail: "1",
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
+                }
             ],
             message: "Loading...",
             activeFilter: "books",
@@ -42,27 +42,27 @@ class Home extends Component {
 
     componentDidMount = () => {
 
-        let message = "";
+        // let message = "";
 
-        if (this.props.books.length === 0) {
-            message = "No books found.";
-        }
+        // if (this.props.books.length === 0) {
+        //     message = "No books found.";
+        // }
 
-        this.setState({
-            books: this.props.books,
-            message: message,
-            userSearch: this.props.userSearch,
-            sortOption: "",
-        });
+        // this.setState({
+        //     books: this.props.books,
+        //     message: message,
+        //     userSearch: this.props.userSearch,
+        //     sortOption: "",
+        // });
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps !== this.props) {
-            this.setState({
-                books: this.props.books,
-                userSearch: this.props.userSearch,
-            });
-        }
+        // if (prevProps !== this.props) {
+        //     this.setState({
+        //         books: this.props.books,
+        //         userSearch: this.props.userSearch,
+        //     });
+        // }
     }
 
     checkScrollPos = () => {
@@ -203,6 +203,7 @@ class Home extends Component {
                                 condition={book.condition}
                                 imageURL={book.imageURL}
                                 tags={book.tags}
+                                sendToCart={this.props.sendToCart}
                             />
                         ))
                     ) : (
