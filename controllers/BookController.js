@@ -34,7 +34,11 @@ class BookController {
             }
         })
         .then((suggestions) => {
-            res.json(suggestions);
+            res.headers['content-type'] === 'application/json' ? (
+                res.json(suggestions)
+            ) : (
+                console.log("None")
+            )
         });
     }
 
