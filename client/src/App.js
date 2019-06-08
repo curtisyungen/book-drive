@@ -24,16 +24,36 @@ class App extends Component {
       userLoggedIn: false,
       useAsGuest: true,
       userSearch: "",
-      cart: []
+      cart: [],
+      redirectToHome: false,
+      redirectToLogin: false,
     }
   }
 
   componentDidMount = () => {
+
+    this.setState({
+      redirectToHome: false,
+      redirectToLogin: false,
+    });
+
     this.getAllBooks();
   }
 
   // REDIRECT HANDLING
   // ========================================= 
+
+  setRedirectToHome = () => {
+    this.setState({
+      redirectToHome: true,
+    });
+  }
+
+  setRedirectToLogin = () => {
+    this.setState({
+      redirectToLogin: true,
+    });
+  }
 
   redirectToHome = () => {
     return <Redirect to="/" /> 
@@ -69,17 +89,15 @@ class App extends Component {
               this.setState({
                 user: userData
               }, () => {
-                this.redirectToHome();
+                this.setRedirectToHome();
               });
-
-              
             });
         }
         else {
           alert("An account already exists for this email address.");
 
           // Redirect to Login page
-          this.redirectToLogin();
+          this.setRedirectToLogin();
         }
       });
   }
@@ -235,6 +253,22 @@ class App extends Component {
       <Router>
         <span>
 
+          {/* HANDLE PAGE REDIRECTS */}
+
+          {this.state.redirectToHome ? (
+            this.redirectToHome()
+          ) : (
+            <></>
+          )}
+
+          {this.state.directToLogin ? (
+            this.redirectToLogin()
+          ) : (
+            <></>
+          )}
+
+          {/* SHOW OR HIDE NAVBAR */}
+
           {window.location.pathname !== "/login" && window.location.pathname !== "/signup" ? (
 
           <Navbar
@@ -246,6 +280,8 @@ class App extends Component {
           ) : ( 
             <></>
           )}
+
+          {/* HANDLE PAGE ROUTING */}
 
           <Switch>
             <Route exact path="/login" render={() => 
