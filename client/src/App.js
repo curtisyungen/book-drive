@@ -129,7 +129,10 @@ class App extends Component {
   }
 
   logoutUser = () => {
-
+    localStorage.setItem("isLoggedIn", false);
+    localStorage.setItem("user", null);
+    localStorage.setItem("cart", null);
+    alert("You have been logged out.");
   }
 
   // BOOK FILTERING
@@ -264,7 +267,6 @@ class App extends Component {
 
   }
 
-
   render() {
     return (
       <Router>
@@ -279,6 +281,7 @@ class App extends Component {
               handleInputChange={this.handleInputChange}
               searchForBook={this.searchForBook}
               getAllBooks={this.getAllBooks}
+              logoutUser={this.logoutUser}
             />
           ) : (
               <></>

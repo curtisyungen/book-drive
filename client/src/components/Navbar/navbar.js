@@ -130,7 +130,7 @@ class Navbar extends Component {
                         </li>
                         <li className="nav-item">
                             {this.state.isLoggedIn ? (
-                                <a className="nav-link" href="/">Logout</a>
+                                <div className="nav-link" onClick={this.props.logoutUser}>Logout</div>
                             ) : (
                                 <a className="nav-link" href="/login">Login</a>
                             )}
