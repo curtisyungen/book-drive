@@ -11,6 +11,33 @@ class BookController {
             });
     }
 
+    getSearchSuggestions(req, res) {
+        db.Books.findAll({
+            where: {
+                [Op.or]: [
+                    {
+                        Title: {
+                            [Op.like]: '%' + req.params.bookSearch + '%'
+                        }
+                    },
+                    {
+                        authorFirst: {
+                            [Op.like]: '%' + req.params.bookSearch + '%'
+                        }
+                    },
+                    {
+                        authorLast: {
+                            [Op.like]: '%' + req.params.bookSearch + '%'
+                        }
+                    }
+                ]
+            }
+        })
+        .then((suggestions) => {
+            res.json(suggestions);
+        });
+    }
+
     searchForBook(req, res) {
         db.Books.findAll({
             where: {
