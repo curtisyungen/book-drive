@@ -12,7 +12,7 @@ export default {
     },
     
     getSearchSuggestions: function(bookSearch) {
-        return axios.get("/api/books/getSearchSuggestions/" + bookSearch, {headers: {"content-type":"application/json"}});
+        return axios.get("/api/books/getSearchSuggestions/" + bookSearch, {headers: {"Content-Type":"application/json"}});
     },
 
     searchForBook: function(userInput) {

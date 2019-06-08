@@ -102,7 +102,7 @@ class App extends Component {
                 user: userData,
                 isLoggedIn: true,
               }, () => {
-                // this.setRedirectToHome();
+                this.setRedirectToHome();
               });
             });
         }
