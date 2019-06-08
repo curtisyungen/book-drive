@@ -39,22 +39,22 @@ class App extends Component {
     // Check to see if user email already exists in database
     API.findExistingUser(email)
       .then((res) => {
-        console.log("Find Existing User", res);
+
+        // If email not found in database, create new user
+        if (res.data.length === 0) {
+          API.createNewUser(name, email, password)
+            .then((res) => {
+              console.log("Create new user", res);
+            });
+        }
+        else {
+          alert("An account already exists for this email address.");
+          // Redirect to Login page
+        }
       })
       .catch((err) => {
         console.log(err);
       });
-
-    // If user isn't found in database, create user
-    // API.createNewUser(name, email, password)
-    //     .then((res) => {
-    //       this.setState({
-    //         userLoggedIn: true,
-    //       });
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     });
   }
 
   saveUserToLocalStorage = (email) => {
