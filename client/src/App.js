@@ -179,18 +179,31 @@ class App extends Component {
       });
   }
 
+  saveUserToLocalStorage = (email) => {
+    let user = {
+        email: email,
+    }
+
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+
   sendToCart = (book) => {
 
-    let cart = this.state.cart;
-    cart.push(book);
+    let email;
+    if (localStorage.getItem("user")) {
+      email = JSON.parse(localStorage.getItem("user")).email;
+    }
 
-    API.addBookToCart()
+    API.addBookToCart(email, book)
       .then((res) => {
         console.log(res);
       })
       .catch((err) => {
         console.log(err);
       });
+
+    let cart = this.state.cart;
+    cart.push(book);
 
     this.setState({
       cart: cart,
@@ -220,11 +233,13 @@ class App extends Component {
             <Route exact path="/login" render={() => 
               <Login 
                 loginUser={this.loginUser}
+                saveUserToLocalStorage={this.saveUserToLocalStorage}
               />
             }/>
             <Route exact path="/signup" render={() => 
               <Signup
                 createNewUser={this.createNewUser}
+                saveUserToLocalStorage={this.saveUserToLocalStorage}
               />
             }/>
             <Route exact path="/" render={() =>

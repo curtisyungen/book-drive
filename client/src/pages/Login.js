@@ -27,6 +27,7 @@ class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.loginUser(this.state.email, this.state.password);
+        this.props.saveUserToLocalStorage(this.state.email);
     }
 
     render() {
