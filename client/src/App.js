@@ -102,8 +102,7 @@ class App extends Component {
                 user: userData,
                 isLoggedIn: true,
               }, () => {
-                this.props.history.push("/");
-                // this.setRedirectToHome();
+                this.setRedirectToHome();
               });
             });
         }
