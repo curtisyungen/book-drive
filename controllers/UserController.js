@@ -26,15 +26,10 @@ class UserController {
 
         //         console.log("Hash", hash);
 
-                db.Users.findOrCreate({
-                    where: {
-                        email: req.body.email,
-                    },
-                    defaults: {
-                        name: req.body.name,
-                        email: req.body.email,
-                        password: req.body.password,
-                    }
+                db.Users.create({
+                    name: req.body.name,
+                    email: req.body.email,
+                    password: req.body.password,
                 })
                 .spread((user) => {
                     res.json(user);
