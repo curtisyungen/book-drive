@@ -41,7 +41,7 @@ class BookController {
     getAvailableBooks(req, res) {
         db.Books.findAll({
             where: {
-                Avail: 0,
+                Avail: "avail",
             }
         })
         .then(books => {
@@ -52,7 +52,14 @@ class BookController {
     getUnavailableBooks(req, res) {
         db.Books.findAll({
             where: {
-                Avail: 1,
+                [Op.or]: [
+                    {
+                        avail: "unavail"
+                    },
+                    {
+                        avail: "hold"
+                    },
+                ]
             }
         })
         .then(books => {

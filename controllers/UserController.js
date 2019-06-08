@@ -59,7 +59,7 @@ class UserController {
 
     addBookToCart(req, res) {
         db.Books.update(
-            {UserId: req.params.email}, 
+            {avail: "hold"}, 
             {where: {
                 title: req.body.title,
                 authorFirst: req.body.authorFirst,
