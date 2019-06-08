@@ -45,11 +45,20 @@ class App extends Component {
   }
 
   createNewUser = (name, email, password) => {
+
+    API.findExistingUser(email)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     API.createNewUser(name, email, password)
         .then((res) => {
-            this.setState({
-              userLoggedIn: true,
-            });
+          this.setState({
+            userLoggedIn: true,
+          });
         })
         .catch((err) => {
             console.log(err);

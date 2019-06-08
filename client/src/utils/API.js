@@ -54,6 +54,10 @@ export default {
         return axios.post("/api/users/createNewUser", user);
     },
 
+    findExistingUser: function(email) {
+        return axios.get("/api/users/findExistingUser", email)
+    },
+
     addBookToCart: function(email, book) {
         return axios.post("/api/users/addBookToCart", email, book);
     }
