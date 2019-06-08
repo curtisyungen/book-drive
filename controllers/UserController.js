@@ -56,6 +56,19 @@ class UserController {
             console.log(err);
         });
     }
+
+    addBookToCart(req, res) {
+        db.Books.update(
+            {UserId: req.params.email}, 
+            {where: {
+                title: req.body.title,
+                authorFirst: req.body.authorFirst,
+                authorLast: req.body.authorLast,
+            }})
+        .then((book) => {
+            res.json(book);
+        });
+    }
 }
 
 module.exports = UserController;
