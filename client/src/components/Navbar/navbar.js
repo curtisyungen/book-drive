@@ -22,6 +22,16 @@ class Navbar extends Component {
     }
 
     componentDidMount = () => {
+        this.getLoginStatus();
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.isLoggedIn !== this.props.isLoggedIn) {
+            this.getLoginStatus();
+        }
+    }
+
+    getLoginStatus = () => {
         let isLoggedIn = localStorage.getItem("isLoggedIn");
         this.setState({
             isLoggedIn: isLoggedIn,
@@ -110,8 +120,6 @@ class Navbar extends Component {
                     )}
                 </form>
 
-                
-
                 {/* NAV MENU */}
 
                 <div className="collapse navbar-collapse" id="navbarNav">
@@ -130,7 +138,7 @@ class Navbar extends Component {
                         </li>
                         <li className="nav-item">
                             {this.state.isLoggedIn ? (
-                                <div className="nav-link" onClick={this.props.logoutUser}>Logout</div>
+                                <div className="nav-link logout" onClick={this.props.logoutUser}>Logout</div>
                             ) : (
                                 <a className="nav-link" href="/login">Login</a>
                             )}

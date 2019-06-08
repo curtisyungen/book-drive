@@ -4,6 +4,10 @@
     margin-top: -5px;
 }
 
+.logout {
+    cursor: pointer;
+}
+
 .navbar-nav {
     background: none;
     position: absolute;

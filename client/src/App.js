@@ -132,6 +132,11 @@ class App extends Component {
     localStorage.setItem("isLoggedIn", false);
     localStorage.setItem("user", null);
     localStorage.setItem("cart", null);
+
+    this.setState({
+      isLoggedIn: false,
+    });
+    
     alert("You have been logged out.");
   }
 
@@ -282,6 +287,7 @@ class App extends Component {
               searchForBook={this.searchForBook}
               getAllBooks={this.getAllBooks}
               logoutUser={this.logoutUser}
+              isLoggedIn={this.state.isLoggedIn}
             />
           ) : (
               <></>
