@@ -1,10 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     let Books = sequelize.define("Books", {
-        id: {
-            type: DataTypes.STRING,
-            primaryKey: true,
-        },
-
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -50,7 +45,7 @@ module.exports = function(sequelize, DataTypes) {
     Books.associate = function(models) {
         Books.belongsTo(models.Users, {
             foreignKey: {
-                allowNull: false,
+                allowNull: true,
             }
         });
     }
