@@ -58,7 +58,7 @@ export default {
         return axios.get("/api/users/findExistingUser/" + email)
     },
 
-    addBookToCart: function(email, book) {
-        return axios.put("/api/users/addBookToCart/" + email, book);
+    addBookToCart: function(book) {
+        return axios.put("/api/users/addBookToCart/", book);
     }
 };

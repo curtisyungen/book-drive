@@ -191,6 +191,14 @@ class App extends Component {
     let cart = this.state.cart;
     cart.push(book);
 
+    API.addBookToCart(book)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     this.setState({
       cart: cart,
     }, () => {
