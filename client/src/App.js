@@ -188,20 +188,6 @@ class App extends Component {
   }
 
   sendToCart = (book) => {
-
-    let email;
-    if (localStorage.getItem("user")) {
-      email = JSON.parse(localStorage.getItem("user")).email;
-    }
-
-    API.addBookToCart(email, book)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
     let cart = this.state.cart;
     cart.push(book);
 
@@ -209,7 +195,13 @@ class App extends Component {
       cart: cart,
     }, () => {
       alert("Added!");
+    }, () => {
+      this.saveCartToLocalStorage();
     });
+  }
+
+  saveCartToLocalStorage = () => {
+    localStorage.setItem("cart", JSON.stringify(this.state.cart));
   }
 
   render() {
