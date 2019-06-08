@@ -16,6 +16,7 @@ class Cart extends Component {
 
     componentDidMount = () => {
         this.getCartFromLocalStorage();
+        this.getSubtotal();
     }
 
     getCartFromLocalStorage = () => {
