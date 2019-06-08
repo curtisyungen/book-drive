@@ -22,15 +22,10 @@ class Navbar extends Component {
     }
 
     componentDidMount = () => {
-
-    }
-
-    componentDidUpdate = (prevProps) => {
-        if (prevProps.isLoggedIn !== this.props.isLoggedIn) {
-            this.setState({
-                isLoggedIn: this.props.isLoggedIn,
-            });
-        }
+        let isLoggedIn = localStorage.getItem("isLoggedIn");
+        this.setState({
+            isLoggedIn: isLoggedIn,
+        });
     }
     
     handleInputChange = (event) => {
