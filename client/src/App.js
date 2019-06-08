@@ -284,11 +284,11 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/cart" render={() => {
+            <Route exact path="/cart" render={() => 
               <Cart 
                 deleteFromCart={this.deleteFromCart}
               />
-            }} />
+            } />
             } />
           </Switch>
         </span>
