@@ -35,8 +35,8 @@ class Navbar extends Component {
         this.setState({
             [name]: value
         }, () => {
-            this.showSearchSuggestions();
             this.getSearchSuggestions();
+            this.showSearchSuggestions();
         });
     }
 
