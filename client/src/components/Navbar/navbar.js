@@ -17,8 +17,12 @@ class Navbar extends Component {
             bookSearch: "",
             isLoggedIn: false,
             showSearchSuggestions: false,
-            suggestions: [],
+            suggestions: ["none"],
         }
+    }
+
+    componentDidMount = () => {
+
     }
 
     componentDidUpdate = (prevProps) => {
