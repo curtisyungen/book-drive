@@ -211,6 +211,33 @@ class App extends Component {
     localStorage.setItem("cart", JSON.stringify(this.state.cart));
   }
 
+  deleteFromCart = (book) => {
+
+    API.deleteBookFromCart(book)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    let idx; 
+
+    for (var book in cart) {
+      if(cart[book].title === book.title && cart[book].authorLast === book.authorLast) {
+        idx = book;
+        cart.splice(idx, 1);
+      }
+    }
+
+    this.setState({
+      cart: cart,
+    }, () => {
+      this.saveCartToLocalStorage();
+    });
+  }
+
   render() {
     return (
       <Router>
@@ -257,7 +284,11 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/cart" render={() => {
+              <Cart 
+                deleteFromCart={this.deleteFromCart}
+              />
+            }} />
             } />
           </Switch>
         </span>

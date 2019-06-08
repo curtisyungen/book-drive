@@ -60,5 +60,9 @@ export default {
 
     addBookToCart: function(book) {
         return axios.put("/api/books/addBookToCart/", book);
-    }
+    },
+
+    deleteBookFromCart: function(book) {
+        return axios.put("/api/books/deleteBookFromCart/", book);
+    },
 };

@@ -29,6 +29,14 @@ class CartItem extends Component {
                 <span className="cartPrice">
                     {this.props.price}
                 </span>
+
+                <a 
+                    className="deleteFromCart" 
+                    href="#"
+                    onClick={this.props.deleteFromCart}
+                >
+                    Delete
+                </a>
             </div>
         )
     }

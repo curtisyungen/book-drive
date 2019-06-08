@@ -56,6 +56,7 @@ class Cart extends Component {
                             authorLast={book.authorLast}
                             price={book.price}
                             imageURL={book.imageURL}
+                            deleteFromCart={this.props.deleteFromCart}
                         />
                     ))
                 ) : (
