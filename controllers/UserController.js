@@ -31,6 +31,7 @@ class UserController {
                         email: req.body.email,
                     },
                     defaults: {
+                        name: req.body.name,
                         email: req.body.email,
                         password: req.body.password,
                     }
