@@ -78,7 +78,7 @@ class Book extends Component {
                     <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
 
                     <div id="buttons">
-                        {this.state.avail ? (
+                        {true ? (
                             <button
                                 className="btn btn-warning btn-sm button"
                                 onClick={(event) => {
