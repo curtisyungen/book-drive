@@ -31,6 +31,40 @@ class App extends Component {
     this.getAllBooks();
   }
 
+  // USER HANDLING
+  // =========================================
+
+  createNewUser = (name, email, password) => {
+
+    // Check to see if user email already exists in database
+    API.findExistingUser(email)
+      .then((res) => {
+        console.log("Find Existing User", res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    // If user isn't found in database, create user
+    API.createNewUser(name, email, password)
+        .then((res) => {
+          this.setState({
+            userLoggedIn: true,
+          });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+  }
+
+  saveUserToLocalStorage = (email) => {
+    let user = {
+        email: email,
+    }
+
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+
   loginUser = (email, password) => {
     API.loginUser(email, password)
       .then((res) => {
@@ -44,26 +78,8 @@ class App extends Component {
       });
   }
 
-  createNewUser = (name, email, password) => {
-
-    API.findExistingUser(email)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    API.createNewUser(name, email, password)
-        .then((res) => {
-          this.setState({
-            userLoggedIn: true,
-          });
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-  }
+  // BOOK FILTERING
+  // =========================================
 
   getAllBooks = () => {
 
@@ -179,32 +195,11 @@ class App extends Component {
       });
   }
 
-  saveUserToLocalStorage = (email) => {
-    let user = {
-        email: email,
-    }
-
-    localStorage.setItem("user", JSON.stringify(user));
-  }
+  // CART HANDLING
+  // =========================================
 
   sendToCart = (book) => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    cart.push(book);
 
-    API.addBookToCart(book)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    this.setState({
-      cart: cart,
-    }, () => {
-      alert("Added!");
-      this.saveCartToLocalStorage();
-    });
   }
 
   saveCartToLocalStorage = () => {
@@ -213,30 +208,9 @@ class App extends Component {
 
   deleteFromCart = (book) => {
 
-    API.deleteBookFromCart(book)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    let idx; 
-
-    for (var book in cart) {
-      if(cart[book].title === book.title && cart[book].authorLast === book.authorLast) {
-        idx = book;
-        cart.splice(idx, 1);
-      }
-    }
-
-    this.setState({
-      cart: cart,
-    }, () => {
-      this.saveCartToLocalStorage();
-    });
   }
+
+
 
   render() {
     return (
