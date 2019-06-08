@@ -52,7 +52,8 @@ class Cart extends Component {
                         <CartItem 
                             key={book.title}
                             title={book.title}
-                            author={book.author}
+                            authorFirst={book.authorFirst}
+                            authorLast={book.authorLast}
                             price={book.price}
                             imageURL={book.imageURL}
                         />
