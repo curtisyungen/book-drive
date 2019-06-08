@@ -42,6 +42,20 @@ class UserController {
             //     console.log(err);
             // });
     }
+
+    findExistingUser(req, res) {
+        db.Users.findAll({
+            where: {
+                email: req.body.email,
+            }
+        })
+        .then((user) => {
+            res.json(user);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }
 }
 
 module.exports = UserController;

@@ -6,6 +6,10 @@ router.get("/loginUser", (req, res) => {
     controller.loginUser(req, res);
 });
 
+router.get("/findExistingUser", (req, res) => {
+    controller.findExistingUser(req, res);
+});
+
 router.post("/createNewUser", (req, res) => {
     controller.createNewUser(req, res);
 });
