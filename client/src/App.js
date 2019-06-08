@@ -136,8 +136,10 @@ class App extends Component {
     this.setState({
       isLoggedIn: false,
     });
-    
+
     alert("You have been logged out.");
+
+    window.location.reload();
   }
 
   // BOOK FILTERING
