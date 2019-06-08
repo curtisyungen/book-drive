@@ -31,8 +31,11 @@ class UserController {
                     email: req.body.email,
                     password: req.body.password,
                 })
-                .spread((user) => {
+                .then((user) => {
                     res.json(user);
+                })
+                .catch((err) => {
+                    console.log(err);
                 });
             // })
             // .catch((err) => {
