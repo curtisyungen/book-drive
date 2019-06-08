@@ -46,15 +46,15 @@ class App extends Component {
       });
 
     // If user isn't found in database, create user
-    API.createNewUser(name, email, password)
-        .then((res) => {
-          this.setState({
-            userLoggedIn: true,
-          });
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    // API.createNewUser(name, email, password)
+    //     .then((res) => {
+    //       this.setState({
+    //         userLoggedIn: true,
+    //       });
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //     });
   }
 
   saveUserToLocalStorage = (email) => {
