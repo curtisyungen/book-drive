@@ -56,7 +56,7 @@ class App extends Component {
   }
 
   redirectToHome = () => {
-    return <Redirect to="/" /> 
+    return <Redirect to="/" />
   }
 
   redirectToLogin = () => {
@@ -253,47 +253,47 @@ class App extends Component {
       <Router>
         <span>
 
+          {/* SHOW OR HIDE NAVBAR */}
+
+          {window.location.pathname !== "/login" && window.location.pathname !== "/signup" ? (
+
+            <Navbar
+              bookSearch={this.state.bookSearch}
+              handleInputChange={this.handleInputChange}
+              searchForBook={this.searchForBook}
+              getAllBooks={this.getAllBooks}
+            />
+          ) : (
+              <></>
+            )}
+
           {/* HANDLE PAGE REDIRECTS */}
 
           {this.state.redirectToHome ? (
             this.redirectToHome()
           ) : (
-            <></>
-          )}
+              <></>
+            )}
 
           {this.state.redirectToLogin ? (
             this.redirectToLogin()
           ) : (
-            <></>
-          )}
-
-          {/* SHOW OR HIDE NAVBAR */}
-
-          {window.location.pathname !== "/login" && window.location.pathname !== "/signup" ? (
-
-          <Navbar
-            bookSearch={this.state.bookSearch}
-            handleInputChange={this.handleInputChange}
-            searchForBook={this.searchForBook}
-            getAllBooks={this.getAllBooks}
-          />
-          ) : ( 
-            <></>
-          )}
+              <></>
+            )}
 
           {/* HANDLE PAGE ROUTING */}
 
           <Switch>
-            <Route exact path="/login" render={() => 
-              <Login 
+            <Route exact path="/login" render={() =>
+              <Login
                 loginUser={this.loginUser}
               />
-            }/>
-            <Route exact path="/signup" render={() => 
+            } />
+            <Route exact path="/signup" render={() =>
               <Signup
                 createNewUser={this.createNewUser}
               />
-            }/>
+            } />
             <Route exact path="/" render={() =>
               <Home
                 books={this.state.books}
@@ -310,8 +310,8 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/cart" render={() => 
-              <Cart 
+            <Route exact path="/cart" render={() =>
+              <Cart
                 deleteFromCart={this.deleteFromCart}
               />
             } />
