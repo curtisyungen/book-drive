@@ -21,7 +21,7 @@ class App extends Component {
       bookSearch: "",
       message: "",
       user: null,
-      userLoggedIn: false,
+      isLoggedIn: false,
       useAsGuest: true,
       userSearch: "",
       cart: [],
@@ -96,7 +96,8 @@ class App extends Component {
 
               // Save new user in state
               this.setState({
-                user: userData
+                user: userData,
+                isLoggedIn: true,
               }, () => {
                 this.setRedirectToHome();
               });
@@ -116,7 +117,7 @@ class App extends Component {
       .then((res) => {
         console.log(res);
         this.setState({
-          userLoggedIn: true,
+          isLoggedIn: true,
         });
       })
       .catch((err) => {

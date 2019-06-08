@@ -131,9 +131,9 @@ class Navbar extends Component {
                         </li>
                         <li className="nav-item">
                             {this.state.isLoggedIn ? (
-                                <a className="nav-link" href="/login">Login</a>
-                            ) : (
                                 <a className="nav-link" href="/">Logout</a>
+                            ) : (
+                                <a className="nav-link" href="/login">Login</a>
                             )}
                             
                         </li>
