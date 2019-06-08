@@ -23,7 +23,7 @@ class CartItem extends Component {
                 </a>
 
                 <span className="cartAuthor">
-                    {` by ${this.props.author}`}
+                    {` by ${this.props.authorFirst} ${this.props.authorLast}`}
                 </span>
 
                 <span className="cartPrice">
