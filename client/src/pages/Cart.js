@@ -9,31 +9,25 @@ class Cart extends Component {
         super(props);
 
         this.state = {
-            books: [],
+            cart: [],
             subtotal: 0,
         }
     }
 
     componentDidMount = () => {
+        this.getCartFromLocalStorage();
+    }
+
+    getCartFromLocalStorage = () => {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+
         this.setState({
-            books: this.props.cart,
-        }, () => {
-            this.getSubtotal();
+            cart: cart,
         });
     }
 
-    componentDidUpdate = (prevProps) => {
-        if (prevProps !== this.props) {
-            this.setState({
-                books: this.props.cart,
-            }, () => {
-                console.log(this.state.books);
-            });
-        }
-    }
-
     getSubtotal = () => {
-        let books = this.state.books;
+        let books = this.state.cart;
         let subtotal = 0;
 
         for (var book in books) {
@@ -52,8 +46,8 @@ class Cart extends Component {
             >
                 <h4>Shopping Cart</h4>
 
-                {this.state.books.length > 0 ? (
-                    this.state.books.map(book => (
+                {this.state.cart.length > 0 ? (
+                    this.state.cart.map(book => (
                         <CartItem 
                             key={book.title}
                             title={book.title}

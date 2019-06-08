@@ -257,10 +257,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/cart" render={() =>
-              <Cart 
-                cart={this.state.cart}
-              />
+            <Route exact path="/cart" component={Cart} />
             } />
           </Switch>
         </span>
