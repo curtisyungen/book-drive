@@ -261,7 +261,7 @@ class App extends Component {
             <></>
           )}
 
-          {this.state.directToLogin ? (
+          {this.state.redirectToLogin ? (
             this.redirectToLogin()
           ) : (
             <></>
