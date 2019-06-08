@@ -30,4 +30,8 @@ router.get("/getSubject/:subject", (req, res) => {
     controller.getSubject(req, res);
 });
 
+router.put("/addBookToCart/", (req, res) => {
+    controller.addBookToCart(req, res);
+});
+
 module.exports = router;

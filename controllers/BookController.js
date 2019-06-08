@@ -54,10 +54,10 @@ class BookController {
             where: {
                 [Op.or]: [
                     {
-                        avail: "unavail"
+                        Avail: "unavail"
                     },
                     {
-                        avail: "hold"
+                        Avail: "hold"
                     },
                 ]
             }
@@ -101,11 +101,18 @@ class BookController {
             res.json(books);
         });
     }
-
-    update(req, res) {
-        db.Books.update(req.body, { where: req.params })
-            .then(book => 
-                res.json(book));
+    
+    addBookToCart(req, res) {
+        db.Books.update(
+            {avail: "hold"}, 
+            {where: {
+                title: req.body.title,
+                authorFirst: req.body.authorFirst,
+                authorLast: req.body.authorLast,
+            }})
+        .then((book) => {
+            res.json(book);
+        });
     }
 }
 
