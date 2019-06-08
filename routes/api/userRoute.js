@@ -6,7 +6,7 @@ router.get("/loginUser", (req, res) => {
     controller.loginUser(req, res);
 });
 
-router.get("/findExistingUser", (req, res) => {
+router.get("/findExistingUser/:email", (req, res) => {
     controller.findExistingUser(req, res);
 });
 
