@@ -55,7 +55,7 @@ export default {
     },
 
     findExistingUser: function(email) {
-        return axios.get("/api/users/findExistingUser", email)
+        return axios.get("/api/users/findExistingUser/" + email)
     },
 
     addBookToCart: function(email, book) {
