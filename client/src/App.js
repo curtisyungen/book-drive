@@ -94,12 +94,16 @@ class App extends Component {
               // Save new user in local storage
               localStorage.setItem("user", JSON.stringify(userData));
 
+              // Save login status in local storage
+              localStorage.setItem("isLoggedIn", true);
+
               // Save new user in state
               this.setState({
                 user: userData,
                 isLoggedIn: true,
               }, () => {
-                this.setRedirectToHome();
+                this.props.history.push("/");
+                // this.setRedirectToHome();
               });
             });
         }
@@ -123,6 +127,10 @@ class App extends Component {
       .catch((err) => {
         console.log(err);
       });
+  }
+
+  logoutUser = () => {
+
   }
 
   // BOOK FILTERING
