@@ -188,7 +188,7 @@ class App extends Component {
   }
 
   sendToCart = (book) => {
-    let cart = this.state.cart;
+    let cart = JSON.parse(localStorage.getItem("cart"));
     cart.push(book);
 
     API.addBookToCart(book)
