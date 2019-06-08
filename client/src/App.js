@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -20,15 +20,44 @@ class App extends Component {
       books: [],
       bookSearch: "",
       message: "",
+      user: null,
       userLoggedIn: false,
       useAsGuest: true,
       userSearch: "",
       cart: [],
+      redirectToHome: false,
     }
   }
 
   componentDidMount = () => {
+    this.setState({
+      redirectToHome: false,
+    });
+
     this.getAllBooks();
+  }
+
+  // REDIRECT HANDLING
+  // ========================================= 
+
+  redirectToHome = () => {
+    if (this.state.redirectToHome) {
+      this.setState({
+        redirectToHome: false,
+      });
+
+      return <Redirect to="/" /> 
+    }
+  }
+
+  redirectToLogin = () => {
+    if (this.state.redirectToLogin) {
+      this.setState({
+        redirectToLogin: false,
+      });
+
+      return <Redirect to="/login" />
+    }
   }
 
   // USER HANDLING
@@ -44,16 +73,30 @@ class App extends Component {
         if (res.data.length === 0) {
           API.createNewUser(name, email, password)
             .then((res) => {
-              console.log("Create new user", res);
+
+              let userData = {
+                name: res.data.name,
+                email: res.data.email,
+              }
+
+              // Save new user in state
+              this.setState({
+                user: userData,
+              }, () => {
+                console.log(this.state);
+                this.redirectToHome();
+              });
+
+              // Save new user in local storage
+              localStorage.setItem("user", JSON.stringify(userData));
             });
         }
         else {
           alert("An account already exists for this email address.");
+
           // Redirect to Login page
+          this.redirectToLogin();
         }
-      })
-      .catch((err) => {
-        console.log(err);
       });
   }
 
@@ -211,7 +254,6 @@ class App extends Component {
   }
 
 
-
   render() {
     return (
       <Router>
@@ -239,7 +281,6 @@ class App extends Component {
             <Route exact path="/signup" render={() => 
               <Signup
                 createNewUser={this.createNewUser}
-                saveUserToLocalStorage={this.saveUserToLocalStorage}
               />
             }/>
             <Route exact path="/" render={() =>
