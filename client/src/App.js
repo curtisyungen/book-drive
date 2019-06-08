@@ -24,16 +24,11 @@ class App extends Component {
       userLoggedIn: false,
       useAsGuest: true,
       userSearch: "",
-      cart: [],
-      redirectToHome: false,
+      cart: []
     }
   }
 
   componentDidMount = () => {
-    this.setState({
-      redirectToHome: false,
-    });
-
     this.getAllBooks();
   }
 
@@ -41,23 +36,11 @@ class App extends Component {
   // ========================================= 
 
   redirectToHome = () => {
-    if (this.state.redirectToHome) {
-      this.setState({
-        redirectToHome: false,
-      });
-
-      return <Redirect to="/" /> 
-    }
+    return <Redirect to="/" /> 
   }
 
   redirectToLogin = () => {
-    if (this.state.redirectToLogin) {
-      this.setState({
-        redirectToLogin: false,
-      });
-
-      return <Redirect to="/login" />
-    }
+    return <Redirect to="/login" />
   }
 
   // USER HANDLING
@@ -79,16 +62,17 @@ class App extends Component {
                 email: res.data.email,
               }
 
+              // Save new user in local storage
+              localStorage.setItem("user", JSON.stringify(userData));
+
               // Save new user in state
               this.setState({
-                user: userData,
+                user: userData
               }, () => {
-                console.log(this.state);
                 this.redirectToHome();
               });
 
-              // Save new user in local storage
-              localStorage.setItem("user", JSON.stringify(userData));
+              
             });
         }
         else {
@@ -98,14 +82,6 @@ class App extends Component {
           this.redirectToLogin();
         }
       });
-  }
-
-  saveUserToLocalStorage = (email) => {
-    let user = {
-        email: email,
-    }
-
-    localStorage.setItem("user", JSON.stringify(user));
   }
 
   loginUser = (email, password) => {
@@ -275,7 +251,6 @@ class App extends Component {
             <Route exact path="/login" render={() => 
               <Login 
                 loginUser={this.loginUser}
-                saveUserToLocalStorage={this.saveUserToLocalStorage}
               />
             }/>
             <Route exact path="/signup" render={() => 
