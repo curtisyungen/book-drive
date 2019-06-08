@@ -114,6 +114,19 @@ class BookController {
             res.json(book);
         });
     }
+
+    deleteBookFromCart(req, res) {
+        db.Books.update(
+            {avail: "avail"},
+            {where: {
+                title: req.body.title,
+                authorFirst: req.body.authorFirst,
+                authorLast: req.body.authorLast,
+            }})
+            .then((book) => {
+                res.json(book);
+            });
+    }
 }
 
 module.exports = BookController;

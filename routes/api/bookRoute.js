@@ -34,4 +34,8 @@ router.put("/addBookToCart/", (req, res) => {
     controller.addBookToCart(req, res);
 });
 
+router.put("/deleteBookFromCart/", (req, res) => {
+    controller.deleteBookFromCart(req ,res);
+});
+
 module.exports = router;
