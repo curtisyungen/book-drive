@@ -10,13 +10,13 @@ export default {
     getAllBooks: function() {
         return axios.get("/api/books/getAllBooks/");
     },
+    
+    getSearchSuggestions: function(bookSearch) {
+        return axios.get("/api/books/getSearchSuggestions/" + bookSearch, {headers: {"content-type":"application/json"}});
+    },
 
     searchForBook: function(userInput) {
         return axios.get("/api/books/searchForBook/" + userInput);
-    },
-
-    getSearchSuggestions: function(bookSearch) {
-        return axios.get("/api/books/getSearchSuggestions/" + bookSearch);
     },
 
     getAvailableBooks: function() {
