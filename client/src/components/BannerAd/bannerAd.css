@@ -8,6 +8,7 @@
 }
 
 .bannerPortfolioAd {
+    cursor: pointer;
     height: 55px;
     overflow: hidden;
     padding-left: 140px;

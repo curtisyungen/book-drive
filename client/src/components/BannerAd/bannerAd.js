@@ -9,7 +9,7 @@ class BannerAd extends Component {
 
     render() {
         return (
-            <div className="bannerPortfolioAd">
+            <div className="bannerPortfolioAd" onClick={(event) => {event.preventDefault(); this.openPortfolio();}}>
                 <a className="portfolioLink" href="https://curtisyungen.github.io/Portfolio" target="_blank" rel="noopener noreferrer">
                     <strong>HIRE CURTIS YUNGEN,</strong> WEB DEVELOPER.
                 </a>
