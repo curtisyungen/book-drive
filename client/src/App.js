@@ -303,15 +303,29 @@ class App extends Component {
 
   sendToCart = (book) => {
 
-    console.log(this.state.user);
+    console.log("App user", this.state.user);
 
-    // API.addBookToCart(book)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err)
-    //   });
+    API.checkBookAvail(book)
+      .then((res) => {
+        console.log(res);
+      });
+
+    // let cart = [];
+
+    // if (localStorage.getItem("cart")) {
+    //   cart = JSON.parse(localStorage.getItem("cart"));
+    // }
+
+    // cart.push(book);
+
+    // localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  putBookOnHold = (book) => {
+    API.putBookOnHold(book)
+      .then((res) => {
+        console.log(res);
+      });
   }
 
   deleteFromCart = (book) => {
@@ -380,6 +394,7 @@ class App extends Component {
                 getSubject={this.getSubject}
                 userSearch={this.state.userSearch}
                 sendToCart={this.sendToCart}
+                putBookOnHold={this.putBookOnHold}
                 updateParentState={this.updateParentState}
               />
             } />

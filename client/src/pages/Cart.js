@@ -15,29 +15,7 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
-        this.getCartFromLocalStorage();
-        this.getSubtotal();
-    }
 
-    getCartFromLocalStorage = () => {
-        let cart = JSON.parse(localStorage.getItem("cart"));
-
-        this.setState({
-            cart: cart,
-        });
-    }
-
-    getSubtotal = () => {
-        let books = this.state.cart;
-        let subtotal = 0;
-
-        for (var book in books) {
-            subtotal += books[book].price;
-        }
-
-        this.setState({
-            subtotal: subtotal,
-        });
     }
 
     render() {

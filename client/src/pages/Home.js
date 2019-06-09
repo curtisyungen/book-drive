@@ -184,6 +184,7 @@ class Home extends Component {
                                 imageURL={book.imageURL}
                                 tags={book.tags}
                                 sendToCart={this.props.sendToCart}
+                                putBookOnHold={this.props.putBookOnHold}
                             />
                         ))
                     ) : (
