@@ -45,6 +45,8 @@ export default {
             password: password,
         }
 
+        console.log("API user", user);
+
         return axios.get("/api/users/loginUser", user);
     },
     
