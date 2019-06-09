@@ -138,6 +138,19 @@ class BookController {
             res.json(books);
         });
     }
+
+    checkBookAvail(req, res) {
+        db.Books.findAll({
+            where: {
+                title: req.body.title,
+                authorFirst: req.body.authorFirst,
+                authorLast: req.body.authorLast,
+            }
+        })
+        .then((book) => {
+            res.json(book);
+        });
+    }
     
     addBookToCart(req, res) {
         db.Books.update(
@@ -150,6 +163,19 @@ class BookController {
         .then((book) => {
             res.json(book);
         });
+    }
+
+    putBookOnHold(req, res) {
+        db.Books.update(
+            {avail: "hold"},
+            {where: {
+                title: req.body.title,
+                authorFirst: req.body.authorFirst,
+                authorLast: req.body.authorLast,
+            }})
+            .then((book) => {
+                res.json(book);
+            });
     }
 
     deleteBookFromCart(req, res) {
