@@ -3,6 +3,10 @@ import "./bannerAd.css";
 
 class BannerAd extends Component {
 
+    openPortfolio = () => {
+        window.open("https://curtisyungen.github.io/Portfolio");
+    }
+
     render() {
         return (
             <div className="bannerPortfolioAd">
@@ -12,6 +16,10 @@ class BannerAd extends Component {
 
                 <button
                     className="btn btn-dark bannerBtn"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        this.openPortfolio();
+                    }}
                 >
                     TAKE A LOOK
                 </button>
