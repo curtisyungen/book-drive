@@ -50,6 +50,8 @@ class Navbar extends Component {
 
     getSearchSuggestions = () => {
 
+        console.log("Get Search Suggestions");
+
         if (this.state.bookSearch !== "" && this.state.bookSearch !== null && this.state.bookSearch.length > 0) {
             API.getSearchSuggestions(this.state.bookSearch)
                 .then((res) => {
