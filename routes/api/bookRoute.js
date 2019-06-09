@@ -6,7 +6,7 @@ router.get("/getAllBooks", (req, res) => {
     controller.getAllBooks(req, res);
 });
 
-router.get("/getSearchSuggestions/:bookSearch", (req, res) => {
+router.get("/getSearchSuggestions", (req, res) => {
     controller.getSearchSuggestions(req, res);
 });
 

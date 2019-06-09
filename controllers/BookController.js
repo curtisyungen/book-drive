@@ -17,28 +17,24 @@ class BookController {
                 [Op.or]: [
                     {
                         Title: {
-                            [Op.like]: '%' + req.params.bookSearch + '%'
+                            [Op.like]: '%' + req.body.bookSearch + '%'
                         }
                     },
                     {
                         authorFirst: {
-                            [Op.like]: '%' + req.params.bookSearch + '%'
+                            [Op.like]: '%' + req.body.bookSearch + '%'
                         }
                     },
                     {
                         authorLast: {
-                            [Op.like]: '%' + req.params.bookSearch + '%'
+                            [Op.like]: '%' + req.body.bookSearch + '%'
                         }
                     }
                 ]
             }
         })
         .then((suggestions) => {
-            res.headers['content-type'] === 'application/json' ? (
-                res.json(suggestions)
-            ) : (
-                console.log("None")
-            )
+            res.json(suggestions);
         });
     }
 
