@@ -18,7 +18,6 @@ class BannerAd extends Component {
                     className="btn btn-dark bannerBtn"
                     onClick={(event) => {
                         event.preventDefault();
-                        this.openPortfolio();
                     }}
                 >
                     TAKE A LOOK
