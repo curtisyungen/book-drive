@@ -33,7 +33,7 @@ class Home extends Component {
             sortOption: "",
         });
 
-        console.log("Loaded from Login");
+        window.location.reload();
     }
 
     componentDidUpdate = (prevProps) => {
