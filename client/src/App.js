@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   redirectToHome = () => {
-    return <Redirect to="/" />
+    return <span><Redirect to="/" /> <Navbar /></span>
   }
 
   redirectToLogin = () => {

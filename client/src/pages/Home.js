@@ -32,8 +32,6 @@ class Home extends Component {
             userSearch: this.props.userSearch,
             sortOption: "",
         });
-
-        window.location.reload();
     }
 
     componentDidUpdate = (prevProps) => {
