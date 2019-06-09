@@ -30,7 +30,8 @@ class BookController {
                             [Op.like]: '%' + req.params.bookSearch + '%'
                         }
                     }
-                ]
+                ],
+                limit: 10,
             }
         })
         .then((suggestions) => {
