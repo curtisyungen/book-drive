@@ -151,6 +151,11 @@ class Navbar extends Component {
                     </ul>
                 </div>
 
+                {/* NAVBAR ADVERT */}
+                <div>
+                    <p className="navbar-advert">Save 30% on men's skincare</p>
+                </div>
+
                 {/* ACCOUNT NAV MENU */}
 
                 <div className="collapse navbar-collapse" id="navbarAcctMenu">

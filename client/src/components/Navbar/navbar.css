@@ -1,3 +1,13 @@
+.accountLink {
+    margin-top: -5px;
+    padding: 15px 10px 0px 10px;
+}
+
+.cartLink {
+    margin-top: -6px;
+    padding: 15px 10px 0px 10px;
+}
+
 .helloUser {
     color: lightgray;
     font-size: 12px;
@@ -18,6 +28,18 @@
 
 .navbar {
     height: 100px;
+}
+
+.navbar-advert {
+    color: white;
+    font-family: "Arial";
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: -10px;
+    margin-top: -24px;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 102;
 }
 
 .nav-item {
@@ -74,15 +96,6 @@
     white-space: nowrap;
 }
 
-.accountLink {
-    margin-top: -5px;
-    padding: 15px 10px 0px 10px;
-}
-
-.cartLink {
-    margin-top: -6px;
-    padding: 15px 10px 0px 10px;
-}
 
 .nav-acct-link:hover {
     border: 1px solid rgb(99, 98, 98);
