@@ -303,8 +303,6 @@ class App extends Component {
 
   sendToCart = (book) => {
 
-    console.log("App, book", book);
-
     API.checkBookAvail(book)
       .then((res) => {
         console.log(res);

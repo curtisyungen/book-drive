@@ -66,10 +66,6 @@ export default {
         return axios.get("/api/books/checkBookAvail", book);
     },
 
-    addBookToCart: function(book) {
-        return axios.put("/api/books/addBookToCart", book);
-    },
-
     putBookOnHold: function(book) {
         return axios.put("/api/books/putBookOnHold", book);
     },
