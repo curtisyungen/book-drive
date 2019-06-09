@@ -76,8 +76,12 @@
 
 .accountLink {
     margin-top: -5px;
-    padding: 0px;
-    padding-top: 15px;
+    padding: 15px 10px 0px 10px;
+}
+
+.cartLink {
+    margin-top: -6px;
+    padding: 15px 10px 0px 10px;
 }
 
 .nav-acct-link:hover {

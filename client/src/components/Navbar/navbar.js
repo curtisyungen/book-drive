@@ -37,9 +37,10 @@ class Navbar extends Component {
     getUserFromLocalStorage = () => {
         if (localStorage.getItem("isLoggedIn")) {
             let user = JSON.parse(localStorage.getItem("user"));
+            let firstName = user.name.split(" ", 1);
 
             this.setState({
-                name: user.name,
+                name: firstName,
                 email: user.email,
             });
         }
@@ -155,7 +156,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarAcctMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            {this.props.isLoggedIn ? (
+                            {this.state.isLoggedIn ? (
                                 <span>
                                     <a className="nav-acct-link accountLink" href="/">
                                         <span className="helloUser">Hello, {this.state.name}</span>
@@ -178,10 +179,7 @@ class Navbar extends Component {
                             <a className="nav-acct-link" href="/">Try SubPrime</a>
                         </li>
                         <li className="nav-item">
-                            
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-acct-link" href="/cart">
+                            <a className="nav-acct-link cartLink" href="/cart">
                                 <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
                                 &nbsp;Cart
                             </a>
