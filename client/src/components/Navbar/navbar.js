@@ -16,6 +16,7 @@ class Navbar extends Component {
         this.state = {
             bookSearch: "",
             isLoggedIn: false,
+            name: "Sign in",
             showSearchSuggestions: false,
             suggestions: ["none"],
         }
@@ -113,31 +114,57 @@ class Navbar extends Component {
 
                 {/* NAV MENU */}
 
-                <div className="collapse navbar-collapse" id="navbarMenu">
+                <div className="">
+                    <ul className="navbar-nav" id="navbarMenu">
+                        <li className="nav-item">
+                            <a className="nav-menu-link" href="/">Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-menu-link" href="/about">About</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-menu-link" href="/gallery">Gallery</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-menu-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* ACCOUNT NAV MENU */}
+
+                <div className="collapse navbar-collapse" id="navbarAcctMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/about">About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/gallery">Gallery</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/contact">Contact</a>
-                        </li>
-                        <li className="nav-item">
                             {this.props.isLoggedIn ? (
-                                <div className="nav-link logout" onClick={this.props.logoutUser}>Logout</div>
+                                <span>
+                                    <a className=" nav-acct-link" href="/login">
+                                        <span className="helloUser">Hello, {this.state.name}</span>
+                                        {`Account & Lists`}
+                                    </a>
+                                </span>
                             ) : (
-                                <a className="nav-link" href="/login">Login</a>
+                                <span>
+                                    <a className="nav-acct-link" href="/login">
+                                        <span className="helloUser">Hello, {this.state.name}</span>
+                                        {`Account & Lists`}
+                                    </a>
+                                </span>
                             )}
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-acct-link" href="/about">Orders</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-acct-link" href="/">Try SubPrime</a>
+                        </li>
+                        <li className="nav-item">
                             
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/cart">
+                            <a className="nav-acct-link" href="/cart">
                                 <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
+                                &nbsp;Cart
                             </a>
                         </li>
                     </ul>
