@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   redirectToHome = () => {
-    return <Redirect to="/" />
+    return <Redirect to={{pathname: "/", state: { fromLogin: true }}} />
   }
 
   redirectToLogin = () => {
@@ -297,22 +297,21 @@ class App extends Component {
       <Router>
         <span>
 
-          {/* BANNER AD */}
-
-          <BannerAd />
-
           {/* SHOW OR HIDE NAVBAR */}
 
-          {window.location.pathname !== "/login" && window.location.pathname !== "/signup" ? (
+          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup") || this.props.fromLogin ? (
+            <span>
+              <BannerAd />
 
-            <Navbar
-              bookSearch={this.state.bookSearch}
-              handleInputChange={this.handleInputChange}
-              searchForBook={this.searchForBook}
-              getAllBooks={this.getAllBooks}
-              logoutUser={this.logoutUser}
-              isLoggedIn={this.state.isLoggedIn}
-            />
+              <Navbar
+                bookSearch={this.state.bookSearch}
+                handleInputChange={this.handleInputChange}
+                searchForBook={this.searchForBook}
+                getAllBooks={this.getAllBooks}
+                logoutUser={this.logoutUser}
+                isLoggedIn={this.state.isLoggedIn}
+              />
+            </span>
           ) : (
               <></>
             )}
