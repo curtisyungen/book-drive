@@ -19,8 +19,8 @@ class SearchSuggestions extends Component {
         }
     }
 
-    chooseSuggestion = (event) => {
-        console.log(event);
+    chooseSuggestion = (suggestion) => {
+        console.log(suggestion);
     }
 
     render() {
@@ -32,7 +32,10 @@ class SearchSuggestions extends Component {
                     this.state.suggestions.map(suggestion => (
                         <div 
                             className="suggestion"
-                            onClick={this.chooseSuggestion}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                this.chooseSuggestion(suggestion.title)
+                            }}
                         >
                             {`${suggestion.title} by ${suggestion.authorFirst} ${suggestion.authorLast}`}
                         </div>

@@ -20,7 +20,7 @@ class Navbar extends Component {
             name: "Sign in",
             email: "",
             showSearchSuggestions: false,
-            suggestions: ["none"],
+            suggestions: [],
         }
     }
 
@@ -30,20 +30,24 @@ class Navbar extends Component {
 
     componentDidUpdate = (prevProps) => {
         if (!prevProps.isLoggedIn && this.props.isLoggedIn && this.state.name === "Sign in") {
-            console.log("Navbar updated");
             this.getUserFromLocalStorage();
         }
     }
 
     getUserFromLocalStorage = () => {
-        console.log(this.state);
-        if (localStorage.getItem("isLoggedIn")) {
+        if (localStorage.getItem("user")) {
             let user = JSON.parse(localStorage.getItem("user"));
             let firstName = user.name.split(" ", 1);
 
             this.setState({
                 name: firstName,
                 email: user.email,
+            });
+        }
+        else {
+            this.setState({
+                name: "Sign in",
+                email: "",
             });
         }
     }
