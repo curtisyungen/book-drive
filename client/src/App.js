@@ -303,10 +303,15 @@ class App extends Component {
 
   sendToCart = (book) => {
 
-  }
+    console.log(this.state.user);
 
-  saveCartToLocalStorage = () => {
-    localStorage.setItem("cart", JSON.stringify(this.state.cart));
+    // API.addBookToCart(book)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //   });
   }
 
   deleteFromCart = (book) => {
