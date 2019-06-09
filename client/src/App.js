@@ -127,6 +127,8 @@ class App extends Component {
         }
         // Otherwise update login status
         else {
+          console.log("Found user", res);
+          
           API.loginUser(email, password)
             .then((res) => {
               console.log("Log in user", res);
