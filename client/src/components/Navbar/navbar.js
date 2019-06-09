@@ -49,19 +49,16 @@ class Navbar extends Component {
     }
 
     getSearchSuggestions = () => {
-        console.log(this.state.bookSearch);
-        
-        if (this.state.bookSearch.length > 0) {
-            API.getSearchSuggestions(this.state.bookSearch)
-                .then((res) => {
-                    console.log("Get Suggestions", res);
-                    this.setState({
-                        suggestions: res.data,
-                    }, () => {
-                        this.showSearchSuggestions();
-                    });
+        API.getSearchSuggestions(this.state.bookSearch)
+            .then((res) => {
+                console.log("Get Suggestions", res);
+                this.setState({
+                    suggestions: res.data,
+                }, () => {
+                    this.showSearchSuggestions();
                 });
-        }
+            });
+        
     }
 
     showSearchSuggestions = () => {
@@ -116,6 +113,7 @@ class Navbar extends Component {
                     >
                         <FontAwesomeIcon icon="search" />
                     </button>
+                    
                     {/* SEARCH SUGGESTIONS */}
 
                     {this.state.showSearchSuggestions ? (

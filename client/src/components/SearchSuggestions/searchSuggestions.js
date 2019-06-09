@@ -16,19 +16,22 @@ class SearchSuggestions extends Component {
     }
 
     render() {
+
+        console.log("Suggestions", this.props.suggestions);
+
         return (
             <div
                 className="searchSuggestions"
             >
-                {this.props.suggestions.length > 0 ? (
-                    this.props.suggestions.map(suggestion => (
+                {/* {this.state.suggestions.length > 0 ? (
+                    this.state.suggestions.map(suggestion => (
                         <div className="suggestion">
                             {suggestion}
                         </div>
                     ))
                 ):( 
                     <></>
-                )}
+                )} */}
             </div>
         )
     }
