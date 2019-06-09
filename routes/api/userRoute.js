@@ -2,7 +2,7 @@ const router = require("express").Router();
 const UserController = require("../../controllers/UserController");
 const controller = new UserController();
 
-router.get("/loginUser", (req, res) => {
+router.get("/loginUser/:user", (req, res) => {
     controller.loginUser(req, res);
 });
 

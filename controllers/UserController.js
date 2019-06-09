@@ -4,9 +4,10 @@ const db = require("../models/index.js");
 class UserController {
 
     loginUser(req, res) {
-        db.Users.findOne({
+        db.Users.findAll({
             where: {
-                password: req.body.password,
+                email: req.params.user.email,
+                password: req.params.user.password,
             }
         })
         .then((user) => {
