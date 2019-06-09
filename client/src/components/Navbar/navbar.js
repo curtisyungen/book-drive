@@ -48,6 +48,13 @@ class Navbar extends Component {
         }
     }
 
+    getLoginStatus = () => {
+        if (localStorage.getItem("isLoggedIn")) {
+            return localStorage.getItem("isLoggedIn");
+        }
+        return false;
+    }
+
     handleInputChange = (event) => {
         const { name, value } = event.target;
 
@@ -163,7 +170,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarAcctMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            {this.props.isLoggedIn ? (
+                            {this.getLoginStatus() ? (
                                 <span>
                                     {/* LOGGED IN: ACCOUNT & LISTS POPUP */}
 
