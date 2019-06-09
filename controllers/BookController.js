@@ -142,12 +142,10 @@ class BookController {
     checkBookAvail(req, res) {
         db.Books.findAll({
             where: {
-                Title: req.body.title,
-                authorFirst: req.body.authorFirst,
-                authorLast: req.body.authorLast,
+                Title: req.body.title
             }
         })
-        .then(book => {
+        .then((book) => {
             res.json(book);
         });
     }
@@ -156,7 +154,7 @@ class BookController {
         db.Books.update(
             {avail: "hold"}, 
             {where: {
-                Title: req.body.title,
+                title: req.body.title,
                 authorFirst: req.body.authorFirst,
                 authorLast: req.body.authorLast,
             }})
@@ -173,7 +171,7 @@ class BookController {
                 authorFirst: req.body.authorFirst,
                 authorLast: req.body.authorLast,
             }})
-            .then(book => {
+            .then((book) => {
                 res.json(book);
             });
     }
