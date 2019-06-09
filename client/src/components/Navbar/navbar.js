@@ -22,20 +22,7 @@ class Navbar extends Component {
     }
 
     componentDidMount = () => {
-        this.getLoginStatus();
-    }
-
-    componentDidUpdate = (prevProps) => {
-        if (prevProps.isLoggedIn !== this.props.isLoggedIn) {
-            this.getLoginStatus();
-        }
-    }
-
-    getLoginStatus = () => {
-        let isLoggedIn = localStorage.getItem("isLoggedIn");
-        this.setState({
-            isLoggedIn: isLoggedIn,
-        });
+        console.log(this.props);
     }
     
     handleInputChange = (event) => {
@@ -129,7 +116,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href="/">Home</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/about">About</a>
@@ -141,7 +128,7 @@ class Navbar extends Component {
                             <a className="nav-link" href="/contact">Contact</a>
                         </li>
                         <li className="nav-item">
-                            {this.state.isLoggedIn ? (
+                            {this.props.isLoggedIn ? (
                                 <div className="nav-link logout" onClick={this.props.logoutUser}>Logout</div>
                             ) : (
                                 <a className="nav-link" href="/login">Login</a>

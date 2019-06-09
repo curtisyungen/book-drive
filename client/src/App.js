@@ -116,15 +116,37 @@ class App extends Component {
   }
 
   loginUser = (email, password) => {
-    API.loginUser(email, password)
+
+        // Check to see if user email exists in database
+    API.findExistingUser(email)
       .then((res) => {
-        console.log(res);
-        this.setState({
-          isLoggedIn: true,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+
+        // If email not found in database, redirect to Sign Up page
+        if (res.data.length === 0) {
+          alert("No user found with this email address.");
+        }
+        // Otherwise update login status
+        else {
+          API.loginUser(email, password)
+            .then((res) => {
+              console.log("Log in user", res);
+      
+              if (res.data.length === 0) {
+                alert("Incorrect password.");
+              }
+              else {
+                alert("Logged in successfully!");
+
+                localStorage.setItem("isLoggedIn", true);
+
+                this.setState({
+                  isLoggedIn: true,
+                });
+
+                this.setRedirectToHome();
+              }
+            });
+        }
       });
   }
 
