@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Popup from "reactjs-popup";
 import SearchSuggestions from "../SearchSuggestions/searchSuggestions";
 import API from "../../utils/API";
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -45,7 +46,7 @@ class Navbar extends Component {
             });
         }
     }
-    
+
     handleInputChange = (event) => {
         const { name, value } = event.target;
 
@@ -65,7 +66,7 @@ class Navbar extends Component {
                     this.showSearchSuggestions();
                 });
             });
-        
+
     }
 
     showSearchSuggestions = () => {
@@ -120,16 +121,16 @@ class Navbar extends Component {
                     >
                         <FontAwesomeIcon icon="search" />
                     </button>
-                    
+
                     {/* SEARCH SUGGESTIONS */}
 
                     {this.state.showSearchSuggestions ? (
-                        <SearchSuggestions 
+                        <SearchSuggestions
                             suggestions={this.state.suggestions}
                         />
                     ) : (
-                        <></>
-                    )}
+                            <></>
+                        )}
                 </form>
 
                 {/* NAV MENU */}
@@ -163,19 +164,56 @@ class Navbar extends Component {
                         <li className="nav-item">
                             {this.state.isLoggedIn ? (
                                 <span>
-                                    <a className="nav-acct-link accountLink" href="/">
-                                        <span className="helloUser">Hello, {this.state.name}</span>
-                                        {`Account & Lists`}
-                                    </a>
+                                    {/* LOGGED IN: ACCOUNT & LISTS POPUP */}
+
+                                    <Popup
+                                        trigger={
+                                            <a className="nav-acct-link accountLink" href="/">
+                                                <span className="helloUser">Hello, {this.state.name}</span>
+                                                {`Account & Lists`}
+                                            </a>}
+                                        on="hover"
+                                        position="bottom right"
+                                        closeOnDocumentClick
+                                        className="popup"
+                                    >
+                                        <div
+                                            className="logoutBtn"
+                                            onClick={this.props.logoutUser}
+                                        >
+                                            Logout
+                                        </div>
+                                    </Popup>
                                 </span>
                             ) : (
                                 <span>
-                                    <a className="nav-acct-link accountLink" href="/login">
-                                        <span className="helloUser">Hello, {this.state.name}</span>
-                                        {`Account & Lists`}
-                                    </a>
+                                    {/* LOGGED OUT: ACCOUNT & LISTS POPUP */ }
+
+                                    <Popup
+                                        trigger={
+                                            <a className="nav-acct-link accountLink" href="/login">
+                                                <span className="helloUser">Hello, {this.state.name}</span>
+                                                {`Account & Lists`}
+                                            </a>}
+                                        on="hover"
+                                        position="bottom right"
+                                        closeOnDocumentClick
+                                        className="popup"
+                                    >
+                                        <button
+                                            className="btn btn-warning btn-sm popupLoginBtn"
+                                        >
+                                            <a className="" href="/login">Sign in</a>
+                                        </button>
+
+                                        <div className="popupNewCustomer">
+                                            New customer?
+                                            <a href="/signup">Start here.</a>
+                                        </div>
+                                        
+                                    </Popup>
                                 </span>
-                            )}
+                        )}
                         </li>
                         <li className="nav-item">
                             <a className="nav-acct-link" href="/about">Orders</a>

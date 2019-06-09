@@ -118,6 +118,41 @@
     text-decoration: none;
 }
 
+.popup {
+    text-align: center;
+}
+
+.popupNewCustomer {
+    color: rgb(44, 44, 44);
+    font-family: "Arial";
+    font-size: 10px;
+    margin-top: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+.popupLoginBtn {
+    color: black;
+    margin-left: 18px;
+    margin-top: 8px;
+    text-align: center;
+    width: 150px;
+}
+
+.popupLoginBtn a{
+    color: black;
+}
+
+.popupLoginBtn:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.popupLoginBtn a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 .searchBox {
     border: 1px solid gray;
     border-right: none;
