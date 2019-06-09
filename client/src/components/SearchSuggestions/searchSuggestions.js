@@ -34,7 +34,7 @@ class SearchSuggestions extends Component {
                             className="suggestion"
                             onClick={this.chooseSuggestion}
                         >
-                            {suggestion.title}
+                            {`${suggestion.title} by ${suggestion.authorFirst} ${suggestion.authorLast}`}
                         </div>
                     ))
                 ):( 
