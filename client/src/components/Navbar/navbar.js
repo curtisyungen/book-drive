@@ -98,6 +98,9 @@ class Navbar extends Component {
     chooseSearchSuggestion = (suggestion) => {
         this.setState({
             bookSearch: suggestion,
+        }, () => {
+            this.props.searchForBook(suggestion);
+            this.hideSearchSuggestions();
         });
     }
 
