@@ -32,6 +32,8 @@ class Home extends Component {
             userSearch: this.props.userSearch,
             sortOption: "",
         });
+
+        this.props.updateParentState();
     }
 
     componentDidUpdate = (prevProps) => {

@@ -41,15 +41,6 @@ class App extends Component {
     this.getAllBooks();
   }
 
-  componentDidUpdate = (prevState) => {
-    if (prevState.redirectToHome || prevState.redirectToLogin) {
-      this.setState({
-        redirectToHome: false,
-        redirectToLogin: false,
-      });
-    }
-  }
-
   // REDIRECT HANDLING
   // ========================================= 
 
@@ -66,11 +57,18 @@ class App extends Component {
   }
 
   redirectToHome = () => {
-    return <span><Redirect to="/" /> <Navbar /></span>
+    return <Redirect to="/" />
   }
 
   redirectToLogin = () => {
     return <Redirect to="/login" />
+  }
+
+  updateParentState = () => {
+    this.setState({
+      redirectToHome: false,
+      redirectToLogin: false,
+    });
   }
 
   // USER HANDLING
@@ -354,6 +352,7 @@ class App extends Component {
                 getSubject={this.getSubject}
                 userSearch={this.state.userSearch}
                 sendToCart={this.sendToCart}
+                updateParentState={this.updateParentState}
               />
             } />
             <Route exact path="/about" component={About} />
