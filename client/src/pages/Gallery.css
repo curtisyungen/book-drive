@@ -1,7 +1,16 @@
 .galleryImg {
     border: 1px solid lightgray;
-    height: 200px;
-    margin: 50px auto;
-    max-width: 600px;
+    height: 400px;
     /* width: 600px; */
+}
+
+.caption {
+    margin: 0;
+    padding: 0;
+}
+
+.cardoneBooks,
+.daringGreatly {
+    display: inline-block;
+    position: absolute;
 }

@@ -303,7 +303,7 @@ class App extends Component {
 
   sendToCart = (book) => {
 
-    console.log("App user", this.state.user);
+    console.log("App, book", book);
 
     API.checkBookAvail(book)
       .then((res) => {
@@ -322,10 +322,10 @@ class App extends Component {
   }
 
   putBookOnHold = (book) => {
-    API.putBookOnHold(book)
-      .then((res) => {
-        console.log(res);
-      });
+    // API.putBookOnHold(book)
+    //   .then((res) => {
+    //     console.log(res);
+    //   });
   }
 
   deleteFromCart = (book) => {
