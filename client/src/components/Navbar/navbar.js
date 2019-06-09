@@ -163,7 +163,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarAcctMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            {this.state.isLoggedIn ? (
+                            {this.props.isLoggedIn ? (
                                 <span>
                                     {/* LOGGED IN: ACCOUNT & LISTS POPUP */}
 
