@@ -31,6 +31,7 @@ class Navbar extends Component {
     componentDidUpdate = (prevProps) => {
         if (!prevProps.isLoggedIn && this.props.isLoggedIn && this.state.name === "Sign in") {
             this.getUserFromLocalStorage();
+            this.getLoginStatus();
         }
     }
 
@@ -138,6 +139,7 @@ class Navbar extends Component {
                         onClick={(event) => {
                             event.preventDefault();
                             this.props.searchForBook(this.state.bookSearch);
+                            this.hideSearchSuggestions();
                         }}
                     >
                         <FontAwesomeIcon icon="search" />
@@ -184,7 +186,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarAcctMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            {!this.getLoginStatus() ? (
+                            {this.getLoginStatus() ? (
                                 <span>
                                     {/* LOGGED IN: ACCOUNT & LISTS POPUP */}
 
