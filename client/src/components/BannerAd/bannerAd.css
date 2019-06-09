@@ -9,6 +9,7 @@
 
 .bannerPortfolioAd {
     height: 55px;
+    overflow: hidden;
     padding-left: 140px;
     padding-top: 12px;
 }
