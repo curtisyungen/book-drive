@@ -127,9 +127,7 @@ class App extends Component {
         }
         // Otherwise update login status
         else {
-          console.log(res.data[0].password, password, res.data.password === password);
-
-          if (res.data.password === password) {
+          if (res.data[0].password === password) {
             alert("Logged in successfully!");
 
                 localStorage.setItem("isLoggedIn", true);
