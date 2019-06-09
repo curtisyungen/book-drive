@@ -28,6 +28,7 @@ class App extends Component {
       cart: [],
       redirectToHome: false,
       redirectToLogin: false,
+      redirectToSignup: false,
     }
   }
 
@@ -56,12 +57,22 @@ class App extends Component {
     });
   }
 
+  setRedirectToSignUp = () => {
+    this.setState({
+      redirectToSignUp: true,
+    });
+  }
+
   redirectToHome = () => {
     return <Redirect to="/" />
   }
 
   redirectToLogin = () => {
     return <Redirect to="/login" />
+  }
+
+  redirectToSignUp = () => {
+    return <Redirect to="/signup" />
   }
 
   updateParentState = () => {
@@ -123,6 +134,8 @@ class App extends Component {
         // If email not found in database, redirect to Sign Up page
         if (res.data.length === 0) {
           alert("No user found with this email address.");
+
+          this.setRedirectToSignUp();
         }
         // Otherwise update login status
         else {
