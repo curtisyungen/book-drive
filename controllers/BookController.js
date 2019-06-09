@@ -17,17 +17,17 @@ class BookController {
                 [Op.or]: [
                     {
                         Title: {
-                            [Op.like]: '%' + req.body.bookSearch + '%'
+                            [Op.like]: '%' + req.params.bookSearch + '%'
                         }
                     },
                     {
                         authorFirst: {
-                            [Op.like]: '%' + req.body.bookSearch + '%'
+                            [Op.like]: '%' + req.params.bookSearch + '%'
                         }
                     },
                     {
                         authorLast: {
-                            [Op.like]: '%' + req.body.bookSearch + '%'
+                            [Op.like]: '%' + req.params.bookSearch + '%'
                         }
                     }
                 ]
