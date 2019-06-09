@@ -30,9 +30,8 @@ class Navbar extends Component {
     }
 
     componentDidUpdate = (prevProps) => {
-        if (!prevProps.isLoggedIn && this.props.isLoggedIn) {
+        if (prevProps.isLoggedIn !== this.props.isLoggedIn && !this.state.isLoggedIn) {
             this.getUserFromLocalStorage();
-            this.getLoginStatus();
         }
     }
 
