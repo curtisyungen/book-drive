@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import BannerAd from "./components/BannerAd/bannerAd";
 import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -295,6 +296,10 @@ class App extends Component {
     return (
       <Router>
         <span>
+
+          {/* BANNER AD */}
+
+          <BannerAd />
 
           {/* SHOW OR HIDE NAVBAR */}
 

@@ -138,7 +138,7 @@ class Navbar extends Component {
                         <li className="nav-item">
                             {this.props.isLoggedIn ? (
                                 <span>
-                                    <a className=" nav-acct-link" href="/login">
+                                    <a className="nav-acct-link accountLink" href="/login">
                                         <span className="helloUser">Hello, {this.state.name}</span>
                                         {`Account & Lists`}
                                     </a>

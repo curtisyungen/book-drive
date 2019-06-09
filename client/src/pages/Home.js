@@ -10,29 +10,7 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            books: [
-                // {
-                //     title: "Test",
-                //     author: "Test", 
-                //     price: "0.00",
-                //     avail: "0",
-                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                // },
-                // {
-                //     title: "Test",
-                //     author: "Test", 
-                //     price: "0.00",
-                //     avail: "0",
-                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                // },
-                // {
-                //     title: "Test",
-                //     author: "Test", 
-                //     price: "0.00",
-                //     avail: "1",
-                //     imageURL: "https://images-na.ssl-images-amazon.com/images/I/81SOM0kcgdL.jpg",
-                // }
-            ],
+            books: [],
             message: "Loading...",
             activeFilter: "books",
             userSearch: "",
