@@ -6,8 +6,8 @@ class UserController {
     loginUser(req, res) {
         db.Users.findAll({
             where: {
-                email: req.params.user.email,
-                password: req.params.user.password,
+                email: req.body.email,
+                password: req.body.password,
             }
         })
         .then((user) => {
