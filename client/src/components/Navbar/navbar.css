@@ -22,10 +22,6 @@
     margin-top: -5px;
 }
 
-.logout {
-    cursor: pointer;
-}
-
 .navbar {
     height: 100px;
 }
@@ -185,6 +181,11 @@
 
 .shoppingCart {
     margin-top: -8px;
+}
+
+.signoutBtn {
+    cursor: pointer;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 1200px) {

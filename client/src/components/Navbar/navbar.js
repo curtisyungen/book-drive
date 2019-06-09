@@ -116,7 +116,7 @@ class Navbar extends Component {
                         type="text"
                         name="bookSearch"
                         onChange={this.handleInputChange}
-                        onBlur={this.hideSearchSuggestions}
+                        // onBlur={this.hideSearchSuggestions}
                         onFocus={this.handleInputChange}
                         value={this.bookSearch}
                     />
@@ -186,10 +186,10 @@ class Navbar extends Component {
                                         className="popup"
                                     >
                                         <div
-                                            className="logoutBtn"
+                                            className="signoutBtn"
                                             onClick={this.props.logoutUser}
                                         >
-                                            Logout
+                                            Sign out
                                         </div>
                                     </Popup>
                                 </span>
@@ -224,7 +224,7 @@ class Navbar extends Component {
                         )}
                         </li>
                         <li className="nav-item">
-                            <a className="nav-acct-link" href="/about">Orders</a>
+                            <a className="nav-acct-link" href="/">Orders</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-acct-link" href="/">Try SubPrime</a>
