@@ -11,6 +11,18 @@ class SearchSuggestions extends Component {
         }
     }
 
+    componentDidMount = () => {
+
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.suggestions !== this.props.suggestions) {
+            this.setState({
+                suggestions: this.props.suggestions,
+            });
+        }
+    }
+
     render() {
         return (
             <div
