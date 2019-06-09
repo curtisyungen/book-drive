@@ -17,14 +17,20 @@ class Navbar extends Component {
             bookSearch: "",
             isLoggedIn: false,
             name: "Sign in",
+            email: "",
             showSearchSuggestions: false,
             suggestions: ["none"],
         }
     }
 
     componentDidMount = () => {
-        console.log("Navbar props", this.props);
         this.getUserFromLocalStorage();
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (!prevProps.isLoggedIn && this.props.isLoggedIn && this.state.name === "Sign in") {
+            this.getUserFromLocalStorage();
+        }
     }
 
     getUserFromLocalStorage = () => {
