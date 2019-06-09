@@ -33,8 +33,18 @@ class BookController {
                 ]
             }
         })
-        .then((suggestions) => {
-            res.json(suggestions);
+        .then(suggestions => {
+
+            let topTen = suggestions.map(book => {
+                return {
+                    id: book.id,
+                    title: book.title,
+                    authorFirst: book.authorFirst,
+                    authorLast: book.authorLast,
+                }
+            });
+
+            res.json(topTen);
         });
     }
 
