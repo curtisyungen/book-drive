@@ -31,7 +31,7 @@ class SearchSuggestions extends Component {
                 {this.state.suggestions.length > 0 ? (
                     this.state.suggestions.map(suggestion => (
                         <div className="suggestion">
-                            {suggestion}
+                            {suggestion.title}
                         </div>
                     ))
                 ):( 
