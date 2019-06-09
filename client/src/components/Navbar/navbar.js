@@ -43,13 +43,13 @@ class Navbar extends Component {
 
         this.setState({
             [name]: value
+        }, () => {
+            this.getSearchSuggestions(value);
         });
-
-        this.getSearchSuggestions();
     }
 
-    getSearchSuggestions = () => {
-        API.getSearchSuggestions(this.state.bookSearch)
+    getSearchSuggestions = (bookSearch) => {
+        API.getSearchSuggestions(bookSearch)
             .then((res) => {
                 console.log("Get Suggestions", res);
                 this.setState({
