@@ -35,7 +35,7 @@ class BookController {
         })
         .then(suggestions => {
 
-            let topTen = suggestions.map(book => {
+            let topTen = suggestions.data.slice(0, 10).map(book => {
                 return {
                     id: book.id,
                     title: book.title,
