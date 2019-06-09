@@ -1,10 +1,10 @@
 const db = require("../models/index.js");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 class UserController {
 
     loginUser(req, res) {
-        db.Users.findOne({
+        db.Users.findAll({
             where: {
                 email: req.body.email,
                 password: req.body.password,
