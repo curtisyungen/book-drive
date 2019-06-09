@@ -128,28 +128,29 @@ class App extends Component {
         // Otherwise update login status
         else {
           console.log("Found user", res);
-          
-          API.loginUser(email, password)
-            .then((res) => {
-              console.log("Log in user", res);
-      
-              if (res.data.length === 0) {
-                alert("Incorrect password.");
-              }
-              else {
-                alert("Logged in successfully!");
-
-                localStorage.setItem("isLoggedIn", true);
-
-                this.setState({
-                  isLoggedIn: true,
-                });
-
-                this.setRedirectToHome();
-              }
-            });
         }
       });
+
+      API.loginUser(email, password)
+        .then((res) => {
+          console.log("Log in user", res);
+
+          if (res.data.length === 0) {
+            alert("Incorrect password.");
+          }
+          else {
+            alert("Logged in successfully!");
+
+            localStorage.setItem("isLoggedIn", true);
+
+            this.setState({
+              isLoggedIn: true,
+            });
+
+            this.setRedirectToHome();
+          }
+      });
+    }
   }
 
   logoutUser = () => {
