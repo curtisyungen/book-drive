@@ -35,7 +35,7 @@ class Navbar extends Component {
     }
 
     getUserFromLocalStorage = () => {
-        if (localStorage.getItem("user")) {
+        if (localStorage.getItem("user") !== null) {
             let user = JSON.parse(localStorage.getItem("user"));
             let firstName = user.name.split(" ", 1);
 
