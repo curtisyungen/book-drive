@@ -7,18 +7,11 @@ class SearchSuggestions extends Component {
         super(props);
 
         this.state = {
-
+            suggestions: [],
         }
     }
 
-    componentDidMount = () => {
-        console.log(this.props);
-    }
-
     render() {
-
-        console.log("Suggestions", this.props.suggestions);
-
         return (
             <div
                 className="searchSuggestions"
