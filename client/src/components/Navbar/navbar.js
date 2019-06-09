@@ -95,6 +95,12 @@ class Navbar extends Component {
         });
     }
 
+    chooseSearchSuggestion = (suggestion) => {
+        this.setState({
+            bookSearch: suggestion,
+        });
+    }
+
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -139,6 +145,7 @@ class Navbar extends Component {
                     {this.state.showSearchSuggestions ? (
                         <SearchSuggestions
                             suggestions={this.state.suggestions}
+                            chooseSearchSuggestion={this.chooseSearchSuggestion}
                         />
                     ) : (
                             <></>
@@ -174,7 +181,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarAcctMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            {this.getLoginStatus() ? (
+                            {!this.getLoginStatus() ? (
                                 <span>
                                     {/* LOGGED IN: ACCOUNT & LISTS POPUP */}
 

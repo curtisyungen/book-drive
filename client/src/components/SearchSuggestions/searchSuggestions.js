@@ -19,10 +19,6 @@ class SearchSuggestions extends Component {
         }
     }
 
-    chooseSuggestion = (suggestion) => {
-        console.log(suggestion);
-    }
-
     render() {
         return (
             <div
@@ -34,7 +30,7 @@ class SearchSuggestions extends Component {
                             className="suggestion"
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.chooseSuggestion(suggestion.title)
+                                this.props.chooseSearchSuggestion(suggestion.title)
                             }}
                         >
                             {`${suggestion.title} by ${suggestion.authorFirst} ${suggestion.authorLast}`}
