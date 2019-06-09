@@ -66,7 +66,8 @@ class App extends Component {
   }
 
   redirectToHome = () => {
-    return <Redirect to={{pathname: "/", state: { fromLogin: true }}} />
+    this.forceUpdate();
+    return <Redirect to="/" />
   }
 
   redirectToLogin = () => {
@@ -296,10 +297,24 @@ class App extends Component {
     return (
       <Router>
         <span>
+          
+          {/* HANDLE PAGE REDIRECTS */}
+
+          {this.state.redirectToHome ? (
+            this.redirectToHome()
+          ) : (
+            <></>
+          )}
+
+          {this.state.redirectToLogin ? (
+            this.redirectToLogin()
+          ) : (
+            <></>
+          )}
 
           {/* SHOW OR HIDE NAVBAR */}
 
-          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup") || this.props.fromLogin ? (
+          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup") ? (
             <span>
               <BannerAd />
 
@@ -312,20 +327,6 @@ class App extends Component {
                 isLoggedIn={this.state.isLoggedIn}
               />
             </span>
-          ) : (
-              <></>
-            )}
-
-          {/* HANDLE PAGE REDIRECTS */}
-
-          {this.state.redirectToHome ? (
-            this.redirectToHome()
-          ) : (
-              <></>
-            )}
-
-          {this.state.redirectToLogin ? (
-            this.redirectToLogin()
           ) : (
               <></>
             )}
