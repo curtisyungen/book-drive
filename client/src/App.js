@@ -66,7 +66,6 @@ class App extends Component {
   }
 
   redirectToHome = () => {
-    this.forceUpdate();
     return <Redirect to="/" />
   }
 

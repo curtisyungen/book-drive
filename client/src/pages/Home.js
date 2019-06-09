@@ -32,6 +32,8 @@ class Home extends Component {
             userSearch: this.props.userSearch,
             sortOption: "",
         });
+
+        console.log("Loaded from Login");
     }
 
     componentDidUpdate = (prevProps) => {
