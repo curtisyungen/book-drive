@@ -127,7 +127,7 @@ class App extends Component {
         }
         // Otherwise update login status
         else {
-          console.log(res.data.password, password, res.data.password === password);
+          console.log(res.data[0].password, password, res.data.password === password);
 
           if (res.data.password === password) {
             alert("Logged in successfully!");
