@@ -43,23 +43,24 @@ class Navbar extends Component {
 
         this.setState({
             [name]: value
-        }, () => {
-            if (this.state.bookSearch !== "" && this.state.bookSearch.length > 0) {
-                this.getSearchSuggestions(); 
-            }
         });
+
+        this.getSearchSuggestions();
     }
 
     getSearchSuggestions = () => {
-        API.getSearchSuggestions(this.state.bookSearch)
-            .then((res) => {
-                console.log("Get Suggestions", res);
-                this.setState({
-                    suggestions: res.data,
-                }, () => {
-                    this.showSearchSuggestions();
+
+        if (this.state.bookSearch !== "" && this.state.bookSearch !== null && this.state.bookSearch.length > 0) {
+            API.getSearchSuggestions(this.state.bookSearch)
+                .then((res) => {
+                    console.log("Get Suggestions", res);
+                    this.setState({
+                        suggestions: res.data,
+                    }, () => {
+                        this.showSearchSuggestions();
+                    });
                 });
-            });
+        }
     }
 
     showSearchSuggestions = () => {
