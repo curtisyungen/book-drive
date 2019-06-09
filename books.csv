@@ -86,10 +86,10 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 85,Bold,Peter,Diamandis,5,avail,hard,,"https://images-na.ssl-images-amazon.com/images/I/51nkVaXEUSL._SX326_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 86,What Makes Your Brain happy and Why You Should Do the Opposite,David,DiSalvo,5,avail,soft,,https://images-na.ssl-images-amazon.com/images/I/51tOUsiMHvL._AC_SY400_.jpg,psychology,6/2/2019 21:12,6/2/2019 21:12
 87,The Way of the Seal,Mark,Divine,5,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/91oEMJ6VcfL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
-88,The Economics Book,DK Publishing,,8,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/91mBf93RgkL.jpg,"business, money",6/2/2019 21:12,6/2/2019 21:12
+88,The Economics Book,DK Publishing,,8,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/91mBf93RgkL.jpg,economics,6/2/2019 21:12,6/2/2019 21:12
 89,The Psychology Book,DK Publishing,,8,avail,hard,,"https://images-na.ssl-images-amazon.com/images/I/61roQVDsneL._SX258_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 90,Managing Oneself,Peter,Drucker,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51CtzJSCz8L._SX344_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
-91,Freakonomics,Stephen,Dubner,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51gYI2oq6KL._SX328_BO1,204,203,200_.jpg","business, money",6/2/2019 21:12,6/2/2019 21:12
+91,Freakonomics,Stephen,Dubner,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51gYI2oq6KL._SX328_BO1,204,203,200_.jpg",business,6/2/2019 21:12,6/2/2019 21:12
 92,The Power of Habit,Charles,Duhigg,5,avail,soft,,https://images-na.ssl-images-amazon.com/images/I/819ZixpQzUL.jpg,"psychology, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 93,"Smarter, Faster, Better",Charles,Duhigg,5,avail,soft,,https://images-na.ssl-images-amazon.com/images/I/51B2dMwPJ5L.jpg,"psychology, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 94,The Greatest Minds and Ideas of All Time,William,Durant,5,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/51yKACO8adL.jpg,"philosophy, history",6/2/2019 21:12,6/2/2019 21:12
@@ -108,13 +108,13 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 107,Controlling People,Patricia,Evans,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51ohSJzNKKL._SX336_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 108,Hooked,Nir,Eyal,5,unavail,hard,,https://images-na.ssl-images-amazon.com/images/I/71iTueU1pBL.jpg,"psychology, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 109,Engineer Your Own Success,Anthony,Fasano,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51HXJjpf-ML._SX310_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
-110,Job + Real Estate = Wealth,Francis,Fernando,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/41VYgmtO8gL._SX326_BO1,204,203,200_.jpg","real estate, money, selfhelp",6/2/2019 21:12,6/2/2019 21:12
+110,Job + Real Estate = Wealth,Francis,Fernando,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/41VYgmtO8gL._SX326_BO1,204,203,200_.jpg","real estate, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 111,Who's Got Your Back,Keith,Ferrazzi,5,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/812%2BEpSKyPL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 112,Never Eat Alone,Keith,Ferrazzi,5,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/81qODNqTJ5L.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 113,The 4-Hour Body,Tim,Ferris,8,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/714lEQaBT7L.jpg,"health, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 114,The 4-Hour Work Week,Tim,Ferris,8,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/81qW97ndkvL.jpg,selfhelp,6/2/2019 21:12,6/2/2019 21:12
 115,Tools of Titans,Tim,Ferris,8,avail,hard,,https://images-na.ssl-images-amazon.com/images/I/71ljsFrHSwL.jpg,"business, selfhelp",6/2/2019 21:12,6/2/2019 21:12
-116,How to Develop a Six Figure Income in Real Estate,Mike,Ferry,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51TME6nnw3L._SX325_BO1,204,203,200_.jpg","real estate, selfhelp, money",6/2/2019 21:12,6/2/2019 21:12
+116,How to Develop a Six Figure Income in Real Estate,Mike,Ferry,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51TME6nnw3L._SX325_BO1,204,203,200_.jpg","real estate, selfhelp",6/2/2019 21:12,6/2/2019 21:12
 117,Delusions of Gender,Cordelia,Fine,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/41Z7CC33yiL._SX329_BO1,204,203,200_.jpg",psychology,6/2/2019 21:12,6/2/2019 21:12
 118,Beat the Crowd,Kenneth,Fisher,5,avail,hard,,"https://images-na.ssl-images-amazon.com/images/I/510HuYZCLAL._SX333_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 119,Diet Cults,Matt,Fitzgerald,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/41D%2BfOdH59L._SX331_BO1,204,203,200_.jpg",health,6/2/2019 21:12,6/2/2019 21:12
@@ -456,7 +456,7 @@ id,Title,authorFirst,authorLast,Price,Avail,Cover,Condition,ImageURL,Tags,create
 455,Cracking the Coding Interview,Gayle,McDowell,0,unavail,soft,great,"https://images-na.ssl-images-amazon.com/images/I/51l5XzLln%2BL._SX348_BO1,204,203,200_.jpg",programming,6/2/2019 21:12,6/2/2019 21:12
 456,Learning React,Alex,Banks,0,unavail,soft,great,"https://images-na.ssl-images-amazon.com/images/I/51FHuacxYjL._SX379_BO1,204,203,200_.jpg",programming,6/2/2019 21:12,6/2/2019 21:12
 457,"Learning PHP, MySQL, & Javascript",Robin,Nixon,0,unavail,soft,great,"https://images-na.ssl-images-amazon.com/images/I/51mk%2B9J-dbL._SX379_BO1,204,203,200_.jpg",programming,6/2/2019 21:12,6/2/2019 21:12
-458,Relationship Marketing,Regis,McKenna,5,avail,soft,,https://images-na.ssl-images-amazon.com/images/I/91xwcH%2BzULL.jpg,"social, selfhelp, marketing",6/2/2019 21:12,6/2/2019 21:12
+458,Relationship Marketing,Regis,McKenna,5,avail,soft,,https://images-na.ssl-images-amazon.com/images/I/91xwcH%2BzULL.jpg,"selfhelp, marketing",6/2/2019 21:12,6/2/2019 21:12
 459,Insider's Guide to Passing the Washington Real Estate Exam,Rockwell,Publishing,10,avail,soft,great,"https://images-na.ssl-images-amazon.com/images/I/513S2Och5yL._SX384_BO1,204,203,200_.jpg",real estate,6/2/2019 21:12,6/2/2019 21:12
 460,How to Read a Book,Mortimer,Adler,5,avail,soft,,"https://images-na.ssl-images-amazon.com/images/I/51crijZbWGL._SX320_BO1,204,203,200_.jpg",selfhelp,6/2/2019 21:12,6/2/2019 21:12
 461,How to Make Yourself Miserable,Dan,Greenburg,5,avail,soft,,https://images-na.ssl-images-amazon.com/images/I/41doMUrin3L._AC_SY400_.jpg,humor,6/2/2019 21:12,6/2/2019 21:12
