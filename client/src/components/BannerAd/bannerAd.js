@@ -6,7 +6,7 @@ class BannerAd extends Component {
     render() {
         return (
             <div className="bannerPortfolioAd">
-                <a className="portfolioLink" href="https://curtisyungen.github.io/Portfolio" target="_blank">
+                <a className="portfolioLink" href="https://curtisyungen.github.io/Portfolio" target="_blank" rel="noopener noreferrer">
                     <strong>HIRE CURTIS YUNGEN,</strong> WEB DEVELOPER.
                 </a>
 

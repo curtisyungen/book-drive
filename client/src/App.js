@@ -116,7 +116,7 @@ class App extends Component {
 
   loginUser = (email, password) => {
 
-        // Check to see if user email exists in database
+    // Check to see if user email exists in database
     API.findExistingUser(email)
       .then((res) => {
 
@@ -129,12 +129,22 @@ class App extends Component {
           if (res.data[0].password === password) {
             alert("Logged in successfully!");
 
+                // Save login status in Local Storage
                 localStorage.setItem("isLoggedIn", true);
+
+                let userData = {
+                  name: res.data[0].name,
+                  email: res.data[0].email,
+                }
+
+                // Save user data in Local Storage
+                localStorage.setItem("user", JSON.stringify(userData));
 
                 this.setState({
                   isLoggedIn: true,
                 });
 
+                // Redirect to Home Page
                 this.setRedirectToHome();
           }
           else {

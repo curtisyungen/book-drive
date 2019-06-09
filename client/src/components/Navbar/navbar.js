@@ -23,7 +23,19 @@ class Navbar extends Component {
     }
 
     componentDidMount = () => {
-        console.log(this.props);
+        console.log("Navbar props", this.props);
+        this.getUserFromLocalStorage();
+    }
+
+    getUserFromLocalStorage = () => {
+        if (localStorage.getItem("isLoggedIn") === true) {
+            let user = JSON.parse(localStorage.getItem("user"));
+
+            this.setState({
+                name: user.name,
+                email: user.email,
+            });
+        }
     }
     
     handleInputChange = (event) => {
@@ -145,7 +157,7 @@ class Navbar extends Component {
                                 </span>
                             ) : (
                                 <span>
-                                    <a className="nav-acct-link" href="/login">
+                                    <a className="nav-acct-link accountLink" href="/login">
                                         <span className="helloUser">Hello, {this.state.name}</span>
                                         {`Account & Lists`}
                                     </a>
