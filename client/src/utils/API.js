@@ -43,11 +43,9 @@ export default {
         let user = {
             email: email, 
             password: password,
-        }
+        };
 
-        console.log("API user", user);
-
-        return axios.get("/api/users/loginUser", user);
+        return axios.get("/api/users/loginUser/" + user);
     },
     
     createNewUser: function(name, email, password) {
@@ -55,7 +53,7 @@ export default {
             name: name,
             email: email,
             password: password,
-        }
+        };
 
         return axios.post("/api/users/createNewUser", user);
     },
@@ -65,10 +63,10 @@ export default {
     },
 
     addBookToCart: function(book) {
-        return axios.put("/api/books/addBookToCart/", book);
+        return axios.put("/api/books/addBookToCart", book);
     },
 
     deleteBookFromCart: function(book) {
-        return axios.put("/api/books/deleteBookFromCart/", book);
+        return axios.put("/api/books/deleteBookFromCart", book);
     },
 };

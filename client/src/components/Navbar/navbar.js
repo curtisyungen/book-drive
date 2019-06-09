@@ -3,10 +3,10 @@ import SearchSuggestions from "../SearchSuggestions/searchSuggestions";
 import API from "../../utils/API";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import "./navbar.css";
 
-library.add(faSearch);
+library.add(faSearch, faShoppingCart);
 
 class Navbar extends Component {
 
@@ -113,7 +113,7 @@ class Navbar extends Component {
 
                 {/* NAV MENU */}
 
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse" id="navbarMenu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link" href="/">Home</a>
@@ -136,7 +136,9 @@ class Navbar extends Component {
                             
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/cart">Cart</a>
+                            <a className="nav-link" href="/cart">
+                                <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
+                            </a>
                         </li>
                     </ul>
                 </div>

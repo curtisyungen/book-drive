@@ -8,10 +8,21 @@
     cursor: pointer;
 }
 
+.navbar {
+    height: 100px;
+}
+
 .navbar-nav {
     background: none;
     position: absolute;
     right: 200px;
+}
+
+#navbarMenu {
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 700;
+    margin: 70px 0px 5px 0px;
 }
 
 .searchBox {
@@ -42,4 +53,8 @@
 .searchForm {
     margin: 10px 100px;
     width: 1000px;
+}
+
+.shoppingCart {
+    margin-top: -6px;
 }
