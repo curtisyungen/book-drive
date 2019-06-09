@@ -224,11 +224,11 @@ class Navbar extends Component {
                                         closeOnDocumentClick
                                         className="popup"
                                     >
-                                        <button
+                                        <div
                                             className="btn btn-warning btn-sm popupLoginBtn"
                                         >
-                                            <a className="" href="/login">Sign in</a>
-                                        </button>
+                                            <a href="/login">Sign in</a>
+                                        </div>
 
                                         <div className="popupNewCustomer">
                                             New customer?
