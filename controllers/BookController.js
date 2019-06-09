@@ -142,22 +142,11 @@ class BookController {
     checkBookAvail(req, res) {
         db.Books.findAll({
             where: {
-                Title: req.body.title
-            }
-        })
-        .then((book) => {
-            res.json(book);
-        });
-    }
-    
-    addBookToCart(req, res) {
-        db.Books.update(
-            {avail: "hold"}, 
-            {where: {
                 title: req.body.title,
                 authorFirst: req.body.authorFirst,
                 authorLast: req.body.authorLast,
-            }})
+            },
+        })
         .then((book) => {
             res.json(book);
         });

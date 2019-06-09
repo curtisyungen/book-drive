@@ -38,15 +38,11 @@ router.get("/checkBookAvail", (req, res) => {
     controller.checkBookAvail(req, res);
 });
 
-router.put("/addBookToCart/", (req, res) => {
-    controller.addBookToCart(req, res);
-});
-
-router.put("/putBookOnHold/", (req, res) => {
+router.put("/putBookOnHold", (req, res) => {
     controller.putBookOnHold(req, res);
 });
 
-router.put("/deleteBookFromCart/", (req, res) => {
+router.put("/deleteBookFromCart", (req, res) => {
     controller.deleteBookFromCart(req ,res);
 });
 
