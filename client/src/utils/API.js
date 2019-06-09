@@ -12,7 +12,7 @@ export default {
     },
     
     getSearchSuggestions: function(bookSearch) {
-        return axios.get("/api/books/getSearchSuggestions/", bookSearch);
+        return axios.get("/api/books/getSearchSuggestions/" + bookSearch);
     },
 
     searchForBook: function(userInput) {

@@ -45,6 +45,7 @@ class Navbar extends Component {
             [name]: value
         }, () => {
             this.getSearchSuggestions(value);
+            console.log("Value", value);
         });
     }
 
