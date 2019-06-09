@@ -26,10 +26,11 @@ class Navbar extends Component {
 
     componentDidMount = () => {
         this.getUserFromLocalStorage();
+        this.getLoginStatus();
     }
 
     componentDidUpdate = (prevProps) => {
-        if (!prevProps.isLoggedIn && this.props.isLoggedIn && this.state.name === "Sign in") {
+        if (!prevProps.isLoggedIn && this.props.isLoggedIn) {
             this.getUserFromLocalStorage();
             this.getLoginStatus();
         }
