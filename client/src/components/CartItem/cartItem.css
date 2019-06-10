@@ -34,5 +34,7 @@
 }
 
 .deleteFromCart {
-    font-size: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
 }

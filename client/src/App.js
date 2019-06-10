@@ -350,6 +350,7 @@ class App extends Component {
     this.releaseBookFromHold(book);
 
     alert("Removed from cart!");
+    window.location.reload();
   }
 
   releaseBookFromHold = (book) => {

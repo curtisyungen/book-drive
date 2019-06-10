@@ -27,9 +27,9 @@ class CartItem extends Component {
 
     removeFromCart = () => {
         let book = {
-            title: this.state.title,
-            authorFirst: this.state.authorFirst,
-            authorLast: this.state.authorLast
+            title: this.props.title,
+            authorFirst: this.props.authorFirst,
+            authorLast: this.props.authorLast
         }
 
         this.props.deleteFromCart(book);
