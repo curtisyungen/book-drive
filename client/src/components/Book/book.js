@@ -58,7 +58,7 @@ class Book extends Component {
         }
 
         this.props.sendToCart(book);
-        // this.props.putBookOnHold(book);
+        this.props.putBookOnHold(book);
     }
 
     render() {
