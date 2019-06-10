@@ -142,7 +142,8 @@ class BookController {
     checkBookAvail(req, res) {
         db.Books.findAll({
             where: {
-                title: req.params.title
+                title: req.params.title,
+                authorLast: req.body.authorLast,
             },
         })
         .then((book) => {
