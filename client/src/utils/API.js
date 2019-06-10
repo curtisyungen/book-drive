@@ -63,7 +63,7 @@ export default {
     },
 
     checkBookAvail: function(book) {
-        return axios.get("/api/books/checkBookAvail", book);
+        return axios.get("/api/books/checkBookAvail/" + book.title);
     },
 
     putBookOnHold: function(book) {
