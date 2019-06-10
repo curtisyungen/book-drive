@@ -70,7 +70,7 @@ export default {
         return axios.put("/api/books/putBookOnHold", book);
     },
 
-    deleteBookFromCart: function(book) {
-        return axios.put("/api/books/deleteBookFromCart", book);
+    releaseBookFromHold: function(book) {
+        return axios.put("/api/books/releaseBookFromHold", book);
     },
 };

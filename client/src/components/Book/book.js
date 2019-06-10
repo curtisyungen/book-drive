@@ -58,7 +58,16 @@ class Book extends Component {
         }
 
         this.props.sendToCart(book);
-        this.props.putBookOnHold(book);
+    }
+
+    removeFromCart = () => {
+        let book = {
+            title: this.state.title,
+            authorFirst: this.state.authorFirst,
+            authorLast: this.state.authorLast
+        }
+
+        this.props.deleteFromCart(book);
     }
 
     render() {

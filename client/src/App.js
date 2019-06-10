@@ -314,6 +314,10 @@ class App extends Component {
 
           cart.push(book);
           localStorage.setItem("cart", JSON.stringify(cart));
+
+          this.putBookOnHold(book);
+
+          alert("Added to cart!");
         }
         else {
           alert("Sorry, this book is no longer available.");
@@ -332,7 +336,32 @@ class App extends Component {
   }
 
   deleteFromCart = (book) => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    console.log("Before", cart);
 
+    let idx = -1;
+
+    for (var book in cart) {
+      if (cart[book].title === book.title) {
+        idx = book;
+      }
+    }
+
+    cart.splice(idx, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    console.log("After", cart);
+
+    this.releaseBookFromHold(book);
+
+    alert("Removed from cart!");
+  }
+
+  releaseBookFromHold = (book) => {
+    API.releaseBookFromHold(book)
+      .then((res) => {
+        console.log("Release book from hold", res);
+      });
   }
 
   render() {
@@ -397,7 +426,6 @@ class App extends Component {
                 getSubject={this.getSubject}
                 userSearch={this.state.userSearch}
                 sendToCart={this.sendToCart}
-                putBookOnHold={this.putBookOnHold}
                 updateParentState={this.updateParentState}
               />
             } />
