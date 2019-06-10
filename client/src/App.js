@@ -304,7 +304,7 @@ class App extends Component {
   sendToCart = (book) => {
     API.checkBookAvail(book)
       .then((res) => {
-        if (res.data.length > 0 && res.data[0].avail === "avail") {
+        if (res.data.length > 0 && res.data[0].avail === "avail" && res.data.authorLast === book.authorLast) {
           console.log("Book is available.");
 
           let cart = [];
