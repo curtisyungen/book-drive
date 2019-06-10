@@ -338,11 +338,9 @@ class App extends Component {
   deleteFromCart = (book) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
 
-    for (var book in cart) {
-      console.log(cart[book], book);
-      if (cart[book].title === book.title) {
-        console.log("Match", cart[book].title, book.title);
-        cart.splice(book, 1);
+    for (var b in cart) {
+      if (cart[b].title === book.title) {
+        cart.splice(b, 1);
       }
     }
 
