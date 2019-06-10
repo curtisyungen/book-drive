@@ -337,20 +337,15 @@ class App extends Component {
 
   deleteFromCart = (book) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
-    console.log("Before", cart);
-
-    let idx = -1;
 
     for (var book in cart) {
       if (cart[book].title === book.title) {
-        idx = book;
+        console.log("Match", cart[book].title, book.title);
+        cart.splice(book, 1);
       }
     }
 
-    cart.splice(idx, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
-
-    console.log("After", cart);
 
     this.releaseBookFromHold(book);
 
