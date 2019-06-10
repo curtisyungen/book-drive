@@ -339,6 +339,7 @@ class App extends Component {
     let cart = JSON.parse(localStorage.getItem("cart"));
 
     for (var book in cart) {
+      console.log(cart[book], book);
       if (cart[book].title === book.title) {
         console.log("Match", cart[book].title, book.title);
         cart.splice(book, 1);
@@ -350,6 +351,7 @@ class App extends Component {
     this.releaseBookFromHold(book);
 
     alert("Removed from cart!");
+    
     window.location.reload();
   }
 
