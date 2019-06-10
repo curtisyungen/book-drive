@@ -302,21 +302,23 @@ class App extends Component {
   // =========================================
 
   sendToCart = (book) => {
-
     API.checkBookAvail(book)
       .then((res) => {
-        console.log(res);
+        if (res.data.length > 0 && res.data[0].avail === "avail") {
+          console.log("Book is available.");
+
+          let cart = [];
+          if (localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+          }
+
+          cart.push(book);
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+      })
+      .catch((err) => {
+        console.log(err);
       });
-
-    // let cart = [];
-
-    // if (localStorage.getItem("cart")) {
-    //   cart = JSON.parse(localStorage.getItem("cart"));
-    // }
-
-    // cart.push(book);
-
-    // localStorage.setItem("cart", JSON.stringify(cart));
   }
 
   putBookOnHold = (book) => {
