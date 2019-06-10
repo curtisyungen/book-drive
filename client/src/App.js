@@ -304,7 +304,7 @@ class App extends Component {
   sendToCart = (book) => {
     API.checkBookAvail(book)
       .then((res) => {
-        if (res.data.length > 0 && res.data[0].avail === "avail" && res.data.authorLast === book.authorLast) {
+        if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
 
           let cart = [];
@@ -316,9 +316,7 @@ class App extends Component {
           localStorage.setItem("cart", JSON.stringify(cart));
         }
         else {
-          console.log("Unavailable");
-          console.log("Res", res);
-          console.log("Book", book);
+          alert("Sorry, this book is no longer available.");
         }
       })
       .catch((err) => {
