@@ -308,7 +308,7 @@ class App extends Component {
           console.log("Book is available.");
 
           let cart = [];
-          if (localStorage.getItem("cart")) {
+          if (localStorage.getItem("cart") && localStorage.getItem("cart") !== null) {
             cart = JSON.parse(localStorage.getItem("cart"));
           }
 
