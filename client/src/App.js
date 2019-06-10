@@ -315,6 +315,9 @@ class App extends Component {
           cart.push(book);
           localStorage.setItem("cart", JSON.stringify(cart));
         }
+        else {
+          console.log("Unavailable", res);
+        }
       })
       .catch((err) => {
         console.log(err);
