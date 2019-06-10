@@ -143,7 +143,6 @@ class BookController {
         db.Books.findAll({
             where: {
                 title: req.params.title,
-                authorLast: req.body.authorLast,
             },
         })
         .then((book) => {
