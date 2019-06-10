@@ -163,7 +163,7 @@ class BookController {
             });
     }
 
-    deleteBookFromCart(req, res) {
+    releaseBookFromHold(req, res) {
         db.Books.update(
             {avail: "avail"},
             {where: {

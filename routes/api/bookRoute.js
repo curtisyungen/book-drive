@@ -42,8 +42,8 @@ router.put("/putBookOnHold", (req, res) => {
     controller.putBookOnHold(req, res);
 });
 
-router.put("/deleteBookFromCart", (req, res) => {
-    controller.deleteBookFromCart(req ,res);
+router.put("/releaseBookFromHold", (req, res) => {
+    controller.releaseBookFromHold(req, res);
 });
 
 module.exports = router;
