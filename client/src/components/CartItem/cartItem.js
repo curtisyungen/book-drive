@@ -7,8 +7,32 @@ class CartItem extends Component {
         super(props);
 
         this.state = {
-
+            title: "",
+            authorFirst: "",
+            authorLast: "",
+            price: "",
+            imageURL: "",
         }
+    }
+
+    componentDidMount = () => {
+        this.setState({
+            title: this.props.title,
+            authorFirst: this.props.authorFirst,
+            authorLast: this.props.authorLast,
+            price: this.props.price,
+            imageURL: this.props.imageURL,
+        });
+    }
+
+    removeFromCart = () => {
+        let book = {
+            title: this.state.title,
+            authorFirst: this.state.authorFirst,
+            authorLast: this.state.authorLast
+        }
+
+        this.props.deleteFromCart(book);
     }
 
     render() {
@@ -32,7 +56,7 @@ class CartItem extends Component {
 
                 <div 
                     className="deleteFromCart" 
-                    onClick={this.props.deleteFromCart}
+                    onClick={this.removeFromCart}
                 >
                     Delete
                 </div>
