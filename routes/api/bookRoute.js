@@ -34,7 +34,7 @@ router.get("/getSubject/:subject", (req, res) => {
     controller.getSubject(req, res);
 });
 
-router.get("/checkBookAvail", (req, res) => {
+router.get("/checkBookAvail/:title", (req, res) => {
     controller.checkBookAvail(req, res);
 });
 
