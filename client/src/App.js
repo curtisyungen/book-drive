@@ -325,10 +325,10 @@ class App extends Component {
   }
 
   putBookOnHold = (book) => {
-    // API.putBookOnHold(book)
-    //   .then((res) => {
-    //     console.log(res);
-    //   });
+    API.putBookOnHold(book)
+      .then((res) => {
+        console.log("Put book on hold", res);
+      });
   }
 
   deleteFromCart = (book) => {

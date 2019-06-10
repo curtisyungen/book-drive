@@ -15,7 +15,35 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
+        this.loadCartFromLocalStorage();
+    }
 
+    loadCartFromLocalStorage = () => {
+        let cart;
+        if (localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+        }
+
+        this.setState({
+            cart: cart,
+        }, () => {
+            this.calculateSubtotal();
+        });
+    }
+
+    calculateSubtotal = () => {
+        let cart = this.state.cart;
+        let subtotal = 0;
+
+        for (var book in cart) {
+            subtotal += cart[book].price;
+        }
+
+        this.setState({
+            subtotal: subtotal,
+        }, () => {
+            console.log("Subtotal", this.state.subtotal);
+        });
     }
 
     render() {
@@ -25,7 +53,7 @@ class Cart extends Component {
             >
                 <h4>Shopping Cart</h4>
 
-                {this.state.cart.length > 0 ? (
+                {this.state.cart && this.state.cart.length > 0 ? (
                     this.state.cart.map(book => (
                         <CartItem 
                             key={book.title}
