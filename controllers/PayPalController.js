@@ -1,0 +1,44 @@
+const db = require("../models/index.js");
+
+class PayPalController {
+    
+    payUsingPayPal (req, res) {
+        const create_payment_json = {
+            "intent": "sale",
+            "payer": {
+                "payment_method": "paypal"
+            },
+            "redirect_urls": {
+                "return_url": "http://localhost:3000/success",
+                "cancel_url": "http://localhost:3000/cancel"
+            },
+            "transactions": [{
+                "item_list": {
+                    "items": [{
+                        "name": "Book",
+                        "sku": "001",
+                        "price": "5.00",
+                        "currency": "USD",
+                        "quantity": 1
+                    }]
+                },
+                "amount": {
+                    "currency": "USD",
+                    "total": "5.00"
+                },
+                "description": "This is a book."
+            }]
+        };
+
+        paypal.payment.create(create_payment_json, function (error, payment) {
+            if (error) {
+                throw error;
+            } else {
+                console.log("Create Payment Response");
+                console.log(payment);
+            }
+        });
+    }
+}
+
+module.exports = PayPalController;

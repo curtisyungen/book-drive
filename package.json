@@ -32,6 +32,7 @@
     "moment": "^2.24.0",
     "multiparty": "^4.2.1",
     "mysql2": "^1.6.4",
+    "paypal-rest-sdk": "^1.8.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-onclickoutside": "6.5.0",

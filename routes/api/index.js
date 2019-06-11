@@ -2,12 +2,16 @@ const path = require("path");
 const router = require("express").Router();
 const bookRoutes = require("./bookRoute");
 const userRoutes = require("./userRoute");
+const payPalRoutes = require("./payPalRoute");
 
 // Book routes
 router.use("/books", bookRoutes);
 
 // User routes
 router.use("/users", userRoutes);
+
+// PayPal routes
+router.use("/payPal", payPalRoutes);
 
 // For anything else, render the html page
 router.use((req, res) => {
