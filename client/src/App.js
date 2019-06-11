@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import API from "./utils/API";
 import './App.css';
 
@@ -433,6 +434,7 @@ class App extends Component {
                 deleteFromCart={this.deleteFromCart}
               />
             } />
+            <Route exact path="/checkout" component={Checkout} />
             } />
           </Switch>
         </span>
