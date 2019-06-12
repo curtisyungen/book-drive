@@ -38,15 +38,14 @@ class PayPalController {
         };
 
         paypal.payment.create(create_payment_json, function (error, payment) {
-
-            // Used to return axios promise
-            db.Books.findOne({})
-            .then(() => {
-                res.json(payment);
-            });
+            if (error) {
+                console.log(error);
+            }
+            console.log(payment);
+        })
+        .then(() => {
+            res.json(payment);
         });
-
-        
     }
 }
 
