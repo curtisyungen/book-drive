@@ -10,49 +10,45 @@ paypal.configure({
 class PayPalController {
     
     payUsingPayPal (req, res) {
-        // var create_payment_json = {
-        //     "intent": "sale",
-        //     "payer": {
-        //         "payment_method": "paypal"
-        //     },
-        //     "redirect_urls": {
-        //         "return_url": "http://localhost:3000/success",
-        //         "cancel_url": "http://localhost:3000/cancel"
-        //     },
-        //     "transactions": [{
-        //         "item_list": {
-        //             "items": [{
-        //                 "name": "Book",
-        //                 "sku": "001",
-        //                 "price": "5.00",
-        //                 "currency": "USD",
-        //                 "quantity": 1
-        //             }]
-        //         },
-        //         "amount": {
-        //             "currency": "USD",
-        //             "total": "5.00"
-        //         },
-        //         "description": "This is a book."
-        //     }]
-        // };
+        var create_payment_json = {
+            "intent": "sale",
+            "payer": {
+                "payment_method": "paypal"
+            },
+            "redirect_urls": {
+                "return_url": "http://localhost:3000/success",
+                "cancel_url": "http://localhost:3000/cancel"
+            },
+            "transactions": [{
+                "item_list": {
+                    "items": [{
+                        "name": "Book",
+                        "sku": "001",
+                        "price": "5.00",
+                        "currency": "USD",
+                        "quantity": 1
+                    }]
+                },
+                "amount": {
+                    "currency": "USD",
+                    "total": "5.00"
+                },
+                "description": "This is a book."
+            }]
+        };
+        
+        paypal.payment.create(create_payment_json)
+            .then((error, payment) => {
+                res.json(payment);
 
-        // console.log(create_payment_json);
-
-        // paypal.payment.create(create_payment_json, function (error, payment) {
-        //     if (error) {
-        //         throw error;
-        //     } else {
-        //         console.log("Create Payment Response");
-        //         console.log(payment);
-        //         res.json(payment);
-        //     }
-        // });
-
-        db.Books.findAll({})
-            .then(books => {
-                res.json(books);
+                console.log("Create Payment Response");
+                console.log(payment);
             });
+
+        // db.Books.findAll({})
+        //     .then(books => {
+        //         res.json(books);
+        //     });
     }
 }
 
