@@ -24,7 +24,7 @@ class Checkout extends Component {
 
                 for (var link in res.data.links) {
                     if (res.data.links[link].rel === "approval_url") {
-                        console.log(res.data.links[link]);
+                        window.open(res.data.links[link].href);
                     }
                 }
             });
