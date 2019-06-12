@@ -22,9 +22,9 @@ class Checkout extends Component {
             .then((res) => {
                 console.log(res);
 
-                for (var link in res.links) {
-                    if (res.links[link].rel === "approval_url") {
-                        console.log(res.links[link]);
+                for (var link in res.data.links) {
+                    if (res.data.links[link].rel === "approval_url") {
+                        console.log(res.data.links[link]);
                     }
                 }
             });
