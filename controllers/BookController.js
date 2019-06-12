@@ -1,6 +1,6 @@
 const db = require("../models/index.js");
 const Sequelize = require("sequelize");
-const Op = Sequelize.Op
+const Op = Sequelize.Op;
 
 class BookController {
 
