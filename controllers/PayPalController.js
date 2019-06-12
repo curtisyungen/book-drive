@@ -37,22 +37,14 @@ class PayPalController {
             }]
         };
 
-        console.log(create_payment_json);
-
         paypal.payment.create(create_payment_json, function (error, payment) {
-            if (error) {
-                throw error;
-            } else {
-                console.log("Create Payment Response");
-                console.log(payment);
+            db.Books.findAll({})
+            .then(() => {
                 res.json(payment);
-            }
+            });
         });
 
-        // db.Books.findAll({})
-        //     .then(books => {
-        //         res.json(books);
-        //     });
+        
     }
 }
 
