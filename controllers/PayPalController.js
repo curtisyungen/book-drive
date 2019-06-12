@@ -36,14 +36,18 @@ class PayPalController {
                 "description": "This is a book."
             }]
         };
-        
-        paypal.payment.create(create_payment_json)
-            .then((error, payment) => {
-                res.json(payment);
 
+        console.log(create_payment_json);
+
+        paypal.payment.create(create_payment_json, function (error, payment) {
+            if (error) {
+                throw error;
+            } else {
                 console.log("Create Payment Response");
                 console.log(payment);
-            });
+                res.json(payment);
+            }
+        });
 
         // db.Books.findAll({})
         //     .then(books => {
