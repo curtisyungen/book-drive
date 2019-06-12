@@ -20,7 +20,7 @@ class Checkout extends Component {
     checkoutWithPayPal = () => {
         API.payUsingPayPal()
             .then((res) => {
-                for (link in res.links) {
+                for (var link in res.links) {
                     if (res.links[link].rel === "approval_url") {
                         console.log(res.links[link]);
                     }
