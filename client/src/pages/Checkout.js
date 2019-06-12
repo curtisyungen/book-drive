@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import Container from "../components/Container/container";
+import Container from "../components/Container/container";
 import API from "../utils/API";
-import "./Contact.css";
+import "./Checkout.css";
 
 class Checkout extends Component {
 
@@ -32,12 +32,14 @@ class Checkout extends Component {
 
     render() {
         return (
-            <div
-                className="payPalBtn"
-                onClick={this.checkoutWithPayPal}
-            >
-                Buy
-            </div>
+            <Container>
+                <div
+                    className="btn btn-success payPalBtn"
+                    onClick={this.checkoutWithPayPal}
+                >
+                    Pay with PayPal
+                </div>
+            </Container>
         )
     }
 }
