@@ -16,9 +16,18 @@
 .cartTable th {
     color: rgb(80, 80, 80);
     font-size: 14px;
+    height: 36px;
     text-align: center;
+    vertical-align: bottom;
 }
 
 .cartTable tr {
     border-bottom: 1px solid lightgray;
+}
+
+#cartTitle {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    text-align: left;
 }

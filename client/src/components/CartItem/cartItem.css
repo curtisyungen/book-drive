@@ -1,9 +1,11 @@
 .cartAuthor {
+    display: inline-block;
     font-size: 13px;
 }
 
 .cartCover {
     height: 150px;
+    margin-right: 10px;
 }
 
 .cartItem {
@@ -38,8 +40,10 @@
 }
 
 .deleteFromCart {
+    color: rgb(8, 102, 190);
     cursor: pointer;
+    font-family: "Arial";
     font-size: 12px;
-    margin-left: 108px;
-    margin-top: -50px;
+    margin-left: 118px;
+    margin-top: -20px;
 }

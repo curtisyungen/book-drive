@@ -67,13 +67,11 @@ class Cart extends Component {
             <div
                 className="cartContainer"
             >
-                <h4>Shopping Cart</h4>
-
                 <table
                     className="cartTable"    
-                >
+                >   
                     <tr>
-                        <th></th>
+                        <th id="cartTitle">Shopping Cart</th>
                         <th>Price</th>
                         <th>Quantity</th>
                     </tr>

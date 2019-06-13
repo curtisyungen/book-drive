@@ -45,15 +45,15 @@ class CartItem extends Component {
                     <a href="/" className="cartTitle">
                         {this.props.title}
                     </a>
-                    <span className="cartAuthor">
-                        {` by ${this.props.authorFirst} ${this.props.authorLast}`}
-                    </span>
+                    <div className="cartAuthor">
+                        &nbsp;{` by ${this.props.authorFirst} ${this.props.authorLast}`}
+                    </div>
                     <div
                         className="deleteFromCart"
                         onClick={this.removeFromCart}
                     >
                         Delete
-                </div>
+                    </div>
                 </td>
 
                 <td className="cartPrice">
