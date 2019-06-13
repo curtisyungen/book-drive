@@ -10,6 +10,9 @@ paypal.configure({
 class PayPalController {
     
     payUsingPayPal (req, res) {
+
+        console.log(req.body);
+
         var create_payment_json = {
             "intent": "sale",
             "payer": {
@@ -24,14 +27,14 @@ class PayPalController {
                     "items": [{
                         "name": "Book",
                         "sku": "001",
-                        "price":`${req.body.total}`,
+                        "price":"5.00",
                         "currency": "USD",
                         "quantity": 1
                     }]
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": "5.00"
+                    "total": `${req.body.total}`
                 },
                 "description": "This is a book."
             }]
