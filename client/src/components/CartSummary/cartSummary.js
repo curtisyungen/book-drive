@@ -34,22 +34,21 @@ class CartSummary extends Component {
 
     checkoutWithPayPal = () => {
 
-        let items = [
-            {
-            "name": "item1",
-            "sku": "item1",
-            "price": "5.00",
-            "currency": "USD",
-            "quantity": 1
-            },
-            {
-            "name": "item2",
-            "sku": "item2",
-            "price": "1.00",
-            "currency": "USD",
-            "quantity": 1
-            },
-    ]
+        let items = [];
+        let item;
+
+        for (book in cart) {
+            item.name = cart[book].title,
+            item.sku = book,
+            item.price = cart[book].price,
+            item.currency = "USD",
+            item.quantity = 1
+
+            items.push(item);
+        }
+
+        console.log("Items", items);
+        console.log("Items JSON", JSON.stringify(items));
 
         API.payUsingPayPal(items)
             .then((res) => {
