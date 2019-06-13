@@ -22,7 +22,7 @@ class PayPalController {
             },
             "transactions": [{
                 "item_list": {
-                    "items": JSON.parse(req.body)
+                    "items": JSON.stringify(req.body)
                 },
                 "amount": {
                     "currency": "USD",
