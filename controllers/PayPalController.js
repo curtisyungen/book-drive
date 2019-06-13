@@ -17,11 +17,19 @@ class PayPalController {
                 "payment_method": "paypal"
             },
             "redirect_urls": {
-                "return_url": "https://congo-cjy.herokuapp.com/success",
-                "cancel_url": "https://congo-cjy.herokuapp.com/cancel"
+                "return_url": "http://return.url",
+                "cancel_url": "http://cancel.url"
             },
             "transactions": [{
-                "item_list": req.body,
+                "item_list": {
+                    "items": [{
+                        "name": "item",
+                        "sku": "item",
+                        "price": "1.00",
+                        "currency": "USD",
+                        "quantity": 1
+                    }]
+                },
                 "amount": {
                     "currency": "USD",
                     "total": "1.00"
@@ -38,7 +46,7 @@ class PayPalController {
             // Used only to return axios promise
             db.Books.findOne({})
                 .then(() => {
-                    res.json(payment);
+                    res.json(req.body);
                 });
         });
     }
