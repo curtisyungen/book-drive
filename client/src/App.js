@@ -9,7 +9,6 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
 import API from "./utils/API";
@@ -436,7 +435,6 @@ class App extends Component {
                 deleteFromCart={this.deleteFromCart}
               />
             } />
-            <Route exact path="/checkout" component={Checkout} />
             <Route exact path="/success" component={Success} />
             <Route exact path="/cancel" component={Cancel} />
             } />

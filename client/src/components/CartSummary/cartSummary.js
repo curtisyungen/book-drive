@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import API from "../../utils/API";
 import "./cartSummary.css";
 
 class CartSummary extends Component {
@@ -17,7 +17,6 @@ class CartSummary extends Component {
         this.setState({
             cart: this.props.cart,
             subtotal: this.props.subtotal,
-            redirectToCheckout: false,
         }, () => {
             console.log(this.state);
         });
@@ -26,15 +25,29 @@ class CartSummary extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
+                cart: this.props.cart,
                 subtotal: this.props.subtotal,
             });
         }
     }
 
-    redirectToCheckout = () => {
-        this.setState({
-            redirectToCheckout: true,
-        });
+    checkoutWithPayPal = () => {
+
+        let purchase = {
+            cart: this.state.cart,
+            total: this.state.subtotal,
+        }
+
+        API.payUsingPayPal(purchase)
+            .then((res) => {
+                console.log(res);
+
+                for (var link in res.data.links) {
+                    if (res.data.links[link].rel === "approval_url") {
+                        window.open(res.data.links[link].href);
+                    }
+                }
+            });
     }
 
     render() {
@@ -52,26 +65,11 @@ class CartSummary extends Component {
                     className="checkoutBtn"
                     onClick={(event) => {
                         event.preventDefault();
-                        this.redirectToCheckout();
+                        this.checkoutWithPayPal();
                     }}
                 >
-                    Proceed to checkout
+                    Checkout with PayPal
                 </button>
-
-                {this.state.redirectToCheckout ? (
-                    <Redirect 
-                        to={{
-                            pathname: "/checkout",
-                            state: {
-                                cart: this.state.cart,
-                                total: this.state.subtotal,
-                            }
-                        }}
-                    />
-                ) : (
-                    <></>
-                )}
-
             </div>
         )
     }
