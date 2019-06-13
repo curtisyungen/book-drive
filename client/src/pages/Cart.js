@@ -30,22 +30,22 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
-        // this.loadCartFromLocalStorage();
+        this.loadCartFromLocalStorage();
         this.calculateSubtotal();
     }
 
-    // loadCartFromLocalStorage = () => {
-    //     let cart;
-    //     if (localStorage.getItem("cart")) {
-    //         cart = JSON.parse(localStorage.getItem("cart"));
-    //     }
+    loadCartFromLocalStorage = () => {
+        let cart;
+        if (localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+        }
 
-    //     this.setState({
-    //         cart: cart,
-    //     }, () => {
-    //         this.calculateSubtotal();
-    //     });
-    // }
+        this.setState({
+            cart: cart,
+        }, () => {
+            this.calculateSubtotal();
+        });
+    }
 
     calculateSubtotal = () => {
         let cart = this.state.cart;
