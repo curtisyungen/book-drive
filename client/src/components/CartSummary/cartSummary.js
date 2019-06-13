@@ -50,9 +50,7 @@ class CartSummary extends Component {
             items.push(item);
         }
 
-        console.log("Items JSON", JSON.stringify(items));
-
-        API.payUsingPayPal(JSON.stringify(items))
+        API.payUsingPayPal(items)
             .then((res) => {
                 console.log(res);
 
