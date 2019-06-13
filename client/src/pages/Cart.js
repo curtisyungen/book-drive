@@ -9,22 +9,7 @@ class Cart extends Component {
         super(props);
 
         this.state = {
-            cart: [
-                {
-                    title: "Test Book",
-                    authorFirst: "Test",
-                    authorLast: "Book",
-                    price: 5.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/51EVY74TMDL._SX331_BO1,204,203,200_.jpg",
-                },
-                {
-                    title: "Test Book",
-                    authorFirst: "Test",
-                    authorLast: "Book",
-                    price: 5.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/51EVY74TMDL._SX331_BO1,204,203,200_.jpg",
-                },
-            ],
+            cart: [],
             subtotal: 0,
         }
     }

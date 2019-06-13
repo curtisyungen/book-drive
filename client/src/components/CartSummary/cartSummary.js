@@ -39,7 +39,7 @@ class CartSummary extends Component {
             total: this.state.subtotal,
         }
 
-        API.payUsingPayPal(purchase)
+        API.payUsingPayPal()
             .then((res) => {
                 console.log(res);
 
