@@ -3,3 +3,17 @@
     margin-top: 10px;
     width: 1000px;
 }
+
+.cartTable {
+    width: 100%;
+}
+
+.cartTable th {
+    color: rgb(80, 80, 80);
+    font-size: 14px;
+    text-align: center;
+}
+
+.cartTable tr {
+    border-bottom: 1px solid lightgray;
+}

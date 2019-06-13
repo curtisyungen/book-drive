@@ -37,30 +37,33 @@ class CartItem extends Component {
 
     render() {
         return (
-            <div 
+            <tr
                 className="cartItem"
             >
-                <img className="cartCover" src={this.props.imageURL} alt={this.props.title} />
-
-                <a href="/" className="cartTitle">
-                    {this.props.title}
-                </a>
-
-                <span className="cartAuthor">
-                    {` by ${this.props.authorFirst} ${this.props.authorLast}`}
-                </span>
-
-                <span className="cartPrice">
-                    {this.props.price}
-                </span>
-
-                <div 
-                    className="deleteFromCart" 
-                    onClick={this.removeFromCart}
-                >
-                    Delete
+                <td>
+                    <img className="cartCover" src={this.props.imageURL} alt={this.props.title} />
+                    <a href="/" className="cartTitle">
+                        {this.props.title}
+                    </a>
+                    <span className="cartAuthor">
+                        {` by ${this.props.authorFirst} ${this.props.authorLast}`}
+                    </span>
+                    <div
+                        className="deleteFromCart"
+                        onClick={this.removeFromCart}
+                    >
+                        Delete
                 </div>
-            </div>
+                </td>
+
+                <td className="cartPrice">
+                    {this.props.price}
+                </td>
+
+                <td className="cartQuantity">
+                    1
+                </td>
+            </tr>
         )
     }
 }

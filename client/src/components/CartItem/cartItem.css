@@ -4,21 +4,23 @@
 
 .cartCover {
     height: 150px;
+    margin-top: 10px;
 }
 
 .cartItem {
-    border: 1px solid lightgray;
-    border-left: none;
-    border-right: none;
     font-family: "Arial";
+    height: 175px;
     min-height: 75px;
     padding: 20px 10px;
     width: 100%;
 }
 
 .cartPrice {
-    display: inline-block;
-    margin: 10px auto;
+    text-align: center;
+}
+
+.cartQuantity {
+    text-align: center;
 }
 
 .cartTitle {
@@ -35,6 +37,7 @@
 
 .deleteFromCart {
     cursor: pointer;
-    display: inline-block;
     font-size: 12px;
+    margin-left: 108px;
+    margin-top: -50px;
 }
