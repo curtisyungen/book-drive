@@ -40,7 +40,7 @@ class PayPalController {
             // Used only to return axios promise
             db.Books.findOne({})
                 .then(() => {
-                    res.json(req.body);
+                    res.json(payment);
                 });
         });
     }
