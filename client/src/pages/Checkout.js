@@ -9,16 +9,27 @@ class Checkout extends Component {
         super(props);
 
         this.state = {
-
+            total: 0,
         }
     }
 
     componentDidMount = () => {
+        // console.log("Checkout", this.props);
 
+        this.setState({
+            cart: this.props.cart,
+            total: this.props.total,
+        });
     }
 
-    checkoutWithPayPal = () => {
-        API.payUsingPayPal()
+    checkoutWithPayPal = (purchase) => {
+
+        let purchase = {
+            cart: this.state.cart,
+            total: this.state.total,
+        }
+
+        API.payUsingPayPal(purchase)
             .then((res) => {
                 console.log(res);
 

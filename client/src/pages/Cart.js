@@ -70,6 +70,7 @@ class Cart extends Component {
                 )}
 
                 <CartSummary 
+                    cart={this.state.cart}
                     subtotal={this.state.subtotal}
                 />
             </div>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "./cartSummary.css";
 
 class CartSummary extends Component {
@@ -14,7 +15,11 @@ class CartSummary extends Component {
     componentDidMount = () => {
 
         this.setState({
+            cart: this.props.cart,
             subtotal: this.props.subtotal,
+            redirectToCheckout: false,
+        }, () => {
+            console.log(this.state);
         });
     }
 
@@ -24,6 +29,12 @@ class CartSummary extends Component {
                 subtotal: this.props.subtotal,
             });
         }
+    }
+
+    redirectToCheckout = () => {
+        this.setState({
+            redirectToCheckout: true,
+        });
     }
 
     render() {
@@ -39,9 +50,27 @@ class CartSummary extends Component {
 
                 <button
                     className="checkoutBtn"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        this.redirectToCheckout();
+                    }}
                 >
-                    <a className="proceedToCheckout" href="/checkout">Proceed to checkout</a>
+                    Proceed to checkout
                 </button>
+
+                {this.state.redirectToCheckout ? (
+                    <Redirect 
+                        to={{
+                            pathname: "/checkout",
+                            state: {
+                                cart: this.state.cart,
+                                total: this.state.subtotal,
+                            }
+                        }}
+                    />
+                ) : (
+                    <></>
+                )}
 
             </div>
         )
