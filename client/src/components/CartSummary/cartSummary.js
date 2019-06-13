@@ -52,7 +52,7 @@ class CartSummary extends Component {
 
         console.log("Items JSON", JSON.stringify(items));
 
-        API.payUsingPayPal(items)
+        API.payUsingPayPal(JSON.stringify(items))
             .then((res) => {
                 console.log(res);
 
