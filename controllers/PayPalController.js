@@ -22,13 +22,7 @@ class PayPalController {
             },
             "transactions": [{
                 "item_list": {
-                    "items": [{
-                        "name": "item",
-                        "sku": "item",
-                        "price": "1.00",
-                        "currency": "USD",
-                        "quantity": 1
-                    }]
+                    "items": [req.body]
                 },
                 "amount": {
                     "currency": "USD",
