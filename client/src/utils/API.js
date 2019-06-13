@@ -75,7 +75,7 @@ export default {
     },
 
     payUsingPayPal: function(items) {
-        return axios.post("/api/payPal/payUsingPayPal", items);
+        return axios.post("/api/payPal/payUsingPayPal/" + items);
     },
 
     successfulPayment: function() {
