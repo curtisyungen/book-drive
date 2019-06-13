@@ -22,7 +22,7 @@ class Checkout extends Component {
         });
     }
 
-    checkoutWithPayPal = (purchase) => {
+    checkoutWithPayPal = () => {
 
         let purchase = {
             cart: this.state.cart,
