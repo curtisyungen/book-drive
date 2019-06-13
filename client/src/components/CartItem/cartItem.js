@@ -57,7 +57,7 @@ class CartItem extends Component {
                 </td>
 
                 <td className="cartPrice">
-                    {this.props.price}
+                    {`$${parseFloat(Math.round(this.props.price * 100) / 100).toFixed(2)}`}
                 </td>
 
                 <td className="cartQuantity">

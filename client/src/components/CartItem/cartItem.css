@@ -4,7 +4,6 @@
 
 .cartCover {
     height: 150px;
-    margin-top: 10px;
 }
 
 .cartItem {
@@ -16,6 +15,9 @@
 }
 
 .cartPrice {
+    color: brown;
+    font-size: 18px;
+    font-weight: 600;
     text-align: center;
 }
 

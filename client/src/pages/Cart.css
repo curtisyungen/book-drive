@@ -8,6 +8,11 @@
     width: 100%;
 }
 
+.cartTable td {
+    padding-top: 10px;
+    vertical-align: top;
+}
+
 .cartTable th {
     color: rgb(80, 80, 80);
     font-size: 14px;
