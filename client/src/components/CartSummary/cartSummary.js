@@ -36,8 +36,9 @@ class CartSummary extends Component {
 
         let items = [];
         let item;
+        let cart = this.state.cart;
 
-        for (book in cart) {
+        for (var book in cart) {
             item.name = cart[book].title,
             item.sku = book,
             item.price = cart[book].price,
