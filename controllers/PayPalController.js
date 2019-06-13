@@ -11,8 +11,6 @@ class PayPalController {
     
     payUsingPayPal (req, res) {
 
-        console.log(req.body);
-
         var create_payment_json = {
             "intent": "sale",
             "payer": {
