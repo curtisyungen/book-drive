@@ -11,7 +11,7 @@ router.get("/cancelPayment", (req, res) => {
     controller.cancelPayment(req, res);
 });
 
-router.post("/payUsingPayPal", (req, res) => {
+router.post("/payUsingPayPal/:items", (req, res) => {
     controller.payUsingPayPal(req, res);
 });
 
