@@ -14,7 +14,7 @@ class Checkout extends Component {
     }
 
     componentDidMount = () => {
-        // console.log("Checkout", this.props);
+        console.log("Checkout", this.props);
 
         this.setState({
             cart: this.props.cart,
