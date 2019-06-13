@@ -57,7 +57,7 @@ class CartSummary extends Component {
                 className="cartSummary"
             >
                 <div>
-                    <span className="subtotalTitle">Subtotal ({this.state.cart.length} items):</span>
+                    <span className="subtotalTitle">Subtotal{this.state.cart ? (` (${this.state.cart.length}) items):`):(":")}</span>
                     <span className="subtotal">&nbsp;{`$${parseFloat(Math.round(this.state.subtotal * 100) / 100).toFixed(2)}`}</span>
                 </div>
 
