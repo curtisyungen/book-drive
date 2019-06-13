@@ -21,9 +21,7 @@ class PayPalController {
                 "cancel_url": "https://congo-cjy.herokuapp.com/cancel"
             },
             "transactions": [{
-                "item_list": {
-                    "items": req.body
-                },
+                "item_list": req.body,
                 "amount": {
                     "currency": "USD",
                     "total": "1.00"
