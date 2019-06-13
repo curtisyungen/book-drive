@@ -23,18 +23,18 @@ class PayPalController {
             "transactions": [{
                 "item_list": {
                     "items": [{
-                        "name": "Book",
-                        "sku": "001",
-                        "price":"5.00",
+                        "name": "item",
+                        "sku": "item",
+                        "price": "1.00",
                         "currency": "USD",
                         "quantity": 1
                     }]
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": "25.00",
+                    "total": "1.00"
                 },
-                "description": "This is a book."
+                "description": "This is the payment description."
             }]
         };
 
