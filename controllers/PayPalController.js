@@ -24,7 +24,7 @@ class PayPalController {
                     "items": [{
                         "name": "Book",
                         "sku": "001",
-                        "price": "5.00",
+                        "price":`${req.body.total}`,
                         "currency": "USD",
                         "quantity": 1
                     }]
