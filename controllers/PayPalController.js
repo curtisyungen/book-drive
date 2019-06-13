@@ -16,8 +16,8 @@ class PayPalController {
                 "payment_method": "paypal"
             },
             "redirect_urls": {
-                "return_url": "http://localhost:3000/success",
-                "cancel_url": "http://localhost:3000/cancel"
+                "return_url": "https://congo-cjy.herokuapp.com/success",
+                "cancel_url": "https://congo-cjy.herokuapp.com/cancel"
             },
             "transactions": [{
                 "item_list": {
@@ -81,7 +81,7 @@ class PayPalController {
         });
     }
 
-    cancelPayment (req, res) {
+    cancelPayment(req, res) {
         db.Books.findOne({})
             .then(() => {
                 res.json("Cancelled.");
