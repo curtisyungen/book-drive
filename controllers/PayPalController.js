@@ -22,7 +22,7 @@ class PayPalController {
             },
             "transactions": [{
                 "item_list": {
-                    "items": [req.params.items]
+                    "items": req.params.items
                 },
                 "amount": {
                     "currency": "USD",
