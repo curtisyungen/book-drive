@@ -31,17 +31,15 @@ class CartSummary extends Component {
     componentDidMount = () => {
 
         this.setState({
-            cart: this.props.cart,
+            // cart: this.props.cart,
             subtotal: this.props.subtotal,
-        }, () => {
-            console.log(this.state);
         });
     }
 
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                cart: this.props.cart,
+                // cart: this.props.cart,
                 subtotal: this.props.subtotal,
             });
         }
