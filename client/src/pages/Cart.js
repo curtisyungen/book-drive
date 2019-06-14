@@ -15,14 +15,14 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
-        this.loadCartFromLocalStorage();
+        this.loadCartFromSessionStorage();
         this.calculateSubtotal();
     }
 
-    loadCartFromLocalStorage = () => {
+    loadCartFromSessionStorage = () => {
         let cart;
-        if (localStorage.getItem("cart")) {
-            cart = JSON.parse(localStorage.getItem("cart"));
+        if (sessionStorage.getItem("cart")) {
+            cart = JSON.parse(sessionStorage.getItem("cart"));
         }
 
         this.setState({
