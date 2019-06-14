@@ -43,6 +43,31 @@ class App extends Component {
     this.getAllBooks();
   }
 
+  componentWillUnmount = () => {
+
+    // If guest user, make books in cart available again in database
+    if (!this.state.isLoggedIn) {
+
+      let cart;
+      if (sessionStorage.getItem("cart")) {
+        cart = JSON.parse(sessionStorage.getItem("cart"));
+      }
+
+      if (cart) {
+        for (var item in cart) {
+
+          let book = {
+            title: cart[item].title,
+            authorFirst: cart[item].authorFirst,
+            authorLast: cart[item].authorLast,
+          }
+
+          API.releaseBookFromHold(book);
+        }
+      }
+    }
+  }
+
   // REDIRECT HANDLING
   // ========================================= 
 
