@@ -55,7 +55,7 @@ class Navbar extends Component {
 
     getLoginStatus = () => {
         if (localStorage.getItem("isLoggedIn")) {
-            return localStorage.getItem("isLoggedIn") === true || localStorage.getItem;
+            return localStorage.getItem("isLoggedIn") === "true";
         }
         return false;
     }
