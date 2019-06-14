@@ -72,8 +72,8 @@ export default {
         return axios.put("/api/books/releaseBookFromHold", book);
     },
 
-    payUsingPayPal: function(items) {
-        return axios.post("/api/payPal/payUsingPayPal", items);
+    payUsingPayPal: function(total) {
+        return axios.post("/api/payPal/payUsingPayPal/" + total);
     },
 
     successfulPayment: function() {
