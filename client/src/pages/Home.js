@@ -20,6 +20,8 @@ class Home extends Component {
 
     componentDidMount = () => {
 
+        window.addEventListener("scroll", this.listenToScroll);
+
         let message = "";
 
         if (this.props.books.length === 0) {
@@ -45,12 +47,23 @@ class Home extends Component {
         }
     }
 
-    checkScrollPos = () => {
-        if (window.pageYOffset > 600) {
-            this.showScrollToTopBtn();
+    componentWillUnmount = () => {
+        window.removeEventListener("scroll", this.listenToScroll);
+    }
+
+    listenToScroll = () => {
+        const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop;
+    
+        if (winScroll > 400) {
+            this.setState({
+                showScrollToBtn: true,
+            });
         }
         else {
-            this.hideScrollToTopBtn();
+            this.setState({
+                showScrollToBtn: false,
+            });
         }
     }
 
