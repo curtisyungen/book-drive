@@ -18,6 +18,8 @@
 
 .bookDescription {
     font-size: 12px;
+    max-height: 150px;
+    overflow-y: scroll;
     white-space: normal;
     width: 300px;
 }
