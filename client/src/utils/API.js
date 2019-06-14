@@ -73,8 +73,35 @@ export default {
     },
 
     payUsingPayPal: function(items) {
-        console.log(items);
-        return axios.post("/api/payPal/payUsingPayPal", items);
+
+        var create_payment_json = {
+            "intent": "sale",
+            "payer": {
+                "payment_method": "paypal"
+            },
+            "redirect_urls": {
+                "return_url": "http://return.url",
+                "cancel_url": "http://cancel.url"
+            },
+            "transactions": [{
+                "item_list": {
+                    "items": items
+                },
+                "amount": {
+                    "currency": "USD",
+                    "total": "1.00"
+                },
+                "description": "This is the payment description."
+            }]
+        };
+
+        paypal.payment.create(create_payment_json, function (error, payment) {
+            if (error) {
+                console.log("Error processing payment", error);
+            }
+
+            return payment;
+        });
     },
 
     successfulPayment: function() {
