@@ -49,7 +49,8 @@ class Login extends Component {
                             onChange={this.handleInputChange}
                         />
 
-                        <p className="formLabel">Password</p>
+                        <span className="formLabel">Password</span>
+                        <a className="forgotYourPassword" href="/">Forgot your password?</a>
                         <input
                             className="formInput"
                             name="password"
