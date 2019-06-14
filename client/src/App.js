@@ -172,7 +172,7 @@ class App extends Component {
   logoutUser = () => {
     localStorage.setItem("isLoggedIn", false);
     localStorage.setItem("user", null);
-    localStorage.setItem("cart", null);
+    sessionStorage.setItem("cart", null);
 
     this.setState({
       isLoggedIn: false,
@@ -310,12 +310,12 @@ class App extends Component {
           console.log("Book is available.");
 
           let cart = [];
-          if (localStorage.getItem("cart") && JSON.parse(localStorage.getItem("cart")) !== null) {
-            cart = JSON.parse(localStorage.getItem("cart"));
+          if (sessionStorage.getItem("cart") && JSON.parse(sessionStorage.getItem("cart")) !== null) {
+            cart = JSON.parse(sessionStorage.getItem("cart"));
           }
 
           cart.push(book);
-          localStorage.setItem("cart", JSON.stringify(cart));
+          sessionStorage.setItem("cart", JSON.stringify(cart));
 
           this.putBookOnHold(book);
 
@@ -338,7 +338,7 @@ class App extends Component {
   }
 
   deleteFromCart = (book) => {
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    let cart = JSON.parse(sessionStorage.getItem("cart"));
 
     for (var b in cart) {
       if (cart[b].title === book.title) {
@@ -346,7 +346,7 @@ class App extends Component {
       }
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    sessionStorage.setItem("cart", JSON.stringify(cart));
 
     this.releaseBookFromHold(book);
 
