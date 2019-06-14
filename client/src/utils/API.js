@@ -3,8 +3,6 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// let API_KEY=process.env.GOOGLE_BOOKS_API_KEY;
-
 export default {
 
     getAllBooks: function() {
@@ -84,5 +82,9 @@ export default {
 
     cancelPayment: function() {
         return axios.get("/api/payPal/cancelPayment");
+    },
+
+    getBookByTitle: function(title) {
+        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${title}`);
     },
 };

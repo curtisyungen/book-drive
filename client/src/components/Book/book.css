@@ -16,6 +16,12 @@
     width: 180px;
 }
 
+.bookDescription {
+    font-size: 12px;
+    white-space: normal;
+    width: 300px;
+}
+
 .bookTitle {
     font-size: 14px;
     font-weight: 700;
@@ -28,6 +34,26 @@
 .button {
     margin: 5px;
     width: 100px;
+}
+
+.circle {
+    border-radius: 10px;
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+
+.circle-avail {
+    background: green;
+}
+
+.circle-hold {
+    background: gray;
+}
+
+.circle-unavail {
+    background: red;
 }
 
 .detailBookCover {

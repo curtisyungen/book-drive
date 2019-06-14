@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Modal from "react-responsive-modal";
+import API from "../../utils/API";
 import "./book.css";
 
 class Book extends Component {
@@ -28,6 +29,13 @@ class Book extends Component {
             avail: this.props.avail,
             tags: this.props.tags,
             imageURL: this.props.imageURL,
+        }, () => {
+            API.getBookByTitle(this.state.title)
+            .then((res) => {
+                this.setState({
+                    description: res.data.items[0].volumeInfo.description
+                });
+            });
         });
     }
 
@@ -65,17 +73,24 @@ class Book extends Component {
             <span>
                 <div
                     className="book"
-                    onClick={this.openDetailView}
+                    onClick={(event) => {
+                        event.preventDefault();
+                        this.openDetailView();
+                    }}
                 >
                     <img className="bookCover" src={this.state.imageURL} alt={this.state.title} />
                 </div>
 
+                {/* <div className={`circle circle-${this.state.avail}`}></div> */}
+                
                 <Modal
                     open={this.state.openDetailView}
                     onClose={this.closeDetailView}
                     className="detailView"
                 >
                     <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
+
+                    <div className="bookDescription">{this.state.description}</div>
 
                     <div id="buttons">
                         {this.state.avail === "avail" ? (
