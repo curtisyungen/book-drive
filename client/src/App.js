@@ -41,9 +41,11 @@ class App extends Component {
     });
 
     this.getAllBooks();
+
+    window.addEventListener("beforeunload", this.releaseBooksFromHold());
   }
 
-  componentWillUnmount = () => {
+  releaseBooksFromHold = () => {
 
     // If guest user, make books in cart available again in database
     if (!this.state.isLoggedIn) {
@@ -66,6 +68,8 @@ class App extends Component {
         }
       }
     }
+
+    window.removeEventListener("beforeunload", this.releaseBooksFromHold());
   }
 
   // REDIRECT HANDLING
