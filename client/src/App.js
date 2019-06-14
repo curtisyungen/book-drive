@@ -42,7 +42,7 @@ class App extends Component {
 
     this.getAllBooks();
 
-    window.addEventListener("beforeunload", this.releaseBooksFromHold());
+    window.addEventListener("beforeunload", this.releaseBooksFromHold);
   }
 
   releaseBooksFromHold = () => {
@@ -68,8 +68,6 @@ class App extends Component {
         }
       }
     }
-
-    window.removeEventListener("beforeunload", this.releaseBooksFromHold());
   }
 
   // REDIRECT HANDLING
