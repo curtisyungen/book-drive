@@ -73,6 +73,7 @@ export default {
     },
 
     payUsingPayPal: function(items) {
+        console.log(items);
         return axios.post("/api/payPal/payUsingPayPal", items);
     },
 
