@@ -29,19 +29,19 @@ class Book extends Component {
             avail: this.props.avail,
             tags: this.props.tags,
             imageURL: this.props.imageURL,
-        }, () => {
-            API.getBookByTitle(this.state.title)
-            .then((res) => {
-                this.setState({
-                    description: res.data.items[0].volumeInfo.description
-                });
-            });
         });
     }
 
     openDetailView = () => {
         this.setState({
             openDetailView: true,
+        });
+
+        API.getBookByTitle(this.state.title)
+        .then((res) => {
+            this.setState({
+                description: res.data.items[0].volumeInfo.description
+            });
         });
     }
 
