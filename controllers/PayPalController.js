@@ -32,7 +32,7 @@ class PayPalController {
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": req.params.total.toString()
+                    "total": req.params.total
                 },
                 "description": "This is the payment description."
             }]
