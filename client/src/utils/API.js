@@ -103,7 +103,7 @@ export default {
             }]
         };
 
-        paypal.payment.create(create_payment_json, function (error, payment) {
+        return paypal.payment.create(create_payment_json, function (error, payment) {
             if (error) {
                 console.log("Error processing payment", error);
             }
