@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import BannerAd from "./components/BannerAd/bannerAd";
 import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -415,7 +416,7 @@ class App extends Component {
 
           {/* SHOW OR HIDE NAVBAR */}
 
-          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup") ? (
+          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup" && window.location.pathname !== "/forgot") ? (
             <span>
               <BannerAd />
 
@@ -440,6 +441,7 @@ class App extends Component {
                 loginUser={this.loginUser}
               />
             } />
+            <Route exact path="/forgot" component={ForgotPassword} />
             <Route exact path="/signup" render={() =>
               <Signup
                 createNewUser={this.createNewUser}

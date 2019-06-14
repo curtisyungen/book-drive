@@ -50,7 +50,7 @@ class Login extends Component {
                         />
 
                         <span className="formLabel">Password</span>
-                        <a className="forgotYourPassword" href="/">Forgot your password?</a>
+                        <a className="forgotYourPassword" href="/forgot">Forgot your password?</a>
                         <input
                             className="formInput"
                             name="password"

@@ -21,6 +21,7 @@ class Navbar extends Component {
             email: "",
             showSearchSuggestions: false,
             suggestions: [],
+            scrollPosition: 0,
         }
     }
 
