@@ -73,7 +73,7 @@ export default {
     },
 
     payUsingPayPal: function(total) {
-        return axios.post("/api/payPal/payUsingPayPal/" + total, { 'headers': { 'Content-Type': 'application/json' } });
+        return axios.post("/api/payPal/payUsingPayPal/" + total);
     },
 
     successfulPayment: function() {
