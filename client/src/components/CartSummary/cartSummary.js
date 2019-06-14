@@ -8,7 +8,22 @@ class CartSummary extends Component {
         super(props);
 
         this.state = {
-            cart: [],
+            cart: [
+                {
+                    title: "Test",
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    price: 5.00,
+                    imageURL: "Test",
+                },
+                {
+                    title: "Test",
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    price: 5.00,
+                    imageURL: "Test",
+                },
+            ],
             subtotal: 0,
         }
     }
