@@ -19,7 +19,7 @@
 .bookDescription {
     font-size: 12px;
     max-height: 150px;
-    overflow-y: scroll;
+    text-overflow: ellipsis;
     white-space: normal;
     width: 300px;
 }
