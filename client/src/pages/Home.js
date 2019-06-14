@@ -20,8 +20,6 @@ class Home extends Component {
 
     componentDidMount = () => {
 
-        window.addEventListener("scroll", this.listenToScroll);
-
         let message = "";
 
         if (this.props.books.length === 0) {
@@ -45,40 +43,6 @@ class Home extends Component {
                 userSearch: this.props.userSearch,
             });
         }
-    }
-
-    componentWillUnmount = () => {
-        window.removeEventListener("scroll", this.listenToScroll);
-    }
-
-    listenToScroll = () => {
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop;
-
-        console.log(winScroll);
-    
-        if (winScroll > 400) {
-            this.setState({
-                showScrollToBtn: true,
-            });
-        }
-        else {
-            this.setState({
-                showScrollToBtn: false,
-            });
-        }
-    }
-
-    showScrollToTopBtn = () => {
-        this.setState({
-            showScrollToTopBtn: true,
-        });
-    }
-
-    hideScrollToTopBtn = () => {
-        this.setState({
-            showScrollToTopBtn: false,
-        });
     }
 
     scrollToTop = () => {
@@ -182,8 +146,7 @@ class Home extends Component {
                 {/* BOOK LIST */}
 
                 <div
-                    className="bookList"    
-                    onScroll={this.checkScrollPos}
+                    className="bookList"
                 >
                     {this.state.books && this.state.books.length > 0 ? (
                         this.state.books.map(book => (
@@ -203,17 +166,6 @@ class Home extends Component {
                         ))
                     ) : (
                         <div>{this.state.message}</div>
-                    )}
-
-                    {this.state.showScrollToTopBtn ? (
-                        <div
-                            id="scrollToTopBtn"
-                            onClick={this.scrollToTop}
-                        >
-                            Back to Top
-                        </div>
-                    ) : (
-                        <></>
                     )}
                 </div>
             </Container>
