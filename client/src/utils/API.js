@@ -1,14 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
 
-const paypal = require("paypal-rest-sdk");
-
-paypal.configure({
-    "mode": "sandbox",
-    "client_id": "AV8Iugkse1G7ntxZ15eI6KdFmCvKvEkSLBmWJWdWihsMIKnEDAcj_IFhjm9PZ7n1jCQeAgUrlXo-YQ2B",
-    "client_secret": "EHPwT8Eo48LQNInmvHAqD_8Qy5PpQyGueniw55eh2Yzf38g0-CxDvhc8Jn4l7RTllfknIyqKCM4ogaHt",
-});
-
 dotenv.config();
 
 export default {
@@ -81,35 +73,7 @@ export default {
     },
 
     payUsingPayPal: function(items) {
-
-        var create_payment_json = {
-            "intent": "sale",
-            "payer": {
-                "payment_method": "paypal"
-            },
-            "redirect_urls": {
-                "return_url": "http://return.url",
-                "cancel_url": "http://cancel.url"
-            },
-            "transactions": [{
-                "item_list": {
-                    "items": items
-                },
-                "amount": {
-                    "currency": "USD",
-                    "total": "1.00"
-                },
-                "description": "This is the payment description."
-            }]
-        };
-
-        return paypal.payment.create(create_payment_json, function (error, payment) {
-            if (error) {
-                console.log("Error processing payment", error);
-            }
-
-            return payment;
-        });
+        return axios.post("/api/payPal/payUsingPayPal", items);
     },
 
     successfulPayment: function() {
