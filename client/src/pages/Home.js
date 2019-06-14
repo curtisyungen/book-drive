@@ -54,6 +54,8 @@ class Home extends Component {
     listenToScroll = () => {
         const winScroll =
             document.body.scrollTop || document.documentElement.scrollTop;
+
+        console.log(winScroll);
     
         if (winScroll > 400) {
             this.setState({
