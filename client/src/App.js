@@ -25,12 +25,11 @@ class App extends Component {
       message: "",
       user: null,
       isLoggedIn: false,
-      useAsGuest: true,
       userSearch: "",
       cart: [],
       redirectToHome: false,
       redirectToLogin: false,
-      redirectToSignup: false,
+      redirectToSignUp: false,
     }
   }
 
@@ -377,6 +376,12 @@ class App extends Component {
 
           {this.state.redirectToLogin ? (
             this.redirectToLogin()
+          ) : (
+            <></>
+          )}
+
+          {this.state.redirectToSignUp ? (
+            this.redirectToSignUp()
           ) : (
             <></>
           )}
