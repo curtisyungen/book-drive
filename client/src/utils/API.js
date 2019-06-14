@@ -1,6 +1,14 @@
 import axios from "axios";
 import dotenv from "dotenv";
 
+const paypal = require("paypal-rest-sdk");
+
+paypal.configure({
+    "mode": "sandbox",
+    "client_id": "AV8Iugkse1G7ntxZ15eI6KdFmCvKvEkSLBmWJWdWihsMIKnEDAcj_IFhjm9PZ7n1jCQeAgUrlXo-YQ2B",
+    "client_secret": "EHPwT8Eo48LQNInmvHAqD_8Qy5PpQyGueniw55eh2Yzf38g0-CxDvhc8Jn4l7RTllfknIyqKCM4ogaHt",
+});
+
 dotenv.config();
 
 export default {
