@@ -63,7 +63,16 @@ class CartSummary extends Component {
             items.push(item);
         }
 
-        console.log(API.payUsingPayPal(items));
+        API.payUsingPayPal(items)
+            .then((res) => {
+                console.log(res);
+
+                for (var link in res.data.links) {
+                    if (res.data.links[link].rel === "approval_url") {
+                        window.open(res.data.links[link].href);
+                    }
+                }
+            });
     }
 
     render() {
