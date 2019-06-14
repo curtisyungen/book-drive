@@ -22,7 +22,13 @@ class PayPalController {
             },
             "transactions": [{
                 "item_list": {
-                    "items": req.body
+                    "items": [{
+                        "name": "item",
+                        "sku": "item",
+                        "price": "1.00",
+                        "currency": "USD",
+                        "quantity": 1
+                    }]
                 },
                 "amount": {
                     "currency": "USD",
@@ -32,7 +38,7 @@ class PayPalController {
             }]
         };
 
-        paypal.payment.create(JSON.stringify(create_payment_json), function (error, payment) {
+        paypal.payment.create(create_payment_json, function (error, payment) {
             if (error) {
                 console.log("Error processing payment", error);
             }
