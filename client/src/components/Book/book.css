@@ -23,7 +23,7 @@
 .bookDescription {
     display: inline-block;
     font-size: 12px;
-    max-height: 500px;
+    max-height: 200px;
     /* overflow-y: scroll; */
     text-overflow: ellipsis;
     white-space: normal;
@@ -32,6 +32,8 @@
 
 .bookInfo {
     display: inline-block;
+    max-height: 3px;
+    overflow: hidden;
     margin-right: 10px;
     padding-left: 15px;
     width: 300px;
@@ -53,7 +55,7 @@
 }
 
 .book-avail {
-
+    color: green;
 }
 
 .book-unavail, 
