@@ -174,6 +174,8 @@ class App extends Component {
                 // Save login status in Local Storage
                 localStorage.setItem("isLoggedIn", true);
 
+                console.log(userData);
+
                 let userData = {
                   name: res.data[0].name,
                   email: res.data[0].email,
@@ -181,6 +183,9 @@ class App extends Component {
 
                 // Save user data in Local Storage
                 localStorage.setItem("user", JSON.stringify(userData));
+
+                // Load user's cart from Database
+
 
                 this.setState({
                   isLoggedIn: true,
@@ -331,6 +336,8 @@ class App extends Component {
   // =========================================
 
   sendToCart = (book) => {
+
+    // Check if book is still available
     API.checkBookAvail(book)
       .then((res) => {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
