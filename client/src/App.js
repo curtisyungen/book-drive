@@ -202,6 +202,7 @@ class App extends Component {
             // Save user cart in state
             this.setState({
               isLoggedIn: true,
+              user: res.data[0],
               cart: cart,
             });
 
