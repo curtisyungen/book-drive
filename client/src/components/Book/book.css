@@ -9,6 +9,10 @@
     width: 202px;
 }
 
+.bookAuthor {
+    font-size: 12px;
+}
+
 .bookCover {
     height: 258px;
     margin: 0;
@@ -17,21 +21,44 @@
 }
 
 .bookDescription {
+    display: inline-block;
     font-size: 12px;
-    max-height: 92px;
-    overflow: hidden;
+    max-height: 500px;
+    /* overflow-y: scroll; */
     text-overflow: ellipsis;
     white-space: normal;
     width: 300px;
 }
 
-.bookTitle {
-    font-size: 14px;
-    font-weight: 700;
+.bookInfo {
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 15px;
+    width: 300px;
 }
 
-.bookAuthor {
+.bookStatus {
+    float: right;
     font-size: 12px;
+}
+
+.bookTitle {
+    font-size: 24px;
+    line-height: 38px;
+    max-width: 300px;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book-avail {
+
+}
+
+.book-unavail, 
+.book-hold {
+    color: darkgray;
 }
 
 .button {
@@ -39,27 +66,9 @@
     width: 100px;
 }
 
-.circle {
-    border-radius: 10px;
-    display: inline-block;
-    height: 10px;
-    position: absolute;
-    width: 10px;
-}
-
-.circle-avail {
-    background: green;
-}
-
-.circle-hold {
-    background: gray;
-}
-
-.circle-unavail {
-    background: red;
-}
-
 .detailBookCover {
+    border: 1px solid lightgray;
+    float: left;
     width: 300px;
 }
 
