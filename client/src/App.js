@@ -42,8 +42,16 @@ class App extends Component {
     });
 
     this.getAllBooks();
+    this.loadUserFromLocalStorage();
+  }
 
-    window.addEventListener("beforeunload", this.releaseBooksFromHold);
+  loadUserFromLocalStorage = () => {
+    if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user") !== null) {
+      this.setState({
+        user: JSON.parse(localStorage.getItem("user")),
+        isLoggedIn: true,
+      });
+    }
   }
 
   releaseBooksFromHold = () => {
@@ -184,11 +192,13 @@ class App extends Component {
                 // Save user data in Local Storage
                 localStorage.setItem("user", JSON.stringify(userData));
 
-                // Load user's cart from Database
+                // Save user cart in Session Storage
+                sessionStorage.setItem("cart", JSON.stringify(res.data[0].cart));
 
-
+                // Save user cart in state
                 this.setState({
                   isLoggedIn: true,
+                  cart: res.data[0].cart,
                 });
 
                 // Redirect to Home Page
@@ -343,15 +353,20 @@ class App extends Component {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
 
-          let cart = [];
-          if (sessionStorage.getItem("cart") && JSON.parse(sessionStorage.getItem("cart")) !== null) {
-            cart = JSON.parse(sessionStorage.getItem("cart"));
-          }
-
-          cart.push(book);
-          sessionStorage.setItem("cart", JSON.stringify(cart));
-
+          // Put book on hold in database
           this.putBookOnHold(book);
+
+          let cart;
+          if (this.state.cart !== null) {
+            cart = this.state.cart;
+            cart.push(book);
+
+            API.updateCart(this.state.email, cart)
+              .then((res) => {
+                console.log("Updated cart", res);
+                sessionStorage.setItem("cart", JSON.stringify(cart));
+              });
+          }
 
           alert("Added to cart!");
         }
