@@ -57,7 +57,11 @@ export default {
     },
 
     updateCart: function(email, cart) {
-        return axios.put("/api/users/updateCart/" + email);
+        let data = {
+            email: email,
+            cart: cart,
+        }
+        return axios.put("/api/users/updateCart", data);
     },
 
     findExistingUser: function(email) {
