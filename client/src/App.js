@@ -358,7 +358,7 @@ class App extends Component {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
 
-          cart = this.state.cart;
+          cart = this.state.cart || [];
           cart.push(book);
 
         }
