@@ -360,17 +360,18 @@ class App extends Component {
           // Put book on hold in database
           this.putBookOnHold(book);
 
-          let cart;
-          if (this.state.cart !== null) {
-            cart = this.state.cart;
-            cart.push(book);
+          let cart = this.state.cart;
+          cart.push(book);
 
-            API.updateCart(this.state.email, cart)
-              .then((res) => {
-                console.log("Updated cart", res);
-                sessionStorage.setItem("cart", JSON.stringify(cart));
+          API.updateCart(this.state.email, cart)
+            .then((res) => {
+              console.log("Updated cart", res);
+              sessionStorage.setItem("cart", JSON.stringify(cart));
+
+              this.setState({
+                cart: cart,
               });
-          }
+            });
 
           alert("Added to cart!");
         }
