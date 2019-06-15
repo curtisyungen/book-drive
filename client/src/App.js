@@ -193,12 +193,16 @@ class App extends Component {
                 localStorage.setItem("user", JSON.stringify(userData));
 
                 // Save user cart in Session Storage
-                sessionStorage.setItem("cart", JSON.stringify(res.data[0].cart));
+                let cart;
+                if (res.data[0].cart === null) {
+                  cart = [];
+                }
+                sessionStorage.setItem("cart", JSON.stringify(cart));
 
                 // Save user cart in state
                 this.setState({
                   isLoggedIn: true,
-                  cart: res.data[0].cart,
+                  cart: cart,
                 });
 
                 // Redirect to Home Page
