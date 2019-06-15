@@ -16,6 +16,9 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        cart: {
+            type: DataTypes.STRING(2000),
+        }
     });
 
     Users.associate = function(models) {
