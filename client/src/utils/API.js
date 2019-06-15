@@ -1,6 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
-var mailgun = require('mailgun-js')({apiKey: "16ffd509-0edbbce6", domain: domain});
+var mailgun = require('mailgun-js');
 
 dotenv.config();
 
