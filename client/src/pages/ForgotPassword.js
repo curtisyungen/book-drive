@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-var mailgun = require('mailgun-js')({apiKey: "16ffd509-0edbbce6", domain: domain});
 import "./ForgotPassword.css";
 
 class ForgotPassword extends Component {
