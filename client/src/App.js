@@ -350,29 +350,17 @@ class App extends Component {
 
   sendToCart = (book) => {
 
+    let cart;
+
     // Check if book is still available
     API.checkBookAvail(book)
       .then((res) => {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
 
-          let cart = this.state.cart;
+          cart = this.state.cart;
           cart.push(book);
 
-          API.updateCart(this.state.user.email, cart.toString())
-            .then((res) => {
-              console.log("Updated cart", res);
-              sessionStorage.setItem("cart", JSON.stringify(cart));
-
-              // Put book on hold in database
-              this.putBookOnHold(book);
-
-              this.setState({
-                cart: cart,
-              });
-
-              alert("Added to cart!");
-            });
         }
         else {
           alert("Sorry, this book is no longer available.");
@@ -380,6 +368,21 @@ class App extends Component {
       })
       .catch((err) => {
         console.log(err);
+      });
+
+    API.updateCart(this.state.user.email, JSON.stringify(cart))
+      .then((res) => {
+        console.log("Updated cart", res);
+        sessionStorage.setItem("cart", JSON.stringify(cart));
+
+        // Put book on hold in database
+        this.putBookOnHold(book);
+
+        this.setState({
+          cart: cart,
+        });
+
+        alert("Added to cart!");
       });
   }
 
