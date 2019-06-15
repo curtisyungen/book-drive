@@ -1,8 +1,15 @@
 import axios from "axios";
 import dotenv from "dotenv";
-var mailgun = require('mailgun-js');
 
 dotenv.config();
+
+const paypal = require("paypal-rest-sdk");
+
+paypal.configure({
+    "mode": "sandbox",
+    "client_id": "AV8Iugkse1G7ntxZ15eI6KdFmCvKvEkSLBmWJWdWihsMIKnEDAcj_IFhjm9PZ7n1jCQeAgUrlXo-YQ2B",
+    "client_secret": "EHPwT8Eo48LQNInmvHAqD_8Qy5PpQyGueniw55eh2Yzf38g0-CxDvhc8Jn4l7RTllfknIyqKCM4ogaHt",
+});
 
 export default {
 
@@ -82,7 +89,45 @@ export default {
     },
 
     payUsingPayPal: function (total) {
-        return axios.post("/api/payPal/payUsingPayPal/" + total);
+
+        let json_data = {
+            "intent": "sale",
+            "payer": {
+                "payment_method": "paypal"
+            },
+            "redirect_urls": {
+                "return_url": "http://return.url",
+                "cancel_url": "http://cancel.url"
+            },
+            "transactions": [{
+                "item_list": {
+                    "items": [{
+                        "name": "item",
+                        "sku": "item",
+                        "price": "1.00",
+                        "currency": "USD",
+                        "quantity": 1
+                    }]
+                },
+                "amount": {
+                    "currency": "USD",
+                    "total": total
+                },
+                "description": "This is the payment description."
+            }]
+        };
+
+        $.ajax({
+            url: "/api/payPal/payUsingPayPal/",
+            data: json_data,
+            method: "POST",
+            dataType: "json",
+        })
+        .then((res) => {
+            console.log("ajax result", res);
+        });
+
+        // return axios.post("/api/payPal/payUsingPayPal/" + total);
     },
 
     successfulPayment: function () {
