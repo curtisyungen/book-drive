@@ -179,34 +179,34 @@ class App extends Component {
           if (res.data[0].password === password) {
             alert("Logged in successfully!");
 
-                // Save login status in Local Storage
-                localStorage.setItem("isLoggedIn", true);
+            // Save login status in Local Storage
+            localStorage.setItem("isLoggedIn", true);
 
-                console.log(userData);
+            console.log(userData);
 
-                let userData = {
-                  name: res.data[0].name,
-                  email: res.data[0].email,
-                }
+            let userData = {
+              name: res.data[0].name,
+              email: res.data[0].email,
+            }
 
-                // Save user data in Local Storage
-                localStorage.setItem("user", JSON.stringify(userData));
+            // Save user data in Local Storage
+            localStorage.setItem("user", JSON.stringify(userData));
 
-                // Save user cart in Session Storage
-                let cart;
-                if (res.data[0].cart === null) {
-                  cart = [];
-                }
-                sessionStorage.setItem("cart", JSON.stringify(cart));
+            // Save user cart in Session Storage
+            let cart;
+            if (res.data[0].cart === null) {
+              cart = [];
+            }
+            sessionStorage.setItem("cart", JSON.stringify(cart));
 
-                // Save user cart in state
-                this.setState({
-                  isLoggedIn: true,
-                  cart: cart,
-                });
+            // Save user cart in state
+            this.setState({
+              isLoggedIn: true,
+              cart: cart,
+            });
 
-                // Redirect to Home Page
-                this.setRedirectToHome();
+            // Redirect to Home Page
+            this.setRedirectToHome();
           }
           else {
             alert("Incorrect password.");
@@ -357,23 +357,26 @@ class App extends Component {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
 
-          // Put book on hold in database
-          this.putBookOnHold(book);
-
           let cart = this.state.cart;
           cart.push(book);
+
+          console.log("Cart", cart);
+          console.log("Email", this.state.email);
 
           API.updateCart(this.state.email, cart)
             .then((res) => {
               console.log("Updated cart", res);
               sessionStorage.setItem("cart", JSON.stringify(cart));
 
+              // Put book on hold in database
+              this.putBookOnHold(book);
+
               this.setState({
                 cart: cart,
               });
-            });
 
-          alert("Added to cart!");
+              alert("Added to cart!");
+            });
         }
         else {
           alert("Sorry, this book is no longer available.");
@@ -405,7 +408,7 @@ class App extends Component {
     this.releaseBookFromHold(book);
 
     alert("Removed from cart!");
-    
+
     window.location.reload();
   }
 
@@ -420,26 +423,26 @@ class App extends Component {
     return (
       <Router>
         <span>
-          
+
           {/* HANDLE PAGE REDIRECTS */}
 
           {this.state.redirectToHome ? (
             this.redirectToHome()
           ) : (
-            <></>
-          )}
+              <></>
+            )}
 
           {this.state.redirectToLogin ? (
             this.redirectToLogin()
           ) : (
-            <></>
-          )}
+              <></>
+            )}
 
           {this.state.redirectToSignUp ? (
             this.redirectToSignUp()
           ) : (
-            <></>
-          )}
+              <></>
+            )}
 
           {/* SHOW OR HIDE NAVBAR */}
 
