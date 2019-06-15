@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+var mailgun = require('mailgun-js')({apiKey: "16ffd509-0edbbce6", domain: domain});
 import "./ForgotPassword.css";
 
 class ForgotPassword extends Component {
@@ -19,9 +20,10 @@ class ForgotPassword extends Component {
         });
     }
 
-    handleSubmit = (event) => {
+    sendPasswordReset = (event) => {
         event.preventDefault();
-    
+
+        API.sendPasswordReset();
     }
 
     render() {
@@ -47,6 +49,7 @@ class ForgotPassword extends Component {
 
                         <button
                             className="submitEmailBtn"
+                            onClick={this.sendPasswordReset}
                         >
                             Continue
                         </button>
