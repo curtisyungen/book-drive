@@ -182,8 +182,6 @@ class App extends Component {
             // Save login status in Local Storage
             localStorage.setItem("isLoggedIn", true);
 
-            console.log(userData);
-
             let userData = {
               name: res.data[0].name,
               email: res.data[0].email,
@@ -360,9 +358,6 @@ class App extends Component {
 
           let cart = this.state.cart;
           cart.push(book);
-
-          console.log("Cart", cart);
-          console.log("Email", this.state.user.email);
 
           API.updateCart(this.state.user.email, cart)
             .then((res) => {

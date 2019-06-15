@@ -57,6 +57,7 @@ export default {
     },
 
     updateCart: function(email, cart) {
+        console.log("API", email, cart);
         return axios.put("/api/users/updateCart/" + email, cart);
     },
 
