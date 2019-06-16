@@ -38,12 +38,7 @@ export default {
     },
 
     loginUser: function (email, password) {
-        let user = {
-            email: email,
-            password: password,
-        };
-
-        return axios.get("/api/users/loginUser", user);
+        return axios.get("/api/users/loginUser/", { params: { email: email, password: password }});
     },
 
     createNewUser: function (name, email, password) {
