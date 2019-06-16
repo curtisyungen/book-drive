@@ -16,7 +16,7 @@ class UserController {
                     res.json(user);
                 }
                 else {
-                    res.send("Incorrect password.");
+                    res.json("Incorrect password.");
                 }
             });
         });        
