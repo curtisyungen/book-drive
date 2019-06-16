@@ -50,6 +50,11 @@ class App extends Component {
       this.setState({
         user: JSON.parse(localStorage.getItem("user")),
         isLoggedIn: true,
+      }, () => {
+        API.findExistingUser(this.state.user.email)
+        .then((res) => {
+          console.log(res.data[0]);
+        });
       });
     }
   }
@@ -361,6 +366,21 @@ class App extends Component {
           cart = this.state.cart || [];
           cart.push(book);
 
+          API.updateCart(this.state.user.email, JSON.stringify(cart))
+            .then((res) => {
+              console.log("Updated cart", res);
+              sessionStorage.setItem("cart", JSON.stringify(cart));
+
+              // Put book on hold in database
+              this.putBookOnHold(book);
+
+              this.setState({
+                cart: cart,
+              });
+
+              alert("Added to cart!");
+            });
+
         }
         else {
           alert("Sorry, this book is no longer available.");
@@ -368,21 +388,6 @@ class App extends Component {
       })
       .catch((err) => {
         console.log(err);
-      });
-
-    API.updateCart(this.state.user.email, JSON.stringify(cart))
-      .then((res) => {
-        console.log("Updated cart", res);
-        sessionStorage.setItem("cart", JSON.stringify(cart));
-
-        // Put book on hold in database
-        this.putBookOnHold(book);
-
-        this.setState({
-          cart: cart,
-        });
-
-        alert("Added to cart!");
       });
   }
 
