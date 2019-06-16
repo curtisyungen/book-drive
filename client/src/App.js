@@ -372,7 +372,22 @@ class App extends Component {
           cart = this.state.cart || [];
           cart.push(book);
 
-          API.updateCart(this.state.user.email, JSON.stringify(cart))
+          cart = [
+            {
+              title: "test",
+              authorFirst: "test",
+            },
+            {
+              title: "test",
+              authorFirst: "test",
+            },
+            {
+              title: "test",
+              authorFirst: "test",
+            },
+          ]
+
+          API.updateCart(this.state.user.email, cart)
             .then((res) => {
               console.log("Updated cart", res);
               sessionStorage.setItem("cart", JSON.stringify(cart));
