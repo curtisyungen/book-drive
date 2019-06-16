@@ -59,15 +59,12 @@ class UserController {
 
     updateCart(req, res) {
         db.Users.update(
-            {cart: req.body.cart},
+            {cart: sessionStorage.getItem("cart")},
             {where: {
                 email: req.body.email,
             }})
             .then((user) => {
                 res.json(user);
-            })
-            .catch((err) => {
-                console.log(err);
             });
     }
 }
