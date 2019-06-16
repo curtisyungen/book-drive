@@ -16,8 +16,12 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
-        let email = JSON.parse(localStorage.getItem("user")).email;
-        this.getBooksInCart(email);
+        let email; 
+        
+        if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user")) {
+            email = JSON.parse(localStorage.getItem("user")).email;
+            this.getBooksInCart(email);
+        }
     }
 
     getBooksInCart = (email) => {
