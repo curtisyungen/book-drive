@@ -54,6 +54,8 @@ class App extends Component {
         API.findExistingUser(this.state.user.email)
         .then((res) => {
           console.log(res.data[0]);
+
+          sessionStorage.setItem("cart", JSON.stringify(res.data[0].cart));
         });
       });
     }
