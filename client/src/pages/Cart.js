@@ -16,16 +16,18 @@ class Cart extends Component {
 
     componentDidMount = () => {
         let email = JSON.parse(localStorage.getItem("user")).email;
-        this.props.getBooksInCart(email);
-
-        this.setState({
-            cart: this.props.cart,
-        }, () => {
-            console.log(this.state);
-        });
-
+        this.getBooksInCart(email);
         this.calculateSubtotal();
     }
+
+    getBooksInCart = (email) => {
+        API.getBooksInCart(email)
+          .then((res) => {
+            this.setState({
+              cart: res.data,
+            });
+          });
+      }
 
     calculateSubtotal = () => {
         let cart = this.state.cart;
