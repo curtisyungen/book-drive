@@ -79,6 +79,10 @@
     width: 100%;
 }
 
+.loginLogo {
+    height: 40px;
+}
+
 .loginPage {
     border-bottom: 1px solid gray;
 }

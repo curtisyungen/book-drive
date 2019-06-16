@@ -38,7 +38,7 @@ class Signup extends Component {
         return (
             <span className="signupPage">
                 <a className="congoLogo" href="/">
-                    <img src="" alt="Congo Logo" />
+                    <img className="loginLogo" src={require('../images/congo1.png')} alt="congo" />
                 </a>
 
                 <div className="signup">
