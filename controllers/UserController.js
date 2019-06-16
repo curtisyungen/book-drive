@@ -16,9 +16,9 @@ class UserController {
                     return console.log(err);
                 }
 
-                if (response) {
-                    res.json(user);
-                }
+                console.log(response);
+
+                res.json(user);
             });
         });        
 
