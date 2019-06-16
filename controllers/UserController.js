@@ -13,12 +13,10 @@ class UserController {
         .then((user) => {
             bcrypt.compare(req.query.password, user.password, function(err, result) {
                 if (result === true) {
-                    console.log("Hello");
-                    res.redirect("/about");
+                    res.json(user);
                 }
                 else {
                     res.send("Incorrect password.");
-                    res.redirect("/");
                 }
             });
         });        
