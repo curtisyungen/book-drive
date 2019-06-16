@@ -26,6 +26,20 @@ class UserController {
             }
             
             console.log("Salt", salt);
+
+            bcrypt.hash(req.body.password, salt, function(err, hash) {
+                db.Users.create({
+                    name: req.body.name,
+                    email: req.body.email,
+                    password: hash,
+                })
+                .then((user) => {
+                    res.json(user);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+            });
         });
 
         // bcrypt
@@ -34,17 +48,17 @@ class UserController {
 
         //         console.log("Hash", hash);
 
-                db.Users.create({
-                    name: req.body.name,
-                    email: req.body.email,
-                    password: req.body.password,
-                })
-                .then((user) => {
-                    res.json(user);
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
+                // db.Users.create({
+                //     name: req.body.name,
+                //     email: req.body.email,
+                //     password: req.body.password,
+                // })
+                // .then((user) => {
+                //     res.json(user);
+                // })
+                // .catch((err) => {
+                //     console.log(err);
+                // });
             // })
             // .catch((err) => {
             //     console.log(err);
