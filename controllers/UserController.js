@@ -59,7 +59,7 @@ class UserController {
 
     updateCart(req, res) {
         db.Users.update(
-            req.body,
+            {cart: req.body.cart},
             {where: {
                 email: req.params.email,
             }})
