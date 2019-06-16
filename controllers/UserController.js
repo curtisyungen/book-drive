@@ -7,7 +7,7 @@ class UserController {
 
         db.Users.findAll({
             where: {
-                email: req.body.email,
+                email: req.query.email,
             }
         })
         .then((user) => {
