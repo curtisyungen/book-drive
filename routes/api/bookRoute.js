@@ -38,7 +38,7 @@ router.get("/checkBookAvail/:title", (req, res) => {
     controller.checkBookAvail(req, res);
 });
 
-router.get("/getBooksInCart", (req, res) => {
+router.get("/getBooksInCart/:email", (req, res) => {
     controller.getBooksInCart(req, res);
 });
 
