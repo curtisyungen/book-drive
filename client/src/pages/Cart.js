@@ -15,21 +15,11 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
-        this.loadCartFromSessionStorage();
-        this.calculateSubtotal();
-    }
-
-    loadCartFromSessionStorage = () => {
-        let cart;
-        if (sessionStorage.getItem("cart")) {
-            cart = JSON.parse(sessionStorage.getItem("cart"));
-        }
-
         this.setState({
-            cart: cart,
-        }, () => {
-            this.calculateSubtotal();
+            cart: this.props.cart,
         });
+
+        this.calculateSubtotal();
     }
 
     calculateSubtotal = () => {

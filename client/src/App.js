@@ -51,12 +51,7 @@ class App extends Component {
         user: JSON.parse(localStorage.getItem("user")),
         isLoggedIn: true,
       }, () => {
-        API.findExistingUser(this.state.user.email)
-        .then((res) => {
-          console.log(res.data[0]);
-
-          sessionStorage.setItem("cart", JSON.stringify(res.data[0].cart));
-        });
+        this.getBooksInCart(this.state.user.email);
       });
     }
   }
@@ -359,7 +354,7 @@ class App extends Component {
       .then((res) => {
         console.log("Put book on hold", res);
         alert("Added to cart!");
-        this.getBooksInCart(this.state.user.email);
+        this.getBooksInCart();
       });
   }
 
@@ -368,15 +363,19 @@ class App extends Component {
       .then((res) => {
         console.log("Release book from hold", res);
         alert("Removed from cart!");
-        this.getBooksInCart(this.state.user.email);
+        this.getBooksInCart();
         window.location.reload();
       });
   }
 
-  getBooksInCart = (email) => {
-    API.getBooksInCart(email)
+  getBooksInCart = () => {
+    API.getBooksInCart(this.state.user.email)
       .then((res) => {
-        console.log(res);
+        this.setState({
+          cart: res.data,
+        }, () => {
+          console.log(this.state);
+        });
       });
   }
 
@@ -458,6 +457,8 @@ class App extends Component {
             <Route exact path="/cart" render={() =>
               <Cart
                 deleteFromCart={this.deleteFromCart}
+                getBooksInCart={this.getBooksInCart}
+                cart={this.state.cart}
               />
             } />
             <Route exact path="/success" component={Success} />
