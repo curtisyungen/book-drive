@@ -68,12 +68,16 @@ export default {
         return axios.get("/api/books/checkBookAvail/" + book.title);
     },
 
-    putBookOnHold: function (book, email) {
-        return axios.put("/api/books/putBookOnHold/" + email, book);
+    addToCart: function (book, email) {
+        return axios.put("/api/books/addToCart/" + email, book);
     },
 
-    releaseBookFromHold: function (book) {
-        return axios.put("/api/books/releaseBookFromHold", book);
+    deleteFromCart: function (book) {
+        return axios.put("/api/books/deleteFromCart", book);
+    },
+
+    getBooksInCart: function(book) {
+        return axios.get("/api/books/getBooksInCart/" + email);
     },
 
     payUsingPayPal: function (total) {

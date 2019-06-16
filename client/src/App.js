@@ -61,31 +61,6 @@ class App extends Component {
     }
   }
 
-  releaseBooksFromHold = () => {
-
-    // If guest user, make books in cart available again in database
-    if (!this.state.isLoggedIn) {
-
-      let cart;
-      if (sessionStorage.getItem("cart")) {
-        cart = JSON.parse(sessionStorage.getItem("cart"));
-      }
-
-      if (cart) {
-        for (var item in cart) {
-
-          let book = {
-            title: cart[item].title,
-            authorFirst: cart[item].authorFirst,
-            authorLast: cart[item].authorLast,
-          }
-
-          API.releaseBookFromHold(book);
-        }
-      }
-    }
-  }
-
   // REDIRECT HANDLING
   // ========================================= 
 
@@ -368,40 +343,7 @@ class App extends Component {
       .then((res) => {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
-
-          cart = this.state.cart || [];
-          cart.push(book);
-
-          cart = [
-            {
-              title: "test",
-              authorFirst: "test",
-            },
-            {
-              title: "test",
-              authorFirst: "test",
-            },
-            {
-              title: "test",
-              authorFirst: "test",
-            },
-          ]
-
-          API.updateCart(this.state.user.email, cart)
-            .then((res) => {
-              console.log("Updated cart", res);
-              sessionStorage.setItem("cart", JSON.stringify(cart));
-
-              // Put book on hold in database
-              this.putBookOnHold(book);
-
-              this.setState({
-                cart: cart,
-              });
-
-              alert("Added to cart!");
-            });
-
+          this.addToCart(book);
         }
         else {
           alert("Sorry, this book is no longer available.");
@@ -412,35 +354,29 @@ class App extends Component {
       });
   }
 
-  putBookOnHold = (book) => {
-    API.putBookOnHold(book, this.state.user.email)
+  addToCart = (book) => {
+    API.addToCart(book, this.state.user.email)
       .then((res) => {
         console.log("Put book on hold", res);
+        alert("Added to cart!");
+        this.getBooksInCart(this.state.email);
       });
   }
 
   deleteFromCart = (book) => {
-    let cart = JSON.parse(sessionStorage.getItem("cart"));
-
-    for (var b in cart) {
-      if (cart[b].title === book.title) {
-        cart.splice(b, 1);
-      }
-    }
-
-    sessionStorage.setItem("cart", JSON.stringify(cart));
-
-    this.releaseBookFromHold(book);
-
-    alert("Removed from cart!");
-
-    window.location.reload();
-  }
-
-  releaseBookFromHold = (book) => {
-    API.releaseBookFromHold(book)
+    API.deleteFromCart(book)
       .then((res) => {
         console.log("Release book from hold", res);
+        alert("Removed from cart!");
+        this.getBooksInCart(this.state.email);
+        window.location.reload();
+      });
+  }
+
+  getBooksInCart = (email) => {
+    API.getBooksInCart(email)
+      .then((res) => {
+        console.log(res);
       });
   }
 
