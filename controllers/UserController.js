@@ -11,15 +11,15 @@ class UserController {
             }
         })
         .then((user) => {
-            bcrypt.compare(req.body.password, user.password, function(err, response) {
-                if (err) {
-                    return console.log(err);
-                }
+            // bcrypt.compare(req.body.password, user.password, function(err, response) {
+            //     if (err) {
+            //         return console.log(err);
+            //     }
 
-                console.log(response);
+            //     console.log(response);
 
                 res.json(user);
-            });
+            // });
         });        
 
         // db.Users.findAll({
