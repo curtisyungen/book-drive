@@ -14,9 +14,5 @@ router.post("/createNewUser", (req, res) => {
     controller.createNewUser(req, res);
 });
 
-router.put("/updateCart/:email", (req, res) => {
-    controller.updateCart(req, res);
-});
-
 module.exports = router;
 

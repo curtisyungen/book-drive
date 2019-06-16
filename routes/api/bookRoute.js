@@ -38,12 +38,16 @@ router.get("/checkBookAvail/:title", (req, res) => {
     controller.checkBookAvail(req, res);
 });
 
-router.put("/putBookOnHold/:email", (req, res) => {
-    controller.putBookOnHold(req, res);
+router.get("/getBooksInCart", (req, res) => {
+    controller.getBooksInCart(req, res);
 });
 
-router.put("/releaseBookFromHold", (req, res) => {
-    controller.releaseBookFromHold(req, res);
+router.put("/addToCart/:email", (req, res) => {
+    controller.addToCart(req, res);
+});
+
+router.put("/deleteFromCart", (req, res) => {
+    controller.deleteFromCart(req, res);
 });
 
 module.exports = router;

@@ -150,7 +150,7 @@ class BookController {
         });
     }
 
-    putBookOnHold(req, res) {
+    addToCart(req, res) {
         db.Books.update(
             {avail: req.params.email},
             {where: {
@@ -163,7 +163,7 @@ class BookController {
             });
     }
 
-    releaseBookFromHold(req, res) {
+    deleteFromCart(req, res) {
         db.Books.update(
             {avail: "avail"},
             {where: {
@@ -174,6 +174,17 @@ class BookController {
             .then((book) => {
                 res.json(book);
             });
+    }
+
+    getBooksInCart(req, res) {
+        db.Books.findAll({
+            where: {
+                avail: req.params.email,
+            }
+        })
+        .then((books) => {
+            res.json(books);
+        });
     }
 }
 
