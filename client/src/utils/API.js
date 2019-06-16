@@ -76,7 +76,7 @@ export default {
         return axios.put("/api/books/deleteFromCart", book);
     },
 
-    getBooksInCart: function(book) {
+    getBooksInCart: function(email) {
         return axios.get("/api/books/getBooksInCart/" + email);
     },
 
