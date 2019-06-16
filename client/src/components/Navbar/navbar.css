@@ -19,7 +19,10 @@
 .logo {
     font-family: "Arial";
     font-size: 30px;
-    margin-top: -5px;
+    left: 15px;
+    margin-top: -15px;
+    position: absolute;
+    width: 125px;
 }
 
 .navbar {

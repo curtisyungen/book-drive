@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import "./navbar.css";
 
+// import logo from "../../images/congo2.png";
+
 library.add(faSearch, faShoppingCart);
 
 class Navbar extends Component {
@@ -114,7 +116,7 @@ class Navbar extends Component {
 
                 <a className="navbar-brand" href="/">
                     congo
-                    {/* <img className="logo" src={require('../../images/congo.png')} alt="congo" /> */}
+                    <img className="logo" src={require('../../images/congo2.png')} alt="congo" />
                 </a>
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
