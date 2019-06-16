@@ -1,5 +1,5 @@
 const db = require("../models/index.js");
-// const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 class UserController {
 
@@ -19,6 +19,14 @@ class UserController {
     }
 
     createNewUser(req, res) {
+
+        bcrypt.genSalt(11, function (err, salt) {
+            if (err) {
+                return console.log(err);
+            }
+            
+            console.log("Salt", salt);
+        });
 
         // bcrypt
         //     .hash(req.body.password, 10)
