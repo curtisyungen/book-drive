@@ -37,8 +37,9 @@ class Book extends Component {
             openDetailView: true,
         });
 
-        API.getBookByTitle(this.state.title)
+        API.getBookByTitle(this.props.title)
             .then((res) => {
+                console.log(res);
                 this.setState({
                     description: res.data.items[0].volumeInfo.description
                 });
