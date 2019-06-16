@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CartItem from "../components/CartItem/cartItem";
 import CartSummary from "../components/CartSummary/cartSummary";
+import API from "../utils/API";
 import "./Cart.css";
 
 class Cart extends Component {
