@@ -158,7 +158,7 @@ class App extends Component {
             .then((res) => {
               console.log(res);
 
-              if (true) {
+              if (res.data !== "Incorrect password.") {
                 alert("Logged in successfully!");
 
                 // Save login status in Local Storage
