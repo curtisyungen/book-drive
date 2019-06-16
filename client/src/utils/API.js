@@ -57,11 +57,7 @@ export default {
     },
 
     updateCart: function (email, cart) {
-        let data = {
-            email: email,
-            cart: cart,
-        }
-        return axios.put("/api/users/updateCart", data);
+        return axios.put("/api/users/updateCart/" + email, cart);
     },
 
     findExistingUser: function (email) {
@@ -95,21 +91,4 @@ export default {
     getBookByTitle: function (title) {
         return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${title}`);
     },
-
-    sendPasswordReset: function () {
-        var api_key = '16ffd509-0edbbce6';
-        var domain = 'sandboxc304b206702d426aa94846dced4a4a73.mailgun.org';
-        var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
-
-        var data = {
-            from: 'Congo <postmaster@sandboxc304b206702d426aa94846dced4a4a73.mailgun.org>',
-            to: 'curtisyungen@gmail.com',
-            subject: 'Hello',
-            text: 'Testing some Mailgun awesomeness!'
-        };
-
-        mailgun.messages().send(data, function (error, body) {
-            console.log(body);
-        });
-    }
 };

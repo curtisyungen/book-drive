@@ -205,7 +205,7 @@ class App extends Component {
             else {
               cart = res.data[0].cart;
             }
-            
+
             sessionStorage.setItem("cart", JSON.stringify(cart));
 
             // Save user cart in state
@@ -372,7 +372,8 @@ class App extends Component {
           cart = this.state.cart || [];
           cart.push(book);
 
-          API.updateCart(this.state.user.email, JSON.stringify(cart))
+          API.updateCart(this.state.user.email, 
+            {cart: cart})
             .then((res) => {
               console.log("Updated cart", res);
               sessionStorage.setItem("cart", JSON.stringify(cart));
