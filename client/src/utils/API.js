@@ -68,8 +68,8 @@ export default {
         return axios.get("/api/books/checkBookAvail/" + book.title);
     },
 
-    putBookOnHold: function (book) {
-        return axios.put("/api/books/putBookOnHold", book);
+    putBookOnHold: function (book, email) {
+        return axios.put("/api/books/putBookOnHold/" + email, book);
     },
 
     releaseBookFromHold: function (book) {

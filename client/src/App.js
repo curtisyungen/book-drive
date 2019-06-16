@@ -387,7 +387,7 @@ class App extends Component {
             },
           ]
 
-          API.updateCart(this.state.user.email, "curtisyungen@gmail.com")
+          API.updateCart(this.state.user.email, cart)
             .then((res) => {
               console.log("Updated cart", res);
               sessionStorage.setItem("cart", JSON.stringify(cart));
@@ -413,7 +413,7 @@ class App extends Component {
   }
 
   putBookOnHold = (book) => {
-    API.putBookOnHold(book)
+    API.putBookOnHold(book, email)
       .then((res) => {
         console.log("Put book on hold", res);
       });
