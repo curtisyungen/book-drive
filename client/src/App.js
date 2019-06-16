@@ -413,7 +413,7 @@ class App extends Component {
   }
 
   putBookOnHold = (book) => {
-    API.putBookOnHold(book, email)
+    API.putBookOnHold(book, this.state.user.email)
       .then((res) => {
         console.log("Put book on hold", res);
       });
