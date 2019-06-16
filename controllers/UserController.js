@@ -59,9 +59,9 @@ class UserController {
 
     updateCart(req, res) {
         db.Users.update(
-            {cart: req.body.data.cart},
+            {cart: req.body.cart},
             {where: {
-                email: req.body.data.email,
+                email: req.body.email,
             }})
             .then((user) => {
                 res.json(user);
