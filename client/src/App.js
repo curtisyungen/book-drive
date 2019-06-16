@@ -157,46 +157,49 @@ class App extends Component {
           API.loginUser(email, password)
             .then((res) => {
               console.log(res);
+
+              if (res.data[0].password === password) {
+                alert("Logged in successfully!");
+
+                // Save login status in Local Storage
+                localStorage.setItem("isLoggedIn", true);
+
+                let userData = {
+                  name: res.data[0].name,
+                  email: res.data[0].email,
+                }
+
+                // Save user data in Local Storage
+                localStorage.setItem("user", JSON.stringify(userData));
+
+                // Save user cart in Session Storage
+                let cart;
+                if (res.data[0].cart === null) {
+                  cart = [];
+                }
+                else {
+                  cart = res.data[0].cart;
+                }
+
+                sessionStorage.setItem("cart", JSON.stringify(cart));
+
+                // Save user cart in state
+                this.setState({
+                  isLoggedIn: true,
+                  user: res.data[0],
+                  cart: cart,
+                });
+
+                // Redirect to Home Page
+                this.setRedirectToHome();
+              }
+              else {
+                alert("Incorrect password.");
+              }
+
             });
 
-          // if (res.data[0].password === password) {
-          //   alert("Logged in successfully!");
 
-          //   // Save login status in Local Storage
-          //   localStorage.setItem("isLoggedIn", true);
-
-          //   let userData = {
-          //     name: res.data[0].name,
-          //     email: res.data[0].email,
-          //   }
-
-          //   // Save user data in Local Storage
-          //   localStorage.setItem("user", JSON.stringify(userData));
-
-          //   // Save user cart in Session Storage
-          //   let cart;
-          //   if (res.data[0].cart === null) {
-          //     cart = [];
-          //   }
-          //   else {
-          //     cart = res.data[0].cart;
-          //   }
-
-          //   sessionStorage.setItem("cart", JSON.stringify(cart));
-
-          //   // Save user cart in state
-          //   this.setState({
-          //     isLoggedIn: true,
-          //     user: res.data[0],
-          //     cart: cart,
-          //   });
-
-          //   // Redirect to Home Page
-          //   this.setRedirectToHome();
-          // }
-          // else {
-          //   alert("Incorrect password.");
-          // }
         }
       });
   }
