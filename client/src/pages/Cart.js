@@ -15,6 +15,9 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
+        let email = JSON.parse(localStorage.getItem("user")).email;
+        this.props.getBooksInCart(email);
+
         this.setState({
             cart: this.props.cart,
         }, () => {
