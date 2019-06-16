@@ -359,7 +359,7 @@ class App extends Component {
       .then((res) => {
         console.log("Put book on hold", res);
         alert("Added to cart!");
-        this.getBooksInCart(this.state.email);
+        this.getBooksInCart(this.state.user.email);
       });
   }
 
@@ -368,7 +368,7 @@ class App extends Component {
       .then((res) => {
         console.log("Release book from hold", res);
         alert("Removed from cart!");
-        this.getBooksInCart(this.state.email);
+        this.getBooksInCart(this.state.user.email);
         window.location.reload();
       });
   }
