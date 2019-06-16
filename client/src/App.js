@@ -354,7 +354,7 @@ class App extends Component {
       .then((res) => {
         console.log("Put book on hold", res);
         alert("Added to cart!");
-        this.getBooksInCart();
+        this.getBooksInCart(this.state.user.email);
       });
   }
 
@@ -363,13 +363,13 @@ class App extends Component {
       .then((res) => {
         console.log("Release book from hold", res);
         alert("Removed from cart!");
-        this.getBooksInCart();
+        this.getBooksInCart(this.state.user.email);
         window.location.reload();
       });
   }
 
-  getBooksInCart = () => {
-    API.getBooksInCart(this.state.user.email)
+  getBooksInCart = (email) => {
+    API.getBooksInCart(email)
       .then((res) => {
         this.setState({
           cart: res.data,
@@ -458,6 +458,7 @@ class App extends Component {
               <Cart
                 deleteFromCart={this.deleteFromCart}
                 getBooksInCart={this.getBooksInCart}
+                email={this.state.user.email}
                 cart={this.state.cart}
               />
             } />
