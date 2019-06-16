@@ -33,15 +33,12 @@ class Book extends Component {
     }
 
     openDetailView = () => {
-        this.setState({
-            openDetailView: true,
-        });
-
-        API.getBookByTitle(this.props.title)
+        API.getBookByTitle(this.state.title)
             .then((res) => {
                 console.log(res);
                 this.setState({
-                    description: res.data.items[0].volumeInfo.description
+                    description: res.data.items[0].volumeInfo.description,
+                    openDetailView: true,
                 });
             });
     }
