@@ -40,7 +40,6 @@ class Book extends Component {
 
         API.getBookByTitle(this.state.title)
             .then((res) => {
-                console.log(res.data.items[0].volumeInfo.description);
                 this.setState({
                     description: res.data.items[0].volumeInfo.description
                 });
