@@ -202,6 +202,10 @@ class App extends Component {
             if (res.data[0].cart === null) {
               cart = [];
             }
+            else {
+              cart = res.data[0].cart;
+            }
+            
             sessionStorage.setItem("cart", JSON.stringify(cart));
 
             // Save user cart in state
