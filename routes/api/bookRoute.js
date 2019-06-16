@@ -38,7 +38,7 @@ router.get("/checkBookAvail/:title", (req, res) => {
     controller.checkBookAvail(req, res);
 });
 
-router.put("/putBookOnHold", (req, res) => {
+router.put("/putBookOnHold/:email", (req, res) => {
     controller.putBookOnHold(req, res);
 });
 

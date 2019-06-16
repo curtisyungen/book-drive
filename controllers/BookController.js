@@ -152,7 +152,7 @@ class BookController {
 
     putBookOnHold(req, res) {
         db.Books.update(
-            {avail: "hold"},
+            {avail: req.params.email},
             {where: {
                 title: req.body.title,
                 authorFirst: req.body.authorFirst,
