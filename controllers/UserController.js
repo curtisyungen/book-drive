@@ -5,20 +5,21 @@ class UserController {
 
     loginUser(req, res) {
 
-        db.Users.findAll({
+        db.Users.findOne({
             where: {
                 email: req.query.email,
             }
         })
         .then((user) => {
-            bcrypt.compare(req.query.password, user.password, function(err, response) {
-                if (err) {
-                    return console.log(err);
+            bcrypt.compare(req.query.password, user.password, function(err, result) {
+                if (result === true) {
+                    console.log("Hello");
+                    res.redirect("/about");
                 }
-
-                console.log(response);
-
-                res.json(user);
+                else {
+                    res.send("Incorrect password.");
+                    res.redirect("/");
+                }
             });
         });        
 
