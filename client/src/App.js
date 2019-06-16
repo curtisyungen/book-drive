@@ -355,6 +355,7 @@ class App extends Component {
         console.log("Put book on hold", res);
         alert("Added to cart!");
         this.getBooksInCart(this.state.user.email);
+        window.location.reload();
       });
   }
 

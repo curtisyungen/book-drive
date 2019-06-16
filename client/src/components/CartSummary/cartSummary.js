@@ -8,22 +8,7 @@ class CartSummary extends Component {
         super(props);
 
         this.state = {
-            cart: [
-                {
-                    title: "Test",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    price: 5.00,
-                    imageURL: "Test",
-                },
-                {
-                    title: "Test",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    price: 5.00,
-                    imageURL: "Test",
-                },
-            ],
+            cart: [],
             subtotal: 0,
         }
     }
@@ -31,7 +16,7 @@ class CartSummary extends Component {
     componentDidMount = () => {
 
         this.setState({
-            // cart: this.props.cart,
+            cart: this.props.cart,
             subtotal: this.props.subtotal,
         });
     }
@@ -39,7 +24,7 @@ class CartSummary extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                // cart: this.props.cart,
+                cart: this.props.cart,
                 subtotal: this.props.subtotal,
             });
         }

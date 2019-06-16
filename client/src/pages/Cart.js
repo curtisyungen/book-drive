@@ -54,27 +54,31 @@ class Cart extends Component {
                 <table
                     className="cartTable"    
                 >   
-                    <tr>
-                        <th id="cartTitle">Shopping Cart</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th id="cartTitle">Shopping Cart</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
 
-                    {this.state.cart && this.state.cart.length > 0 ? (
-                        this.state.cart.map(book => (
-                            <CartItem 
-                                key={book.title}
-                                title={book.title}
-                                authorFirst={book.authorFirst}
-                                authorLast={book.authorLast}
-                                price={book.price}
-                                imageURL={book.imageURL}
-                                deleteFromCart={this.props.deleteFromCart}
-                            />
-                        ))
-                    ) : (
-                        <div>Your shopping cart is empty.</div>
-                    )}
+                    <tbody>
+                        {this.state.cart && this.state.cart.length > 0 ? (
+                            this.state.cart.map(book => (
+                                <CartItem 
+                                    key={book.title}
+                                    title={book.title}
+                                    authorFirst={book.authorFirst}
+                                    authorLast={book.authorLast}
+                                    price={book.price}
+                                    imageURL={book.imageURL}
+                                    deleteFromCart={this.props.deleteFromCart}
+                                />
+                            ))
+                        ) : (
+                            <tr><td>Your shopping cart is empty.</td></tr>
+                        )}
+                    </tbody>
                 </table>
 
                 <CartSummary 
