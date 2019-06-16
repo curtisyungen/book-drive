@@ -458,7 +458,6 @@ class App extends Component {
               <Cart
                 deleteFromCart={this.deleteFromCart}
                 getBooksInCart={this.getBooksInCart}
-                email={this.state.user.email}
                 cart={this.state.cart}
               />
             } />
