@@ -15,8 +15,12 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
+        this.props.getBooksInCart();
+        
         this.setState({
             cart: this.props.cart,
+        }, () => {
+            console.log(this.state);
         });
 
         this.calculateSubtotal();
