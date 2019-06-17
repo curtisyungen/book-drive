@@ -22,11 +22,11 @@ class PayPalController {
             },
             "transactions": [{
                 "item_list": {
-                    "items": req.body.items
+                    "items": req.query.items
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": req.params.total
+                    "total": req.query.total
                 },
                 "description": "This is the payment description."
             }]
@@ -40,7 +40,7 @@ class PayPalController {
             // Used only to return axios promise
             db.Books.findAll({})
                 .then(() => {
-                    res.json(payment);
+                    res.json(create_payment_json);
                 });
         });
     }
