@@ -17,14 +17,14 @@ class PayPalController {
                 "payment_method": "paypal"
             },
             "redirect_urls": {
-                "return_url": "http://return.url",
-                "cancel_url": "http://cancel.url"
+                "return_url": "http://congo-cjy.herokuapp.com/success",
+                "cancel_url": "http://congo-cjy.herokuapp.com/cancel"
             },
             "transactions": [{
                 "item_list": {
                     "items": [{
-                        "name": "item",
-                        "sku": "item1",
+                        "name": "Congo Book Order",
+                        "sku": "books",
                         "price": req.params.total,
                         "currency": "USD",
                         "quantity": 1
@@ -34,7 +34,7 @@ class PayPalController {
                     "currency": "USD",
                     "total": req.params.total
                 },
-                "description": "This is the payment description."
+                "description": "Your book order from Congo."
             }]
         };
         
