@@ -32,7 +32,7 @@ class PayPalController {
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": req.query.total
+                    "total": "25.00"
                 },
                 "description": "This is the payment description."
             }]
