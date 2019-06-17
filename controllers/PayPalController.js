@@ -25,7 +25,7 @@ class PayPalController {
                     "items": [{
                         "name": "item",
                         "sku": "item",
-                        "price": "1.00",
+                        "price": "2.00",
                         "currency": "USD",
                         "quantity": 1
                     }]
