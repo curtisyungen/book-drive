@@ -83,11 +83,11 @@
 @media only screen and (max-width: 420px) {
     .book {
         height: 200px;
-        width: 132px;
+        width: 142px;
     }
 
     .bookCover {
         height: 188px;
-        width: 110px;
+        width: 130px;
     }
 }
