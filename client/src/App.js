@@ -345,7 +345,13 @@ class App extends Component {
       .then((res) => {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
-          this.addToCart(book);
+
+          if (this.state.isLoggedIn === true && localStorage.getItem("isLoggedIn") === "true" && this.state.user !== null) {
+            this.addToCart(book);
+          }
+          else {
+            this.addToGuestCart(book);
+          }
         }
         else {
           alert("Sorry, this book is no longer available.");
@@ -356,12 +362,27 @@ class App extends Component {
       });
   }
 
-  addToCart = (book) => {
-    API.addToCart(book, this.state.user.email)
+  addToGuestCart = (book) => {
+    let cart = [];
+    if (sessionStorage.getItem("cart")) {
+      cart = JSON.parse(sessionStorage.getItem("cart"));
+    }
+
+    cart.push(book);
+
+    this.setState({
+      cart: cart,
+    });
+
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  addToCart = (book, email) => {
+    API.addToCart(book, email)
       .then((res) => {
         console.log("Put book on hold", res);
         alert("Added to cart!");
-        this.getBooksInCart(this.state.user.email);
+        this.getBooksInCart(email);
         window.location.reload();
       });
   }
