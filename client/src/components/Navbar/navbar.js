@@ -41,12 +41,11 @@ class Navbar extends Component {
     getUserFromLocalStorage = () => {
         if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user") !== null) {
             let user = JSON.parse(localStorage.getItem("user"));
-            let firstName = "test" //user.name.split(" ", 1);
 
-            // this.setState({
-            //     name: firstName,
-            //     email: user.email,
-            // });
+            this.setState({
+                name: user.name.split(" ", 1),
+                email: user.email,
+            });
         }
         else {
             this.setState({
