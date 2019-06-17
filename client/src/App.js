@@ -165,8 +165,8 @@ class App extends Component {
                 localStorage.setItem("isLoggedIn", true);
 
                 let userData = {
-                  name: res.data[0].name,
-                  email: res.data[0].email,
+                  name: res.data.name,
+                  email: res.data.email,
                 }
 
                 // Save user data in Local Storage
@@ -174,11 +174,11 @@ class App extends Component {
 
                 // Save user cart in Session Storage
                 let cart;
-                if (res.data[0].cart === null) {
+                if (res.data.cart === null) {
                   cart = [];
                 }
                 else {
-                  cart = res.data[0].cart;
+                  cart = res.data.cart;
                 }
 
                 sessionStorage.setItem("cart", JSON.stringify(cart));
@@ -186,7 +186,7 @@ class App extends Component {
                 // Save user cart in state
                 this.setState({
                   isLoggedIn: true,
-                  user: res.data[0],
+                  user: res.data,
                   cart: cart,
                 });
 
