@@ -10,7 +10,15 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            books: [],
+            books: [
+                {
+                    title: "Test", 
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    price: 0.00,
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+                }
+            ],
             message: "Loading...",
             activeFilter: "books",
             userSearch: "",
@@ -27,7 +35,7 @@ class Home extends Component {
         }
 
         this.setState({
-            books: this.props.books,
+            // books: this.props.books,
             message: message,
             userSearch: this.props.userSearch,
             sortOption: "",
@@ -39,7 +47,7 @@ class Home extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                books: this.props.books,
+                // books: this.props.books,
                 userSearch: this.props.userSearch,
             });
         }
@@ -47,7 +55,7 @@ class Home extends Component {
 
     scrollToTop = () => {
         window.scrollTo(0, 0);
-        this.hideScrollToTopBtn();
+        // this.hideScrollToTopBtn();
     }
       
     getActiveFilter = (filter) => {
@@ -150,19 +158,30 @@ class Home extends Component {
                 >
                     {this.state.books && this.state.books.length > 0 ? (
                         this.state.books.map(book => (
-                            <Book
-                                key={book.title + Math.random()}
-                                title={book.title}
-                                authorFirst={book.authorFirst}
-                                authorLast={book.authorLast}
-                                price={book.price}
-                                avail={book.avail}
-                                cover={book.cover}
-                                condition={book.condition}
-                                imageURL={book.imageURL}
-                                tags={book.tags}
-                                sendToCart={this.props.sendToCart}
-                            />
+                            <span>
+                                <Book
+                                    key={book.title + Math.random()}
+                                    title={book.title}
+                                    authorFirst={book.authorFirst}
+                                    authorLast={book.authorLast}
+                                    price={book.price}
+                                    avail={book.avail}
+                                    cover={book.cover}
+                                    condition={book.condition}
+                                    imageURL={book.imageURL}
+                                    tags={book.tags}
+                                    sendToCart={this.props.sendToCart}
+                                />
+                                <button
+                                    className="btn btn-outline-dark btn-sm backToTopBtn"
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        this.scrollToTop();
+                                    }}
+                                >
+                                    Back to Top
+                                </button>
+                            </span>
                         ))
                     ) : (
                         <div>{this.state.message}</div>

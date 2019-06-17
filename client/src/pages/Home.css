@@ -1,3 +1,8 @@
+.backToTopBtn {
+    display: block;
+    float: right;
+}
+
 .bookList {
     margin-top: 45px;
 }
