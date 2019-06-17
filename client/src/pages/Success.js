@@ -14,6 +14,9 @@ class Success extends Component {
     }
 
     componentDidMount = () => {
+
+        console.log(window.location.searchParams);
+
         API.successfulPayment()
             .then((res) => {
                 console.log("Success", res);
