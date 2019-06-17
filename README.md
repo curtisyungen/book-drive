@@ -1,5 +1,5 @@
 ## Curtis Yungen
-## June 2019
+# June 2019
 
 This project is deployed at https://congo-cjy.herokuapp.com.
 
