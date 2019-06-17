@@ -208,7 +208,6 @@
 
     .navbar {
         height: 138px;
-        width: 100vh;
     }
 
     #navbarMenu {
@@ -231,17 +230,17 @@
         max-width: 400px !important;
         position: absolute;
         top: 87px;
-        width: 400px !important;
+        width: 350px !important;
     }
 
     .searchBtn {
         position: absolute;
-        left: 415px;
+        left: 350px;
         top: 87px;
         z-index: 99;
     }
 
     .searchForm {
-        max-width: 405px !important;
+        max-width: 350px !important;
     }
 }
