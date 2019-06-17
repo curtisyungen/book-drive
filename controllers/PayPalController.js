@@ -43,11 +43,13 @@ class PayPalController {
                 console.log("Error processing payment", error);
             }
 
+            res.send(payment);
+
             // Used only to return axios promise
-            db.Books.findAll({})
-                .then(() => {
-                    res.json(payment);
-                });
+            // db.Books.findAll({})
+            //     .then(() => {
+            //         res.json(payment);
+            //     });
         });
     }
 
