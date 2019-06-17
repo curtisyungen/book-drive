@@ -32,24 +32,22 @@ class PayPalController {
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": "25.00"
+                    "total": "1.00"
                 },
                 "description": "This is the payment description."
             }]
         };
-
+        
         paypal.payment.create(create_payment_json, function (error, payment) {
             if (error) {
                 console.log("Error processing payment", error);
             }
 
-            res.send(payment);
-
             // Used only to return axios promise
-            // db.Books.findAll({})
-            //     .then(() => {
-            //         res.json(payment);
-            //     });
+            db.Books.findAll({})
+                .then(() => {
+                    res.json(payment);
+                });
         });
     }
 
