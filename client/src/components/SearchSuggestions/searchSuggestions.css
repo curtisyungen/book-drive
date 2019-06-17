@@ -8,11 +8,17 @@
     line-height: 24px;
     margin-top: -1px;
     min-height: 20px;
-    min-width: 399px;
-    max-width: 700px;
     position: absolute;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 870px;
     z-index: 101;
+}
+
+@media only screen and (max-width: 420px) {
+    .searchSuggestions {
+        left: 16px;
+        top: 125px;
+        width: 314px;
+    }
 }
