@@ -15,7 +15,10 @@ class Success extends Component {
 
     componentDidMount = () => {
 
-        console.log(window.location.searchParams);
+        console.log(window.location.href);
+        let PayId = window.location.href.split("?")[1].split("&");
+        let PayerId = window.location.href.split("&")[1].split("&");
+        console.log(PayId, PayerId);
 
         API.successfulPayment()
             .then((res) => {
