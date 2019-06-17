@@ -20,6 +20,7 @@ This project is deployed at https://congo-cjy.herokuapp.com.
 6) react-router
 7) reactjs-popup
 8) sequelize
+9) paypal-rest-sdk
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
