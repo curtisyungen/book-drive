@@ -48,16 +48,16 @@ class CartSummary extends Component {
         //     items.push(item);
         // }
 
-        items = {
+        items = [{
                 name: "Test",
                 sku: "001",
                 price: "5.00",
                 currency: "USD",
                 quantity: 1
-            };
+        }];
         
 
-        API.payUsingPayPal(items, "5.00")
+        API.payUsingPayPal(items, 5.00)
             .then((res) => {
                 console.log(res);
 
