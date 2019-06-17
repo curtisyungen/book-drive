@@ -30,7 +30,7 @@ class ForgotPassword extends Component {
         return (
             <span className="loginPage">
                 <a className="congoLogo" href="/">
-                    <img src="" alt="Congo Logo" />
+                    <img className="loginLogo" src={require('../images/congo1.png')} alt="congo" />
                 </a>
 
                 <div className="login">
