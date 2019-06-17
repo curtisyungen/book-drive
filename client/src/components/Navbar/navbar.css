@@ -224,22 +224,17 @@
     }
 
     .searchBox {
-        left: 15px;
+        left: 7%;
         margin: 0;
-        max-width: 330px !important;
         position: absolute;
         top: 87px;
-        width: 330px !important;
+        width: 80% !important;
     }
 
     .searchBtn {
+        left: 80%;
         position: absolute;
-        left: 330px;
         top: 87px;
         z-index: 99;
-    }
-
-    .searchForm {
-        max-width: 330px !important;
     }
 }
