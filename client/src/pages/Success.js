@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import Container from "../components/Container/container";
-// import API from "../utils/API";
+import API from "../utils/API";
 import "./Success.css";
 
 class Success extends Component {
@@ -11,6 +11,13 @@ class Success extends Component {
         this.state = {
 
         }
+    }
+
+    componentDidMount = () => {
+        API.successfulPayment()
+            .then((res) => {
+                console.log("Success", res);
+            });
     }
 
     render() {
