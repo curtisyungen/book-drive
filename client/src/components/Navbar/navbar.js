@@ -114,7 +114,6 @@ class Navbar extends Component {
                 {/* SITE TITLE */}
 
                 <a className="navbar-brand" href="/">
-                    congo
                     <img className="logo" src={require('../../images/congo2.png')} alt="congo" />
                 </a>
 

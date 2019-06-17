@@ -20,7 +20,7 @@
     font-family: "Arial";
     font-size: 30px;
     left: 15px;
-    margin-top: -15px;
+    margin-top: -42px;
     position: absolute;
     width: 125px;
 }
@@ -34,7 +34,7 @@
     font-family: "Arial";
     font-size: 24px;
     font-weight: 400;
-    margin-left: -10px;
+    margin-left: -90px;
     margin-top: -24px;
     white-space: nowrap;
     width: 100%;
@@ -77,7 +77,7 @@
 #navbarMenu {
     color: gray;
     font-size: 14px;
-    left: 187px;
+    left: 204px;
     margin-top: 15px;
     right: none;
     z-index: 99;
@@ -177,7 +177,7 @@
 }
 
 .searchForm {
-    margin: 10px 100px;
+    margin: 10px 176px;
     margin-top: -30px;
     max-width: 100%;
 }
@@ -194,5 +194,57 @@
 @media only screen and (max-width: 1200px) {
     .searchBox {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .logo {
+        left: 75px;
+        position: absolute;
+        top: 20px;
+        z-index: 99;
+    }
+
+    .navbar {
+        height: 138px;
+        width: 100vh;
+    }
+
+    #navbarMenu {
+        display: none;
+    }
+
+    .navbar-advert {
+        display: none;
+    }
+
+    .navbar-toggler {
+        left: 15px;
+        position: absolute;
+        top: 15px;
+    }
+
+    input {
+        width: 100px;
+    }
+
+    .searchBox {
+        left: 15px;
+        margin: 0;
+        max-width: 100px !important;
+        position: absolute;
+        top: 87px;
+        width: 100px !important;
+    }
+
+    .searchBtn {
+        position: absolute;
+        right: 15px;
+        top: 87px;
+    }
+
+    .searchForm {
+        max-width: 100px !important;
     }
 }

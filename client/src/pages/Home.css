@@ -43,3 +43,15 @@
     text-align: center;
     width: 100px;
 }
+
+@media only screen and (max-width: 420px) {
+    .bookList {
+        left: 15px;
+        position: absolute;
+        top: 160px;
+    }
+
+    .resultsSummary {
+        display: none;
+    }
+}
