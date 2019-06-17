@@ -9,6 +9,7 @@ This project is deployed at https://congo-cjy.herokuapp.com.
 1) Node.js
 2) Express.js
 3) ReactJS
+4) MySQL
 
 ## Dependencies
 1) axios
