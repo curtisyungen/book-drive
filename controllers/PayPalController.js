@@ -52,8 +52,8 @@ class PayPalController {
     }
 
     successfulPayment(req, res) {
-        const payerId = req.query.PayerId;
-        const paymentId = req.query.paymentId;
+        const payerId = req.query.payerId;
+        const paymentId = req.query.payId;
 
         const execute_payment_json = {
             "payer_id": payerId,
