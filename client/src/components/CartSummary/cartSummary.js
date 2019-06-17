@@ -48,7 +48,7 @@ class CartSummary extends Component {
             items.push(item);
         }
 
-        API.payUsingPayPal(25.00)
+        API.payUsingPayPal("25.00")
             .then((res) => {
                 console.log(res);
 
