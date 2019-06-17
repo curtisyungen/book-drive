@@ -22,11 +22,11 @@ class PayPalController {
             },
             "transactions": [{
                 "item_list": {
-                    "items": [req.query.items]
+                    "items": req.body.items
                 },
                 "amount": {
                     "currency": "USD",
-                    "total": req.query.total
+                    "total": req.params.total
                 },
                 "description": "This is the payment description."
             }]
