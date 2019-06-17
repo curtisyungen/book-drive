@@ -1,5 +1,5 @@
 # Congo
-*by Curtis Yungen
+*by Curtis Yungen*
 
 Congo is a website I created to sell my extensive collection of self-help books. It is still a work in progress as of June 16, 2019.
 
