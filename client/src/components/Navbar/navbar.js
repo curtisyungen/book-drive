@@ -43,10 +43,10 @@ class Navbar extends Component {
             let user = JSON.parse(localStorage.getItem("user"));
             let firstName = "test" //user.name.split(" ", 1);
 
-            this.setState({
-                name: firstName,
-                email: user.email,
-            });
+            // this.setState({
+            //     name: firstName,
+            //     email: user.email,
+            // });
         }
         else {
             this.setState({
