@@ -215,7 +215,7 @@ class App extends Component {
 
     alert("You have been logged out.");
 
-    window.location.reload();
+    this.setRedirectToHome();
   }
 
   // BOOK FILTERING
@@ -339,8 +339,6 @@ class App extends Component {
   // =========================================
 
   sendToCart = (book) => {
-
-    let cart;
 
     // Check if book is still available
     API.checkBookAvail(book)
