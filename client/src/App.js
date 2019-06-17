@@ -346,7 +346,7 @@ class App extends Component {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
           console.log("Book is available.");
 
-          if (this.state.isLoggedIn === true && localStorage.getItem("isLoggedIn") === "true" && this.state.user !== null) {
+          if (localStorage.getItem("isLoggedIn") === "true") {
             this.addToCart(book);
           }
           else {
@@ -377,12 +377,12 @@ class App extends Component {
     sessionStorage.setItem("cart", JSON.stringify(cart));
   }
 
-  addToCart = (book, email) => {
-    API.addToCart(book, email)
+  addToCart = (book) => {
+    API.addToCart(book, this.state.user.email)
       .then((res) => {
         console.log("Put book on hold", res);
         alert("Added to cart!");
-        this.getBooksInCart(email);
+        this.getBooksInCart(this.state.user.email);
         window.location.reload();
       });
   }
