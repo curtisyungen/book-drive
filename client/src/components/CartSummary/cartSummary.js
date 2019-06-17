@@ -36,19 +36,36 @@ class CartSummary extends Component {
         let item;
         let cart = this.state.cart;
 
-        for (var book in cart) {
-            item = {
-                name: cart[book].title,
-                sku: book,
-                price: cart[book].price,
+        // for (var book in cart) {
+        //     item = {
+        //         name: cart[book].title,
+        //         sku: book,
+        //         price: cart[book].price,
+        //         currency: "USD",
+        //         quantity: 1
+        //     }
+
+        //     items.push(item);
+        // }
+
+        items = [
+            {
+                name: "Test",
+                sku: "001",
+                price: "1.00",
                 currency: "USD",
                 quantity: 1
-            }
+            },
+            {
+                name: "Test",
+                sku: "002",
+                price: "1.00",
+                currency: "USD",
+                quantity: 1
+            },
+        ]
 
-            items.push(item);
-        }
-
-        API.payUsingPayPal("25.00")
+        API.payUsingPayPal(items, "2.00")
             .then((res) => {
                 console.log(res);
 
