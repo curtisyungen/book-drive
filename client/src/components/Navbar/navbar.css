@@ -202,7 +202,7 @@
     .logo {
         left: 75px;
         position: absolute;
-        top: 20px;
+        top: 50px;
         z-index: 99;
     }
 
@@ -225,26 +225,23 @@
         top: 15px;
     }
 
-    input {
-        width: 100px;
-    }
-
     .searchBox {
         left: 15px;
         margin: 0;
-        max-width: 100px !important;
+        max-width: 400px !important;
         position: absolute;
         top: 87px;
-        width: 100px !important;
+        width: 400px !important;
     }
 
     .searchBtn {
         position: absolute;
-        right: 15px;
+        left: 415px;
         top: 87px;
+        z-index: 99;
     }
 
     .searchForm {
-        max-width: 100px !important;
+        max-width: 405px !important;
     }
 }
