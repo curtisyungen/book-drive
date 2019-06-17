@@ -17,8 +17,8 @@
 
 @media only screen and (max-width: 420px) {
     .searchSuggestions {
-        left: 16px;
+        left: 7%;
         top: 125px;
-        width: 314px;
+        width: 73%;
     }
 }
