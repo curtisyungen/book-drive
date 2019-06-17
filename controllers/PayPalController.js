@@ -44,9 +44,9 @@ class PayPalController {
             }
 
             // Used only to return axios promise
-            db.Books.findOne({})
+            db.Books.findAll({})
                 .then(() => {
-                    res.json(create_payment_json);
+                    res.json(payment);
                 });
         });
     }
