@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     let Orders = sequelize.define("Orders", {
-        buyerName: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
 
-        buyerEmail: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -43,4 +43,6 @@ module.exports = function(sequelize, DataTypes) {
             }
         });
     }
+
+    return Orders;
 }
