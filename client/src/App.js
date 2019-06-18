@@ -490,7 +490,13 @@ class App extends Component {
                 cart={this.state.cart}
               />
             } />
-            <Route exact path="/success" component={Success} />
+            <Route exact path="/success" render={() => 
+              <Success
+                user={this.state.user}
+                cart={this.state.cart}
+              />
+            }
+            />
             <Route exact path="/cancel" component={Cancel} />
             } />
           </Switch>
