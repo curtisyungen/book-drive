@@ -18,8 +18,8 @@ class OrderController {
 
     createBookOrder(req, res) {
         db.Orders.create({
-            buyerName: req.body.name,
-            buyerEmail: req.body.email,
+            name: req.body.name,
+            email: req.body.email,
             date: req.body.date,
             totalPrice: req.body.totalPrice,
             items: req.body.items,
