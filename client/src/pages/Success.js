@@ -33,10 +33,39 @@ class Success extends Component {
                     this.setState({
                         shippingAddress: res.data.transactions[0].item_list.shipping_address,
                         order: res.data.transactions[0].item_list.items,
+                        user: this.props.user,
+                        cart: this.props.cart,
                     }, () => {
                         console.log(this.state);
+                        this.saveBookOrder();
                     });
                 }
+            });
+    }
+
+    saveBookOrder = () => {
+
+        let cart = this.props.cart;
+        let total = 0;
+
+        for (var book in cart) {
+            total += cart[book].price;
+        }
+
+        let order = {
+            name: this.state.user.name,
+            email: this.state.user.email,
+            date: new Date(),
+            totalPrice: total,
+            items: this.props.cart,
+            itemQty: this.props.cart.length,
+            shippingAddress: this.state.shippingAddress,
+        }
+
+        API.createBookOrder(order)
+            .then((res) => {
+                console.log(res);
+                alert("Order saved!");
             });
     }
 
