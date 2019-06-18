@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import "./orderDetail.css";
+import "./shippingInfo.css";
 
 class ShippingInfo extends Component {
 
