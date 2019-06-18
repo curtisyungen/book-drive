@@ -23,18 +23,18 @@ class ShippingInfo extends Component {
             <div>
                 <h4>Shipped to:</h4>
                 <div>
-                    {this.state.shippingAddress.recipient_name}
+                    {this.props.shippingAddress.recipient_name}
                 </div>
                 <div>
-                    {this.state.shippingAddress.line1}
+                    {this.props.shippingAddress.line1}
                 </div>
                 <div>
-                    {this.state.shippingAddress.city},&nbsp;
-                {this.state.shippingAddress.state}&nbsp;
-                {this.state.shippingAddress.postal_code}
+                    {this.props.shippingAddress.city},&nbsp;
+                {this.props.shippingAddress.state}&nbsp;
+                {this.props.shippingAddress.postal_code}
                 </div>
                 <div>
-                    {this.state.shippingAddress.country_code}
+                    {this.props.shippingAddress.country_code}
                 </div>
             </div>
         )
