@@ -90,4 +90,12 @@ export default {
     getBookByTitle: function (title) {
         return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${title}`);
     },
+
+    getUserBookOrders: function(email) {
+        return axios.get("/api/orders/getUserBookOrders/" + email);
+    },
+
+    createBookOrder: function(order) {
+        return axios.post("/api/orders/createBookOrder", order);
+    }
 };
