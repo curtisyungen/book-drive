@@ -36,13 +36,5 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    Orders.associate = function(models) {
-        Orders.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: false,
-            }
-        });
-    }
-
     return Orders;
 }
