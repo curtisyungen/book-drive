@@ -55,6 +55,11 @@ class Sidebar extends Component {
         });
     }
 
+    scrollToTop = () => {
+        window.scrollTo(0, 0);
+        // this.hideScrollToTopBtn();
+    }
+
     render() {
         return (
             <div
@@ -418,6 +423,16 @@ class Sidebar extends Component {
                         </li>
                     </ul>
                 </div>
+
+                <button
+                    className="btn btn-outline-dark btn-sm backToTopBtn"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        this.scrollToTop();
+                    }}
+                >
+                    Back to Top
+                </button>
 
             </div>
         )
