@@ -5,6 +5,11 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
         },
 
+        buyerEmail: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
         date: {
             type: DataTypes.DATE,
             allowNull: false,
