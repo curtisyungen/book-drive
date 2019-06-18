@@ -1,6 +1,6 @@
 .backToTopBtn {
     display: block;
-    float: right;
+    margin: 5px auto 15px auto;
 }
 
 .bookList {
