@@ -20,22 +20,17 @@ class ShippingInfo extends Component {
 
     render() {
         return (
-            <div>
-                <h4>Shipped to:</h4>
-                <div>
-                    {this.props.shippingAddress.recipient_name}
-                </div>
-                <div>
-                    {this.props.shippingAddress.line1}
-                </div>
-                <div>
+            <div className="shippingInfo">
+                <p className="shippedTo">Shipped to:</p>
+
+                <p>{this.props.shippingAddress.recipient_name}</p>
+                <p>{this.props.shippingAddress.line1}</p>
+                <p>
                     {this.props.shippingAddress.city},&nbsp;
-                {this.props.shippingAddress.state}&nbsp;
-                {this.props.shippingAddress.postal_code}
-                </div>
-                <div>
+                    {this.props.shippingAddress.state}&nbsp;
+                    {this.props.shippingAddress.postal_code}
                     {this.props.shippingAddress.country_code}
-                </div>
+                </p>
             </div>
         )
     }

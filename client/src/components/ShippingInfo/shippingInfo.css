@@ -1,3 +1,7 @@
-p {
-    color: black;
+.shippedTo {
+    font-weight: 700;
+}
+
+.shippingInfo {
+    font-size: 13px;
 }
