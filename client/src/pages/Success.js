@@ -15,13 +15,18 @@ class Success extends Component {
 
     componentDidMount = () => {
 
-        // console.log(window.location.href);
-        let payId = window.location.href.split("?")[1].split("&");
-        let payerId = window.location.href.split("&")[1].split("&");
-        console.log("PayId", payId);
-        console.log("PayerId", payerId);
+        // Get payment info from URL
+        let parameters = window.location.href.split("?")[1].split("&");
 
-        API.successfulPayment(payId, payerId)
+        let paymentId = parameters[0].split("=")[1];
+        let token = parameters[1].split("=")[1];
+        let payerId = parameters[2].split("=")[1];
+
+        console.log("paymentId", paymentId);
+        console.log("token", token);
+        console.log("payerId", payerId);
+
+        API.successfulPayment(paymentId, payerId)
             .then((res) => {
                 console.log("Success", res);
             });
