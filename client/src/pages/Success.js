@@ -29,7 +29,7 @@ class Success extends Component {
                 if (res.data.state === "approved") {
                     this.setState({
                         shippingAddress: res.data.transactions[0].item_list.shipping_address,
-    
+                        order: res.data.transactions[0].item_list.items,
                     }, () => {
                         console.log(this.state);
                     });
@@ -40,14 +40,46 @@ class Success extends Component {
     render() {
         return (
             <Container>
-                <h4>Shipping Address:</h4>
+
+                {/* CONFIRMATION MESSAGE */}
+                
                 <div>
-                    {this.state.shippingAddress.recipient_name}
-                    {this.state.shippingAddress.line1}
-                    {this.state.shippingAddress.city}
-                    {this.state.shippingAddress.state}
-                    {this.state.shippingAddress.postal_code}
-                    {this.state.shippingAddress.country_code}
+                    <p>Payment successful! Your books are on their way!</p>
+                </div>
+
+                {/* ORDER SUMMARY */}
+
+                <div>
+                    <p>Order Summary:</p>
+                    <p>
+                        {this.state.order.map(item => (
+                            <div>
+                                {item.name}
+                                {item.price}
+                                {item.quantity}
+                            </div>
+                        ))}
+                    </p>
+                </div>
+
+                {/* SHIPPING INFO */}
+
+                <div>
+                    <h4>Shipped to:</h4>
+                    <div>
+                        {this.state.shippingAddress.recipient_name}
+                    </div>
+                    <div>
+                        {this.state.shippingAddress.line1}
+                    </div>
+                    <div>
+                        {this.state.shippingAddress.city}, 
+                        {this.state.shippingAddress.state}&nbsp;
+                        {this.state.shippingAddress.postal_code}
+                    </div>
+                    <div>
+                        {this.state.shippingAddress.country_code}
+                    </div>
                 </div>
             </Container>
         )
