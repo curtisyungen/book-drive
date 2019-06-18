@@ -22,7 +22,6 @@ class OrderDetail extends Component {
         return (
 
             <div>
-                <p>Order Summary:</p>
                 <p>
                     {this.state.order ? (
                         this.state.order.map(item => (

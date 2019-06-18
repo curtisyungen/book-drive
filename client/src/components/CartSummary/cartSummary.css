@@ -21,6 +21,13 @@
     width: 100%;
 }
 
+.payPalCaption {
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+}
+
 .proceedToCheckout {
     color: black;
     text-decoration: none;

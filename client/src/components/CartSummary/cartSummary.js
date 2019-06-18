@@ -72,6 +72,7 @@ class CartSummary extends Component {
                 >
                     Checkout with PayPal
                 </button>
+                <p className="payPalCaption">Will open PayPal in new window</p>
             </div>
         )
     }
