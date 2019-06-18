@@ -10,6 +10,7 @@ class Success extends Component {
 
         this.state = {
             shippingAddress: "",
+            order: null,
         }
     }
 
@@ -52,13 +53,17 @@ class Success extends Component {
                 <div>
                     <p>Order Summary:</p>
                     <p>
-                        {this.state.order.map(item => (
-                            <div>
-                                {item.name}
-                                {item.price}
-                                {item.quantity}
-                            </div>
-                        ))}
+                        {this.state.order ? (
+                            this.state.order.map(item => (
+                                <div>
+                                    {item.name}
+                                    {item.price}
+                                    {item.quantity}
+                                </div>
+                            ))
+                        ) : (
+                            <></>
+                        )}
                     </p>
                 </div>
 
