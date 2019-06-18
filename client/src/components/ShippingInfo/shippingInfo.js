@@ -23,14 +23,15 @@ class ShippingInfo extends Component {
             <div className="shippingInfo">
                 <p className="shippedTo">Shipped to:</p>
 
-                <p>{this.props.shippingAddress.recipient_name}</p>
-                <p>{this.props.shippingAddress.line1}</p>
-                <p>
+                <div>
+                    {this.props.shippingAddress.recipient_name}<br/>
+                    {this.props.shippingAddress.line1}<br/>
                     {this.props.shippingAddress.city},&nbsp;
                     {this.props.shippingAddress.state}&nbsp;
-                    {this.props.shippingAddress.postal_code}
+                    {this.props.shippingAddress.postal_code}<br/>
                     {this.props.shippingAddress.country_code}
-                </p>
+                </div>
+
             </div>
         )
     }
