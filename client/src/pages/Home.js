@@ -12,7 +12,7 @@ class Home extends Component {
         this.state = {
             books: [
                 {
-                    title: "Test", 
+                    title: "Test",
                     authorFirst: "Test",
                     authorLast: "Test",
                     price: 0.00,
@@ -57,7 +57,7 @@ class Home extends Component {
         window.scrollTo(0, 0);
         // this.hideScrollToTopBtn();
     }
-      
+
     getActiveFilter = (filter) => {
         this.setState({
             activeFilter: filter,
@@ -95,7 +95,7 @@ class Home extends Component {
             return (a.title < b.title) ? -1 : 1;
         }
     }
-    
+
     sortByAuthor = () => {
         let books = this.state.books;
 
@@ -119,73 +119,74 @@ class Home extends Component {
         return (
             <Container>
 
-            {/* RESULTS SUMMARY */}
+                {/* RESULTS SUMMARY */}
 
-            <div
-                className="resultsSummary"
-            >
-                <span>
-                    {this.state.books.length} 
-                    &nbsp;results&nbsp;
-                    {this.state.activeFilter ? (`for ${this.state.activeFilter}`):(null)}
-                    {this.state.userSearch ? (`: "${this.state.userSearch}"`):(null)}
-                </span>
-
-                <select
-                    className="sortBy"
-                    onChange={this.handleSortOption}
-                    value={this.state.sortOption}
+                <div
+                    className="resultsSummary"
                 >
-                    <option value="" disabled selected>Sort by:</option>
-                    <option value="title">Alpabetical by Title</option>
-                    <option value="author">Alpabetical by Author Last</option>
-                </select>
-            </div>
+                    <span>
+                        {this.state.books.length}
+                        &nbsp;results&nbsp;
+                    {this.state.activeFilter ? (`for ${this.state.activeFilter}`) : (null)}
+                        {this.state.userSearch ? (`: "${this.state.userSearch}"`) : (null)}
+                    </span>
 
-            <Sidebar 
-                getAllBooks={this.props.getAllBooks}
-                getAvailableBooks={this.props.getAvailableBooks}
-                getUnavailableBooks={this.props.getUnavailableBooks}
-                getPaperbacks={this.props.getPaperbacks}
-                getHardcovers={this.props.getHardcovers}
-                getSubject={this.props.getSubject}
-                getActiveFilter={this.getActiveFilter}
-            />
+                    <select
+                        className="sortBy"
+                        onChange={this.handleSortOption}
+                        value={this.state.sortOption}
+                    >
+                        <option value="" disabled selected>Sort by:</option>
+                        <option value="title">Alpabetical by Title</option>
+                        <option value="author">Alpabetical by Author Last</option>
+                    </select>
+                </div>
+
+                <Sidebar
+                    getAllBooks={this.props.getAllBooks}
+                    getAvailableBooks={this.props.getAvailableBooks}
+                    getUnavailableBooks={this.props.getUnavailableBooks}
+                    getPaperbacks={this.props.getPaperbacks}
+                    getHardcovers={this.props.getHardcovers}
+                    getSubject={this.props.getSubject}
+                    getActiveFilter={this.getActiveFilter}
+                />
                 {/* BOOK LIST */}
 
                 <div
                     className="bookList"
                 >
                     {this.state.books && this.state.books.length > 0 ? (
-                        this.state.books.map(book => (
-                            <span>
-                                <Book
-                                    key={book.title + Math.random()}
-                                    title={book.title}
-                                    authorFirst={book.authorFirst}
-                                    authorLast={book.authorLast}
-                                    price={book.price}
-                                    avail={book.avail}
-                                    cover={book.cover}
-                                    condition={book.condition}
-                                    imageURL={book.imageURL}
-                                    tags={book.tags}
-                                    sendToCart={this.props.sendToCart}
-                                />
-                                <button
-                                    className="btn btn-outline-dark btn-sm backToTopBtn"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        this.scrollToTop();
-                                    }}
-                                >
-                                    Back to Top
-                                </button>
-                            </span>
-                        ))
+
+                        <span>
+                            {this.state.books.map(book => (
+                            <Book
+                                key={book.title + Math.random()}
+                                title={book.title}
+                                authorFirst={book.authorFirst}
+                                authorLast={book.authorLast}
+                                price={book.price}
+                                avail={book.avail}
+                                cover={book.cover}
+                                condition={book.condition}
+                                imageURL={book.imageURL}
+                                tags={book.tags}
+                                sendToCart={this.props.sendToCart}
+                            />
+                            ))}
+                            <button
+                                className="btn btn-outline-dark btn-sm backToTopBtn"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.scrollToTop();
+                                }}
+                            >
+                                Back to Top
+                            </button>
+                        </span>
                     ) : (
-                        <div>{this.state.message}</div>
-                    )}
+                            <div>{this.state.message}</div>
+                        )}
                 </div>
             </Container>
         )
