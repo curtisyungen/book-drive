@@ -56,9 +56,9 @@ class Success extends Component {
                         {this.state.order ? (
                             this.state.order.map(item => (
                                 <div>
-                                    {item.name}
-                                    {item.price}
-                                    {item.quantity}
+                                    <p>{item.name}</p>
+                                    <p>${item.price}</p>
+                                    <p>{item.quantity}</p>
                                 </div>
                             ))
                         ) : (
@@ -78,7 +78,7 @@ class Success extends Component {
                         {this.state.shippingAddress.line1}
                     </div>
                     <div>
-                        {this.state.shippingAddress.city}, 
+                        {this.state.shippingAddress.city},&nbsp; 
                         {this.state.shippingAddress.state}&nbsp;
                         {this.state.shippingAddress.postal_code}
                     </div>
