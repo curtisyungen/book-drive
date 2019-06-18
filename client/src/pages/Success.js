@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Container from "../components/Container/container";
+import OrderDetail from "../components/OrderDetail/orderDetail";
+import ShippingInfo from "../components/ShippingInfo/shippingInfo";
 import API from "../utils/API";
 import "./Success.css";
 
@@ -41,51 +43,19 @@ class Success extends Component {
     render() {
         return (
             <Container>
-
-                {/* CONFIRMATION MESSAGE */}
                 
                 <div>
                     <p>Payment successful! Your books are on their way!</p>
                 </div>
 
-                {/* ORDER SUMMARY */}
+                <OrderDetail 
+                    order={this.state.order}
+                />
 
-                <div>
-                    <p>Order Summary:</p>
-                    <p>
-                        {this.state.order ? (
-                            this.state.order.map(item => (
-                                <div>
-                                    <p>{item.name}</p>
-                                    <p>${item.price}</p>
-                                    <p>{item.quantity}</p>
-                                </div>
-                            ))
-                        ) : (
-                            <></>
-                        )}
-                    </p>
-                </div>
+                <ShippingInfo 
+                    shippingAddress={this.state.shippingAddress}
+                />
 
-                {/* SHIPPING INFO */}
-
-                <div>
-                    <h4>Shipped to:</h4>
-                    <div>
-                        {this.state.shippingAddress.recipient_name}
-                    </div>
-                    <div>
-                        {this.state.shippingAddress.line1}
-                    </div>
-                    <div>
-                        {this.state.shippingAddress.city},&nbsp; 
-                        {this.state.shippingAddress.state}&nbsp;
-                        {this.state.shippingAddress.postal_code}
-                    </div>
-                    <div>
-                        {this.state.shippingAddress.country_code}
-                    </div>
-                </div>
             </Container>
         )
     }
