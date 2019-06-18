@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Container from "../components/Container/container";
+// import Container from "../components/Container/container";
 import OrderDetail from "../components/OrderDetail/orderDetail";
 import ShippingInfo from "../components/ShippingInfo/shippingInfo";
 import API from "../utils/API";
@@ -26,7 +26,6 @@ class Success extends Component {
         // Process payment
         API.successfulPayment(paymentId, payerId)
             .then((res) => {
-                console.log("Success", res);
 
                 // If payment approved, get shipping address
                 if (res.data.state === "approved") {
@@ -36,7 +35,6 @@ class Success extends Component {
                         user: this.props.user,
                         cart: this.props.cart,
                     }, () => {
-                        console.log(this.state);
                         this.saveBookOrder();
                     });
                 }
@@ -62,9 +60,11 @@ class Success extends Component {
             shippingAddress: this.state.shippingAddress,
         }
 
+        console.log("Order", order);
+
         API.createBookOrder(order)
             .then((res) => {
-                console.log(res);
+                console.log("Result", res);
                 alert("Order saved!");
             });
     }
