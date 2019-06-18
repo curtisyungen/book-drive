@@ -1,3 +1,24 @@
-p {
-    color: black;
+.confirmation {
+    font-family: "Arial";
+    font-size: 13px;
+}
+
+.orderConfirmation {
+    border: 1px solid rgb(43, 173, 43);
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px #dff7df inset;
+    margin: 15px auto;
+    padding: 14px 18px;
+    padding-left: 60px;
+    width: 1400px;
+}
+
+.thankYou {
+    color: green;
+    font-family: "Arial";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: -4px;
+    padding-bottom: 0;
 }

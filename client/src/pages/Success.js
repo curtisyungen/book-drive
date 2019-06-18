@@ -42,10 +42,11 @@ class Success extends Component {
 
     render() {
         return (
-            <Container>
+            <div className="orderConfirmation">
                 
                 <div>
-                    <p>Payment successful! Your books are on their way!</p>
+                    <p className="thankYou">Thank you, your order has been placed.</p>
+                    <p className="confirmation">Please check your email for order confirmation.</p>
                 </div>
 
                 <OrderDetail 
@@ -56,7 +57,7 @@ class Success extends Component {
                     shippingAddress={this.state.shippingAddress}
                 />
 
-            </Container>
+            </div>
         )
     }
 }
