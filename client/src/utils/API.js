@@ -101,5 +101,9 @@ export default {
 
     purchaseBook: function(book, email) {
         return axios.put("/api/books/purchaseBook/" + email, book);
+    },
+
+    getBookSuggestions: function() {
+        return axios.get("/api/books/getBookSuggestions");
     }
 };
