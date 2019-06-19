@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import Orders from "./pages/Orders";
 import Cart from "./pages/Cart";
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
@@ -483,6 +484,11 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/orders" render={() =>
+              <Orders 
+                user={this.state.user}
+              />
+            } />
             <Route exact path="/cart" render={() =>
               <Cart
                 deleteFromCart={this.deleteFromCart}
