@@ -52,7 +52,9 @@ class Orders extends Component {
                     <p>No orders found.</p>
                 )}
 
-                <BookSuggestions />
+                <BookSuggestions 
+                    displayClass="order"
+                />
 
             </Container>
 

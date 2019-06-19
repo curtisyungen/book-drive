@@ -91,7 +91,9 @@ class Cart extends Component {
                     subtotal={this.state.subtotal}
                 />
 
-                <BookSuggestions />
+                <BookSuggestions 
+                    displayClass="cart"
+                />
             </div>
         )
     }
