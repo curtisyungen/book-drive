@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Container from "../Container/container";
 import "./pastOrderItem.css";
 
 class PastOrderItem extends Component {
@@ -30,7 +29,7 @@ class PastOrderItem extends Component {
 
     render() {
         return (
-            <Container>
+            <span>
                 <h4 className="orderHeader">Ordered on: {this.props.date}</h4>
                 <div className="pastOrderItem">
                     <img className="orderCover" src={this.props.imageURL} alt="book cover" />
@@ -40,7 +39,7 @@ class PastOrderItem extends Component {
                         <p className="orderPrice">${Math.round((this.props.price * 100) / 100).toFixed(2)}</p>
                     </span>
                 </div>
-            </Container>
+            </span>
         )
     }
 }
