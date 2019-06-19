@@ -27,7 +27,7 @@ class PastOrder extends Component {
     render() {
         return (
             <div className="pastOrder">
-                {this.state.items.length > 0 ? (
+                {this.state.items ? (
                     this.state.items.map(item => (
                         <PastOrderItem
                             title={item.title}
