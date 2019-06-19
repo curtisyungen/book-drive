@@ -23,6 +23,9 @@ class Cart extends Component {
             email = JSON.parse(localStorage.getItem("user")).email;
             this.getBooksInCart(email);
         }
+        else {
+            this.getBooksInSessionStorage();
+        }
     }
 
     getBooksInCart = (email) => {
@@ -35,6 +38,20 @@ class Cart extends Component {
             });
           });
       }
+
+    getBooksInSessionStorage = () => {
+        let cart;
+
+        if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+            cart = JSON.parse(sessionStorage.getItem("cart"));
+
+            this.setState({
+                cart: cart,
+            }, () => {
+                this.calculateSubtotal();
+            });
+        }
+    }
 
     calculateSubtotal = () => {
         let cart = this.state.cart;
