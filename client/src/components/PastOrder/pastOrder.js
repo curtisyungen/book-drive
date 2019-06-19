@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./pastOrder.css";
+import PastOrderItem from "../PastOrderItem/pastOrderItem";
 
 class PastOrder extends Component {
 
@@ -26,8 +27,19 @@ class PastOrder extends Component {
     render() {
         return (
             <div className="pastOrder">
-                <p className="pastOrderHeader"></p>
-                <img src="" alt="order image" />
+                {this.state.items.length > 0 ? (
+                    this.state.items.map(item => (
+                        <PastOrderItem
+                            title={item.title}
+                            authorFirst={item.authorFirst}
+                            authorLast={item.authorLast}
+                            price={item.price}
+                            imageURL={item.imageURL}
+                        />
+                    ))
+                ) : (
+                    <></>
+                )}
             </div>
         )
     }
