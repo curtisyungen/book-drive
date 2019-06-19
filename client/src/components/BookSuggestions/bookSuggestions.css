@@ -14,7 +14,13 @@
 }
 
 .bookSuggestionList-cart {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 15px;
+    height: auto;
     position: relative;
+    right: 107px;
+    width: 264px;
 }
 
 .suggestionBtn {
