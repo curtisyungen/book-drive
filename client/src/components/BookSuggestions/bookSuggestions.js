@@ -37,14 +37,13 @@ class BookSuggestions extends Component {
                                 <p className="suggestionTitle">{book.title}</p>
                                 <p className="suggestionAuthor">{book.authorLast}, {book.authorFirst}</p>
                                 <p className="suggestionPrice">${(Math.round(book.price * 100) / 100).toFixed(2)}</p>
-                            </span>
-
-                            <button
+                            
+                                <button
                                 className="btn btn-warning btn-sm suggestionBtn"
-                            >
-                                Add to Cart
-                            </button>
-                        
+                                >
+                                    Add to Cart
+                                </button>
+                            </span>  
                         </div>
                     ))
                 ) : (

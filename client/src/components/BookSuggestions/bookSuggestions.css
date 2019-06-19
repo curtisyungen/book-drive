@@ -14,7 +14,8 @@
 }
 
 .suggestionBtn {
-    
+    cursor: pointer;
+    padding: 2px;
 }
 
 .suggestionCover {
