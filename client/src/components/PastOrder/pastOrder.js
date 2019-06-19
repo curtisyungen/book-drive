@@ -16,7 +16,7 @@ class PastOrder extends Component {
 
     componentDidMount = () => {
         this.setState({
-            date: this.props.date,
+            date: this.props.date.split("T")[0],
             items: JSON.parse(this.props.items),
             price: this.props.price,
         }, () => {
