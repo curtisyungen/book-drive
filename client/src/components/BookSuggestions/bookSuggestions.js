@@ -14,13 +14,19 @@ class BookSuggestions extends Component {
     }
 
     componentDidMount = () => {
-
-        let tag = "business";
-
         API.getBookSuggestions()
             .then((res) => {
+
+                // Get three random books
+                let randIdx;
+                let books = [];
+                for (var i=0; i<3; i++) {
+                    randIdx = Math.random() * res.data.length;
+                    books.push(res.data[randIdx]);
+                }
+
                 this.setState({
-                    suggestions: res.data,
+                    suggestions: books,
                 });
             });
     }
