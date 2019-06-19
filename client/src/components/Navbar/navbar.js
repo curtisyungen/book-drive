@@ -241,7 +241,7 @@ class Navbar extends Component {
                         )}
                         </li>
                         <li className="nav-item">
-                            <a className="nav-acct-link" href="/">Orders</a>
+                            <a className="nav-acct-link" href="/orders">Orders</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-acct-link" href="/">Try SubPrime</a>
