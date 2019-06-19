@@ -8,6 +8,7 @@ class Orders extends Component {
         super(props);
 
         this.state = {
+            user: null,
             orders: null,
         }
     }
@@ -22,7 +23,7 @@ class Orders extends Component {
     }
 
     getOrders = () => {
-        API.getUserBookOrders(this.state.user.email)
+        API.getUserBookOrders(this.props.user.email || this.state.user.email)
             .then((res) => {
                 console.log(res);
             });
