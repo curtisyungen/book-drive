@@ -37,7 +37,7 @@ class Orders extends Component {
     render() {
         return (
             <Container>
-                <h4>Your Orders</h4>
+                <h4 className="yourOrdersHeader">Your Orders</h4>
 
                 {this.state.orders ? (
                     this.state.orders.map(order => (
