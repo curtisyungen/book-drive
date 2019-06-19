@@ -7,6 +7,10 @@
     margin-right: 10px;
 }
 
+.orderDetails {
+    display: inline-block;
+}
+
 .orderPrice {
     color: brown;
     font-size: 12px;

@@ -35,6 +35,7 @@ class PastOrder extends Component {
                             authorLast={item.authorLast}
                             price={item.price}
                             imageURL={item.imageURL}
+                            date={this.state.date}
                         />
                     ))
                 ) : (
