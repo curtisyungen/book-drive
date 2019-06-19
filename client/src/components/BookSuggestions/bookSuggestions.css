@@ -6,7 +6,7 @@
     border: 1px solid lightgray;
     border-radius: 4px;
     padding: 15px;
-    height: 700px;
+    height: auto;
     position: absolute;
     right: 117px;
     top: 226px;
@@ -16,4 +16,23 @@
 .suggestionCover {
     height: 200px;
     margin-bottom: 20px;
+}
+
+.suggestionDetails {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.suggestionHeader {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.suggestionPrice {
+    color: brown;
+}
+
+.suggestionTitle {
+
 }

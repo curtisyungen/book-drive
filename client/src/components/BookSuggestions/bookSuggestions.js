@@ -25,10 +25,20 @@ class BookSuggestions extends Component {
     render() {
         return (
             <div className="bookSuggestionList">
+
+                <p className="suggestionHeader">More books:</p>
+
                 {this.state.suggestions ? (
                     this.state.suggestions.map(book => (
                         <div className="bookSuggestion">
                             <img className="suggestionCover" src={book.imageURL} alt="book cover" />
+                        
+                            <span className="suggestionDetails">
+                                <p className="suggestionTitle">{book.title}</p>
+                                <p className="suggestionAuthor">{book.authorLast}, {book.authorFirst}</p>
+                                <p className="suggestionPrice">{book.price}</p>
+                            </span>
+                        
                         </div>
                     ))
                 ) : (
