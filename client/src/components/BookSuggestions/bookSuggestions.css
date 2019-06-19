@@ -1,7 +1,7 @@
-.pastOrder {
+.bookSuggestions {
     border: 1px solid lightgray;
     border-radius: 4px;
-    margin: 15px auto;
     padding: 15px;
-    width: 920px;
+    height: 100%;
+    width: 200px;
 }
