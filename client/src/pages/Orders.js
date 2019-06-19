@@ -16,6 +16,7 @@ class Orders extends Component {
         this.setState({
             user: this.props.user,
         }, () => {
+            console.log(this.props);
             this.getOrders();
         });
     }
