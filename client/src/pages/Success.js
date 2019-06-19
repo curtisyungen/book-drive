@@ -56,6 +56,8 @@ class Success extends Component {
                         shippingAddress: JSON.stringify(this.state.shippingAddress),
                     }
 
+                    let $this = this;
+
                     // Store shipping and order info in state
                     this.setState({
                         shippingAddress: res.data.transactions[0].item_list.shipping_address,
@@ -63,10 +65,10 @@ class Success extends Component {
                     }, () => {
 
                         // Store order in database
-                        this.saveBookOrder(order);
+                        $this.saveBookOrder(order);
 
                         // Update book purchase status in database
-                        this.purchaseBook(cart);
+                        $this.purchaseBook(cart);
                     });
                 }
             });
