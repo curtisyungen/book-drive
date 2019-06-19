@@ -53,11 +53,11 @@ class Success extends Component {
         let order = {
             name: this.state.user.name,
             email: this.state.user.email,
-            date: "date",
+            date: new Date(),
             totalPrice: total,
-            items: "cart",
+            items: JSON.stringify(this.props.cart),
             itemQty: this.props.cart.length,
-            shippingAddress: this.state.shippingAddress,
+            shippingAddress: JSON.stringify(this.state.shippingAddress),
         }
 
         console.log("Order", order);
