@@ -36,7 +36,7 @@ class BookSuggestions extends Component {
                             <span className="suggestionDetails">
                                 <p className="suggestionTitle">{book.title}</p>
                                 <p className="suggestionAuthor">{book.authorLast}, {book.authorFirst}</p>
-                                <p className="suggestionPrice">{book.price}</p>
+                                <p className="suggestionPrice">{(Math.round(book.price * 100) / 100).toFixed(2)}</p>
                             </span>
                         
                         </div>

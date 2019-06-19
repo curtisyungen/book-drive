@@ -14,13 +14,15 @@
 }
 
 .suggestionCover {
-    height: 200px;
+    height: 150px;
     margin-bottom: 20px;
+    margin-right: 10px;
 }
 
 .suggestionDetails {
     display: inline-block;
     font-size: 14px;
+    position: absolute;
 }
 
 .suggestionHeader {
