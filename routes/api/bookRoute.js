@@ -42,6 +42,10 @@ router.get("/getBooksInCart/:email", (req, res) => {
     controller.getBooksInCart(req, res);
 });
 
+router.get("/getBookSuggestions", (req, res) => {
+    controller.getBookSuggestions(req, res);
+});
+
 router.put("/addToCart/:email", (req, res) => {
     controller.addToCart(req, res);
 });
