@@ -15,7 +15,8 @@
 
 .suggestionBtn {
     cursor: pointer;
-    padding: 2px;
+    font-size: 12px;
+    padding: 3px;
 }
 
 .suggestionCover {
@@ -26,8 +27,12 @@
 
 .suggestionDetails {
     display: inline-block;
-    font-size: 14px;
+    font-size: 13px;
     position: absolute;
+}
+
+.suggestionDetails p {
+    margin: 0;
 }
 
 .suggestionHeader {
