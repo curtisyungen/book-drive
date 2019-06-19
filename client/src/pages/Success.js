@@ -53,9 +53,9 @@ class Success extends Component {
         let order = {
             name: this.state.user.name,
             email: this.state.user.email,
-            date: new Date(),
+            date: "date",
             totalPrice: total,
-            items: this.props.cart,
+            items: "cart",
             itemQty: this.props.cart.length,
             shippingAddress: this.state.shippingAddress,
         }
