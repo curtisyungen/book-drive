@@ -29,10 +29,12 @@ class PastOrderItem extends Component {
 
     render() {
         return (
-            <div>
+            <div className="pastOrderItem">
                 <img className="orderCover" src={this.props.imageURL} alt="book image" />
+                <a className="orderTitle" href="/">{this.props.title}</a>
+                <span className="orderAuthor">{this.props.authorFirst} {this.props.authorLast}</span>
+                <span className="orderPrice">{this.props.price}</span>
             </div>
-
         )
     }
 }
