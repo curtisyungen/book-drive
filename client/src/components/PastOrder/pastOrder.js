@@ -16,7 +16,7 @@ class PastOrder extends Component {
     componentDidMount = () => {
         this.setState({
             date: this.props.date,
-            items: this.props.items,
+            items: JSON.parse(this.props.items),
             price: this.props.price,
         }, () => {
             console.log(this.state);
@@ -25,7 +25,10 @@ class PastOrder extends Component {
 
     render() {
         return (
-            <></>
+            <div className="pastOrder">
+                <p className="pastOrderHeader"></p>
+                <img src="" alt="order image" />
+            </div>
         )
     }
 }
