@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Container from "../components/Container/container";
 import PastOrder from "../components/PastOrder/pastOrder";
 import API from "../utils/API";
 import "./Orders.css";
@@ -35,7 +36,7 @@ class Orders extends Component {
 
     render() {
         return (
-            <span>
+            <Container>
                 <h4>Your Orders</h4>
 
                 {this.state.orders ? (
@@ -50,7 +51,7 @@ class Orders extends Component {
                     <p>No orders found.</p>
                 )}
 
-            </span>
+            </Container>
 
         )
     }
