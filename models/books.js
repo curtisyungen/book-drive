@@ -40,6 +40,10 @@ module.exports = function(sequelize, DataTypes) {
         tags: {
             type: DataTypes.STRING(2000),
         },
+
+        buyer: {
+            type: DataTypes.TEXT,
+        },
     });
 
     Books.associate = function(models) {
