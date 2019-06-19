@@ -370,8 +370,10 @@ class App extends Component {
       cart = JSON.parse(sessionStorage.getItem("cart"));
     }
 
-    cart.push(book);
-
+    if (cart.indexOf(book) === -1) {
+      cart.push(book);
+    }
+    
     this.setState({
       cart: cart,
     });
@@ -390,13 +392,32 @@ class App extends Component {
   }
 
   deleteFromCart = (book) => {
-    API.deleteFromCart(book)
-      .then((res) => {
-        console.log("Release book from hold", res);
+
+    if (this.state.isLoggedIn && localStorage.getItem("isLoggedIn") === "true") {
+      API.deleteFromCart(book)
+        .then((res) => {
+          console.log("Release book from hold", res);
+          alert("Removed from cart!");
+          this.getBooksInCart(this.state.user.email);
+          window.location.reload();
+        });
+    }
+    else {
+      let cart; 
+      let idx;
+
+      if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+        cart = JSON.parse(sessionStorage.getItem("cart"));
+        idx = cart.indexOf(book);
+        cart.splice(idx, 1);
+
+        sessionStorage.setItem("cart", JSON.stringify(cart));
+
         alert("Removed from cart!");
-        this.getBooksInCart(this.state.user.email);
+
         window.location.reload();
-      });
+      }
+    }
   }
 
   getBooksInCart = (email) => {
