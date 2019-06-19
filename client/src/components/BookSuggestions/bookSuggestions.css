@@ -2,7 +2,7 @@
 
 }
 
-.bookSuggestionList {
+.bookSuggestionList-order {
     border: 1px solid lightgray;
     border-radius: 4px;
     padding: 15px;
@@ -11,6 +11,10 @@
     right: 107px;
     top: 226px;
     width: 264px;
+}
+
+.bookSuggestionList-cart {
+    position: relative;
 }
 
 .suggestionBtn {

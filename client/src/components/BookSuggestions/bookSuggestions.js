@@ -10,10 +10,16 @@ class BookSuggestions extends Component {
 
         this.state = {
             suggestions: null,
+            displayClass: null,
         }
     }
 
     componentDidMount = () => {
+
+        this.setState({
+            displayClass: this.props.displayClass,
+        });
+
         API.getBookSuggestions()
             .then((res) => {
                 this.setState({
@@ -24,7 +30,7 @@ class BookSuggestions extends Component {
 
     render() {
         return (
-            <div className="bookSuggestionList">
+            <div className={`bookSuggestionList-${this.state.displayClass}`}>
 
                 <p className="suggestionHeader">More books:</p>
 
