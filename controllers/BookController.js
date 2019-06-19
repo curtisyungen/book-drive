@@ -207,7 +207,8 @@ class BookController {
         db.Books.findAll({
             where: {
                 avail: "avail",
-            }
+            },
+            limit: 3,
         })
         .then((books) => {
             res.json(books);
