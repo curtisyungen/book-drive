@@ -202,6 +202,17 @@ class BookController {
                 res.json(book);
             });
     }
+
+    getBookSuggestions(req, res) {
+        db.Books.findAll({
+            where: {
+                avail: "avail",
+            }
+        })
+        .then((books) => {
+            res.json(books);
+        });
+    }
 }
 
 module.exports = BookController;
