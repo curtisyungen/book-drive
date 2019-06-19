@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Container from "../components/Container/container";
 import PastOrder from "../components/PastOrder/pastOrder";
+import BookSuggestions from "../components/BookSuggestions/bookSuggestions";
 import API from "../utils/API";
 import "./Orders.css";
 
@@ -50,6 +51,8 @@ class Orders extends Component {
                 ) : (
                     <p>No orders found.</p>
                 )}
+
+                <BookSuggestions />
 
             </Container>
 
