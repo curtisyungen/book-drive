@@ -97,5 +97,9 @@ export default {
 
     createBookOrder: function(order) {
         return axios.post("/api/orders/createBookOrder", order);
+    },
+
+    purchaseBooks: function(book, email) {
+        return axios.put("/api/books/purchaseBook/" + email, book);
     }
 };
