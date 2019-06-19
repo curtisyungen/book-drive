@@ -366,7 +366,7 @@ class App extends Component {
 
   addToGuestCart = (book) => {
     let cart = [];
-    if (sessionStorage.getItem("cart")) {
+    if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
       cart = JSON.parse(sessionStorage.getItem("cart"));
     }
 
