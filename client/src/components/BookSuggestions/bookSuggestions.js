@@ -14,6 +14,9 @@ class BookSuggestions extends Component {
     }
 
     componentDidMount = () => {
+
+        let tag = "business";
+
         API.getBookSuggestions()
             .then((res) => {
                 this.setState({
