@@ -48,6 +48,7 @@ class Cart extends Component {
             this.setState({
                 cart: cart,
             }, () => {
+                alert("Added to cart!");
                 this.calculateSubtotal();
             });
         }
