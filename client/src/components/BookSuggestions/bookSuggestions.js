@@ -16,19 +16,6 @@ class BookSuggestions extends Component {
     componentDidMount = () => {
         API.getBookSuggestions()
             .then((res) => {
-
-                // Get three random books
-                let randIdx;
-                let books = [];
-                let bookList = res.data;
-                console.log(res.data);
-
-                for (var i=0; i<3; i++) {
-                    randIdx = Math.random() * bookList.length;
-                    books.push(bookList[randIdx]);
-                    bookList.splice(randIdx, 1);
-                }
-
                 this.setState({
                     suggestions: res.data,
                 });
@@ -37,18 +24,12 @@ class BookSuggestions extends Component {
 
     render() {
         return (
-            <div className="bookSuggestions">
+            <div className="bookSuggestionList">
                 {this.state.suggestions ? (
                     this.state.suggestions.map(book => (
-                        <Book 
-                            title={book.title}
-                            authorFirst={book.authorFirst}
-                            authorLast={book.authorLast}
-                            price={book.price}
-                            avail={book.avail}
-                            tags={book.tags}
-                            imageURL={book.imageURL}
-                        />
+                        <div className="bookSuggestion">
+                            <img src={book.imageURL} alt="book cover" />
+                        </div>
                     ))
                 ) : (
                     <></>
