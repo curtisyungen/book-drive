@@ -1,3 +1,7 @@
+.container {
+    margin-left: -250px;
+}
+
 .yourOrdersHeader {
     font-size: 28px;
     font-weight: 400;
