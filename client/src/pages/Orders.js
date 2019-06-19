@@ -18,13 +18,12 @@ class Orders extends Component {
         this.setState({
             user: this.props.user,
         }, () => {
-            console.log(this.props);
             this.getOrders();
         });
     }
 
     getOrders = () => {
-        if (this.props.user.email || this.state.user.email) {
+        if (this.props.user || this.state.user) {
             API.getUserBookOrders(this.props.user.email || this.state.user.email)
             .then((res) => {
                 this.setState({
