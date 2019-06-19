@@ -30,7 +30,7 @@ class BookSuggestions extends Component {
                 }
 
                 this.setState({
-                    suggestions: books,
+                    suggestions: res.data,
                 });
             });
     }
