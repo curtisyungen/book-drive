@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CartItem from "../components/CartItem/cartItem";
 import CartSummary from "../components/CartSummary/cartSummary";
+import BookSuggestions from "../components/BookSuggestions/bookSuggestions";
 import API from "../utils/API";
 import "./Cart.css";
 
@@ -89,6 +90,8 @@ class Cart extends Component {
                     cart={this.state.cart}
                     subtotal={this.state.subtotal}
                 />
+
+                <BookSuggestions />
             </div>
         )
     }
