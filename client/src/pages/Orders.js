@@ -24,17 +24,21 @@ class Orders extends Component {
     }
 
     getOrders = () => {
-        API.getUserBookOrders(this.props.user.email || this.state.user.email)
+        if (this.props.user.email || this.state.user.email) {
+            API.getUserBookOrders(this.props.user.email || this.state.user.email)
             .then((res) => {
                 this.setState({
                     orders: res.data,
                 });
             });
+        }
     }
 
     render() {
         return (
             <span>
+                <h4>Your Orders</h4>
+
                 {this.state.orders ? (
                     this.state.orders.map(order => (
                         <PastOrder
@@ -44,7 +48,7 @@ class Orders extends Component {
                         />
                     ))
                 ) : (
-                    <></>
+                    <p>No orders found.</p>
                 )}
 
             </span>
