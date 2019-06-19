@@ -20,12 +20,6 @@ class Success extends Component {
 
     componentDidMount = () => {
 
-        // Store user and cart in state
-        this.setState({
-            user: this.props.user,
-            cart: this.props.cart,
-        });
-
         // Get payment info from URL
         let parameters = window.location.href.split("?")[1].split("&");
         let paymentId = parameters[0].split("=")[1];
@@ -37,6 +31,12 @@ class Success extends Component {
 
                 // If payment approved, get shipping and order info
                 if (res.data.state === "approved") {
+
+                    // Store user and cart in state
+                    this.setState({
+                        user: this.props.user,
+                        cart: this.props.cart,
+                    });
 
                     // Get total from cart
                     let cart = this.props.cart;
