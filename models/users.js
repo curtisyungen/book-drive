@@ -1,9 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     let Users = sequelize.define("Users", {
-        // id: {
-        //     type: DataTypes.STRING,
-        //     primaryKey: true,
-        // },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -15,17 +11,8 @@ module.exports = function(sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        cart: {
-            type: DataTypes.TEXT,
         }
     });
-
-    Users.associate = function(models) {
-        Users.hasMany(models.Books, {
-            onDelete: "cascade"
-        });
-    }
     
     return Users;
 }

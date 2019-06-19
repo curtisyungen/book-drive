@@ -46,13 +46,5 @@ module.exports = function(sequelize, DataTypes) {
         },
     });
 
-    Books.associate = function(models) {
-        Books.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: true,
-            }
-        });
-    }
-
     return Books;
 }
