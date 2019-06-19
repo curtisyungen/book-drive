@@ -1,5 +1,5 @@
 .bookSuggestion {
-    
+
 }
 
 .bookSuggestionList {
@@ -11,4 +11,9 @@
     right: 117px;
     top: 226px;
     width: 250px;
+}
+
+.suggestionCover {
+    height: 200px;
+    margin-bottom: 20px;
 }

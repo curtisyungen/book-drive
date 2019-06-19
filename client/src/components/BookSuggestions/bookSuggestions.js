@@ -28,7 +28,7 @@ class BookSuggestions extends Component {
                 {this.state.suggestions ? (
                     this.state.suggestions.map(book => (
                         <div className="bookSuggestion">
-                            <img src={book.imageURL} alt="book cover" />
+                            <img className="suggestionCover" src={book.imageURL} alt="book cover" />
                         </div>
                     ))
                 ) : (
