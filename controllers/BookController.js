@@ -186,6 +186,22 @@ class BookController {
             res.json(books);
         });
     }
+
+    purchaseBook(req, res) {
+        db.Books.update(
+            {
+                avail: "unavail",
+                buyer: req.params.email
+            },
+            {where: {
+                title: req.body.title,
+                authorFirst: req.body.authorFirst,
+                authorLast: req.body.authorLast,
+            }})
+            .then((book) => {
+                res.json(book);
+            });
+    }
 }
 
 module.exports = BookController;
