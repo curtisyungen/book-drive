@@ -19,9 +19,9 @@ This project is deployed at https://congo-cjy.herokuapp.com.
 3) express
 4) paypal-rest-sdk
 5) react-dom
-6) reactjs-popup
-7) react-responsive-modal
-8) react-router
+6) react-responsive-modal
+7) react-router
+8) reactjs-popup
 9) sequelize
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
