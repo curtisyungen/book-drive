@@ -50,4 +50,8 @@ router.put("/deleteFromCart", (req, res) => {
     controller.deleteFromCart(req, res);
 });
 
+router.put("/purchaseBook/:email", (req, res) => {
+    controller.purchaseBook(req, res);
+});
+
 module.exports = router;
