@@ -20,13 +20,13 @@ class BookSuggestions extends Component {
                 // Get three random books
                 let randIdx;
                 let books = [];
-                let bookList = res;
-                console.log(res);
+                let bookList = res.data;
+                console.log(res.data);
 
                 for (var i=0; i<3; i++) {
                     randIdx = Math.random() * bookList.length;
                     books.push(bookList[randIdx]);
-                    bookList.splice(randIdx);
+                    bookList.splice(randIdx, 1);
                 }
 
                 this.setState({
