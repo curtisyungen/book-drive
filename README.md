@@ -10,17 +10,19 @@ This project is deployed at https://congo-cjy.herokuapp.com.
 2) Express.js
 3) ReactJS
 4) MySQL
+5) PayPal API
+6) Google Books API
 
 ## Dependencies
 1) axios
 2) bcrypt
 3) express
-4) react-dom
-5) react-responsive-modal
-6) react-router
-7) reactjs-popup
-8) sequelize
-9) paypal-rest-sdk
+4) paypal-rest-sdk
+5) react-dom
+6) reactjs-popup
+7) react-responsive-modal
+8) react-router
+9) sequelize
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
