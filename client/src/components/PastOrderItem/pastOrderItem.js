@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Container from "../Container/container";
 import "./pastOrderItem.css";
 
 class PastOrderItem extends Component {
@@ -29,17 +30,17 @@ class PastOrderItem extends Component {
 
     render() {
         return (
-            <span>
-                <h4>Ordered on: {this.props.date}</h4>
+            <Container>
+                <h4 className="orderHeader">Ordered on: {this.props.date}</h4>
                 <div className="pastOrderItem">
                     <img className="orderCover" src={this.props.imageURL} alt="book cover" />
                     <span className="orderDetails">
                         <a className="orderTitle" href="/">{this.props.title}</a>
                         <p className="orderAuthor">{this.props.authorLast}, {this.props.authorFirst}</p>
-                        <p className="orderPrice">{Math.round((this.props.price * 100) / 100).toFixed(2)}</p>
+                        <p className="orderPrice">${Math.round((this.props.price * 100) / 100).toFixed(2)}</p>
                     </span>
                 </div>
-            </span>
+            </Container>
         )
     }
 }

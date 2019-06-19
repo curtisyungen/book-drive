@@ -11,6 +11,10 @@
     display: inline-block;
 }
 
+.orderHeader {
+    font-size: 18px;
+}
+
 .orderPrice {
     color: brown;
     font-size: 12px;
