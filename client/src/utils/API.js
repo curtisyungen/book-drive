@@ -99,8 +99,8 @@ export default {
         return axios.post("/api/payPal/payUsingPayPal/" + total);
     },
 
-    successfulPayment: function (paymentId, payerId) {
-        return axios.get("/api/payPal/successfulPayment", { params: { paymentId: paymentId, payerId: payerId }});
+    successfulPayment: function (paymentId, payerId, total) {
+        return axios.get("/api/payPal/successfulPayment", { params: { paymentId: paymentId, payerId: payerId, total: total }});
     },
 
     cancelPayment: function () {
@@ -120,5 +120,9 @@ export default {
 
     purchaseBook: function(book, email) {
         return axios.put("/api/books/purchaseBook/" + email, book);
+    },
+
+    saveOrderTotal: function(total) {
+        return axios.post("/api/orders/saveOrderTotal", total);
     },
 };
