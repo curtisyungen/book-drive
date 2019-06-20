@@ -380,7 +380,7 @@ class App extends Component {
   addToGuestCart = (book) => {
     let idx = -1;
     let cart = [];
-    if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+    if (sessionStorage.getItem("cart") && JSON.parse(sessionStorage.getItem("cart")) !== null) {
       cart = JSON.parse(sessionStorage.getItem("cart"));
 
       // Check if book is already in guest's cart to avoid duplicates
