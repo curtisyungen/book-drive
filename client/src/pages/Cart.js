@@ -19,6 +19,8 @@ class Cart extends Component {
 
     componentDidMount = () => {
 
+        console.log("Cart Summary", this.props);
+
         this.setState({
             user: this.props.user,
         });
@@ -110,7 +112,7 @@ class Cart extends Component {
                 </table>
 
                 <CartSummary 
-                    user={this.state.user}
+                    user={this.props.user}
                     cart={this.state.cart}
                     subtotal={this.state.subtotal}
                     setRedirectToSignUp={this.props.setRedirectToSignUp}
