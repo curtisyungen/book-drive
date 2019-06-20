@@ -16,6 +16,7 @@ class CartSummary extends Component {
     componentDidMount = () => {
 
         this.setState({
+            user: this.props.user,
             cart: this.props.cart,
             subtotal: this.props.subtotal,
         });
@@ -30,6 +31,15 @@ class CartSummary extends Component {
         }
     }
 
+    checkout = () => {
+        if (this.state.user) {
+            this.checkoutWithPayPal();
+        }
+        else {
+            this.props.setRedirectToSignUp();
+        }
+    }
+
     checkoutWithPayPal = () => {
 
         let total = 0;
@@ -37,17 +47,20 @@ class CartSummary extends Component {
 
         for (var book in cart) {
             total += cart[book].price;
-        }        
+        }
 
         API.payUsingPayPal(total)
             .then((res) => {
                 console.log(res);
 
+                let idx;
                 for (var link in res.data.links) {
                     if (res.data.links[link].rel === "approval_url") {
-                        window.open(res.data.links[link].href);
+                        idx = link;
                     }
                 }
+
+                window.open(res.data.links[idx].href);
             });
     }
 
@@ -67,7 +80,7 @@ class CartSummary extends Component {
                     className="checkoutBtn"
                     onClick={(event) => {
                         event.preventDefault();
-                        this.checkoutWithPayPal();
+                        this.checkout();
                     }}
                 >
                     Checkout with PayPal
