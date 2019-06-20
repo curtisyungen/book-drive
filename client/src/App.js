@@ -417,13 +417,16 @@ class App extends Component {
     }
     else {
       let cart; 
-      let idx;
 
       if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
         cart = JSON.parse(sessionStorage.getItem("cart"));
-        idx = cart.indexOf(book);
-        cart.splice(idx, 1);
-
+        
+        for (var item in cart) {
+          if (cart[item].title === book.title) {
+            cart.splice(item, 1);
+          }
+        }
+        
         sessionStorage.setItem("cart", JSON.stringify(cart));
 
         alert("Removed from cart!");
