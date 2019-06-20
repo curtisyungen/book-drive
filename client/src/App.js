@@ -532,6 +532,8 @@ class App extends Component {
                 deleteFromCart={this.deleteFromCart}
                 getBooksInCart={this.getBooksInCart}
                 cart={this.state.cart}
+                user={this.state.user}
+                setRedirectToSignUp={this.setRedirectToSignUp}
               />
             } />
             <Route exact path="/success" render={() => 
