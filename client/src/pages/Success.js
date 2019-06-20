@@ -25,6 +25,8 @@ class Success extends Component {
         let paymentId = parameters[0].split("=")[1];
         let payerId = parameters[2].split("=")[1];
 
+        console.log("Success page props", this.props);
+
         // Process payment
         API.successfulPayment(paymentId, payerId)
             .then((res) => {
@@ -44,8 +46,6 @@ class Success extends Component {
                     for (var book in cart) {
                         total += cart[book].price;
                     }
-
-                    console.log("Success page cart", this.state.cart);
 
                     // Assemble order info
                     let order = {
