@@ -221,14 +221,16 @@ class App extends Component {
   }
 
   transferGuestCartToUser = () => {
-    let cart;
+
+    // Pull cart items from session storage and add to cart in database
+    let guestCart;
     if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
-      cart = JSON.parse(sessionStorage.getItem("cart"));
+      guestCart = JSON.parse(sessionStorage.getItem("cart"));
     }
 
-    if (cart !== null) {
-      for (var item in cart) {
-        this.addToCart(cart[item]);
+    if (guestCart !== null) {
+      for (var item in guestCart) {
+        this.addToCart(guestCart[item]);
       }
     }
   }
@@ -408,9 +410,9 @@ class App extends Component {
   }
 
   addToCart = (book) => {
+    console.log("add to cart", this.state.user.email);
     API.addToCart(book, this.state.user.email)
       .then((res) => {
-        console.log("Put book on hold", res);
         alert("Added to cart!");
         this.getBooksInCart(this.state.user.email);
         window.location.reload();
@@ -418,11 +420,9 @@ class App extends Component {
   }
 
   deleteFromCart = (book) => {
-
     if (this.state.isLoggedIn && localStorage.getItem("isLoggedIn") === "true") {
       API.deleteFromCart(book)
         .then((res) => {
-          console.log("Release book from hold", res);
           alert("Removed from cart!");
           this.getBooksInCart(this.state.user.email);
           window.location.reload();
