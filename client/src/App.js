@@ -127,6 +127,7 @@ class App extends Component {
                 user: userData,
                 isLoggedIn: true,
               }, () => {
+                this.transferGuestCartToUser();
                 this.setRedirectToHome();
               });
             });
@@ -217,6 +218,19 @@ class App extends Component {
     alert("You have been logged out.");
 
     this.setRedirectToHome();
+  }
+
+  transferGuestCartToUser = () => {
+    let cart;
+    if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+      cart = JSON.parse(sessionStorage.getItem("cart"));
+    }
+
+    if (cart !== null) {
+      for (var item in cart) {
+        this.addToCart(cart[item]);
+      }
+    }
   }
 
   // BOOK FILTERING
