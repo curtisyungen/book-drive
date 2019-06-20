@@ -368,13 +368,13 @@ class App extends Component {
     let cart = [];
     if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
       cart = JSON.parse(sessionStorage.getItem("cart"));
-    }
 
-    // Check if book is already in guest's cart to avoid duplicates
-    let idx = -1;
-    for (var item in cart) {
-      if (cart[item].title === book.title) {
-        idx = item;
+      // Check if book is already in guest's cart to avoid duplicates
+      let idx = -1;
+      for (var item in cart) {
+        if (cart[item].title === book.title) {
+          idx = item;
+        }
       }
     }
 
