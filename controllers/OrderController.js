@@ -52,7 +52,7 @@ class OrderController {
         });
 
         let mailOptions = {
-            from: "congobooksales@gmail.com",
+            from: "congoserver@gmail.com",
             to: "curtisyungen@gmail.com",
             subject: "Your Congo Book Order",
             text: "Success!",
