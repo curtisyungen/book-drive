@@ -46,7 +46,7 @@ class OrderController {
         let transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: "congobooksales@gmail.com",
+                user: "congoserver@gmail.com",
                 pass: process.env.GMAIL_PASSWORD,
             }
         });
