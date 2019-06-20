@@ -23,8 +23,8 @@
 .bookDescription {
     display: inline-block;
     font-size: 12px;
-    max-height: 200px;
-    /* overflow-y: scroll; */
+    max-height: 250px;
+    overflow-y: scroll;
     text-overflow: ellipsis;
     white-space: normal;
     width: 300px;
