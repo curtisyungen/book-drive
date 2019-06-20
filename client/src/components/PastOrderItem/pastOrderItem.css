@@ -24,3 +24,7 @@
 .orderTitle {
  font-size: 14px;
 }
+
+.pastOrderItem {
+    margin-bottom: 15px;
+}
