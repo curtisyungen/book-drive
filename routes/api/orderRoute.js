@@ -10,4 +10,8 @@ router.post("/createBookOrder", (req, res) => {
     controller.createBookOrder(req, res);
 });
 
+router.post("/saveOrderTotal", (req, res) => {
+    controller.saveOrderTotal(req, res);
+});
+
 module.exports = router;
