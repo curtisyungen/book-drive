@@ -79,6 +79,7 @@ class Cart extends Component {
 
     render() {
         return (
+            <span>
             <div
                 className="cartContainer"
             >
@@ -114,10 +115,6 @@ class Cart extends Component {
                                     subtotal={this.state.subtotal}
                                     setRedirectToSignUp={this.props.setRedirectToSignUp}
                                 />
-                
-                                <BookSuggestions 
-                                    displayClass="cart"
-                                />
                             </span>
                         ) : (
                             <tr>
@@ -140,8 +137,16 @@ class Cart extends Component {
                     </tbody>
                 </table>
 
-                <Footer />
+                                
+                <BookSuggestions 
+                    displayClass="cart"
+                />
+
+                
             </div>
+
+            <Footer />
+            </span>
         )
     }
 }
