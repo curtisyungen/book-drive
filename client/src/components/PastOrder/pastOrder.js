@@ -27,6 +27,7 @@ class PastOrder extends Component {
     render() {
         return (
             <div className="pastOrder">
+                <h4 className="orderHeader">Ordered on: {this.props.date.split("T")[0]}</h4>
                 {this.state.items ? (
                     this.state.items.map(item => (
                         <PastOrderItem
@@ -35,7 +36,6 @@ class PastOrder extends Component {
                             authorLast={item.authorLast}
                             price={item.price}
                             imageURL={item.imageURL}
-                            date={this.state.date}
                         />
                     ))
                 ) : (

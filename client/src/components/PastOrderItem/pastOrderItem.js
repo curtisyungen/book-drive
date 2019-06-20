@@ -30,7 +30,6 @@ class PastOrderItem extends Component {
     render() {
         return (
             <span>
-                <h4 className="orderHeader">Ordered on: {this.props.date}</h4>
                 <div className="pastOrderItem">
                     <img className="orderCover" src={this.props.imageURL} alt="book cover" />
                     <span className="orderDetails">
