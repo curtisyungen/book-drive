@@ -6,6 +6,10 @@ router.get("/getUserBookOrders/:email", (req, res) => {
     controller.getUserBookOrders(req, res);
 });
 
+router.post("/sendConfirmationEmail", (req, res) => {
+    controller.sendConfirmationEmail(req, res);
+});
+
 router.post("/createBookOrder", (req, res) => {
     controller.createBookOrder(req, res);
 });

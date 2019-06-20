@@ -1,4 +1,5 @@
 const db = require("../models/index.js");
+const nodemailer = require("nodemailer");
 
 class OrderController {
 
@@ -8,12 +9,12 @@ class OrderController {
                 email: req.params.email,
             }
         })
-        .then((orders) => {
-            res.json(orders);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+            .then((orders) => {
+                res.json(orders);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 
     createBookOrder(req, res) {
@@ -26,11 +27,49 @@ class OrderController {
             itemQty: req.body.itemQty,
             shippingAddress: req.body.shippingAddress,
         })
-        .then((order) => {
-            res.json(order);
-        })
-        .catch((err) => {
-            console.log(err);
+            .then((order) => {
+                res.json(order);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
+
+    saveOrderTotal(req, res) {
+        db.Orders.findAll({})
+            .then((order) => {
+                res.json(order);
+            });
+    }
+
+    sendConfirmationEmail(req, res) {
+        let transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "congobooksales@gmail.com",
+                pass: process.env.GMAIL_PASSWORD,
+            }
+        });
+
+        let mailOptions = {
+            from: "congobooksales@gmail.com",
+            to: "curtisyungen@gmail.com",
+            subject: "Your Congo Book Order",
+            text: "Success!",
+        };
+
+        transporter.sendMail(mailOptions, function (err, info) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log("Email sent: " + info.response);
+
+                db.Orders.findAll({})
+                    .then((order) => {
+                        res.json(order);
+                    });
+            }
         });
     }
 }
