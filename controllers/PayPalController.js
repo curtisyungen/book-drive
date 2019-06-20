@@ -3,8 +3,8 @@ const paypal = require("paypal-rest-sdk");
 
 paypal.configure({
     "mode": "sandbox",
-    "client_id": "AV8Iugkse1G7ntxZ15eI6KdFmCvKvEkSLBmWJWdWihsMIKnEDAcj_IFhjm9PZ7n1jCQeAgUrlXo-YQ2B",
-    "client_secret": "EHPwT8Eo48LQNInmvHAqD_8Qy5PpQyGueniw55eh2Yzf38g0-CxDvhc8Jn4l7RTllfknIyqKCM4ogaHt",
+    "client_id": process.env.PAYPAL_SANDBOX_CLIENT_ID, //"AV8Iugkse1G7ntxZ15eI6KdFmCvKvEkSLBmWJWdWihsMIKnEDAcj_IFhjm9PZ7n1jCQeAgUrlXo-YQ2B",
+    "client_secret": process.env.PAYPAL_SANDBOX_CLIENT_SECRET, //"EHPwT8Eo48LQNInmvHAqD_8Qy5PpQyGueniw55eh2Yzf38g0-CxDvhc8Jn4l7RTllfknIyqKCM4ogaHt",
 });
 
 class PayPalController {
