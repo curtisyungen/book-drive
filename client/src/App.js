@@ -174,6 +174,13 @@ class App extends Component {
                 // Save user data in Local Storage
                 localStorage.setItem("user", JSON.stringify(userData));
 
+                // Save user cart in state
+                this.setState({
+                  isLoggedIn: true,
+                  user: res.data,
+                });
+
+                // Get user's cart
                 this.transferGuestCartToUser();
                 this.getBooksInCart(res.data.email);
 
