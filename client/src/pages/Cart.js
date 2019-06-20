@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CartItem from "../components/CartItem/cartItem";
 import CartSummary from "../components/CartSummary/cartSummary";
 import BookSuggestions from "../components/BookSuggestions/bookSuggestions";
+import Footer from "../components/Footer/footer";
 import API from "../utils/API";
 import "./Cart.css";
 
@@ -138,6 +139,8 @@ class Cart extends Component {
                         )}
                     </tbody>
                 </table>
+
+                <Footer />
             </div>
         )
     }
