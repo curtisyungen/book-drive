@@ -26,6 +26,7 @@ class CartSummary extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
+                user: this.props.user,
                 cart: this.props.cart,
                 subtotal: this.props.subtotal,
             });
