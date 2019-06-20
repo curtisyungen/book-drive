@@ -86,13 +86,17 @@ class Cart extends Component {
                 <table
                     className="cartTable"    
                 >   
-                    <thead>
-                        <tr>
-                            <th id="cartTitle">Shopping Cart</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                        </tr>
-                    </thead>
+                    {this.state.cart && this.state.cart.length > 0 ? (
+                        <thead>
+                            <tr>
+                                <th id="cartTitle">Shopping Cart</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        ) : (
+                            <></>
+                    )}
 
                     <tbody>
                         {this.state.cart && this.state.cart.length > 0 ? (
