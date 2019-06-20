@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import Container from "../components/Container/container";
 import OrderDetail from "../components/OrderDetail/orderDetail";
 import ShippingInfo from "../components/ShippingInfo/shippingInfo";
+import Footer from "../components/Footer/footer";
 import API from "../utils/API";
 import "./Success.css";
 
@@ -67,13 +68,13 @@ class Success extends Component {
                     }, () => {
 
                         // Store order in database
-                        $this.saveBookOrder(order);
+                        // $this.saveBookOrder(order);
 
                         // Update book purchase status in database
-                        $this.purchaseBook(cart);
+                        // $this.purchaseBook(cart);
 
                         // Send confirmation email to user
-                        $this.sendConfirmationEmail();
+                        // $this.sendConfirmationEmail();
                     });
                 }
             });
@@ -112,22 +113,26 @@ class Success extends Component {
 
     render() {
         return (
-            <div className="orderConfirmation">
+            <span>
+                <div className="orderConfirmation">
 
-                <div>
-                    <p className="thankYou">Thank you, your order has been placed.</p>
-                    <p className="confirmation">Please check your email for order confirmation.</p>
+                    <div>
+                        <p className="thankYou">Thank you, your order has been placed.</p>
+                        <p className="confirmation">Please check your email for order confirmation.</p>
+                    </div>
+
+                    <OrderDetail
+                        order={this.state.order}
+                    />
+
+                    <ShippingInfo
+                        shippingAddress={this.state.shippingAddress}
+                    />
+
                 </div>
 
-                <OrderDetail
-                    order={this.state.order}
-                />
-
-                <ShippingInfo
-                    shippingAddress={this.state.shippingAddress}
-                />
-
-            </div>
+                <Footer />
+            </span>
         )
     }
 }
