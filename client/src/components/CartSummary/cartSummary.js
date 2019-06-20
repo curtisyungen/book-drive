@@ -8,6 +8,7 @@ class CartSummary extends Component {
         super(props);
 
         this.state = {
+            user: null,
             cart: [],
             subtotal: 0,
         }
@@ -32,7 +33,7 @@ class CartSummary extends Component {
     }
 
     checkout = () => {
-        if (this.state.user) {
+        if (this.props.user !== null) {
             this.checkoutWithPayPal();
         }
         else {
