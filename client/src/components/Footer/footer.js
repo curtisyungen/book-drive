@@ -15,7 +15,7 @@ class Footer extends Component {
         return (
             <div className="footer">
                 <div className="footerScrollToTop">
-                    <p>Back to top</p>
+                    Back to top
                 </div>
                 Footer
             </div>
