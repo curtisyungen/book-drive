@@ -370,18 +370,26 @@ class App extends Component {
       cart = JSON.parse(sessionStorage.getItem("cart"));
     }
 
-    console.log("Cart", cart);
-    console.log("Book", book);
-
-    if (cart.indexOf(book) === -1) {
-      cart.push(book);
+    // Check if book is already in guest's cart to avoid duplicates
+    let idx = -1;
+    for (var item in cart) {
+      if (cart[item].title === book.title) {
+        idx = item;
+      }
     }
+
+    if (idx !== -1) {
+      alert("Book is already in cart.");
+    }
+    else {
+      cart.push(book);
     
-    this.setState({
-      cart: cart,
-    }, () => {
-      alert("Added to cart!");
-    });
+      this.setState({
+        cart: cart,
+      }, () => {
+        alert("Added to cart!");
+      });
+    }
 
     sessionStorage.setItem("cart", JSON.stringify(cart));
   }
