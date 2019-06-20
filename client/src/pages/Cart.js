@@ -11,12 +11,18 @@ class Cart extends Component {
         super(props);
 
         this.state = {
+            user: null,
             cart: [],
             subtotal: 0,
         }
     }
 
     componentDidMount = () => {
+
+        this.setState({
+            user: this.props.user,
+        });
+
         let email; 
         
         if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user")) {
@@ -104,8 +110,10 @@ class Cart extends Component {
                 </table>
 
                 <CartSummary 
+                    user={this.state.user}
                     cart={this.state.cart}
                     subtotal={this.state.subtotal}
+                    setRedirectToSignUp={this.props.setRedirectToSignUp}
                 />
 
                 <BookSuggestions 
