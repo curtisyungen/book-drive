@@ -20,8 +20,6 @@ class Success extends Component {
 
     componentDidMount = () => {
 
-        console.log("Success Page props", this.props);
-
         // Get payment info from URL
         let parameters = window.location.href.split("?")[1].split("&");
         let paymentId = parameters[0].split("=")[1];
@@ -46,6 +44,8 @@ class Success extends Component {
                     for (var book in cart) {
                         total += cart[book].price;
                     }
+
+                    console.log("Success page cart", this.state.cart);
 
                     // Assemble order info
                     let order = {
