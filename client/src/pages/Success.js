@@ -74,7 +74,7 @@ class Success extends Component {
                         // $this.purchaseBook(cart);
 
                         // Send confirmation email to user
-                        // $this.sendConfirmationEmail();
+                        $this.sendConfirmationEmail();
                     });
                 }
             });
