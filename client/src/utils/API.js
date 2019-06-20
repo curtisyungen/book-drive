@@ -125,4 +125,8 @@ export default {
     saveOrderTotal: function(total) {
         return axios.post("/api/orders/saveOrderTotal", total);
     },
+
+    sendConfirmationEmail: function() {
+        return axios.post("/api/orders/sendConfirmationEmail");
+    }
 };
