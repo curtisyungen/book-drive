@@ -5,6 +5,9 @@ dotenv.config();
 
 export default {
 
+    // BOOK ROUTES
+    // =============================================================
+
     getAllBooks: function () {
         return axios.get("/api/books/getAllBooks/");
     },
@@ -37,6 +40,17 @@ export default {
         return axios.get("/api/books/getSubject/" + subject);
     },
 
+    getBookByTitle: function (title) {
+        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${title}`);
+    },
+    
+    getBookSuggestions: function() {
+        return axios.get("/api/books/getBookSuggestions");
+    },
+
+    // USER ROUTES
+    // =============================================================
+
     loginUser: function (email, password) {
         return axios.get("/api/users/loginUser/", { params: { email: email, password: password }});
     },
@@ -59,6 +73,9 @@ export default {
         return axios.get("/api/users/findExistingUser/" + email);
     },
 
+    // CART ROUTES
+    // =============================================================
+
     checkBookAvail: function (book) {
         return axios.get("/api/books/checkBookAvail/" + book.title);
     },
@@ -75,6 +92,9 @@ export default {
         return axios.get("/api/books/getBooksInCart/" + email);
     },
 
+    // PAYPAL ROUTES
+    // =============================================================
+
     payUsingPayPal: function (total) {
         return axios.post("/api/payPal/payUsingPayPal/" + total);
     },
@@ -87,9 +107,8 @@ export default {
         return axios.get("/api/payPal/cancelPayment");
     },
 
-    getBookByTitle: function (title) {
-        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${title}`);
-    },
+    // ORDER ROUTES
+    // =============================================================
 
     getUserBookOrders: function(email) {
         return axios.get("/api/orders/getUserBookOrders/" + email);
@@ -102,8 +121,4 @@ export default {
     purchaseBook: function(book, email) {
         return axios.put("/api/books/purchaseBook/" + email, book);
     },
-
-    getBookSuggestions: function() {
-        return axios.get("/api/books/getBookSuggestions");
-    }
 };
