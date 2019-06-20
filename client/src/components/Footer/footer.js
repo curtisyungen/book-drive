@@ -14,6 +14,9 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
+                <div className="footerScrollToTop">
+                    <p>Back to top</p>
+                </div>
                 Footer
             </div>
         )

@@ -7,3 +7,17 @@
     right: 0;
     width: 100%;
 }
+
+.footerScrollToTop {
+    background: rgb(55, 71, 90);
+    color: #fff;
+    font-family: "Arial";
+    font-size: 13px;
+    line-height: 19px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footerScrollToTop:hover {
+    background: rgb(72, 87, 105);
+}
