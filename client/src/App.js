@@ -208,7 +208,6 @@ class App extends Component {
   logoutUser = () => {
     localStorage.setItem("isLoggedIn", false);
     localStorage.setItem("user", null);
-    localStorage.setItem("cart", null);
     sessionStorage.setItem("cart", null);
 
     this.setState({
@@ -365,12 +364,12 @@ class App extends Component {
   }
 
   addToGuestCart = (book) => {
+    let idx = -1;
     let cart = [];
     if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
       cart = JSON.parse(sessionStorage.getItem("cart"));
 
       // Check if book is already in guest's cart to avoid duplicates
-      let idx = -1;
       for (var item in cart) {
         if (cart[item].title === book.title) {
           idx = item;
@@ -378,7 +377,7 @@ class App extends Component {
       }
     }
 
-    if (idx !== -1) {
+    if (idx !== -1 && cart !== []) {
       alert("Book is already in cart.");
     }
     else {
