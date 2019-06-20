@@ -10,7 +10,6 @@ paypal.configure({
 class PayPalController {
     
     payUsingPayPal (req, res) {
-
         var create_payment_json = {
             "intent": "sale",
             "payer": {
@@ -60,7 +59,7 @@ class PayPalController {
             "transactions": [{
                 "amount": {
                     "currency": "USD",
-                    "total": "5.00",
+                    "total": req.query.total,
                 }
             }]
         };
