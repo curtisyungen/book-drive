@@ -11,13 +11,22 @@ class Footer extends Component {
         }
     }
 
+    scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div className="footer">
-                <div className="footerScrollToTop">
+                <div 
+                    className="footerScrollToTop"
+                    onClick={(event) => {
+                        event.preventDefault(); 
+                        this.scrollToTop();
+                    }}
+                >
                     Back to top
                 </div>
-                Footer
             </div>
         )
     }
