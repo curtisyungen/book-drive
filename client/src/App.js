@@ -220,21 +220,6 @@ class App extends Component {
     this.setRedirectToHome();
   }
 
-  transferGuestCartToUser = () => {
-
-    // Pull cart items from session storage and add to cart in database
-    let guestCart;
-    if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
-      guestCart = JSON.parse(sessionStorage.getItem("cart"));
-    }
-
-    if (guestCart !== null) {
-      for (var item in guestCart) {
-        this.addToCart(guestCart[item]);
-      }
-    }
-  }
-
   // BOOK FILTERING
   // =========================================
 
@@ -458,6 +443,23 @@ class App extends Component {
           console.log(this.state);
         });
       });
+  }
+
+  // Pulls cart items from session storage and add to cart in database
+  // Called when guest logs in or signs up for account
+  transferGuestCartToUser = () => {
+    let guestCart;
+    if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+      guestCart = JSON.parse(sessionStorage.getItem("cart"));
+    }
+
+    console.log("Guest cart", guestCart);
+
+    if (guestCart !== null) {
+      for (var item in guestCart) {
+        this.addToCart(guestCart[item]);
+      }
+    }
   }
 
   render() {
