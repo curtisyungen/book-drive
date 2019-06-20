@@ -5,6 +5,32 @@ import ShippingInfo from "../components/ShippingInfo/shippingInfo";
 import API from "../utils/API";
 import "./Success.css";
 
+const nodemailer = require("nodemailer");
+
+let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "congobooksales@gmail.com",
+        pass: process.env.GMAIL_PASSWORD,
+    }
+});
+
+let mailOptions = {
+    from: "congobooksales@gmail.com",
+    to: "curtisyungen@gmail.com",
+    subject: "Your Congo Book Order",
+    text: "Success!",
+};
+
+transporter.sendMail(mailOptions, function(err, info) {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        console.log("Email sent: " + info.response);
+    }
+});
+
 class Success extends Component {
 
     constructor(props) {
