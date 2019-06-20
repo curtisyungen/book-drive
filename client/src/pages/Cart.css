@@ -4,6 +4,17 @@
     width: 1000px;
 }
 
+.cartIsEmpty {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.cartIsEmptyNote {
+    font-family: "Arial";
+    font-size: 13px;
+}
+
 .cartTable {
     width: 100%;
 }

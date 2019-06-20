@@ -106,7 +106,22 @@ class Cart extends Component {
                                 />
                             ))
                         ) : (
-                            <tr><td>Your shopping cart is empty.</td></tr>
+                            <tr>
+                                <td>
+                                    <p className="cartIsEmpty">Your shopping cart is empty.</p>
+
+                                    <p className="cartIsEmptyNote">
+                                        Your Shopping Cart lives to serve. 
+                                        Give it purpose — fill it with books about business, psychology, speaking, sales, and more. 
+                                        If you already have an account, 
+                                        <a href="/login">Sign In</a> to see your Cart. 
+                                        Continue shopping on the Congo.com homepage and explore our available books.
+                                        The price and availability of items at Congo.com are subject to change. 
+                                        The Cart is a temporary place to store a list of your items and reflects each item's 
+                                        most recent price. 
+                                    </p>
+                                </td>
+                            </tr>
                         )}
                     </tbody>
                 </table>
