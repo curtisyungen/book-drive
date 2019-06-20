@@ -94,17 +94,30 @@ class Cart extends Component {
 
                     <tbody>
                         {this.state.cart && this.state.cart.length > 0 ? (
-                            this.state.cart.map(book => (
-                                <CartItem 
-                                    key={book.title}
-                                    title={book.title}
-                                    authorFirst={book.authorFirst}
-                                    authorLast={book.authorLast}
-                                    price={book.price}
-                                    imageURL={book.imageURL}
-                                    deleteFromCart={this.props.deleteFromCart}
+                            <span>
+                                {this.state.cart.map(book => (
+                                    <CartItem 
+                                        key={book.title}
+                                        title={book.title}
+                                        authorFirst={book.authorFirst}
+                                        authorLast={book.authorLast}
+                                        price={book.price}
+                                        imageURL={book.imageURL}
+                                        deleteFromCart={this.props.deleteFromCart}
+                                    />
+                                ))}
+
+                                <CartSummary 
+                                    user={this.props.user}
+                                    cart={this.state.cart}
+                                    subtotal={this.state.subtotal}
+                                    setRedirectToSignUp={this.props.setRedirectToSignUp}
                                 />
-                            ))
+                
+                                <BookSuggestions 
+                                    displayClass="cart"
+                                />
+                            </span>
                         ) : (
                             <tr>
                                 <td>
@@ -125,17 +138,6 @@ class Cart extends Component {
                         )}
                     </tbody>
                 </table>
-
-                <CartSummary 
-                    user={this.props.user}
-                    cart={this.state.cart}
-                    subtotal={this.state.subtotal}
-                    setRedirectToSignUp={this.props.setRedirectToSignUp}
-                />
-
-                <BookSuggestions 
-                    displayClass="cart"
-                />
             </div>
         )
     }
