@@ -241,7 +241,11 @@ class Navbar extends Component {
                         )}
                         </li>
                         <li className="nav-item">
-                            <a className="nav-acct-link" href="/orders">Orders</a>
+                            {this.getLoginStatus() ? (
+                                <a className="nav-acct-link" href="/orders">Orders</a>
+                            ) : (
+                                <a className="nav-acct-link" href="/login">Orders</a>
+                            )}                            
                         </li>
                         <li className="nav-item">
                             <a className="nav-acct-link" href="/">Try SubPrime</a>
