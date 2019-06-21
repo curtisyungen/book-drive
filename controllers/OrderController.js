@@ -53,9 +53,10 @@ class OrderController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: "curtisyungen@gmail.com",
+            to: req.params.email,
             subject: "Your Congo Book Order",
-            text: "Success!",
+            text: 
+                `Thank you for your order!`,
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
