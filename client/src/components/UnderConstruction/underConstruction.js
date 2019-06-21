@@ -19,6 +19,7 @@ class UnderConstruction extends Component {
             <div className="underConstruction">
                 <a href="https://github.com/curtisyungen/congo/issues/1" target="_blank">
                     Site under construction. Estimated completion date: June 26, 2019.
+                    Click here to view open items.
                 </a>
             </div>
         )
