@@ -63,10 +63,13 @@ class OrderController {
                 Here's a summary of your order: 
 
                 Shipping Address: 
+                ${req.body.shippingAddress}
 
                 Items Ordered: 
+                ${req.body.items}
 
                 Total Price: 
+                ${req.body.totalPrice}
 
                 Sincerely, 
 
