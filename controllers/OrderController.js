@@ -67,10 +67,10 @@ class OrderController {
                 ${req.query.shippingAddress}
 
                 Items Ordered: 
-                ${req.query.items}
+                ${req.query.order.items}
 
                 Total Price: 
-                ${req.query.totalPrice}
+                ${req.query.order.totalPrice}
 
                 Sincerely, 
 
