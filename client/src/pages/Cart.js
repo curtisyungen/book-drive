@@ -98,7 +98,7 @@ class Cart extends Component {
                             )}
 
                         <tbody>
-                            {this.state.cart && this.state.cart.length > 0 ? (
+                            {this.props.cart && this.props.cart.length > 0 ? (
                                 <span>
                                     {this.state.cart.map(book => (
                                         <CartItem
