@@ -29,12 +29,7 @@ class BookSuggestions extends Component {
     }
 
     sendToCart = (book) => {
-        // console.log(event);
-        // console.log(event.target);
-        // console.log(event.target["data-book"]);
-        console.log(book);
-        // let book = event.target.attr("data-book");
-        // this.props.sendToCart(book);
+        this.props.sendToCart(book);
     }
 
     render() {
