@@ -68,10 +68,10 @@ class Success extends Component {
                     }, () => {
 
                         // Store order in database
-                        // $this.saveBookOrder(order);
+                        $this.saveBookOrder(order);
 
                         // Update book purchase status in database
-                        // $this.purchaseBook(cart);
+                        $this.purchaseBook(cart);
 
                         // Send confirmation email to user
                         $this.sendConfirmationEmail();
@@ -88,7 +88,7 @@ class Success extends Component {
     }
 
     sendConfirmationEmail = () => {
-        API.sendConfirmationEmail()
+        API.sendConfirmationEmail(this.state.user.email)
             .then((res) => {
                 console.log(res);
             });
