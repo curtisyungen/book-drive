@@ -53,10 +53,10 @@ class OrderController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: req.body.orderInfo.email,
+            to: req.body.email,
             subject: "Your Congo Book Order",
             text: 
-                `Hi ${req.body.orderInfo.name},
+                `Hi ${req.body.name},
 
                 Thank you for your order! Your books will be shipped within 1-2 days.
                 
