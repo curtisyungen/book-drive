@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CartItem from "../components/CartItem/cartItem";
-import CartSummary from "../components/CartSummary/cartSummary";
-import BookSuggestions from "../components/BookSuggestions/bookSuggestions";
+import CartSidebar from "../components/CartSidebar/cartSidebar";
 import Footer from "../components/Footer/footer";
 import API from "../utils/API";
 import "./Cart.css";
@@ -83,12 +82,6 @@ class Cart extends Component {
                 <div
                     className="cartContainer"
                 >
-                    <span className={`cart-empty-${this.state.cart.length}`}>
-                        <BookSuggestions
-                            displayClass="cart"
-                        />
-                    </span>
-
                     <table
                         className="cartTable"
                     >
@@ -118,13 +111,6 @@ class Cart extends Component {
                                             deleteFromCart={this.props.deleteFromCart}
                                         />
                                     ))}
-
-                                    <CartSummary
-                                        user={this.props.user}
-                                        cart={this.state.cart}
-                                        subtotal={this.state.subtotal}
-                                        setRedirectToSignUp={this.props.setRedirectToSignUp}
-                                    />
                                 </span>
                             ) : (
                                     <tr>
@@ -147,6 +133,13 @@ class Cart extends Component {
                         </tbody>
                     </table>
                 </div>
+
+                <CartSidebar 
+                    user={this.props.user}
+                    cart={this.state.cart}
+                    subtotal={this.state.subtotal}
+                    setRedirectToSignUp={this.props.setRedirectToSignUp}
+                />
 
                 <Footer />
             </span>
