@@ -24,6 +24,10 @@
     width: 300px;
 }
 
+.cart-empty-false {
+    top: 200px !important;
+}
+
 .cart-empty-true {
     top: 200px !important;
 }
