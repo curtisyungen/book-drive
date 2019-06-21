@@ -56,8 +56,7 @@ class OrderController {
             to: req.query.email,
             subject: "Your Congo Book Order",
             text: 
-                `
-                Hi ${req.query.name},
+                `Hi ${req.query.name},
 
                 Thank you for your order! Your books will be shipped within 1-2 days.
                 
@@ -67,16 +66,14 @@ class OrderController {
                 ${req.query.shippingAddress}
 
                 Items Ordered: 
-                ${req.query.order.items}
+                ${req.query.order}
 
                 Total Price: 
-                ${req.query.order.totalPrice}
+                ${req.query.order}
 
                 Sincerely, 
 
-                Congo
-                
-                `,
+                Congo`,
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
