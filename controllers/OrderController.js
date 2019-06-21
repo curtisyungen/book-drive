@@ -63,7 +63,6 @@ class OrderController {
                 Here's a summary of your order: 
 
                 Shipping Address: 
-                ${req.query.shippingAddress}
 
                 Items Ordered: 
 
@@ -71,7 +70,7 @@ class OrderController {
 
                 Sincerely, 
 
-                Congo`,
+                Congo`
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
