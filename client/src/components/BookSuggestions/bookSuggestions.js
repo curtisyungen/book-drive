@@ -53,6 +53,7 @@ class BookSuggestions extends Component {
                                 <button
                                     className="btn btn-warning btn-sm suggestionBtn"
                                     onClick={this.sendToCart}
+                                    data-book={book}
                                 >
                                     Add to Cart
                                 </button>
