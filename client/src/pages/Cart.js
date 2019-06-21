@@ -86,7 +86,7 @@ class Cart extends Component {
 
                     <BookSuggestions
                         displayClass="cart"
-                        positionClass={`cart-empty-${this.state.cart.length === 0}`}
+                        positionClass={`cart-empty-${this.state.cart && this.state.cart.length === 0}`}
                     />
 
                     <table
