@@ -45,7 +45,8 @@ class BookSuggestions extends Component {
                                 <p className="suggestionPrice">${(Math.round(book.price * 100) / 100).toFixed(2)}</p>
                             
                                 <button
-                                className="btn btn-warning btn-sm suggestionBtn"
+                                    className="btn btn-warning btn-sm suggestionBtn"
+                                    onClick={this.props.sendToCart}
                                 >
                                     Add to Cart
                                 </button>
