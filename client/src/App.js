@@ -160,7 +160,6 @@ class App extends Component {
 
           API.loginUser(email, password)
             .then((res) => {
-              console.log(res);
 
               if (res.data !== "Incorrect password.") {
                 alert("Logged in successfully!");
@@ -340,7 +339,6 @@ class App extends Component {
     API.checkBookAvail(book)
       .then((res) => {
         if (res.data.length > 0 && res.data[0].avail === "avail" && res.data[0].authorLast === book.authorLast) {
-          console.log("Book is available.");
 
           if (localStorage.getItem("isLoggedIn") === "true") {
             this.addToCart(book);
@@ -389,7 +387,6 @@ class App extends Component {
   }
 
   addToCart = (book) => {
-    console.log("add to cart", this.state.user.email);
     API.addToCart(book, this.state.user.email)
       .then((res) => {
         alert("Added to cart!");
@@ -433,8 +430,6 @@ class App extends Component {
       .then((res) => {
         this.setState({
           cart: res.data,
-        }, () => {
-          console.log(this.state);
         });
       });
   }
@@ -446,8 +441,6 @@ class App extends Component {
     if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
       guestCart = JSON.parse(sessionStorage.getItem("cart"));
     }
-
-    console.log("Guest cart", guestCart);
 
     if (guestCart !== null) {
       for (var item in guestCart) {
