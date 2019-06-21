@@ -127,6 +127,6 @@ export default {
     },
 
     sendConfirmationEmail: function(email) {
-        return axios.post("/api/orders/sendConfirmationEmail/" + email);
+        return axios.post("/api/orders/sendConfirmationEmail", { params: { name: name, email: email, order: order, shippingAddress: shippingAddress }});
     }
 };
