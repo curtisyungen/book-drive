@@ -54,6 +54,7 @@ class Orders extends Component {
 
                 <BookSuggestions 
                     displayClass="order"
+                    sendToCart={this.props.sendToCart}
                 />
 
             </Container>
