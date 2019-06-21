@@ -208,7 +208,7 @@ class BookController {
             where: {
                 avail: "avail",
             },
-            limit: 4,
+            limit: 3,
         })
         .then((books) => {
             res.json(books);
