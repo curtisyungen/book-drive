@@ -28,6 +28,12 @@ class BookSuggestions extends Component {
             });
     }
 
+    sendToCart = () => {
+        console.log(event);
+        console.log(event.target);
+        // this.props.sendToCart(book);
+    }
+
     render() {
         return (
             <div className={`bookSuggestionList-${this.state.displayClass}`}>
@@ -46,7 +52,10 @@ class BookSuggestions extends Component {
                             
                                 <button
                                     className="btn btn-warning btn-sm suggestionBtn"
-                                    onClick={this.props.sendToCart(book)}
+                                    onClick={(event) => {
+                                        event.preventDefault();
+                                        this.sendToCart();
+                                    }}
                                 >
                                     Add to Cart
                                 </button>
