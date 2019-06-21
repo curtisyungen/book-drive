@@ -21,6 +21,7 @@ class CartSidebar extends Component {
                 <BookSuggestions 
                     displayClass="cart"
                     positionClass={`cart-empty-{this.props.cart && this.props.cart.length > 0}`}
+                    sendToCart={this.props.sendToCart}
                 />
             </span>
         )
