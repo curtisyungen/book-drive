@@ -17,7 +17,7 @@ class UnderConstruction extends Component {
     render() {
         return (
             <div className="underConstruction">
-                <a href="https://github.com/curtisyungen/congo/issues/1">
+                <a href="https://github.com/curtisyungen/congo/issues/1" target="_blank">
                     Site under construction. Estimated completion date: June 26, 2019.
                 </a>
             </div>
