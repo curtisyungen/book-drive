@@ -66,10 +66,10 @@ class OrderController {
                 ${req.body.shippingAddress}
 
                 Items Ordered: 
-                ${req.body.items}
+                ${JSON.parse(req.body.items)}
 
                 Total Price: 
-                ${req.body.totalPrice}
+                $<b>${(Math.round(req.body.totalPrice * 100) / 100).toFixed(2)}</b>
 
                 Sincerely, 
 
