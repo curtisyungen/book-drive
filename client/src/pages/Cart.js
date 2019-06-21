@@ -139,6 +139,7 @@ class Cart extends Component {
                     cart={this.state.cart}
                     subtotal={this.state.subtotal}
                     setRedirectToSignUp={this.props.setRedirectToSignUp}
+                    sendToCart={this.props.sendToCart}
                 />
 
                 <Footer />
