@@ -1,5 +1,6 @@
 .cartContainer {
     height: 100vh;
+    margin-bottom: 100px;
     margin-left: 100px;
     margin-top: 10px;
     width: 1000px;
@@ -42,12 +43,4 @@
     font-weight: 600;
     padding-bottom: 12px;
     text-align: left;
-}
-
-.cart-empty-false {
-    top: 340px !important;
-}
-
-.cart-empty-true {
-    top: 200px !important;
 }
