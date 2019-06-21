@@ -11,7 +11,6 @@ class BookSuggestions extends Component {
         this.state = {
             suggestions: null,
             displayClass: null,
-            positionClass: null,
         }
     }
 
@@ -19,7 +18,6 @@ class BookSuggestions extends Component {
 
         this.setState({
             displayClass: this.props.displayClass,
-            positionClass: this.props.positionClass,
         });
 
         API.getBookSuggestions()
@@ -32,7 +30,7 @@ class BookSuggestions extends Component {
 
     render() {
         return (
-            <div className={`bookSuggestionList-${this.state.displayClass} ${this.state.positionClass}`}>
+            <div className={`bookSuggestionList-${this.state.displayClass}`}>
 
                 <p className="suggestionHeader">More books:</p>
 
