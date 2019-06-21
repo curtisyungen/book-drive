@@ -539,6 +539,7 @@ class App extends Component {
                 cart={this.state.cart}
                 user={this.state.user}
                 setRedirectToSignUp={this.setRedirectToSignUp}
+                sendToCart={this.sendToCart}
               />
             } />
             <Route exact path="/success" render={() => 
