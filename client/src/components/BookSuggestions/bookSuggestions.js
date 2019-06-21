@@ -46,7 +46,7 @@ class BookSuggestions extends Component {
                             
                                 <button
                                     className="btn btn-warning btn-sm suggestionBtn"
-                                    onClick={this.props.sendToCart}
+                                    onClick={this.props.sendToCart(book)}
                                 >
                                     Add to Cart
                                 </button>
