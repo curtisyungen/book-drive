@@ -529,6 +529,7 @@ class App extends Component {
             <Route exact path="/orders" render={() =>
               <Orders 
                 user={this.state.user}
+                sendToCart={this.sendToCart}
               />
             } />
             <Route exact path="/cart" render={() =>
