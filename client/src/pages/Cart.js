@@ -83,11 +83,11 @@ class Cart extends Component {
                 <div
                     className="cartContainer"
                 >
-
-                    <BookSuggestions
-                        displayClass="cart"
-                        positionClass={`cart-empty-${this.state.cart && this.state.cart.length > 0 ? ("true"):("false")}`}
-                    />
+                    <span className={`cart-empty-${this.state.cart && this.state.cart.length > 0}`}>
+                        <BookSuggestions
+                            displayClass="cart"
+                        />
+                    </span>
 
                     <table
                         className="cartTable"

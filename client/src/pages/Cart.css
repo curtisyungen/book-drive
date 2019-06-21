@@ -43,3 +43,11 @@
     padding-bottom: 12px;
     text-align: left;
 }
+
+.cart-empty-false {
+    top: 340px !important;
+}
+
+.cart-empty-true {
+    top: 200px !important;
+}
