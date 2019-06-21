@@ -20,6 +20,14 @@
     width: 300px;
 }
 
+.cart-empty-false {
+    top: 340px !important;
+}
+
+.cart-empty-true {
+    top: 200px !important;
+}
+
 .suggestionBtn {
     cursor: pointer;
     font-size: 12px;
