@@ -36,7 +36,9 @@ class CartSidebar extends Component {
                     setRedirectToSignUp={this.props.setRedirectToSignUp}
                 />
 
-                <BookSuggestions />
+                <BookSuggestions 
+                    displayClass="cart"
+                />
             </span>
         )
     }
