@@ -48,24 +48,23 @@ class Success extends Component {
                         total += cart[book].price;
                     }
 
-                    // Assemble order info
-                    let order = {
-                        name: this.state.user.name,
-                        email: this.state.user.email,
-                        date: new Date(),
-                        totalPrice: total,
-                        items: JSON.stringify(this.props.cart),
-                        itemQty: this.props.cart.length,
-                        shippingAddress: JSON.stringify(this.state.shippingAddress),
-                    }
-
                     let $this = this;
 
                     // Store shipping and order info in state
                     this.setState({
                         shippingAddress: res.data.transactions[0].item_list.shipping_address,
-                        order: order,
                     }, () => {
+
+                        // Assemble order info
+                        let order = {
+                            name: this.state.user.name,
+                            email: this.state.user.email,
+                            date: new Date(),
+                            totalPrice: total,
+                            items: JSON.stringify(this.props.cart),
+                            itemQty: this.props.cart.length,
+                            shippingAddress: JSON.stringify(this.state.shippingAddress),
+                        }
 
                         // Store order in database
                         $this.saveBookOrder(order);
@@ -74,7 +73,7 @@ class Success extends Component {
                         $this.purchaseBook(cart);
 
                         // Send confirmation email to user
-                        $this.sendConfirmationEmail();
+                        $this.sendConfirmationEmail(order);
                     });
                 }
             });
@@ -87,8 +86,8 @@ class Success extends Component {
             });
     }
 
-    sendConfirmationEmail = () => {
-        API.sendConfirmationEmail(this.state.user.name, this.state.user.email, this.state.order, this.state.shippingAddress)
+    sendConfirmationEmail = (order) => {
+        API.sendConfirmationEmail(order)
             .then((res) => {
                 console.log(res);
             });
