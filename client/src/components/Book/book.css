@@ -24,7 +24,7 @@
     border: 1px dashed lightgray;
     display: inline-block;
     font-size: 12px;
-    max-height: 200px;
+    max-height: 400px;
     overflow-y: scroll;
     white-space: normal;
     width: 300px;
