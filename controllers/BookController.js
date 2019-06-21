@@ -208,6 +208,7 @@ class BookController {
             where: {
                 avail: "avail",
             },
+            order: "rand()",
             limit: 3,
         })
         .then((books) => {
