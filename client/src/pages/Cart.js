@@ -100,7 +100,7 @@ class Cart extends Component {
                         <tbody>
                             {this.props.cart && this.props.cart.length > 0 ? (
                                 <span>
-                                    {this.state.cart.map(book => (
+                                    {this.props.cart.map(book => (
                                         <CartItem
                                             key={book.title}
                                             title={book.title}
