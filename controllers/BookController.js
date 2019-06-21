@@ -208,7 +208,7 @@ class BookController {
             where: {
                 avail: "avail",
             },
-            order: "rand()",
+            order: [Sequelize.literal('RAND()')],
             limit: 3,
         })
         .then((books) => {
