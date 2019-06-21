@@ -126,8 +126,7 @@ export default {
         return axios.post("/api/orders/saveOrderTotal", total);
     },
 
-    sendConfirmationEmail: function(name, email, order, shippingAddress) {
-        console.log(name, email, order, shippingAddress);
-        return axios.post("/api/orders/sendConfirmationEmail", { params: { name: name, email: email, order: order, shippingAddress: shippingAddress }});
+    sendConfirmationEmail: function(orderInfo) {
+        return axios.post("/api/orders/sendConfirmationEmail", orderInfo);
     }
 };
