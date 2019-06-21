@@ -28,8 +28,11 @@ class BookSuggestions extends Component {
             });
     }
 
-    sendToCart = (event) => {
+    sendToCart = (book) => {
+        console.log(event);
         console.log(event.target);
+        console.log(event.target["data-book"]);
+        console.log(book);
         // let book = event.target.attr("data-book");
         // this.props.sendToCart(book);
     }
@@ -52,7 +55,7 @@ class BookSuggestions extends Component {
                             
                                 <button
                                     className="btn btn-warning btn-sm suggestionBtn"
-                                    onClick={this.sendToCart}
+                                    onClick={this.sendToCart.bind(null, book)}
                                     data-book={JSON.stringify(book)}
                                 >
                                     Add to Cart
