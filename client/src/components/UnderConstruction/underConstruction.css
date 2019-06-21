@@ -5,7 +5,7 @@
     font-size: 13px;
     margin: 0;
     padding: 15px;
-    position: absolute;
+    position: fixed;
     right: 50px;
     text-align: center;
     top: 10px;
