@@ -13,3 +13,12 @@
     width: 220px;
     z-index: 99;
 }
+
+.underConstruction a {
+    color: black;
+    text-decoration: none;
+}
+
+.underConstruction a:hover {
+    text-decoration: none;   
+}
