@@ -88,7 +88,7 @@ class Success extends Component {
     }
 
     sendConfirmationEmail = () => {
-        API.sendConfirmationEmail(this.state.user.email)
+        API.sendConfirmationEmail(this.state.user.name, this.state.user.email, order, this.state.shippingAddress)
             .then((res) => {
                 console.log(res);
             });
