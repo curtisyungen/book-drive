@@ -26,8 +26,8 @@ class Cart extends Component {
             user: this.props.user,
         });
 
-        let email; 
-        
+        let email;
+
         if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user")) {
             email = JSON.parse(localStorage.getItem("user")).email;
             this.getBooksInCart(email);
@@ -39,14 +39,14 @@ class Cart extends Component {
 
     getBooksInCart = (email) => {
         API.getBooksInCart(email)
-          .then((res) => {
-            this.setState({
-              cart: res.data,
-            }, () => {
-                this.calculateSubtotal();
+            .then((res) => {
+                this.setState({
+                    cart: res.data,
+                }, () => {
+                    this.calculateSubtotal();
+                });
             });
-          });
-      }
+    }
 
     getBooksInSessionStorage = () => {
         let cart;
@@ -80,76 +80,75 @@ class Cart extends Component {
     render() {
         return (
             <span>
-            <div
-                className="cartContainer"
-            >
-                <table
-                    className="cartTable"    
-                >   
-                    {this.state.cart && this.state.cart.length > 0 ? (
-                        <thead>
-                            <tr>
-                                <th id="cartTitle">Shopping Cart</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead>
-                        ) : (
-                            <></>
-                    )}
+                <div
+                    className="cartContainer"
+                >
 
-                    <tbody>
+                    <BookSuggestions
+                        displayClass="cart"
+                        positionClass={`cart-empty-${cart.length === 0}`}
+                    />
+
+                    <table
+                        className="cartTable"
+                    >
                         {this.state.cart && this.state.cart.length > 0 ? (
-                            <span>
-                                {this.state.cart.map(book => (
-                                    <CartItem 
-                                        key={book.title}
-                                        title={book.title}
-                                        authorFirst={book.authorFirst}
-                                        authorLast={book.authorLast}
-                                        price={book.price}
-                                        imageURL={book.imageURL}
-                                        deleteFromCart={this.props.deleteFromCart}
-                                    />
-                                ))}
-
-                                <CartSummary 
-                                    user={this.props.user}
-                                    cart={this.state.cart}
-                                    subtotal={this.state.subtotal}
-                                    setRedirectToSignUp={this.props.setRedirectToSignUp}
-                                />
-                            </span>
+                            <thead>
+                                <tr>
+                                    <th id="cartTitle">Shopping Cart</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
                         ) : (
-                            <tr>
-                                <td>
-                                    <p className="cartIsEmpty">Your shopping cart is empty.</p>
+                                <></>
+                            )}
 
-                                    <p className="cartIsEmptyNote">
-                                        Your Shopping Cart lives to serve. 
-                                        Give it purpose — fill it with books about business, psychology, speaking, sales, and more. 
-                                        If you already have an account, 
-                                        <a href="/login">Sign In</a> to see your Cart. 
-                                        Continue shopping on the Congo.com homepage and explore our available books.
-                                        The price and availability of items at Congo.com are subject to change. 
-                                        The Cart is a temporary place to store a list of your items and reflects each item's 
-                                        most recent price. 
+                        <tbody>
+                            {this.state.cart && this.state.cart.length > 0 ? (
+                                <span>
+                                    {this.state.cart.map(book => (
+                                        <CartItem
+                                            key={book.title}
+                                            title={book.title}
+                                            authorFirst={book.authorFirst}
+                                            authorLast={book.authorLast}
+                                            price={book.price}
+                                            imageURL={book.imageURL}
+                                            deleteFromCart={this.props.deleteFromCart}
+                                        />
+                                    ))}
+
+                                    <CartSummary
+                                        user={this.props.user}
+                                        cart={this.state.cart}
+                                        subtotal={this.state.subtotal}
+                                        setRedirectToSignUp={this.props.setRedirectToSignUp}
+                                    />
+                                </span>
+                            ) : (
+                                    <tr>
+                                        <td>
+                                            <p className="cartIsEmpty">Your shopping cart is empty.</p>
+
+                                            <p className="cartIsEmptyNote">
+                                                Your Shopping Cart lives to serve.
+                                                Give it purpose — fill it with books about business, psychology, speaking, sales, and more.
+                                                If you already have an account,
+                                        <a href="/login">Sign In</a> to see your Cart.
+                                                Continue shopping on the Congo.com homepage and explore our available books.
+                                                The price and availability of items at Congo.com are subject to change.
+                                                The Cart is a temporary place to store a list of your items and reflects each item's
+                                                most recent price.
                                     </p>
-                                </td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
+                                        </td>
+                                    </tr>
+                                )}
+                        </tbody>
+                    </table>
+                </div>
 
-                                
-                <BookSuggestions 
-                    displayClass="cart"
-                />
-
-                
-            </div>
-
-            <Footer />
+                <Footer />
             </span>
         )
     }
