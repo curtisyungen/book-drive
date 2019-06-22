@@ -82,9 +82,9 @@ class Contact extends Component {
                 </div>
 
                 <div className="socialMedia">
-                    <a href="https://www.linkedin.com/in/curtisyungen"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faLinkedin} /></a>
-                    <a href="https://www.instagram.com/curtisyungen/"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faInstagram} /></a>
-                    <a href="https://twitter.com/yungenc"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faTwitter} /></a>
+                    <a href="https://www.linkedin.com/in/curtisyungen" target="_blank"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faLinkedin} /></a>
+                    <a href="https://www.instagram.com/curtisyungen/" target="_blank"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faInstagram} /></a>
+                    <a href="https://twitter.com/yungenc" target="_blank"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faTwitter} /></a>
                 </div>
             </span>
         )
