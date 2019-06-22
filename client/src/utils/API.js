@@ -126,13 +126,17 @@ export default {
         return axios.post("/api/orders/saveOrderTotal", total);
     },
 
+    // EMAIL ROUTES
+
     sendConfirmationEmail: function(orderInfo) {
         return axios.post("/api/orders/sendConfirmationEmail", orderInfo);
     },
 
-    // PASSWORD RESET ROUTE
-
     sendPasswordReset: function(email) {
         return axios.post("/api/users/sendPasswordReset/" + email);
+    },
+
+    sendContactMessage: function(email, message) {
+        return axios.post("/api/contact/sendContactMessage", { params: { email: email, message: message }});
     }
 };
