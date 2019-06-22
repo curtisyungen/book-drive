@@ -4,6 +4,7 @@ const bookRoutes = require("./bookRoute");
 const userRoutes = require("./userRoute");
 const payPalRoutes = require("./payPalRoute");
 const orderRoutes = require("./orderRoute");
+const contactRoutes = require("./contactRoute");
 
 // Book routes
 router.use("/books", bookRoutes);
@@ -16,6 +17,9 @@ router.use("/payPal", payPalRoutes);
 
 // Order routes
 router.use("/orders", orderRoutes);
+
+// Contact routes
+router.use("/contact", contactRoutes);
 
 // For anything else, render the html page
 router.use((req, res) => {
