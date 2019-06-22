@@ -136,7 +136,7 @@ export default {
         return axios.post("/api/users/sendPasswordReset/" + email);
     },
 
-    sendContactMessage: function(email, message) {
-        return axios.post("/api/contact/sendContactMessage", { params: { email: email, message: message }});
+    submitContactForm: function(email, message) {
+        return axios.post("/api/contact/submitContactForm", { params: { email: email, message: message }});
     }
 };
