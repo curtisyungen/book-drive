@@ -36,11 +36,22 @@
 }
 
 .formInput {
+    background: #fff;
     border: 1px solid darkgray;
     border-radius: 3px;
-    height: 30px;
-    padding-left: 5px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    font-size: 13px;
+    height: 31px;
+    line-height: normal;
+    padding: 3px 7px;
+    vertical-align: middle;
     width: 100%;
+}
+
+.formInput:focus {
+    border: 1px solid rgb(230, 117, 9);
+    box-shadow: 0px 0px 2px 2px rgb(242, 196, 154);
+    outline: none;
 }
 
 .formLabel {
@@ -49,6 +60,14 @@
     font-weight: 700;
     margin: 0;
     margin-top: 15px;
+}
+
+.passwordLabel {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
 }
 
 .signup {

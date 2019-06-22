@@ -47,6 +47,7 @@ class Login extends Component {
                             type="email"
                             value={this.state.email}
                             onChange={this.handleInputChange}
+                            autoComplete="off"
                         />
 
                         <span className="formLabel">Password</span>
