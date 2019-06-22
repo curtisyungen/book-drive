@@ -18,6 +18,12 @@ import soGood from "../images/soGood.jpg";
 import seal from "../images/seal.jpg";
 import buyology from "../images/buyology.jpg";
 import bounce from "../images/bounce.jpg";
+import chessPiece from "../images/chessPiece.png";
+import politics from "../images/politics.jpg";
+import selfesteem from "../images/selfesteem.JPG";
+import design from "../images/design.JPG";
+import anxiety from "../images/anxiety.JPG";
+import controlling from "../images/controlling.JPG";
 import "./Gallery.css";
 
 class Gallery extends Component {
@@ -37,6 +43,14 @@ class Gallery extends Component {
                     <div>
                         <img className="cardoneBooks galleryImg col-4 right" src={cardoneBooks} alt="Grant Cardone" />
                     </div>
+                    
+                    <div>
+                        <img className="millionaireMind galleryImg col-4 left" src={millionaireMind} alt="Millionaire Mind" />
+                    </div>
+
+                    <div>
+                        <img className="losingAMillion galleryImg col-4 right" src={losingAMillion} alt="losingAMillion" />
+                    </div>
 
                     <div>
                         <img className="daringGreatly galleryImg col-4 left" src={daringGreatly} alt="Daring Greatly" />
@@ -47,35 +61,35 @@ class Gallery extends Component {
                     </div>
 
                     <div>
-                        <img className="earlyShelf galleryImg col-4 right" src={earlyShelf} alt="Early Shelf" />
+                        <img className="buyology galleryImg col-4 right" src={buyology} alt="buyology" />
                     </div>
 
                     <div>
-                        <img className="handstand galleryImg col-4 left" src={handstand} alt="Handstand" />
+                        <img className="bounce galleryImg col-4 left" src={bounce} alt="bounce" />
                     </div>
 
                     <div>
-                        <img className="firstFullShelf galleryImg col-4 right" src={firstFullShelf} alt="First Full Shelf" />
+                        <img className="handstand galleryImg col-4 right" src={handstand} alt="Handstand" />
                     </div>
 
                     <div>
-                        <img className="midBooks galleryImg col-4 left" src={midBooks} alt="Some books" />
+                        <img className="earlyShelf galleryImg col-4 left" src={earlyShelf} alt="Early Shelf" />
                     </div>
 
                     <div>
-                        <img className="millionaireMind galleryImg col-4 left" src={millionaireMind} alt="Millionaire Mind" />
+                        <img className="midBooks galleryImg col-4 right" src={midBooks} alt="Some books" />
                     </div>
 
                     <div>
-                        <img className="losingAMillion galleryImg col-4 right" src={losingAMillion} alt="losingAMillion" />
+                        <img className="firstFullShelf galleryImg col-4 left" src={firstFullShelf} alt="First Full Shelf" />
                     </div>
 
                     <div>
-                        <img className="noOneUnderstands galleryImg col-4 left" src={noOneUnderstands} alt="noOneUnderstands" />
+                        <img className="noOneUnderstands galleryImg col-4 right" src={noOneUnderstands} alt="noOneUnderstands" />
                     </div>
 
                     <div>
-                        <img className="rousey galleryImg col-4 right" src={rousey} alt="rousey" />
+                        <img className="chessPiece galleryImg col-4 right" src={chessPiece} alt="chessPiece" />
                     </div>
 
                     <div>
@@ -83,15 +97,31 @@ class Gallery extends Component {
                     </div>
 
                     <div>
-                        <img className="seal galleryImg col-4 right" src={seal} alt="seal" />
+                        <img className="politics galleryImg col-8 left" src={politics} alt="politics" />
                     </div>
 
                     <div>
-                        <img className="buyology galleryImg col-4 left" src={buyology} alt="buyology" />
+                        <img className="rousey galleryImg col-4 right" src={rousey} alt="rousey" />
                     </div>
 
                     <div>
-                        <img className="bounce galleryImg col-4 right" src={bounce} alt="bounce" />
+                        <img className="seal galleryImg col-4 left" src={seal} alt="seal" />
+                    </div>
+
+                    <div>
+                        <img className="design galleryImg col-4 right" src={design} alt="design" />
+                    </div>
+
+                    <div>
+                        <img className="selfesteem galleryImg col-4 left" src={selfesteem} alt="selfesteem" />
+                    </div>
+
+                    <div>
+                        <img className="anxiety galleryImg col-4 right" src={anxiety} alt="anxiety" />
+                    </div>
+
+                    <div>
+                        <img className="controlling galleryImg col-4 left" src={controlling} alt="controlling" />
                     </div>
 
                     <div>
