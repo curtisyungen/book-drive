@@ -38,8 +38,6 @@ class Contact extends Component {
         let email = this.state.contactEmail;
         let message = this.state.contactMessage;
 
-        console.log(email, message);
-
         if (email !== null && email !== "" && message !== null && message !== "") {
 
             API.submitContactForm(email, message)
@@ -72,6 +70,7 @@ class Contact extends Component {
                                 aria-describedby="emailHelp" 
                                 name="contactEmail" 
                                 onChange={this.handleInputChange}
+                                autoComplete="off"
                             />
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
