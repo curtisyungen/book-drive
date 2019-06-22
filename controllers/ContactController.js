@@ -14,7 +14,7 @@ class ContactController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: "congobooksales@gmail.com",
+            to: "curtisyungen@gmail.com",
             subject: "Message from Congo user",
             text: req.params.message,
         };
