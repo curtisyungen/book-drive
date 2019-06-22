@@ -128,5 +128,11 @@ export default {
 
     sendConfirmationEmail: function(orderInfo) {
         return axios.post("/api/orders/sendConfirmationEmail", orderInfo);
+    },
+
+    // PASSWORD RESET ROUTE
+
+    sendPasswordReset: function(email) {
+        return axios.post("/api/users/sendPasswordReset/" + email);
     }
 };
