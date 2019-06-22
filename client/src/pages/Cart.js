@@ -26,8 +26,12 @@ class Cart extends Component {
         });
 
         let email;
-
         if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user")) {
+
+            this.setState({
+                isLoggedIn: true,
+            });
+
             email = JSON.parse(localStorage.getItem("user")).email;
             this.getBooksInCart(email);
         }
@@ -117,24 +121,28 @@ class Cart extends Component {
                                         <td>
                                             <p className="cartIsEmpty">Your shopping cart is empty.</p>
 
-                                            <p className="cartIsEmptyNote">
+                                            {this.state.isLoggedIn ? (
+                                                <p className="cartIsEmptyNote">Your Shopping Cart is empty.</p>
+                                            ): (
+                                                <p className = "cartIsEmptyNote">
                                                 Your Shopping Cart lives to serve.
                                                 Give it purpose — fill it with books about business, psychology, speaking, sales, and more.
-                                                If you already have an account,
-                                        <a href="/login">Sign In</a> to see your Cart.
+                                                If you already have an account,&nbsp;
+                                                <a href="/login">Sign In</a> to see your Cart.
                                                 Continue shopping on the Congo.com homepage and explore our available books.
                                                 The price and availability of items at Congo.com are subject to change.
                                                 The Cart is a temporary place to store a list of your items and reflects each item's
                                                 most recent price.
-                                    </p>
+                                                </p>
+                                            )}                                        
                                         </td>
                                     </tr>
-                                )}
+                        )}
                         </tbody>
                     </table>
                 </div>
 
-                <CartSidebar 
+                <CartSidebar
                     user={this.props.user}
                     cart={this.state.cart}
                     subtotal={this.state.subtotal}
