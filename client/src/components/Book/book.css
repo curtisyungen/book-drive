@@ -24,10 +24,9 @@
     border: 1px dashed lightgray;
     display: inline-block;
     font-size: 12px;
-    max-height: 400px;
-    overflow-y: scroll;
+    max-width: 300px;
     white-space: normal;
-    width: 300px;
+    width: auto;
 }
 
 .bookInfo {
