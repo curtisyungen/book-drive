@@ -21,7 +21,6 @@
 }
 
 .bookDescription {
-    border: 1px dashed lightgray;
     display: inline-block;
     font-size: 12px;
     max-width: 300px;
@@ -31,11 +30,10 @@
 
 .bookInfo {
     display: inline-block;
-    max-height: 400px;
-    overflow: hidden;
     margin-right: 10px;
+    max-width: 300px;
     padding-left: 15px;
-    width: 300px;
+    width: auto;
 }
 
 .bookStatus {
