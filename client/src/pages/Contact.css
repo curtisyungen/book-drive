@@ -29,4 +29,15 @@
 
 .socialMedia {
     display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.socialMediaIcon {
+    color: rgb(34, 46, 61);
+    margin: 20px;
+}
+
+.socialMediaIcon:hover {
+    color: rgb(254, 152, 14);
 }
