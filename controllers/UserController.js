@@ -1,5 +1,6 @@
 const db = require("../models/index.js");
 const bcrypt = require("bcrypt");
+const nodemailer = require("nodemailer");
 
 class UserController {
 
@@ -20,19 +21,6 @@ class UserController {
                 }
             });
         });        
-
-        // db.Users.findAll({
-        //     where: {
-        //         email: req.body.email,
-        //         password: req.body.password,
-        //     }
-        // })
-        // .then((user) => {
-        //     res.json(user);
-        // })
-        // .catch((err) => {
-        //     console.log(err);
-        // });
     }
 
     createNewUser(req, res) {
@@ -69,6 +57,45 @@ class UserController {
         })
         .catch((err) => {
             console.log(err);
+        });
+    }
+
+    sendPasswordReset(req, res) {
+        let transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "congoserver@gmail.com",
+                pass: process.env.GMAIL_PASSWORD,
+            }
+        });
+
+        let mailOptions = {
+            from: "congoserver@gmail.com",
+            to: req.body.email,
+            subject: "Password Reset",
+            text: `
+            Hi ${req.body.name},
+
+            Click here to reset your password: https://congo-cjy.herokuapp.com/passwordReset
+
+            Sincerely, 
+
+            Congo`
+        };
+
+        transporter.sendMail(mailOptions, function (err, info) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log("Email sent: " + info.response);
+
+                // Used only to fulfill axios promise
+                db.Users.findAll({})
+                    .then((order) => {
+                        res.json(order);
+                    });
+            }
         });
     }
 }
