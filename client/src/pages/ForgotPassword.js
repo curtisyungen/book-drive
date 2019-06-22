@@ -23,7 +23,12 @@ class ForgotPassword extends Component {
     sendPasswordReset = (event) => {
         event.preventDefault();
 
-        API.sendPasswordReset();
+        if (this.state.email !== null && this.state.email !== "") {
+            API.sendPasswordReset(this.state.email);
+        }
+        else {
+            alert("Please enter your email address.");
+        }
     }
 
     render() {
