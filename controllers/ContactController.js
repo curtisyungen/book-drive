@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 
 class ContactController {
 
-    sendContactMessage(req, res) {
+    submitContactForm(req, res) {
         let transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
