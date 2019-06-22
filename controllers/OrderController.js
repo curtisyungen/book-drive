@@ -63,13 +63,13 @@ class OrderController {
             Here's a summary of your order: 
 
             Shipping Address: 
-            ${req.body.shippingAddress.recipient_name}
-            ${req.body.shippingAddress.line1}
-            ${req.body.shippingAddress.city}, ${req.body.shippingAddress.state} ${req.body.shippingAddress.postal_code}
-            ${req.body.shippingAddress.country_code}
+            ${JSON.parse(req.body.shippingAddress).recipient_name}
+            ${JSON.parse(req.body.shippingAddress).line1}
+            ${JSON.parse(req.body.shippingAddress).city}, ${JSON.parse(req.body.shippingAddress).state} ${JSON.parse(req.body.shippingAddress).postal_code}
+            ${JSON.parse(req.body.shippingAddress).country_code}
 
             Items Ordered: 
-            ${req.body.items}
+            ${JSON.parse(req.body.items)}
 
             Total Price: 
             $${(Math.round(req.body.totalPrice * 100) / 100).toFixed(2)}
