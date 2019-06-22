@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Container from "../components/Container/container";
 import Book from "../components/Book/book";
 import Sidebar from "../components/Sidebar/sidebar";
+import Footer from "../components/Footer/footer";
 import "./Home.css";
 
 class Home extends Component {
@@ -112,72 +113,77 @@ class Home extends Component {
 
     render() {
         return (
-            <Container>
+            <span>
+                <div className="content">
 
-                {/* RESULTS SUMMARY */}
+                    {/* RESULTS SUMMARY */}
 
-                <div
-                    className="resultsSummary"
-                >
-                    <span>
-                        {this.state.books.length}
-                        &nbsp;results&nbsp;
-                    {this.state.activeFilter ? (`for ${this.state.activeFilter}`) : (null)}
-                        {this.state.userSearch ? (`: "${this.state.userSearch}"`) : (null)}
-                    </span>
-
-                    <select
-                        className="sortBy"
-                        onChange={this.handleSortOption}
-                        value={this.state.sortOption}
+                    <div
+                        className="resultsSummary"
                     >
-                        <option value="" disabled selected>Sort by:</option>
-                        <option value="title">Alpabetical by Title</option>
-                        <option value="author">Alpabetical by Author Last</option>
-                    </select>
-                </div>
-
-                <Sidebar
-                    getAllBooks={this.props.getAllBooks}
-                    getAvailableBooks={this.props.getAvailableBooks}
-                    getUnavailableBooks={this.props.getUnavailableBooks}
-                    getPaperbacks={this.props.getPaperbacks}
-                    getHardcovers={this.props.getHardcovers}
-                    getSubject={this.props.getSubject}
-                    getActiveFilter={this.getActiveFilter}
-                />
-                {/* BOOK LIST */}
-
-                <div
-                    className="bookList"
-                >
-                    {this.state.books && this.state.books.length > 0 ? (
-
                         <span>
-                            {this.state.books.map(book => (
-                            <Book
-                                key={book.title + Math.random()}
-                                title={book.title}
-                                authorFirst={book.authorFirst}
-                                authorLast={book.authorLast}
-                                price={book.price}
-                                avail={book.avail}
-                                cover={book.cover}
-                                condition={book.condition}
-                                imageURL={book.imageURL}
-                                tags={book.tags}
-                                sendToCart={this.props.sendToCart}
-                            />
-                            ))}
+                            {this.state.books.length}
+                            &nbsp;results&nbsp;
+                    {this.state.activeFilter ? (`for ${this.state.activeFilter}`) : (null)}
+                            {this.state.userSearch ? (`: "${this.state.userSearch}"`) : (null)}
                         </span>
-                    ) : (
-                            <div>{this.state.message}</div>
-                        )}
+
+                        <select
+                            className="sortBy"
+                            onChange={this.handleSortOption}
+                            value={this.state.sortOption}
+                        >
+                            <option value="" disabled selected>Sort by:</option>
+                            <option value="title">Alpabetical by Title</option>
+                            <option value="author">Alpabetical by Author Last</option>
+                        </select>
+                    </div>
+
+                    <Sidebar
+                        getAllBooks={this.props.getAllBooks}
+                        getAvailableBooks={this.props.getAvailableBooks}
+                        getUnavailableBooks={this.props.getUnavailableBooks}
+                        getPaperbacks={this.props.getPaperbacks}
+                        getHardcovers={this.props.getHardcovers}
+                        getSubject={this.props.getSubject}
+                        getActiveFilter={this.getActiveFilter}
+                    />
+                    {/* BOOK LIST */}
+
+                    <div
+                        className="bookList"
+                    >
+                        {this.state.books && this.state.books.length > 0 ? (
+
+                            <span>
+                                {this.state.books.map(book => (
+                                    <Book
+                                        key={book.title + Math.random()}
+                                        title={book.title}
+                                        authorFirst={book.authorFirst}
+                                        authorLast={book.authorLast}
+                                        price={book.price}
+                                        avail={book.avail}
+                                        cover={book.cover}
+                                        condition={book.condition}
+                                        imageURL={book.imageURL}
+                                        tags={book.tags}
+                                        sendToCart={this.props.sendToCart}
+                                    />
+                                ))}
+                            </span>
+                        ) : (
+                                <div>{this.state.message}</div>
+                            )}
+                    </div>
+
+
                 </div>
-            </Container>
+
+                <Footer />
+            </span>
         )
     }
-
 }
 
 export default Home;
