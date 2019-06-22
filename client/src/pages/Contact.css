@@ -1,3 +1,32 @@
-p {
-    color: black;
+.contactForm {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0px auto;
+    padding: 14px 18px;
+    width: 500px;
+}
+
+.contactFormDiv {
+    background: rgb(242, 242, 242);
+    height: auto;
+    margin: 30px 0px;
+    padding: 25px;
+    width: 100vw;
+}
+
+.contactHeader {
+    font-family: "Arial";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 26px auto;
+    padding: 0;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    width: 100vw;
+}
+
+.socialMedia {
+    display: inline-block;
 }
