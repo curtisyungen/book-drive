@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from "../components/Footer/footer";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons"
@@ -34,13 +35,13 @@ class Contact extends Component {
 
     submitContactForm = () => {
 
-        let email = this.state.email;
-        let message = this.state.message;
+        let email = this.state.contactEmail;
+        let message = this.state.contactMessage;
 
         if (email !== null && email !== "" && message !== null && message !== "") {
 
             console.log(email, message);
-            
+
             API.submitContactForm(email, message)
             .then((res) => {
                 console.log(res);
@@ -89,6 +90,8 @@ class Contact extends Component {
                     <a href="https://www.instagram.com/curtisyungen/" target="_blank"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faInstagram} /></a>
                     <a href="https://twitter.com/yungenc" target="_blank"><FontAwesomeIcon className="fa-5x socialMediaIcon" icon={faTwitter} /></a>
                 </div>
+
+                <Footer />
             </span>
         )
     }
