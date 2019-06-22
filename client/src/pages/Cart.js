@@ -119,10 +119,8 @@ class Cart extends Component {
                             ) : (
                                     <tr>
                                         <td>
-                                            <p className="cartIsEmpty">Your shopping cart is empty.</p>
-
                                             {this.state.isLoggedIn ? (
-                                                <p className="cartIsEmptyNote">Your Shopping Cart is empty.</p>
+                                                <p className="cartIsEmpty">Your shopping cart is empty.</p>
                                             ): (
                                                 <p className = "cartIsEmptyNote">
                                                 Your Shopping Cart lives to serve.
