@@ -14,5 +14,9 @@ router.post("/createNewUser", (req, res) => {
     controller.createNewUser(req, res);
 });
 
+router.post("/sendPasswordReset/:email", (req, res) => {
+    controller.sendPasswordReset(req, res);
+});
+
 module.exports = router;
 
