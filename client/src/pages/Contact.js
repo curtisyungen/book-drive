@@ -31,7 +31,8 @@ class Contact extends Component {
         let email = this.state.email;
         let message = this.state.message;
 
-        API.submitContactForm(email, message)
+        if (email !== null && email !== "" && message !== null && message !== "") {
+            API.submitContactForm(email, message)
             .then((res) => {
                 console.log(res);
 
@@ -39,6 +40,7 @@ class Contact extends Component {
 
                 this.props.setRedirectToHome();
             });
+        }
     }
 
     render() {
