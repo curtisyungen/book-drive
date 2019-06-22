@@ -31,6 +31,8 @@ class Gallery extends Component {
         return (
             <span>
 
+                <h4 className="galleryHeader">Gallery</h4>
+
                 <div className="gallery">
                     <div>
                         <img className="fiftyBooks galleryImg col-8" src={fiftyBooks} alt="Fifty Books" />
