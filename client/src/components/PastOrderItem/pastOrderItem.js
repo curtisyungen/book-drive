@@ -33,7 +33,7 @@ class PastOrderItem extends Component {
                 <div className="pastOrderItem">
                     <img className="orderCover" src={this.props.imageURL} alt="book cover" />
                     <span className="orderDetails">
-                        <a className="orderTitle" href="/">{this.props.title}</a>
+                        <span className="orderTitle" href="/">{this.props.title}</span>
                         <p className="orderAuthor">{this.props.authorLast}, {this.props.authorFirst}</p>
                         <p className="orderPrice">${Math.round((this.props.price * 100) / 100).toFixed(2)}</p>
                     </span>
