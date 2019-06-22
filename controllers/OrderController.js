@@ -55,25 +55,28 @@ class OrderController {
             from: "congoserver@gmail.com",
             to: req.body.email,
             subject: "Your Congo Book Order",
-            text: 
-                `Hi ${req.body.name},
+            text: `
+            Hi ${req.body.name},
 
-                Thank you for your order! Your books will be shipped within 1-2 days.
-                
-                Here's a summary of your order: 
+            Thank you for your order! Your books will be shipped within 1-2 days.
+            
+            Here's a summary of your order: 
 
-                Shipping Address: 
-                ${req.body.shippingAddress}
+            Shipping Address: 
+            ${req.body.shippingAddress.recipient_name}
+            ${req.body.shippingAddress.line1}
+            ${req.body.shippingAddress.city}, ${req.body.shippingAddress.state} ${req.body.shippingAddress.postal_code}
+            ${req.body.shippingAddress.country_code}
 
-                Items Ordered: 
-                ${JSON.parse(req.body.items)}
+            Items Ordered: 
+            ${req.body.items}
 
-                Total Price: 
-                $<b>${(Math.round(req.body.totalPrice * 100) / 100).toFixed(2)}</b>
+            Total Price: 
+            $${(Math.round(req.body.totalPrice * 100) / 100).toFixed(2)}
 
-                Sincerely, 
+            Sincerely, 
 
-                Congo`
+            Congo`
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
