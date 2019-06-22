@@ -17,7 +17,8 @@ class Signup extends Component {
     validateForm = () => {
         return (
             this.state.email.length > 0 && this.state.password.length > 0 &&
-            this.state.password === this.state.verifyPassword
+            this.state.password === this.state.verifyPassword &&
+            this.state.password.length >= 6
         );
     }
 
@@ -52,6 +53,7 @@ class Signup extends Component {
                             type="text"
                             value={this.state.name}
                             onChange={this.handleInputChange}
+                            autoComplete="off"
                         />
 
                         <p className="formLabel">Email</p>
@@ -61,6 +63,7 @@ class Signup extends Component {
                             type="email"
                             value={this.state.email}
                             onChange={this.handleInputChange}
+                            autoComplete="off"
                         />
 
                         <p className="formLabel">Password</p>
@@ -70,7 +73,9 @@ class Signup extends Component {
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInputChange}
+                            placeholder="At least 6 characters"
                         />
+                        <label for="password" className="passwordLabel">Passwords must be at least 6 characters</label>
 
                         <p className="formLabel">Re-enter password</p>
                         <input
