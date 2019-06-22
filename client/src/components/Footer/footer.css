@@ -1,3 +1,12 @@
+.copyright {
+    color: rgb(175, 175, 175);
+    font-family: "Arial";
+    font-size: 12px;
+    margin-top: 200px;
+    text-align: center;
+    width: 100%;
+}
+
 .footer {
     background: rgb(35, 47, 62);
     bottom: 0;
@@ -24,4 +33,19 @@
 
 .footerScrollToTop:hover {
     background: rgb(72, 87, 105);
+}
+
+.socialMedia {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.socialMediaIcon {
+    color: rgb(130, 130, 130);
+    margin: 20px;
+}
+
+.socialMediaIcon:hover {
+    color: rgb(254, 152, 14);
 }
