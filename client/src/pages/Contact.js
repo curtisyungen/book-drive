@@ -38,9 +38,9 @@ class Contact extends Component {
         let email = this.state.contactEmail;
         let message = this.state.contactMessage;
 
-        if (email !== null && email !== "" && message !== null && message !== "") {
+        console.log(email, message);
 
-            console.log(email, message);
+        if (email !== null && email !== "" && message !== null && message !== "") {
 
             API.submitContactForm(email, message)
             .then((res) => {
