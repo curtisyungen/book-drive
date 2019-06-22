@@ -1,10 +1,19 @@
-.allBooks {
+.allBooks,
+.politics {
     max-width: 800px !important;
 }
 
 .caption {
     margin: 0;
     padding: 0;
+}
+
+.chessPiece {
+    height: 430px;
+}
+
+.controlling {
+    height: 256px;
 }
 
 .fiftyBooks {
@@ -22,13 +31,23 @@
 
 .galleryImg {
     border: 1px solid lightgray;
-    margin-top: 20px;
+    margin-top: 10px;
     max-width: 395px;
     padding: 0;
 }
 
 .left {
     float: left;
+}
+
+.placeholder {
+    background: gray;
+    background-size: 100%;
+    height: 215px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    max-width: 395px !important;
+    width: 395px;
 }
 
 .right {
