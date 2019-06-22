@@ -26,19 +26,3 @@
     text-rendering: optimizeLegibility;
     width: 100vw;
 }
-
-.socialMedia {
-    display: inline-block;
-    margin-bottom: 150px;
-    text-align: center;
-    width: 100%;
-}
-
-.socialMediaIcon {
-    color: rgb(34, 46, 61);
-    margin: 20px;
-}
-
-.socialMediaIcon:hover {
-    color: rgb(254, 152, 14);
-}
