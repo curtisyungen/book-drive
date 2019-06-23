@@ -14,6 +14,7 @@ class Book extends Component {
             authorLast: null,
             price: null,
             avail: null,
+            cover: null,
             tags: [],
             imageURL: null,
             openDetailView: false
@@ -21,12 +22,20 @@ class Book extends Component {
     }
 
     componentDidMount = () => {
+
+        let cover = "Paperback";
+        if (this.props.cover === "hard") {
+            cover = "Hardcover";
+        }
+
+
         this.setState({
             title: this.props.title,
             authorFirst: this.props.authorFirst,
             authorLast: this.props.authorLast,
             price: this.props.price,
-            avail: this.props.avail,
+            avail: "avail",
+            cover: cover,
             tags: this.props.tags,
             imageURL: this.props.imageURL,
         });
@@ -92,36 +101,53 @@ class Book extends Component {
 
                     <div>
                         <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
-                        
-                        <span className="bookInfo">
-                            <p className="bookTitle">{this.state.title}</p>
-                            <span className="bookAuthor">by {this.state.authorFirst} {this.state.authorLast}</span>
-                            <span className={`bookStatus book-${this.state.avail}`}>{this.state.avail === "avail" ? (`Available`):(`Unavailable`)}</span>
-                            <p className="bookDescription">{this.state.description}</p>
-                        </span>
+                    </div>
 
-                        <div id="buttons">
-                            {this.state.avail === "avail" ? (
-                                <button
-                                    className="btn btn-warning btn-sm button"
-                                    onClick={(event) => {
-                                        event.preventDefault();
-                                        this.addToCart();
-                                    }}
-                                >
-                                    Add to Cart
-                            </button>
-                            ) : (
-                                    <></>
-                                )}
+                    <div className="bookInfoHeader">
+                        <p className="bookTitle">{this.state.title}</p>
+                        <span className="bookAuthor">by {this.state.authorFirst} {this.state.authorLast}</span>
+                    </div>
 
+                    {this.state.avail === "avail" ? (
+                        <div className="buyOptionList">
+                            <div className="buyOption">
+                                <span className="buyCoverType">{this.state.cover}</span>
+                                <span className="buyPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</span>
+                            </div>
+                        </div>
+                    ) : (
+                            <></>
+                        )}
+
+                    <div id="buyBox">
+
+                        <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
+
+                        <p className={`bookStatus book-${this.state.avail}`}>{this.state.avail === "avail" ? (`In Stock.`) : (`Out of Stock.`)}</p>
+                        <p className="shipsFromCongo">Ships from and sold by Congo.</p>
+
+                        {this.state.avail === "avail" ? (
                             <button
-                                className="btn btn-success btn-sm button"
+                                className="btn btn-sm button addToCartBtn"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.addToCart();
+                                }}
+                            >
+                                Add to Cart
+                        </button>
+                        ) : (
+                            <button
+                                className="btn btn-outline-dark btn-sm button"
                                 onClick={this.searchOnAmazon}
                             >
                                 Amazon
-                        </button>
-                        </div>
+                            </button>
+                        )}
+                    </div>
+
+                    <div className="bookInfoBody">
+                        <p className="bookDescription">{this.state.description}</p>
                     </div>
                 </Modal>
             </span>

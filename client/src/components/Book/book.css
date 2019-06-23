@@ -1,3 +1,9 @@
+.addToCartBtn {
+    background: rgb(241, 203, 112);
+    border: 1px solid rgb(167, 134, 53);
+    vertical-align: middle;
+}
+
 .book {
     border: 1px solid lightgray;
     cursor: pointer;
@@ -21,29 +27,42 @@
 }
 
 .bookDescription {
-    display: inline-block;
     font-size: 12px;
-    max-width: 300px;
+    max-height: 200px;
+    overflow: hidden;
     white-space: normal;
-    width: auto;
 }
 
-.bookInfo {
+.bookInfoBody {
+    clear: both;
+    display: block;
+    max-width: 800px;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.bookInfoHeader {
     display: inline-block;
+    margin-left: 10px;
     margin-right: 10px;
-    max-width: 300px;
+    min-width: 400px;
+    max-width: 500px;
     padding-left: 15px;
     width: auto;
 }
 
 .bookStatus {
-    float: right;
     font-size: 12px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    margin-top: 3px;
+    text-align: left;
 }
 
 .bookTitle {
     font-size: 24px;
     line-height: 38px;
+    margin-bottom: 0px;
     max-width: 300px;
     overflow: hidden;
     padding: 0;
@@ -52,7 +71,10 @@
 }
 
 .book-avail {
-    color: green;
+    color: #007600;
+    font-family: "Arial";
+    font-size: 17px;
+    line-height: 1.255;
 }
 
 .book-unavail, 
@@ -61,20 +83,75 @@
 }
 
 .button {
-    margin: 5px;
-    width: 100px;
+    margin: 5px 0px;
+    width: 90%;
+}
+
+#buyBox {
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px rgba(0,0,0,.1);
+    color: rgb(17, 17, 17);
+    display: block;
+    height: 150px;
+    line-height: 19px;
+    margin: 10px;
+    position: absolute;
+    right: 25px;
+    text-align: center;
+    top: 50px;
+    width: 270px;
+}
+
+.buyBoxPrice {
+    color: rgb(190, 44, 6);
+    font-family: "Arial";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.255;
+    margin-right: 12px;
+    margin-top: 12px;
+    text-align: right;
+}
+
+.buyOption {
+    background: rgb(253, 247, 241);
+    border: 1px solid rgb(230, 117, 9);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    height: 51px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    padding: 5px 5px;
+    width: 115px;
+}
+
+.buyOptionList {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.buyPrice {
+    color: rgb(190, 44, 6);
+    display: block;
 }
 
 .detailBookCover {
     border: 1px solid lightgray;
     float: left;
-    width: 300px;
+    width: 200px;
 }
 
-#buttons {
-    display: block;
-    margin: 10px;
-    text-align: center;
+.shipsFromCongo {
+    color: black;
+    font-family: "Arial";
+    font-size: 13px;
+    line-height: 19px;
+    margin-left: 15px;
+    margin-top: 0px;
+    text-align: left;
 }
 
 @media only screen and (max-width: 420px) {
