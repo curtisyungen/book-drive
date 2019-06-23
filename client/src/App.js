@@ -85,6 +85,7 @@ class App extends Component {
   }
 
   redirectToLogin = () => {
+    window.location.reload();
     return <Redirect to="/login" />
   }
 
