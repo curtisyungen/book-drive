@@ -72,6 +72,7 @@ class Home extends Component {
             case "speaking": activeFilter = "Public Speaking"; break;
             case "money": activeFilter = "Money/Investing"; break;
             case "": activeFilter = "Books"; break;
+            case null: activeFilter = "Books"; break;
             default: activeFilter = activeFilter;
         }
 
