@@ -42,7 +42,7 @@ class Orders extends Component {
                 <Container>
                     <h4 className="yourOrdersHeader">Your Orders</h4>
 
-                    {this.state.orders ? (
+                    {this.state.orders && this.state.orders.length > 0 ? (
                         this.state.orders.map(order => (
                             <PastOrder
                                 date={order.date}
@@ -50,9 +50,9 @@ class Orders extends Component {
                                 price={order.totalPrice}
                             />
                         ))
-                    ) : (
+                        ) : (
                             <p>No orders found.</p>
-                        )}
+                    )}
 
                     <BookSuggestions
                         displayClass="order"
