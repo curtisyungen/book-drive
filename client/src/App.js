@@ -259,8 +259,24 @@ class App extends Component {
     }
   }
 
-  getAvailableBooks = (filter) => {
-    API.getFilteredAvailable(filter)
+  // getAvailableBooks = (filter) => {
+  //   API.getFilteredAvailable(filter)
+  //     .then((res) => {
+  //       this.setState({
+  //         books: res.data,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+
+  //       this.setState({
+  //         message: "Error loading books.",
+  //       });
+  //     });
+  // }
+
+  getFilteredBooks = (availFilter, formatFilter, subjectFilter) => {
+    API.getFilteredBooks(availFilter, formatFilter, subjectFilter)
       .then((res) => {
         this.setState({
           books: res.data,
@@ -275,79 +291,63 @@ class App extends Component {
       });
   }
 
-  getFilteredBooks = (availFilter, coverFilter, subjectFilter) => {
-    API.getFilteredBooks(availFilter, coverFilter, subjectFilter)
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+  // getUnavailableBooks = () => {
+  //   API.getUnavailableBooks()
+  //     .then((res) => {
+  //       this.setState({
+  //         books: res.data,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
 
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
+  //       this.setState({
+  //         message: "Error loading books.",
+  //       });
+  //     });
+  // }
 
-  getUnavailableBooks = () => {
-    API.getUnavailableBooks()
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+  // getPaperbacks = () => {
+  //   API.getPaperbacks()
+  //     .then((res) => {
+  //       this.setState({
+  //         books: res.data,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       this.setState({
+  //         message: "Error loading books.",
+  //       });
+  //     });
+  // }
 
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
+  // getHardcovers = () => {
+  //   API.getHardcovers()
+  //     .then((res) => {
+  //       this.setState({
+  //         books: res.data,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       this.setState({
+  //         message: "Error loading books.",
+  //       });
+  //     });
+  // }
 
-  getPaperbacks = () => {
-    API.getPaperbacks()
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
-
-  getHardcovers = () => {
-    API.getHardcovers()
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
-
-  getSubject = (subject) => {
-    API.getSubject(subject)
-      .then((res) => {
-        this.setState({
-          books: res.data,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          message: "Error loading books.",
-        });
-      });
-  }
+  // getSubject = (subject) => {
+  //   API.getSubject(subject)
+  //     .then((res) => {
+  //       this.setState({
+  //         books: res.data,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       this.setState({
+  //         message: "Error loading books.",
+  //       });
+  //     });
+  // }
 
   // CART HANDLING
   // =========================================
