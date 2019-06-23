@@ -22,9 +22,7 @@ class SearchSuggestions extends Component {
 
     handleClickOutside = (event) => {
         event.preventDefault();
-        this.setState({
-            showSearchSuggestions: false,
-        });
+        this.props.hideSearchSuggestions();
     }
 
     render() {
