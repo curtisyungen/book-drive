@@ -208,9 +208,7 @@ class App extends Component {
       isLoggedIn: false,
     });
 
-    alert("You have been logged out.");
-
-    this.setRedirectToHome();
+    this.setRedirectToLogin();
   }
 
   // BOOK FILTERING
