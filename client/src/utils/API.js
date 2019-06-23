@@ -28,6 +28,10 @@ export default {
         return axios.get("/api/books/getUnavailableBooks/");
     },
 
+    getFilteredAvailable: function(filter) {
+        return axios.get("/api/books/getFilteredAvailable/" + filter);
+    },
+
     getPaperbacks: function () {
         return axios.get("/api/books/getPaperbacks/");
     },
@@ -127,6 +131,7 @@ export default {
     },
 
     // EMAIL ROUTES
+    // =============================================================
 
     sendConfirmationEmail: function(orderInfo) {
         return axios.post("/api/orders/sendConfirmationEmail", orderInfo);

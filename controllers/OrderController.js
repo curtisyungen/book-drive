@@ -86,6 +86,7 @@ class OrderController {
             else {
                 console.log("Email sent: " + info.response);
 
+                // Used only to fulfill axios promise
                 db.Orders.findAll({})
                     .then((order) => {
                         res.json(order);

@@ -104,6 +104,20 @@ class BookController {
         });
     }
 
+    getFilteredAvailable(req, res) {
+        db.Books.findAll({
+            where: {
+                Avail: "avail",
+                tags: {
+                    [Op.like]: '%' + req.params.subject + '%',
+                },
+            }
+        })
+        .then((books) => {
+            res.json(books);
+        });
+    }
+
     getPaperbacks(req, res) {
         db.Books.findAll({
             where: {
