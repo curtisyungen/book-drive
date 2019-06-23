@@ -37,7 +37,7 @@ class Home extends Component {
         }
 
         this.setState({
-            // books: this.props.books,
+            books: this.props.books,
             message: message,
             userSearch: this.props.userSearch,
             sortOption: "",
@@ -49,13 +49,13 @@ class Home extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                // books: this.props.books,
+                books: this.props.books,
                 userSearch: this.props.userSearch,
             });
         }
     }
 
-    getActiveFilter = (filter) => {
+    setActiveFilter = (filter) => {
 
         let activeFilter;
         if (filter) {
@@ -184,7 +184,7 @@ class Home extends Component {
                         getPaperbacks={this.props.getPaperbacks}
                         getHardcovers={this.props.getHardcovers}
                         getSubject={this.props.getSubject}
-                        getActiveFilter={this.getActiveFilter}
+                        setActiveFilter={this.getActiveFilter}
                         getFilteredBooks={this.props.getFilteredBooks}
                     />
 
