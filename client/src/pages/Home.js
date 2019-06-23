@@ -37,7 +37,7 @@ class Home extends Component {
         }
 
         this.setState({
-            // books: this.props.books,
+            books: this.props.books,
             message: message,
             userSearch: this.props.userSearch,
             sortOption: "",
@@ -49,7 +49,7 @@ class Home extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                // books: this.props.books,
+                books: this.props.books,
                 userSearch: this.props.userSearch,
             });
         }
