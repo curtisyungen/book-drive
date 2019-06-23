@@ -151,6 +151,7 @@ class Navbar extends Component {
                         <SearchSuggestions
                             suggestions={this.state.suggestions}
                             chooseSearchSuggestion={this.chooseSearchSuggestion}
+                            hideSearchSuggestions={this.hideSearchSuggestions}
                         />
                     ) : (
                             <></>
