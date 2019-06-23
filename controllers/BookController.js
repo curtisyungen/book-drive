@@ -119,49 +119,28 @@ class BookController {
     }
 
     getFilteredBooks(req, res) {
-        db.Books.findAll({
-            where: {
-                [Op.or]: 
-                [
-                    {
-                        Avail: req.query.availFilter,
-                        Cover: req.query.formatFilter,
-                        tags: {
-                            [Op.like]: '%' + req.query.subjectFilter + '%',
-                        },
-                    },
-                    {
-                        Avail: req.query.availFilter,
-                        Cover: req.query.formatFilter,
-                    },
-                    {
-                        Avail: req.query.availFilter,
-                    },
-                    {
-                        Cover: req.query.formatFilter,
-                        tags: {
-                            [Op.like]: '%' + req.query.subjectFilter + '%',
-                        },
-                    },
-                    {
-                        Cover: req.query.formatFilter,
-                    },
-                    {
-                        Avail: req.query.availFilter,
-                        tags: {
-                            [Op.like]: '%' + req.query.subjectFilter + '%',
-                        },
-                    },
-                    {
-                        tags: {
-                            [Op.like]: '%' + req.query.subjectFilter + '%',
-                        },
-                    },
-                ]
-            }
-        })
+        db.Books.findAll({})
         .then((books) => {
-            res.json(books);
+
+            let availFilter = req.query.availFilter;
+            let formatFilter = req.qeury.formatFilter;
+            let subjectFilter = req.query.subjectFilter;
+
+            let filterBooks = books;
+
+            if (availFilter !== "" && availFilter !== null) {
+                filterBooks = books.filter(book => { book.avail === availFilter });
+            }
+
+            if (formatFilter !== "" && formatFilter !== null) {
+                filterBooks = books.filter(book => { book.format === formatFilter });
+            }
+
+            if (subjectFilter !== "" && subjectFilter !== null) {
+                filterBooks = books.filter(book => { book.tags.indexOf(subjectFilter) > -1 });
+            }
+
+            res.json(filterBooks);
         });
     }
 
