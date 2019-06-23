@@ -29,6 +29,7 @@
 .bookDescription {
     font-size: 12px;
     max-height: 200px;
+    min-width: 800px;
     overflow: hidden;
     white-space: normal;
 }
