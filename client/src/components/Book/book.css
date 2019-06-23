@@ -36,7 +36,7 @@
     clear: both;
     display: block;
     max-width: 800px;
-    padding-top: 10px;
+    padding-top: 15px;
     text-align: justify;
 }
 
@@ -143,6 +143,16 @@
     width: 200px;
 }
 
+.imageSource {
+    color: gray;
+    display: block;
+    font-size: 10px;
+    margin: 305px 0px 10px 1px;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+}
+
 .shipsFromCongo {
     color: black;
     font-family: "Arial";
@@ -153,7 +163,7 @@
     text-align: left;
 }
 
-.styles_modal_gNwvD {
+.styles_modal__gNwvD {
     max-width: 900px !important;
 }
 

@@ -100,7 +100,8 @@ class Book extends Component {
                 >
 
                     <div>
-                        <img className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
+                        <img name="detailBookCover" className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
+                        <label for="detailBookCover" className="imageSource">Image source: Amazon.com</label>
                     </div>
 
                     <div className="bookInfoHeader">
