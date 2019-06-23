@@ -54,7 +54,7 @@ class Sidebar extends Component {
         this.setState({
             availFilter: filter,
         }, () => {
-            this.props.getFilteredBooks(this.state.filterAvail, this.state.filterFormat, this.state.filterSubject);
+            this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
         });
     }
 
@@ -62,27 +62,17 @@ class Sidebar extends Component {
         this.setState({
             formatFilter: filter,
         }, () => {
-            this.props.getFilteredBooks(this.state.filterAvail, this.state.filterFormat, this.state.filterSubject);
+            this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
         });
     }
 
     setSubjectFilter = (filter) => {
         this.setState({
             subjectFilter: filter,
-            activeOption: filter,
         }, () => {
-            this.props.getFilteredBooks(this.state.filterAvail, this.state.filterFormat, this.state.filterSubject);
-            this.props.getActiveFilter(filter);
+            this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
         });
     }
-
-    // setActiveOption = (key) => {
-    //     this.setState({
-    //         activeOption: key,
-    //     }, () => {
-    //         this.props.getActiveFilter(key);
-    //     });
-    // }
 
     render() {
         return (
@@ -100,9 +90,7 @@ class Sidebar extends Component {
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
-                                    this.unfilterBooks();
                                     this.setAvailFilter("");
-                                    // this.setActiveOption(null);
                                 }}
                             >
                                 {`< All Books`}
@@ -115,9 +103,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "avail"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                // this.filterBooks("avail");
                                 this.setAvailFilter("avail");
-                                // this.setActiveOption("avail");
                             }}
                         >
                             Available
@@ -127,8 +113,6 @@ class Sidebar extends Component {
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setAvailFilter("unavail");
-                                // this.filterBooks("avail");
-                                // this.setActiveOption("unavail");
                             }}
                         >
                             Unavailable
@@ -148,9 +132,7 @@ class Sidebar extends Component {
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
-                                    this.unfilterBooks();
                                     this.setFormatFilter("");
-                                    // this.setActiveOption(null);
                                 }}
                             >
                                 {`< All Formats`}
@@ -163,10 +145,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "paperback"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                // this.props.getPaperbacks();
                                 this.setFormatFilter("soft");
-                                // this.filterBooks("format");
-                                // this.setActiveOption("paperback");
                             }}
                         >
                             Paperback
@@ -175,10 +154,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "hardcover"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                // this.props.getHardcovers();
                                 this.setFormatFilter("hard");
-                                // this.filterBooks("format");
-                                // this.setActiveOption("hardcover");
                             }}
                         >
                             Hardcover
@@ -197,9 +173,7 @@ class Sidebar extends Component {
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.getAllBooks();
-                                    this.unfilterBooks();
                                     this.setSubjectFilter("");
-                                    // this.setActiveOption(null);
                                 }}
                             >
                                 {`< All Subjects`}
@@ -212,10 +186,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "biography"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                // this.props.getSubject("biography");
-                                // this.filterBooks("subject");
                                 this.setSubjectFilter("biography");
-                                this.setActiveOption("biography");
                             }}
                         >
                             Biography
@@ -223,11 +194,8 @@ class Sidebar extends Component {
                         <li
                             className={`option bold-${this.state.activeOption === "business"}`}
                             onClick={(event) => {
-                                event.preventDefault();
-                                // this.props.getSubject("business");
-                                // this.filterBooks("subject");
+                                event.preventDefault();;
                                 this.setSubjectFilter("business");
-                                this.setActiveOption("business");
                             }}
                         >
                             Business
@@ -236,10 +204,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "economics"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                // this.props.getSubject("economics");
-                                // this.filterBooks("subject");
                                 this.setSubjectFilter("economics");
-                                this.setActiveOption("economics");
                             }}
                         >
                             Economics
@@ -248,9 +213,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "fiction"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("fiction");
-                                this.filterBooks("subject");
-                                this.setActiveOption("fiction");
+                                this.setSubjectFilter("fiction");
                             }}
                         >
                             Fiction
@@ -259,9 +222,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "health"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("health");
-                                this.filterBooks("subject");
-                                this.setActiveOption("health");
+                                this.setSubjectFilter("health");
                             }}
                         >
                             Health
@@ -270,9 +231,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "history"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("history");
-                                this.filterBooks("subject");
-                                this.setActiveOption("history");
+                                this.setSubjectFilter("history");
                             }}
                         >
                             History
@@ -281,9 +240,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "humor"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("humor");
-                                this.filterBooks("subject");
-                                this.setActiveOption("humor");
+                                this.setSubjectFilter("humor");
                             }}
                         >
                             Humor
@@ -292,9 +249,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "leadership"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("leadership");
-                                this.filterBooks("subject");
-                                this.setActiveOption("leadership");
+                                this.setSubjectFilter("leadership");
                             }}
                         >
                             Leadership
@@ -303,9 +258,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "marketing"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("market");
-                                this.filterBooks("subject");
-                                this.setActiveOption("marketing");
+                                this.setSubjectFilter("marketing");
                             }}
                         >
                             Marketing
@@ -314,9 +267,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "money"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("money");
-                                this.filterBooks("subject");
-                                this.setActiveOption("money");
+                                this.setSubjectFilter("money");
                             }}
                         >
                             Money/Investing
@@ -325,10 +276,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "nonfict"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("nonfict");
-                                this.filterBooks("subject");
-                                this.setActiveOption("nonfict");
-
+                                this.setSubjectFilter("nonfict");
                             }}
                         >
                             Non-fiction
@@ -337,10 +285,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "philosophy"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("philosophy");
-                                this.filterBooks("subject");
-                                this.setActiveOption("philosophy");
-
+                                this.setSubjectFilter("philosophy");
                             }}
                         >
                             Philosophy
@@ -349,10 +294,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "political"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("political");
-                                this.filterBooks("subject");
-                                this.setActiveOption("political");
-
+                                this.setSubjectFilter("political");
                             }}
                         >
                             Political
@@ -361,10 +303,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "programming"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("programming");
-                                this.filterBooks("subject");
-                                this.setActiveOption("programming");
-
+                                this.setSubjectFilter("programming");
                             }}
                         >
                             Programming
@@ -373,10 +312,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "psychology"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("psychology");
-                                this.filterBooks("subject");
-                                this.setActiveOption("psychology");
-
+                                this.setSubjectFilter("psychology");
                             }}
                         >
                             Psychology
@@ -385,10 +321,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "speaking"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("speaking");
-                                this.filterBooks("subject");
-                                this.setActiveOption("speaking");
-
+                                this.setSubjectFilter("speaking");
                             }}
                         >
                             Public Speaking
@@ -397,10 +330,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "real estate"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("real estate");
-                                this.filterBooks("subject");
-                                this.setActiveOption("real estate");
-
+                                this.setSubjectFilter("real estate");
                             }}
                         >
                             Real Estate
@@ -409,10 +339,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "selfhelp"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("selfhelp");
-                                this.filterBooks("subject");
-                                this.setActiveOption("selfhelp");
-
+                                this.setSubjectFilter("selfhelp");
                             }}
                         >
                             Self Help
@@ -421,10 +348,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "selling"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("selling");
-                                this.filterBooks("subject");
-                                this.setActiveOption("selling");
-
+                                this.setSubjectFilter("selling");
                             }}
                         >
                             Selling
@@ -433,10 +357,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "sex"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("sex");
-                                this.filterBooks("subject");
-                                this.setActiveOption("sex");
-
+                                this.setSubjectFilter("sex");
                             }}
                         >
                             Sex
@@ -445,10 +366,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "social"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getSubject("social");
-                                this.filterBooks("subject");
-                                this.setActiveOption("social");
-
+                                this.setSubjectFilter("social");
                             }}
                         >
                             Social Skills
