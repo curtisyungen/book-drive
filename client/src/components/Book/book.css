@@ -28,9 +28,7 @@
 
 .bookDescription {
     font-size: 12px;
-    max-height: 200px;
-    min-width: 800px;
-    overflow: hidden;
+    min-width: 700px;
     white-space: normal;
 }
 
@@ -153,6 +151,10 @@
     margin-left: 15px;
     margin-top: 0px;
     text-align: left;
+}
+
+.styles_modal_gNwvD {
+    max-width: 900px !important;
 }
 
 @media only screen and (max-width: 420px) {
