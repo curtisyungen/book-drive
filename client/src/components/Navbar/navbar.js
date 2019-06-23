@@ -5,7 +5,6 @@ import API from "../../utils/API";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import onClickOutside from "react-onclickoutside";
 import "./navbar.css";
 
 // import logo from "../../images/congo2.png";
@@ -37,13 +36,6 @@ class Navbar extends Component {
         if (prevProps.isLoggedIn !== this.props.isLoggedIn && !this.state.isLoggedIn) {
             this.getUserFromLocalStorage();
         }
-    }
-
-    handleClickOutside = (event) => {
-        event.preventDefault();
-        this.setState({
-            showSearchSuggestions: false,
-        });
     }
 
     getUserFromLocalStorage = () => {
@@ -139,7 +131,6 @@ class Navbar extends Component {
                         type="text"
                         name="bookSearch"
                         onChange={this.handleInputChange}
-                        // onBlur={this.hideSearchSuggestions}
                         onFocus={this.handleInputChange}
                         value={this.bookSearch}
                     />
@@ -156,7 +147,7 @@ class Navbar extends Component {
 
                     {/* SEARCH SUGGESTIONS */}
 
-                    {this.state.showSearchSuggestions ? (
+                    {this.state.showSearchSuggestions && this.state.suggestions && this.state.suggestions.length > 0 ? (
                         <SearchSuggestions
                             suggestions={this.state.suggestions}
                             chooseSearchSuggestion={this.chooseSearchSuggestion}
@@ -271,4 +262,4 @@ class Navbar extends Component {
     }
 }
 
-export default onClickOutside(Navbar);
+export default Navbar;

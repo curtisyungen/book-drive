@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import onClickOutside from "react-onclickoutside";
 import "./searchSuggestions.css";
 
 class SearchSuggestions extends Component {
@@ -17,6 +18,13 @@ class SearchSuggestions extends Component {
                 suggestions: this.props.suggestions,
             });
         }
+    }
+
+    handleClickOutside = (event) => {
+        event.preventDefault();
+        this.setState({
+            showSearchSuggestions: false,
+        });
     }
 
     render() {
@@ -44,4 +52,4 @@ class SearchSuggestions extends Component {
     }
 }
 
-export default SearchSuggestions;
+export default onClickOutside(SearchSuggestions);
