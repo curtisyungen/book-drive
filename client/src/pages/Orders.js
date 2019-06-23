@@ -51,7 +51,7 @@ class Orders extends Component {
                             />
                         ))
                         ) : (
-                            <p>No orders found.</p>
+                            <div className="noOrdersNote">No orders found.</div>
                     )}
 
                     <BookSuggestions
