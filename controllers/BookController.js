@@ -126,18 +126,18 @@ class BookController {
             let formatFilter = req.qeury.formatFilter;
             let subjectFilter = req.query.subjectFilter;
 
-            let filterBooks = books;
+            let filterBooks = JSON.parse(books);
 
             if (availFilter !== "" && availFilter !== null) {
-                filterBooks = books.filter(book => { book.avail === availFilter });
+                filterBooks = filterBooks.filter(book => { book.avail === availFilter });
             }
 
             if (formatFilter !== "" && formatFilter !== null) {
-                filterBooks = books.filter(book => { book.format === formatFilter });
+                filterBooks = filterBooks.filter(book => { book.format === formatFilter });
             }
 
             if (subjectFilter !== "" && subjectFilter !== null) {
-                filterBooks = books.filter(book => { book.tags.indexOf(subjectFilter) > -1 });
+                filterBooks = filterBooks.filter(book => { book.tags.indexOf(subjectFilter) > -1 });
             }
 
             res.json(filterBooks);
