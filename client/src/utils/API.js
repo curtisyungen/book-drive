@@ -32,6 +32,10 @@ export default {
         return axios.get("/api/books/getFilteredAvailable/" + filter);
     },
 
+    getFilteredBooks: function(availFilter, formatFilter, subjectFilter) {
+        return axios.get("/api/books/getFilteredBooks", { params: { availFilter: availFilter, formatFilter: formatFilter, subjectFilter: subjectFilter}});
+    },
+
     getPaperbacks: function () {
         return axios.get("/api/books/getPaperbacks/");
     },
