@@ -275,6 +275,22 @@ class App extends Component {
       });
   }
 
+  getFilteredBooks = (availFilter, coverFilter, subjectFilter) => {
+    API.getFilteredBooks(availFilter, coverFilter, subjectFilter)
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+
+        this.setState({
+          message: "Error loading books.",
+        });
+      });
+  }
+
   getUnavailableBooks = () => {
     API.getUnavailableBooks()
       .then((res) => {
@@ -518,6 +534,7 @@ class App extends Component {
                 getAllBooks={this.getAllBooks}
                 getAvailableBooks={this.getAvailableBooks}
                 getUnavailableBooks={this.getUnavailableBooks}
+                getFilteredBooks={this.getFilteredBooks}
                 getPaperbacks={this.getPaperbacks}
                 getHardcovers={this.getHardcovers}
                 getSubject={this.getSubject}
