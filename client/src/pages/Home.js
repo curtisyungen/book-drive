@@ -13,15 +13,16 @@ class Home extends Component {
         this.state = {
             books: [
                 {
-                    title: "Test",
+                    title: "Testing a Very Long Book Title Like This One",
                     authorFirst: "Test",
                     authorLast: "Test",
+                    cover: "hard",
                     price: 0.00,
                     imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
                 }
             ],
             message: "Loading...",
-            activeFilter: "books",
+            activeFilter: "Books",
             userSearch: "",
             sortOption: "",
         }
@@ -55,8 +56,27 @@ class Home extends Component {
     }
 
     getActiveFilter = (filter) => {
+
+        let activeFilter;
+        if (filter) {
+            activeFilter = filter.charAt(0).toUpperCase() + filter.substr(1);
+        }
+
+        switch (filter) {
+            case "avail": activeFilter = "Available"; break;
+            case "unavail": activeFilter = "Unavailable"; break;
+            case "nonfict": activeFilter = "Non-fiction"; break;
+            case "selfhelp": activeFilter = "Self-Help"; break;
+            case "real estate": activeFilter = "Real Estate"; break;
+            case "social": activeFilter = "Social Skills"; break;
+            case "speaking": activeFilter = "Public Speaking"; break;
+            case "money": activeFilter = "Money/Investing"; break;
+            case "": activeFilter = "Books"; break;
+            default: activeFilter = activeFilter;
+        }
+
         this.setState({
-            activeFilter: filter,
+            activeFilter: activeFilter,
         });
     }
 
