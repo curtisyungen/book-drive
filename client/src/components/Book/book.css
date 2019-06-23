@@ -28,6 +28,7 @@
 
 .bookDescription {
     font-size: 12px;
+    margin-bottom: 0px !important;
     min-width: 700px;
     white-space: normal;
 }
