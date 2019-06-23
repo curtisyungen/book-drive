@@ -34,7 +34,7 @@ class Book extends Component {
             authorFirst: this.props.authorFirst,
             authorLast: this.props.authorLast,
             price: this.props.price,
-            avail: "avail",
+            avail: this.props.avail,
             cover: cover,
             tags: this.props.tags,
             imageURL: this.props.imageURL,
