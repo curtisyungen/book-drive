@@ -91,17 +91,15 @@ class Book extends Component {
                     <img className="bookCover" src={this.state.imageURL} alt={this.state.title} />
                 </div>
 
-                {/* <div className={`circle circle-${this.state.avail}`}></div> */}
-
                 <Modal
                     open={this.state.openDetailView}
                     onClose={this.closeDetailView}
                     className="detailView"
                 >
 
-                    <div>
+                    <div className="detailBookImage">
                         <img name="detailBookCover" className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
-                        <label for="detailBookCover" className="imageSource">Image source: Amazon.com</label>
+                        <span for="detailBookCover" className="imageSource">Image source: Amazon.com</span>
                     </div>
 
                     <div className="bookInfoHeader">
@@ -125,7 +123,7 @@ class Book extends Component {
                         <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
 
                         <p className={`bookStatus book-${this.state.avail}`}>{this.state.avail === "avail" ? (`In Stock.`) : (`Out of Stock.`)}</p>
-                        <p className="shipsFromCongo">Ships from and sold by Congo.</p>
+                        <p className="shipsFromCongo">{`${this.state.avail === "avail" ? ("Ships from and sold by Congo.") : ("Guess you'd better check on Amazon.")}`}</p>
 
                         {this.state.avail === "avail" ? (
                             <button
