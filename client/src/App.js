@@ -237,6 +237,11 @@ class App extends Component {
 
   searchForBook = (userInput) => {
     if (userInput !== "" && userInput !== null) {
+
+      if (window.location.href !== "/home") {
+        this.setRedirectToHome();
+      }
+
       API.searchForBook(userInput)
         .then((res) => {
           this.setState({
