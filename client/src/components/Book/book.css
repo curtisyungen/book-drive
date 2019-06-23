@@ -36,7 +36,7 @@
     clear: both;
     display: block;
     max-width: 800px;
-    padding-top: 15px;
+    padding-top: 25px;
     text-align: justify;
 }
 
@@ -147,7 +147,7 @@
     color: gray;
     display: block;
     font-size: 10px;
-    margin: 305px 0px 10px 1px;
+    margin: 300px 0px 10px 1px;
     padding: 0;
     position: absolute;
     text-align: left;
