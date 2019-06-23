@@ -184,7 +184,7 @@ class Home extends Component {
                         getPaperbacks={this.props.getPaperbacks}
                         getHardcovers={this.props.getHardcovers}
                         getSubject={this.props.getSubject}
-                        setActiveFilter={this.getActiveFilter}
+                        setActiveFilter={this.setActiveFilter}
                         getFilteredBooks={this.props.getFilteredBooks}
                     />
 
