@@ -22,7 +22,7 @@ router.get("/getUnavailableBooks", (req, res) => {
     controller.getUnavailableBooks(req, res);
 });
 
-router.get("/getFilteredAvailable", (req, res) => {
+router.get("/getFilteredAvailable/:filter", (req, res) => {
     controller.getFilteredAvailable(req, res);
 });
 
