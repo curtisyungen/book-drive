@@ -109,7 +109,7 @@ class BookController {
             where: {
                 Avail: "avail",
                 tags: {
-                    [Op.like]: '%' + req.params.subject + '%',
+                    [Op.like]: '%' + req.params.filter + '%',
                 },
             }
         })
