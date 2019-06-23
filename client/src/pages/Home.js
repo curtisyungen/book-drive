@@ -55,7 +55,7 @@ class Home extends Component {
         }
     }
 
-    getActiveFilter = (filter) => {
+    setActiveFilter = (filter) => {
 
         let activeFilter;
         if (filter) {
@@ -184,7 +184,7 @@ class Home extends Component {
                         getPaperbacks={this.props.getPaperbacks}
                         getHardcovers={this.props.getHardcovers}
                         getSubject={this.props.getSubject}
-                        getActiveFilter={this.getActiveFilter}
+                        setActiveFilter={this.getActiveFilter}
                         getFilteredBooks={this.props.getFilteredBooks}
                     />
 

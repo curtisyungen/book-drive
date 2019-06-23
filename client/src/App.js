@@ -276,6 +276,9 @@ class App extends Component {
   // }
 
   getFilteredBooks = (availFilter, formatFilter, subjectFilter) => {
+    
+    console.log("Filters", availFilter, formatFilter, subjectFilter);
+
     API.getFilteredBooks(availFilter, formatFilter, subjectFilter)
       .then((res) => {
         this.setState({

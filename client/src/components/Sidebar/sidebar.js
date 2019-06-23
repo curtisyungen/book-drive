@@ -55,6 +55,7 @@ class Sidebar extends Component {
             availFilter: filter,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
+            this.props.setActiveFilter(filter);
         });
     }
 
@@ -63,6 +64,7 @@ class Sidebar extends Component {
             formatFilter: filter,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
+            this.props.setActiveFilter(filter);
         });
     }
 
@@ -71,6 +73,7 @@ class Sidebar extends Component {
             subjectFilter: filter,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
+            this.props.setActiveFilter(filter);
         });
     }
 
@@ -89,8 +92,8 @@ class Sidebar extends Component {
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    this.props.getAllBooks();
                                     this.setAvailFilter("");
+                                    this.props.getAllBooks();
                                 }}
                             >
                                 {`< All Books`}
@@ -131,8 +134,8 @@ class Sidebar extends Component {
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    this.props.getAllBooks();
                                     this.setFormatFilter("");
+                                    this.props.getAllBooks();
                                 }}
                             >
                                 {`< All Formats`}
@@ -172,8 +175,8 @@ class Sidebar extends Component {
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    this.props.getAllBooks();
                                     this.setSubjectFilter("");
+                                    this.props.getAllBooks();
                                 }}
                             >
                                 {`< All Subjects`}
