@@ -24,8 +24,8 @@ class SearchSuggestions extends Component {
             <div
                 className="searchSuggestions"
             >
-                {this.state.suggestions.constructor === Array && this.state.suggestions.length > 0 ? (
-                    this.state.suggestions.map(suggestion => (
+                {this.state.suggestions.constructor === Array && this.props.suggestions.length > 0 ? (
+                    this.props.suggestions.map(suggestion => (
                         <div 
                             className="suggestion"
                             onClick={(event) => {
