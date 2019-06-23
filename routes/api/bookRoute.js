@@ -26,6 +26,10 @@ router.get("/getFilteredAvailable/:filter", (req, res) => {
     controller.getFilteredAvailable(req, res);
 });
 
+router.get("/getFilteredBooks", (req, res) => {
+    controller.getFilteredBooks(req, res);
+});
+
 router.get("/getPaperbacks", (req, res) => {
     controller.getPaperbacks(req, res);
 });
