@@ -41,18 +41,18 @@
     width: 200px;
 }
 
-#scrollToTopBtn {
-    background: lightgray;
+.scrollToTopHomeBtn {
     border: 1px solid darkgray;
-    bottom: 50px;
+    border-radius: 4px;
     color: black;
     cursor: pointer;
     font-size: 14px;
-    padding: 10px;
+    margin: 0px auto;
+    padding: 5px;
     position: fixed;
-    right: 50px;
-    text-align: center;
-    width: 100px;
+    right: 600px;
+    top: 225px;
+    width: 90px;
 }
 
 @media only screen and (max-width: 420px) {
@@ -60,9 +60,14 @@
         left: 15px;
         position: absolute;
         top: 160px;
+        width: 360px;
     }
 
     .resultsSummary {
+        display: none;
+    }
+
+    .underConstruction {
         display: none;
     }
 }
