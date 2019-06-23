@@ -37,7 +37,7 @@ class Home extends Component {
         }
 
         this.setState({
-            books: this.props.books,
+            // books: this.props.books,
             message: message,
             userSearch: this.props.userSearch,
             sortOption: "",
@@ -49,7 +49,7 @@ class Home extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                books: this.props.books,
+                // books: this.props.books,
                 userSearch: this.props.userSearch,
             });
         }
@@ -132,6 +132,10 @@ class Home extends Component {
         }
     }
 
+    scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <span>
@@ -160,6 +164,19 @@ class Home extends Component {
                         </select>
                     </div>
 
+                    {/* BACK TO TOP BUTTON */}
+
+                    {/* <div>
+                        <button
+                            className="btn btn-light btn-sm scrollToTopHomeBtn"
+                            onClick={this.scrollToTop}
+                        >
+                            Back to top
+                        </button>
+                    </div> */}
+
+                    {/* SIDE BAR */}
+
                     <Sidebar
                         getAllBooks={this.props.getAllBooks}
                         getAvailableBooks={this.props.getAvailableBooks}
@@ -168,7 +185,9 @@ class Home extends Component {
                         getHardcovers={this.props.getHardcovers}
                         getSubject={this.props.getSubject}
                         getActiveFilter={this.getActiveFilter}
+                        getFilteredBooks={this.props.getFilteredBooks}
                     />
+
                     {/* BOOK LIST */}
 
                     <div
