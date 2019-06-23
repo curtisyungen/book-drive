@@ -85,7 +85,7 @@ class Sidebar extends Component {
                             className={`option bold-${this.state.activeOption === "avail"}`}
                             onClick={(event) => {
                                 event.preventDefault();
-                                this.props.getFilteredAvailable("biography");
+                                this.props.getAvailable("biography");
                                 this.filterBooks("avail");
                                 this.setActiveOption("avail");
                             }}

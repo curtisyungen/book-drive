@@ -259,8 +259,8 @@ class App extends Component {
     }
   }
 
-  getAvailableBooks = () => {
-    API.getAvailableBooks()
+  getAvailableBooks = (filter) => {
+    API.getFilteredAvailable(filter)
       .then((res) => {
         this.setState({
           books: res.data,
