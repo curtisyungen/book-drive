@@ -42,7 +42,7 @@ class Login extends Component {
                         <p className="formLabel">Email</p>
                         <input
                             autoFocus
-                            className="formInput"
+                            className="formInput emailInput"
                             name="email"
                             type="email"
                             value={this.state.email}
