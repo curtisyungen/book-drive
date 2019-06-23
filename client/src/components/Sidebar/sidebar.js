@@ -53,6 +53,7 @@ class Sidebar extends Component {
     setAvailFilter = (filter) => {
         this.setState({
             availFilter: filter,
+            filterAvail: true,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
             this.props.setActiveFilter(filter);
@@ -62,6 +63,7 @@ class Sidebar extends Component {
     setFormatFilter = (filter) => {
         this.setState({
             formatFilter: filter,
+            filterFormat: true,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
             this.props.setActiveFilter(filter);
@@ -71,6 +73,7 @@ class Sidebar extends Component {
     setSubjectFilter = (filter) => {
         this.setState({
             subjectFilter: filter,
+            filterSubject: true,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
             this.props.setActiveFilter(filter);
