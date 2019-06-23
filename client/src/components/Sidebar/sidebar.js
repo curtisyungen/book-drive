@@ -51,9 +51,15 @@ class Sidebar extends Component {
     }
 
     setAvailFilter = (filter) => {
+
+        let filterFormat = true;
+        if (filter !== "") {
+            filterFormat = false;
+        }
+
         this.setState({
             availFilter: filter,
-            filterAvail: true,
+            filterAvail: filterFormat,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
             this.props.setActiveFilter(filter);
@@ -61,9 +67,15 @@ class Sidebar extends Component {
     }
 
     setFormatFilter = (filter) => {
+
+        let filterFormat = true;
+        if (filter !== "") {
+            filterFormat = false;
+        }
+
         this.setState({
             formatFilter: filter,
-            filterFormat: true,
+            filterFormat: filterFormat,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
             this.props.setActiveFilter(filter);
@@ -71,9 +83,15 @@ class Sidebar extends Component {
     }
 
     setSubjectFilter = (filter) => {
+
+        let filterFormat = true;
+        if (filter !== "") {
+            filterFormat = false;
+        }
+
         this.setState({
             subjectFilter: filter,
-            filterSubject: true,
+            filterSubject: filterFormat,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
             this.props.setActiveFilter(filter);
