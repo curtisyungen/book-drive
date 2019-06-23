@@ -121,11 +121,43 @@ class BookController {
     getFilteredBooks(req, res) {
         db.Books.findAll({
             where: {
-                Avail: req.query.availFilter,
-                Cover: req.query.formatFilter,
-                tags: {
-                    [Op.like]: '%' + req.query.subjectFilter + '%',
-                },
+                [Op.or]: 
+                [
+                    {
+                        Avail: req.query.availFilter,
+                        Cover: req.query.formatFilter,
+                        tags: {
+                            [Op.like]: '%' + req.query.subjectFilter + '%',
+                        },
+                    },
+                    {
+                        Avail: req.query.availFilter,
+                        Cover: req.query.formatFilter,
+                    },
+                    {
+                        Avail: req.query.availFilter,
+                    },
+                    {
+                        Cover: req.query.formatFilter,
+                        tags: {
+                            [Op.like]: '%' + req.query.subjectFilter + '%',
+                        },
+                    },
+                    {
+                        Cover: req.query.formatFilter,
+                    },
+                    {
+                        Avail: req.query.availFilter,
+                        tags: {
+                            [Op.like]: '%' + req.query.subjectFilter + '%',
+                        },
+                    },
+                    {
+                        tags: {
+                            [Op.like]: '%' + req.query.subjectFilter + '%',
+                        },
+                    },
+                ]
             }
         })
         .then((books) => {
