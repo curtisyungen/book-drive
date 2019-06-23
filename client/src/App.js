@@ -85,7 +85,6 @@ class App extends Component {
   }
 
   redirectToLogin = () => {
-    window.location.reload();
     return <Redirect to="/login" />
   }
 
@@ -209,7 +208,7 @@ class App extends Component {
       isLoggedIn: false,
     });
 
-    this.setRedirectToLogin();
+    this.setRedirectToHome();
   }
 
   // BOOK FILTERING
