@@ -38,6 +38,7 @@
 
 .socialMedia {
     display: inline-block;
+    margin-left: 5px;
     text-align: center;
     width: 100%;
 }
