@@ -36,7 +36,23 @@ class SlideInMenu extends Component {
             <div
                 className={`slideInMenu ${this.props.show}`}
             >
-                Test
+                <div className="slideInName">
+                    Hello, name
+                </div>
+                <ul>
+                    <li>
+                        <a href="/home">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         )
     }
