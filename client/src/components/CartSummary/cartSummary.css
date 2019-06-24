@@ -1,12 +1,11 @@
 .cartSummary {
     background: rgb(236, 235, 235);
-    border: 1px solid lightgray;
-    border-radius: 3px;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 4px;
     height: 150px;
     padding: 20px;
     position: absolute;
     right: 50px;
-    top: 180px;
     width: 300px;
 }
 
