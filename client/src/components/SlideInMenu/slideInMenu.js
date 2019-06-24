@@ -63,6 +63,9 @@ class SlideInMenu extends Component {
                     <li>
                         <a href="/cart">Cart</a>
                     </li>
+                    <li>
+                        <a href="/orders">Orders</a>
+                    </li>
                     {this.state.isLoggedIn ? (
                         <li>
                             <button
