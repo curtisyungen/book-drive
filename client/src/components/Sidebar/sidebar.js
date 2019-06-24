@@ -7,47 +7,10 @@ class Sidebar extends Component {
         super(props);
 
         this.state = {
-            filterAvail: false,
-            filterFormat: false,
-            filterSubject: false,
-            activeOption: null,
             availFilter: null,
             formatFilter: null,
             subjectFilter: null,
         }
-    }
-
-    filterBooks = (key) => {
-
-        let filterAvail = false;
-        let filterFormat = false;
-        let filterSubject = false;
-
-        if (key === "avail") {
-            filterAvail = true;
-        }
-
-        if (key === "format") {
-            filterFormat = true;
-        }
-
-        if (key === "subject") {
-            filterSubject = true;
-        }
-
-        this.setState({
-            filterAvail: filterAvail,
-            filterFormat: filterFormat,
-            filterSubject: filterSubject,
-        });
-    }
-
-    unfilterBooks = () => {
-        this.setState({
-            filterAvail: false,
-            filterFormat: false,
-            filterSubject: false,
-        });
     }
 
     setAvailFilter = (filter) => {
@@ -108,12 +71,12 @@ class Sidebar extends Component {
                 <div id="availabilityOptions">
                     <span className="title">Availability</span><br />
                     <ul>
-                        {this.state.filterAvail ? (
+                        {this.state.availFilter ? (
                             <li
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    this.setAvailFilter("");
+                                    this.setAvailFilter(null);
                                     this.props.getAllBooks();
                                 }}
                             >
@@ -150,12 +113,12 @@ class Sidebar extends Component {
 
                     <ul>
 
-                        {this.state.filterFormat ? (
+                        {this.state.formatFilter ? (
                             <li
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    this.setFormatFilter("");
+                                    this.setFormatFilter(null);
                                     this.props.getAllBooks();
                                 }}
                             >
@@ -191,12 +154,12 @@ class Sidebar extends Component {
                     <span className="title">Subject/Genre</span><br />
 
                     <ul>
-                        {this.state.filterSubject ? (
+                        {this.state.subjectFilter ? (
                             <li
                                 className="option"
                                 onClick={(event) => {
                                     event.preventDefault();
-                                    this.setSubjectFilter("");
+                                    this.setSubjectFilter(null);
                                     this.props.getAllBooks();
                                 }}
                             >
