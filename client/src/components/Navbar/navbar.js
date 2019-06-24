@@ -160,7 +160,7 @@ class Navbar extends Component {
 
                 {/* NAV MENU */}
 
-                <div className="">
+                <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav" id="navbarMenu">
                         <li className="nav-item">
                             <a className="nav-menu-link" href="/">Home</a>
