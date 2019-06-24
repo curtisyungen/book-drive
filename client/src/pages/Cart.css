@@ -22,27 +22,6 @@
     font-size: 13px;
 }
 
-.cartTable {
-    min-width: 600px;
-    width: auto;
-}
-
-.cartTable td {
-    padding-top: 10px;
-    vertical-align: top;
-}
-
-.cartTable th {
-    color: rgb(80, 80, 80);
-    font-size: 14px;
-    height: 36px;
-    text-align: center;
-    vertical-align: bottom;
-}
-
-.cartTable tr {
-    border-bottom: 1px solid lightgray;
-}
 
 #cartTitle {
     font-size: 24px;
@@ -56,11 +35,5 @@
     .cartContainer {
         margin-left: 0px;
         margin-right: 0px;
-    }
-
-    .cartTable {
-        height: auto;
-        margin-top: 160px;
-        min-width: 0px;
     }
 }

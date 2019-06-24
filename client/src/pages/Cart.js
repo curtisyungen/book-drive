@@ -83,54 +83,48 @@ class Cart extends Component {
     render() {
         return (
             <span className="cart">
-                <div
-                    className="cartContainer"
-                >
-                    <div
-                        className="cartTable"
-                    >
-                        {this.props.cart && this.props.cart.length > 0 ? (
-                            <div>
-                                <span id="cartTitle">Shopping Cart</span>
-                                <span>Price</span>
-                            </div>
-                        ) : (
-                                <></>
-                            )}
+                <div className="cartContainer">
+                    {this.props.cart && this.props.cart.length > 0 ? (
+                        <div>
+                            <span id="cartTitle">Shopping Cart</span>
+                            <span>Price</span>
+                        </div>
+                    ) : (
+                            <></>
+                        )}
 
-                        {this.props.cart && this.props.cart.length > 0 ? (
-                            <span>
-                                {this.props.cart.map(book => (
-                                    <CartItem
-                                        key={book.title}
-                                        title={book.title}
-                                        authorFirst={book.authorFirst}
-                                        authorLast={book.authorLast}
-                                        price={book.price}
-                                        imageURL={book.imageURL}
-                                        deleteFromCart={this.props.deleteFromCart}
-                                    />
-                                ))}
-                            </span>
-                        ) : (
-                                <div>
-                                    {this.state.isLoggedIn ? (
-                                        <p className="cartIsEmpty">Your shopping cart is empty.</p>
-                                    ) : (
-                                            <p className="cartIsEmptyNote">
-                                                Your Shopping Cart lives to serve.
-                                                Give it purpose — fill it with books about business, psychology, speaking, sales, and more.
-                                                If you already have an account,&nbsp;
+                    {this.props.cart && this.props.cart.length > 0 ? (
+                        <span>
+                            {this.props.cart.map(book => (
+                                <CartItem
+                                    key={book.title}
+                                    title={book.title}
+                                    authorFirst={book.authorFirst}
+                                    authorLast={book.authorLast}
+                                    price={book.price}
+                                    imageURL={book.imageURL}
+                                    deleteFromCart={this.props.deleteFromCart}
+                                />
+                            ))}
+                        </span>
+                    ) : (
+                            <div>
+                                {this.state.isLoggedIn ? (
+                                    <p className="cartIsEmpty">Your shopping cart is empty.</p>
+                                ) : (
+                                        <p className="cartIsEmptyNote">
+                                            Your Shopping Cart lives to serve.
+                                            Give it purpose — fill it with books about business, psychology, speaking, sales, and more.
+                                            If you already have an account,&nbsp;
                                                 <a href="/login">Sign In</a> to see your Cart.
-                                                Continue shopping on the Congo.com homepage and explore our available books.
-                                                The price and availability of items at Congo.com are subject to change.
-                                                The Cart is a temporary place to store a list of your items and reflects each item's
-                                                most recent price.
+                                            Continue shopping on the Congo.com homepage and explore our available books.
+                                            The price and availability of items at Congo.com are subject to change.
+                                            The Cart is a temporary place to store a list of your items and reflects each item's
+                                            most recent price.
                                                 </p>
-                                        )}
-                                </div>
-                            )}
-                    </div>
+                                    )}
+                            </div>
+                        )}
                 </div>
 
                 <CartSidebar
