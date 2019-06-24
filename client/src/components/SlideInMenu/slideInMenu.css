@@ -1,6 +1,8 @@
 .hide {
   display: none;
   left: -320px;
+  z-index: 1;
+  
   -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -23,6 +25,7 @@
 .show {
     display: inline;
     left: 0px;
+    z-index: 100;
 
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -41,7 +44,7 @@
   position: absolute;
   top: 0;
   width: 250px;
-  z-index: 100;
+  z-index: 1;
 }
 
 .slideInMenu a {
