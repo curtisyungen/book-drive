@@ -39,7 +39,7 @@ class Orders extends Component {
     render() {
         return (
             <span>
-                <Container>
+                <div className="ordersPage">
                     <h4 className="yourOrdersHeader">Your Orders</h4>
 
                     {this.state.orders && this.state.orders.length > 0 ? (
@@ -59,7 +59,7 @@ class Orders extends Component {
                         sendToCart={this.props.sendToCart}
                     />
 
-                </Container>
+                </div>
 
                 <Footer />
 
