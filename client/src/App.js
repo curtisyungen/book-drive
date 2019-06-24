@@ -35,6 +35,7 @@ class App extends Component {
       redirectToHome: false,
       redirectToLogin: false,
       redirectToSignUp: false,
+      showSlideInMenu: "hide",
     }
   }
 
