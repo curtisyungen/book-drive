@@ -1,6 +1,7 @@
 .cartSidebar {
     height: auto;
-    min-height: 250px;
+    margin-top: -495px;
+    min-height: 770px;
     position: relative;
     width: 100vw;
 }
