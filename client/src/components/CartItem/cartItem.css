@@ -45,6 +45,7 @@
     font-weight: 400;
     margin-left: 5px;
     padding: 0;
+    width: calc(100vw - 700px);
 }
 
 .cartTitle:hover {
