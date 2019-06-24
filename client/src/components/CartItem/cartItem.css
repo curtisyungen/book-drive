@@ -9,6 +9,8 @@
 }
 
 .cartItem {
+    border: 1px solid lightgray;
+    border-radius: 4px;
     display: flex;
     flex-direction: row;
     font-family: "Arial";
