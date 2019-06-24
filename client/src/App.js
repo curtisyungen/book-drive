@@ -259,33 +259,14 @@ class App extends Component {
     }
   }
 
-  // getAvailableBooks = (filter) => {
-  //   API.getFilteredAvailable(filter)
-  //     .then((res) => {
-  //       this.setState({
-  //         books: res.data,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-
-  //       this.setState({
-  //         message: "Error loading books.",
-  //       });
-  //     });
-  // }
-
   getFilteredBooks = (availFilter, formatFilter, subjectFilter) => {
-    
-    console.log("Filters", availFilter, formatFilter, subjectFilter);
-
     API.getAllBooks()
       .then((res) => {
 
         let filteredBooks = res.data;
 
+        // Apply availability filter (available or unavailable)
         if (availFilter !== null && availFilter !== "") {
-
           if (availFilter === "unavail") {
             filteredBooks = filteredBooks.filter(book => (
               book.avail !== "avail"
@@ -295,22 +276,22 @@ class App extends Component {
             filteredBooks = filteredBooks.filter(book => (
               book.avail === availFilter
             ));
-          }          
+          }
         }
 
+        // Apply format filter (hardcover or paperback)
         if (formatFilter !== null && formatFilter !== "") {
           filteredBooks = filteredBooks.filter(book => (
             book.cover === formatFilter
           ));
         }
 
+        // Apply subject filter (biography, fiction, nonfiction, etc.)
         if (subjectFilter !== null && subjectFilter !== "") {
           filteredBooks = filteredBooks.filter(book => (
             book.tags.indexOf(subjectFilter) > -1
           ));
         }
-
-        console.log(filteredBooks);
 
         this.setState({
           books: filteredBooks,
@@ -324,64 +305,6 @@ class App extends Component {
         });
       });
   }
-
-  // getUnavailableBooks = () => {
-  //   API.getUnavailableBooks()
-  //     .then((res) => {
-  //       this.setState({
-  //         books: res.data,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-
-  //       this.setState({
-  //         message: "Error loading books.",
-  //       });
-  //     });
-  // }
-
-  // getPaperbacks = () => {
-  //   API.getPaperbacks()
-  //     .then((res) => {
-  //       this.setState({
-  //         books: res.data,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       this.setState({
-  //         message: "Error loading books.",
-  //       });
-  //     });
-  // }
-
-  // getHardcovers = () => {
-  //   API.getHardcovers()
-  //     .then((res) => {
-  //       this.setState({
-  //         books: res.data,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       this.setState({
-  //         message: "Error loading books.",
-  //       });
-  //     });
-  // }
-
-  // getSubject = (subject) => {
-  //   API.getSubject(subject)
-  //     .then((res) => {
-  //       this.setState({
-  //         books: res.data,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       this.setState({
-  //         message: "Error loading books.",
-  //       });
-  //     });
-  // }
 
   // CART HANDLING
   // =========================================
@@ -428,7 +351,7 @@ class App extends Component {
     }
     else {
       cart.push(book);
-    
+
       this.setState({
         cart: cart,
       }, () => {
@@ -458,17 +381,17 @@ class App extends Component {
         });
     }
     else {
-      let cart; 
+      let cart;
 
       if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
         cart = JSON.parse(sessionStorage.getItem("cart"));
-        
+
         for (var item in cart) {
           if (cart[item].title === book.title) {
             cart.splice(item, 1);
           }
         }
-        
+
         sessionStorage.setItem("cart", JSON.stringify(cart));
 
         alert("Removed from cart!");
@@ -500,6 +423,18 @@ class App extends Component {
         this.addToCart(guestCart[item]);
       }
     }
+  }
+
+  showSlideInMenu = () => {
+    this.setState({
+      showSlideInMenu: "show",
+    });
+  }
+
+  hideSlideInMenu = () => {
+    this.setState({
+      showSlideInMenu: "hide",
+    });
   }
 
   render() {
@@ -540,6 +475,7 @@ class App extends Component {
                 getAllBooks={this.getAllBooks}
                 logoutUser={this.logoutUser}
                 isLoggedIn={this.state.isLoggedIn}
+                showSlideInMenu={this.showSlideInMenu}
               />
             </span>
           ) : (
@@ -575,17 +511,19 @@ class App extends Component {
                 userSearch={this.state.userSearch}
                 sendToCart={this.sendToCart}
                 updateParentState={this.updateParentState}
+                showSlideInMenu={this.state.showSlideInMenu}
+                hideSlideInMenu={this.hideSlideInMenu}
               />
             } />
             <Route exact path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
-            <Route exact path="/contact" render={() => 
-              <Contact 
+            <Route exact path="/contact" render={() =>
+              <Contact
                 setRedirectToHome={this.setRedirectToHome}
               />
             } />
             <Route exact path="/orders" render={() =>
-              <Orders 
+              <Orders
                 user={this.state.user}
                 sendToCart={this.sendToCart}
               />
@@ -600,7 +538,7 @@ class App extends Component {
                 sendToCart={this.sendToCart}
               />
             } />
-            <Route exact path="/success" render={() => 
+            <Route exact path="/success" render={() =>
               <Success
                 user={this.state.user}
                 cart={this.state.cart}
