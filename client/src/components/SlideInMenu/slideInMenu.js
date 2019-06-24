@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import onClickOutside from "react-onclickoutside";
+// import onClickOutside from "react-onclickoutside";
 import "./slideInMenu.css";
 
 class SlideInMenu extends Component {
@@ -32,10 +32,10 @@ class SlideInMenu extends Component {
         }
     }
 
-    handleClickOutside = (event) => {
-        event.preventDefault();
-        this.props.hideSlideInMenu();
-    }
+    // handleClickOutside = (event) => {
+    //     event.preventDefault();
+    //     this.props.hideSlideInMenu();
+    // }
 
     render() {
         return (
@@ -66,6 +66,7 @@ class SlideInMenu extends Component {
                     {this.state.isLoggedIn ? (
                         <li>
                             <button
+                                className="button btn-sm"
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.logoutUser();
@@ -85,4 +86,4 @@ class SlideInMenu extends Component {
     }
 }
 
-export default onClickOutside(SlideInMenu);
+export default SlideInMenu;
