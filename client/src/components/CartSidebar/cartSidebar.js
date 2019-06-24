@@ -6,7 +6,7 @@ import "./cartSidebar.css";
 class CartSidebar extends Component {
     render() {
         return (
-            <span>
+            <div className="cartSidebar">
                 {this.props.cart && this.props.cart.length > 0 ? (
                     <CartSummary 
                         user={this.props.user}
@@ -23,7 +23,7 @@ class CartSidebar extends Component {
                     positionClass={`cart-empty-{this.props.cart && this.props.cart.length > 0}`}
                     sendToCart={this.props.sendToCart}
                 />
-            </span>
+            </div>
         )
     }
 }
