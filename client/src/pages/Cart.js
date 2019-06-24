@@ -12,7 +12,16 @@ class Cart extends Component {
 
         this.state = {
             user: null,
-            cart: [],
+            cart: [
+                {
+                    title: "The Old Man and the Sea",
+                    authorFirst: "Ernest",
+                    authorLast: "Hemmingway",
+                    avail: "avail",
+                    price: "5.00",
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+                }
+            ],
             subtotal: 0,
         }
     }
@@ -75,8 +84,6 @@ class Cart extends Component {
 
         this.setState({
             subtotal: subtotal,
-        }, () => {
-            console.log("Subtotal", this.state.subtotal);
         });
     }
 
@@ -86,8 +93,8 @@ class Cart extends Component {
                 <div className="cartContainer">
                     {this.props.cart && this.props.cart.length > 0 ? (
                         <div className="cartHeader">
-                            <div id="cartTitle">Shopping Cart</div>
-                            <div id="cartPrice">Price</div>
+                            <div id="cartTitleLabel">Shopping Cart</div>
+                            <div id="cartPriceLabel">Price</div>
                         </div>
                     ) : (
                         <></>
