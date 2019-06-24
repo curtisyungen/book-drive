@@ -82,7 +82,7 @@ class Cart extends Component {
 
     render() {
         return (
-            <span>
+            <span className="cart">
                 <div
                     className="cartContainer"
                 >
