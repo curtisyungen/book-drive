@@ -10,13 +10,15 @@
 
 .cartItem {
     border: 1px solid lightgray;
-    border-radius: 4px;
+    border-left: 0px;
+    border-right: 0px;
     display: flex;
     flex-direction: row;
     font-family: "Arial";
     height: 175px;
+    margin-top: 10px
     min-height: 75px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     width: calc(100vw - 700px);
 }
 
