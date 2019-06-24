@@ -55,9 +55,6 @@
     .cartSummary {
         background: #fff;
         border-radius: 0px;
-        position: absolute;
-        right: 0;
-        top: 100px;
         width: 100%;
     }
 }
