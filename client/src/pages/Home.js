@@ -27,6 +27,7 @@ class Home extends Component {
             availFilter: null,
             formatFilter: null,
             subjectFilter: null,
+            filterString: null,
         }
     }
 
@@ -73,13 +74,18 @@ class Home extends Component {
         if (filter === "avail") {
             filter = "Available";
         }
-        else {
+        else if (filter === "unavail") {
             filter = "Unavailable";
+        }
+        else {
+            filter = null;
         }
 
         this.setState({
             availFilter: filter,
             activeFilter: true,
+        }, () => {
+            this.setFilterString();
         });
     }
 
@@ -87,13 +93,18 @@ class Home extends Component {
         if (filter === "soft") {
             filter = "Paperback";
         }
-        else {
+        else if (filter === "hard") {
             filter = "Hardcover";
+        }
+        else {
+            filter = null;
         }
 
         this.setState({
             formatFilter: filter,
             activeFilter: true,
+        }, () => {
+            this.setFilterString();
         });
     }
 
@@ -112,6 +123,29 @@ class Home extends Component {
         this.setState({
             subjectFilter: filter,
             activeFilter: true,
+        }, () => {
+            this.setFilterString();
+        });
+    }
+
+    setFilterString = () => {
+        let filterString = "";
+        let filters = [];
+
+        if (this.state.availFilter) {
+            filters.push(this.state.availFilter);
+        }
+        if (this.state.formatFilter) {
+            filters.push(this.state.formatFilter);
+        }
+        if (this.state.subjectFilter) {
+            filters.push(this.state.subjectFilter);
+        }
+
+        filterString = filters.join(" : ");
+
+        this.setState({
+            filterString: filterString,
         });
     }
 
@@ -184,9 +218,7 @@ class Home extends Component {
                             {this.state.books.length}
                             &nbsp;results&nbsp;
                             {this.state.activeFilter ? (
-                                `for ${this.state.availFilter ? (this.state.availFilter):(null)} : 
-                                ${this.state.formatFilter ? (this.state.formatFilter):(null)} : 
-                                ${this.state.subjectFilter ? (this.state.subjectFilter):(null)}`
+                                this.state.filterString
                             ) : (
                                 null
                             )}
