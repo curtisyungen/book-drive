@@ -1,14 +1,14 @@
 .cartSidebar {
     height: auto;
-    min-height: 770px;
     position: absolute;
-    top: 95px;
+    top: 10px;
     width: 100vw;
 }
 
 @media only screen and (max-width: 420px) {
     .cartSidebar {
-        margin-top: -592px;
         min-height: 0px;
+        position: absolute;
+        top: 195px;
     }
 }
