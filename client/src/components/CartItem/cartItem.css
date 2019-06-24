@@ -16,7 +16,7 @@
     flex-direction: row;
     font-family: "Arial";
     height: 175px;
-    margin-top: 10px
+    margin-top: 10px;
     min-height: 75px;
     padding: 10px 10px;
     width: calc(100vw - 700px);
