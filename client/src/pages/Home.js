@@ -28,7 +28,6 @@ class Home extends Component {
             formatFilter: null,
             subjectFilter: null,
             filterString: null,
-            showSlideInMenu: false,
         }
     }
 
