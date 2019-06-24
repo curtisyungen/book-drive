@@ -285,22 +285,21 @@ class App extends Component {
         let filteredBooks = res.data;
 
         if (availFilter !== null && availFilter !== "") {
-          filteredBooks = filteredBooks.filter(book => {
-            book.avail === availFilter;
-          });
+          filteredBooks = filteredBooks.filter(book => (
+            book.avail === availFilter
+          ));
         }
 
         if (formatFilter !== null && formatFilter !== "") {
-          filteredBooks = filteredBooks.filter(book => {
-            book.cover === formatFilter;
-          });
+          filteredBooks = filteredBooks.filter(book => (
+            book.cover === formatFilter
+          ));
         }
 
         if (availFilter !== null && availFilter !== "") {
-          filteredBooks = filteredBooks.filter(book => {
-            console.log(book);
-            book.tags.indexOf(subjectFilter) > -1;
-          });
+          filteredBooks = filteredBooks.filter(book => (
+            book.tags.indexOf(subjectFilter) > -1
+          ));
         }
 
         console.log(filteredBooks);
