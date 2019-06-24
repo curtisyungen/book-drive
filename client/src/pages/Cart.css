@@ -31,9 +31,9 @@
 }
 
 @media only screen and (max-width: 420px) {
-
     .cartContainer {
         margin-left: 0px;
         margin-right: 0px;
+        margin-top: 160px;
     }
 }
