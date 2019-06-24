@@ -1,3 +1,6 @@
-p {
-    color: black;
+.cartSidebar {
+    height: auto;
+    min-height: 250px;
+    position: relative;
+    width: 100vw;
 }
