@@ -1,9 +1,8 @@
 .cartContainer {
-    height: 100vh;
-    margin-bottom: 100px;
-    margin-left: 100px;
-    margin-top: 10px;
-    width: 1000px;
+    height: auto;
+    margin: 10px 2% 100px 2%;
+    max-width: 1000px;
+    width: auto;
 }
 
 .cartIsEmpty {
