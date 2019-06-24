@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Container from "../components/Container/container";
 import Book from "../components/Book/book";
 import Sidebar from "../components/Sidebar/sidebar";
 import Footer from "../components/Footer/footer";
@@ -22,9 +21,12 @@ class Home extends Component {
                 }
             ],
             message: "Loading...",
-            activeFilter: "Books",
             userSearch: "",
             sortOption: "",
+            activeFilter: false,
+            availFilter: null,
+            formatFilter: null,
+            subjectFilter: null,
         }
     }
 
@@ -55,29 +57,61 @@ class Home extends Component {
         }
     }
 
-    setActiveFilter = (filter) => {
-
-        let activeFilter;
-        if (filter) {
-            activeFilter = filter.charAt(0).toUpperCase() + filter.substr(1);
+    setFilter = (key, filter) => {
+        if (key === "avail") {
+            this.setAvailFilter(filter);
         }
+        else if (key === "format") {
+            this.setFormatFilter(filter);
+        }
+        else if (key === "subject") {
+            this.setSubjectFilter(filter);
+        }
+    }
 
-        switch (filter) {
-            case "avail": activeFilter = "Available"; break;
-            case "unavail": activeFilter = "Unavailable"; break;
-            case "nonfict": activeFilter = "Non-fiction"; break;
-            case "selfhelp": activeFilter = "Self-Help"; break;
-            case "real estate": activeFilter = "Real Estate"; break;
-            case "social": activeFilter = "Social Skills"; break;
-            case "speaking": activeFilter = "Public Speaking"; break;
-            case "money": activeFilter = "Money/Investing"; break;
-            case "": activeFilter = "Books"; break;
-            case null: activeFilter = "Books"; break;
-            default: activeFilter = activeFilter;
+    setAvailFilter = (filter) => {
+        if (filter === "avail") {
+            filter = "Available";
+        }
+        else {
+            filter = "Unavailable";
         }
 
         this.setState({
-            activeFilter: activeFilter,
+            availFilter: filter,
+            activeFilter: true,
+        });
+    }
+
+    setFormatFilter = (filter) => {
+        if (filter === "soft") {
+            filter = "Paperback";
+        }
+        else {
+            filter = "Hardcover";
+        }
+
+        this.setState({
+            formatFilter: filter,
+            activeFilter: true,
+        });
+    }
+
+    setSubjectFilter = (filter) => {
+        switch (filter) {
+            case "nonfict": filter = "Non-fiction"; break;
+            case "real estate": filter = "Real Estate"; break;
+            case "social": filter = "Social Skills"; break;
+            case "speaking": filter = "Public Speaking"; break;
+            case "money": filter = "Money/Investing"; break;
+            case "": filter = ""; break;
+            case null: filter = null; break;
+            default: filter = filter.charAt(0).toUpperCase() + filter.substr(1);
+        }
+
+        this.setState({
+            subjectFilter: filter,
+            activeFilter: true,
         });
     }
 
@@ -149,8 +183,13 @@ class Home extends Component {
                         <span>
                             {this.state.books.length}
                             &nbsp;results&nbsp;
-                    {this.state.activeFilter ? (`for ${this.state.activeFilter}`) : (null)}
-                            {this.state.userSearch ? (`: "${this.state.userSearch}"`) : (null)}
+                            {this.state.activeFilter ? (
+                                `for ${this.state.availFilter ? (this.state.availFilter):(null)} : 
+                                ${this.state.formatFilter ? (this.state.formatFilter):(null)} : 
+                                ${this.state.subjectFilter ? (this.state.subjectFilter):(null)}`
+                            ) : (
+                                null
+                            )}
                         </span>
 
                         <select
