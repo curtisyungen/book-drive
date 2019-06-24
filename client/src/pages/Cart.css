@@ -25,6 +25,7 @@
 #cartTitle {
     font-size: 24px;
     font-weight: 600;
+    min-height: 400px;
     padding-bottom: 12px;
     text-align: left;
 }
