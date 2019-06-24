@@ -218,12 +218,8 @@ class Home extends Component {
 
                     <Sidebar
                         getAllBooks={this.props.getAllBooks}
-                        getAvailableBooks={this.props.getAvailableBooks}
-                        getUnavailableBooks={this.props.getUnavailableBooks}
-                        getPaperbacks={this.props.getPaperbacks}
-                        getHardcovers={this.props.getHardcovers}
-                        getSubject={this.props.getSubject}
                         setActiveFilter={this.setActiveFilter}
+                        setFilter={this.setFilter}
                         getFilteredBooks={this.props.getFilteredBooks}
                     />
 
