@@ -142,10 +142,16 @@ class Home extends Component {
             filters.push(this.state.subjectFilter);
         }
 
+        let activeFilter = true;
+        if (!(this.state.availFilter || this.state.formatFilter || this.state.subjectFilter)) {
+            activeFilter = false;
+        }
+
         filterString = filters.join(" : ");
 
         this.setState({
             filterString: filterString,
+            activeFilter: activeFilter,
         });
     }
 
@@ -218,7 +224,7 @@ class Home extends Component {
                             {this.state.books.length}
                             &nbsp;results&nbsp;
                             {this.state.activeFilter ? (
-                                this.state.filterString
+                                `for ${this.state.filterString}`
                             ) : (
                                 null
                             )}
