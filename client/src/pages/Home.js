@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Book from "../components/Book/book";
 import Sidebar from "../components/Sidebar/sidebar";
-import SlideInMenu from "../components/SlideInMenu/slideInMenu";
 import Footer from "../components/Footer/footer";
 import "./Home.css";
 
@@ -260,11 +259,6 @@ class Home extends Component {
                             Back to top
                         </button>
                     </div> */}
-
-                    <SlideInMenu 
-                        show={this.props.showSlideInMenu}
-                        hideSlideInMenu={this.props.hideSlideInMenu}
-                    />
 
                     {/* SIDE BAR */}
 
