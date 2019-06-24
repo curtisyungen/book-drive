@@ -40,7 +40,7 @@ class CartItem extends Component {
             <tr
                 className="cartItem"
             >
-                <td>
+                <td className="cartItemInfo">
                     <img className="cartCover" src={this.props.imageURL} alt={this.props.title} />
                     <a href="/" className="cartTitle">
                         {this.props.title}

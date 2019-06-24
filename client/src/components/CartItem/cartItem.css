@@ -16,6 +16,11 @@
     width: 100%;
 }
 
+.cartItemInfo {
+    min-width: 550px;
+    width: auto;
+}
+
 .cartPrice {
     color: brown;
     font-size: 18px;
