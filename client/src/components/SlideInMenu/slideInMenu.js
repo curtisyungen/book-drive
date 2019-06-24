@@ -52,6 +52,12 @@ class SlideInMenu extends Component {
                     <li>
                         <a href="/contact">Contact</a>
                     </li>
+                    <li>
+                        <a href="/cart">Cart</a>
+                    </li>
+                    <li>
+                        <a href="/">Sign out</a>
+                    </li>
                 </ul>
             </div>
         )
