@@ -1,3 +1,7 @@
+.cart {
+    min-width: 500px;
+}
+
 .cartContainer {
     height: auto;
     margin: 15px 250px;
