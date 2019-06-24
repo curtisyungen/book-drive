@@ -3,8 +3,9 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     margin: 0px auto;
+    max-width: 500px;
     padding: 14px 18px;
-    width: 500px;
+    width: auto;
 }
 
 .contactFormDiv {
