@@ -85,28 +85,26 @@ class Cart extends Component {
             <span className="cart">
                 <div className="cartContainer">
                     {this.props.cart && this.props.cart.length > 0 ? (
-                        <div>
+                        <div className="cartHeader">
                             <span id="cartTitle">Shopping Cart</span>
-                            <span>Price</span>
+                            <span id="cartPrice">Price</span>
                         </div>
                     ) : (
-                            <></>
-                        )}
+                        <></>
+                    )}
 
                     {this.props.cart && this.props.cart.length > 0 ? (
-                        <span>
-                            {this.props.cart.map(book => (
-                                <CartItem
-                                    key={book.title}
-                                    title={book.title}
-                                    authorFirst={book.authorFirst}
-                                    authorLast={book.authorLast}
-                                    price={book.price}
-                                    imageURL={book.imageURL}
-                                    deleteFromCart={this.props.deleteFromCart}
-                                />
-                            ))}
-                        </span>
+                        this.props.cart.map(book => (
+                            <CartItem
+                                key={book.title}
+                                title={book.title}
+                                authorFirst={book.authorFirst}
+                                authorLast={book.authorLast}
+                                price={book.price}
+                                imageURL={book.imageURL}
+                                deleteFromCart={this.props.deleteFromCart}
+                            />
+                        ))
                     ) : (
                             <div>
                                 {this.state.isLoggedIn ? (
@@ -121,7 +119,7 @@ class Cart extends Component {
                                             The price and availability of items at Congo.com are subject to change.
                                             The Cart is a temporary place to store a list of your items and reflects each item's
                                             most recent price.
-                                                </p>
+                                        </p>
                                     )}
                             </div>
                         )}
