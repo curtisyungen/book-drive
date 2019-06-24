@@ -45,4 +45,9 @@
         margin-right: 0px;
         margin-top: 160px;
     }
+
+    #cartTitleLabel {
+        min-width: 310px;
+        width: auto;
+    }
 }
