@@ -21,8 +21,12 @@
     font-size: 13px;
 }
 
+#cartPriceLabel {
+    vertical-align: top;
+}
 
-#cartTitle {
+
+#cartTitleLabel {
     font-size: 24px;
     font-weight: 600;
     min-width: 400px;
