@@ -94,7 +94,6 @@ class Cart extends Component {
                                 <tr>
                                     <th id="cartTitle">Shopping Cart</th>
                                     <th>Price</th>
-                                    <th>Quantity</th>
                                 </tr>
                             </thead>
                         ) : (
