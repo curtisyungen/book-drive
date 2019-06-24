@@ -62,7 +62,7 @@ class Sidebar extends Component {
             filterAvail: filterFormat,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
-            this.props.setActiveFilter(filter);
+            this.props.setFilter("avail", filter);
         });
     }
 
@@ -78,7 +78,7 @@ class Sidebar extends Component {
             filterFormat: filterFormat,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
-            this.props.setActiveFilter(filter);
+            this.props.setFilter("format", filter);
         });
     }
 
@@ -94,7 +94,7 @@ class Sidebar extends Component {
             filterSubject: filterFormat,
         }, () => {
             this.props.getFilteredBooks(this.state.availFilter, this.state.formatFilter, this.state.subjectFilter);
-            this.props.setActiveFilter(filter);
+            this.props.setFilter("subject", filter);
         });
     }
 
