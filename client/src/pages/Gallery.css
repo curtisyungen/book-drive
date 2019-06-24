@@ -63,3 +63,39 @@
 .right {
     float: right;
 }
+
+@media only screen and (max-width: 420px) {
+    .allBooks, 
+    .fiftyBooks,
+    .politics {
+        max-width: 400px !important;
+    }
+    
+    .galleryImg {
+        display: block;
+        margin: 5px 5px;
+        max-width: 400px;
+    }
+
+    .left, .right {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .allBooks, 
+    .fiftyBooks,
+    .politics {
+        max-width: 365px !important;
+    }
+    
+    .galleryImg {
+        display: block;
+        margin: 5px 5px;
+        max-width: 365px;
+    }
+
+    .left, .right {
+        float: none;
+    }
+}
