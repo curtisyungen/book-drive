@@ -3,6 +3,18 @@
     font-size: 13px;
 }
 
+.cartBookTitle {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.cartBookTitle:hover {
+    color: brown;
+}
+
 .cartCover {
     height: 150px;
     margin-right: 10px;
@@ -38,18 +50,6 @@
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-}
-
-.cartTitle {
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 400;
-    margin-left: 5px;
-    padding: 0;
-}
-
-.cartTitle:hover {
-    color: brown;
 }
 
 .deleteFromCart {
