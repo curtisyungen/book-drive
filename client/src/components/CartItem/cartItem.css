@@ -8,6 +8,11 @@
     margin-right: 10px;
 }
 
+.cartHeader {
+    display: flex;
+    flex-direction: row;
+}
+
 .cartItem {
     border: 1px solid lightgray;
     border-left: 0px;
@@ -19,7 +24,7 @@
     margin-top: 10px;
     min-height: 75px;
     padding: 10px 10px;
-    width: calc(100vw - 700px);
+    width: calc(100vw - 450px);
 }
 
 .cartItemInfo {
