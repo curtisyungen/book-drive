@@ -1,6 +1,7 @@
 .cartContainer {
     height: auto;
-    margin: 10px 2% 100px 2%;
+    margin: 15px 250px;
+    margin-bottom: 100px;
     max-width: 1000px;
     min-height: 700px;
     width: auto;
@@ -18,7 +19,8 @@
 }
 
 .cartTable {
-    width: 100%;
+    min-width: 600px;
+    width: auto;
 }
 
 .cartTable td {
