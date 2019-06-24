@@ -86,8 +86,8 @@ class Cart extends Component {
                 <div className="cartContainer">
                     {this.props.cart && this.props.cart.length > 0 ? (
                         <div className="cartHeader">
-                            <span id="cartTitle">Shopping Cart</span>
-                            <span id="cartPrice">Price</span>
+                            <div id="cartTitle">Shopping Cart</div>
+                            <div id="cartPrice">Price</div>
                         </div>
                     ) : (
                         <></>
