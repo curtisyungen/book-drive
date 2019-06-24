@@ -490,6 +490,9 @@ class App extends Component {
           <SlideInMenu
             show={this.state.showSlideInMenu}
             hideSlideInMenu={this.hideSlideInMenu}
+            isLoggedIn={this.state.isLoggedIn}
+            user={this.state.user}
+            logoutUser={this.logoutUser}
           />
 
           <UnderConstruction />
