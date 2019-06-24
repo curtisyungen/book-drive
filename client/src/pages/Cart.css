@@ -43,3 +43,10 @@
     padding-bottom: 12px;
     text-align: left;
 }
+
+@media only screen and (max-width: 420px) {
+    .cartTable {
+        height: auto;
+        margin-top: 160px;
+    }
+}

@@ -49,3 +49,13 @@
     margin: 0;
     padding: 0;
 }
+
+@media only screen and (max-width: 420px) {
+    .cartSummary {
+        background: #fff;
+        border-radius: 0px;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+    }
+}
