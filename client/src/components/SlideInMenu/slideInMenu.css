@@ -33,13 +33,17 @@
   border-right: 1px solid lightgray;
   color: black;
   height: 100vh;
-  line-height: 35px;
+  line-height: 45px;
   padding: 15px;
   padding-left: 25px;
   position: absolute;
   top: 0;
   width: 250px;
   z-index: 100;
+}
+
+.slideInMenu a {
+  color: black;
 }
 
 .slideInName {
@@ -50,6 +54,6 @@
   margin-left: -25px;
   margin-top: -15px;
   padding-left: 25px;
-  padding-top: 6px;
+  padding-top: 2px;
   width: 250px;
 }
