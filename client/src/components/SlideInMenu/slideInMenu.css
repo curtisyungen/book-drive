@@ -1,4 +1,5 @@
 .hide {
+  display: none;
   left: -320px;
   -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -20,6 +21,7 @@
 } */
 
 .show {
+    display: inline;
     left: 0px;
 
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
