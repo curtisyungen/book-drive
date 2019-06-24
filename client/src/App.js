@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import Signup from "./pages/Signup";
+import SlideInMenu from "./components/SlideInMenu/slideInMenu";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -425,6 +426,9 @@ class App extends Component {
     }
   }
 
+  // RESPONSIVE VIEW
+  // =========================================
+
   showSlideInMenu = () => {
     this.setState({
       showSlideInMenu: "show",
@@ -481,6 +485,11 @@ class App extends Component {
           ) : (
               <></>
             )}
+
+          <SlideInMenu
+            show={this.state.showSlideInMenu}
+            hideSlideInMenu={this.hideSlideInMenu}
+          />
 
           <UnderConstruction />
 
