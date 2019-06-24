@@ -9,12 +9,16 @@ class SlideInMenu extends Component {
 
         this.state = {
             show: "show",
+            isLoggedIn: false,
+            user: null,
         }
     }
 
     componentDidMount = () => {
         this.setState({
             show: this.props.show,
+            isLoggedIn: this.props.isLoggedIn,
+            user: this.props.user,
         });
     }
 
@@ -22,6 +26,8 @@ class SlideInMenu extends Component {
         if (prevProps.show !== this.props.show) {
             this.setState({
                 show: this.props.show,
+                isLoggedIn: this.props.isLoggedIn,
+                user: this.props.user,
             })
         }
     }
@@ -36,12 +42,14 @@ class SlideInMenu extends Component {
             <div
                 className={`slideInMenu ${this.props.show}`}
             >
-                <div className="slideInName">
-                    Hello, name
-                </div>
+                {this.state.isLoggedIn && this.state.user !== null ? (
+                    <div className="slideInName">Hello, {this.state.user.name}</div>
+                ) : (
+                    <div className="slideInName">Hello, Sign in</div>
+                )}
                 <ul>
                     <li>
-                        <a href="/home">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
                         <a href="/about">About</a>
@@ -55,9 +63,22 @@ class SlideInMenu extends Component {
                     <li>
                         <a href="/cart">Cart</a>
                     </li>
-                    <li>
-                        <a href="/">Sign out</a>
-                    </li>
+                    {this.state.isLoggedIn ? (
+                        <li>
+                            <button
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.props.logoutUser();
+                                }}
+                            >
+                                Sign out
+                            </button>
+                        </li>
+                    ) : (
+                        <li>
+                            <a href="/signin">Sign in</a>
+                        </li>
+                    )}
                 </ul>
             </div>
         )
