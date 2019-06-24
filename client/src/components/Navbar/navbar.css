@@ -207,10 +207,20 @@
 
     .navbar {
         height: 138px;
+        min-height: 138px;
+        z-index: 99;
     }
 
     #navbarMenu {
-        display: none;
+        background: #343a40;
+        border: 1px solid black;
+        border-radius: 4px;
+        left: 15px;
+        min-width: 200px;
+        padding: 5px;
+        position: fixed;
+        top: 100px;
+        width: auto;
     }
 
     .navbar-advert {
@@ -221,6 +231,10 @@
         left: 15px;
         position: absolute;
         top: 15px;
+    }
+    
+    .nav-menu-link {
+        border: none;
     }
 
     .searchBox {
