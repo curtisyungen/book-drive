@@ -19,6 +19,8 @@
 .cartIsEmptyNote {
     font-family: "Arial";
     font-size: 13px;
+    min-width: 300px;
+    width: calc(100vw - 400px);
 }
 
 #cartPriceLabel {
