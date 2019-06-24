@@ -37,10 +37,10 @@ class CartItem extends Component {
 
     render() {
         return (
-            <tr
+            <div
                 className="cartItem"
             >
-                <td className="cartItemInfo">
+                <div className="cartItemInfo">
                     <img className="cartCover" src={this.props.imageURL} alt={this.props.title} />
                     <a href="/" className="cartTitle">
                         {this.props.title}
@@ -54,12 +54,12 @@ class CartItem extends Component {
                     >
                         Delete
                     </div>
-                </td>
+                </div>
 
-                <td className="cartPrice">
+                <div className="cartPrice">
                     {`$${parseFloat(Math.round(this.props.price * 100) / 100).toFixed(2)}`}
-                </td>
-            </tr>
+                </div>
+            </div>
         )
     }
 }

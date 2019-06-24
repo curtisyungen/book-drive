@@ -86,42 +86,38 @@ class Cart extends Component {
                 <div
                     className="cartContainer"
                 >
-                    <table
+                    <div
                         className="cartTable"
                     >
                         {this.props.cart && this.props.cart.length > 0 ? (
-                            <thead>
-                                <tr>
-                                    <th id="cartTitle">Shopping Cart</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
+                            <div>
+                                <span id="cartTitle">Shopping Cart</span>
+                                <span>Price</span>
+                            </div>
                         ) : (
                                 <></>
                             )}
 
-                        <tbody>
-                            {this.props.cart && this.props.cart.length > 0 ? (
-                                <span>
-                                    {this.props.cart.map(book => (
-                                        <CartItem
-                                            key={book.title}
-                                            title={book.title}
-                                            authorFirst={book.authorFirst}
-                                            authorLast={book.authorLast}
-                                            price={book.price}
-                                            imageURL={book.imageURL}
-                                            deleteFromCart={this.props.deleteFromCart}
-                                        />
-                                    ))}
-                                </span>
-                            ) : (
-                                    <tr>
-                                        <td>
-                                            {this.state.isLoggedIn ? (
-                                                <p className="cartIsEmpty">Your shopping cart is empty.</p>
-                                            ): (
-                                                <p className = "cartIsEmptyNote">
+                        {this.props.cart && this.props.cart.length > 0 ? (
+                            <span>
+                                {this.props.cart.map(book => (
+                                    <CartItem
+                                        key={book.title}
+                                        title={book.title}
+                                        authorFirst={book.authorFirst}
+                                        authorLast={book.authorLast}
+                                        price={book.price}
+                                        imageURL={book.imageURL}
+                                        deleteFromCart={this.props.deleteFromCart}
+                                    />
+                                ))}
+                            </span>
+                        ) : (
+                                <div>
+                                    {this.state.isLoggedIn ? (
+                                        <p className="cartIsEmpty">Your shopping cart is empty.</p>
+                                    ) : (
+                                            <p className="cartIsEmptyNote">
                                                 Your Shopping Cart lives to serve.
                                                 Give it purpose — fill it with books about business, psychology, speaking, sales, and more.
                                                 If you already have an account,&nbsp;
@@ -131,12 +127,10 @@ class Cart extends Component {
                                                 The Cart is a temporary place to store a list of your items and reflects each item's
                                                 most recent price.
                                                 </p>
-                                            )}                                        
-                                        </td>
-                                    </tr>
-                        )}
-                        </tbody>
-                    </table>
+                                        )}
+                                </div>
+                            )}
+                    </div>
                 </div>
 
                 <CartSidebar
