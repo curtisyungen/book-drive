@@ -77,7 +77,7 @@ class SlideInMenu extends Component {
                         </li>
                     ) : (
                         <li>
-                            <a href="/signin">Sign in</a>
+                            <a href="/login">Sign in</a>
                         </li>
                     )}
                 </ul>
