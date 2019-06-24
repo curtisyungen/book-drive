@@ -115,6 +115,7 @@ class Home extends Component {
             case "social": filter = "Social Skills"; break;
             case "speaking": filter = "Public Speaking"; break;
             case "money": filter = "Money/Investing"; break;
+            case "selfhelp": filter = "Self-help"; break;
             case "": filter = ""; break;
             case null: filter = null; break;
             default: filter = filter.charAt(0).toUpperCase() + filter.substr(1);
