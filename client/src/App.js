@@ -285,9 +285,17 @@ class App extends Component {
         let filteredBooks = res.data;
 
         if (availFilter !== null && availFilter !== "") {
-          filteredBooks = filteredBooks.filter(book => (
-            book.avail === availFilter
-          ));
+
+          if (availFilter === "unavail") {
+            filteredBooks = filteredBooks.filter(book => (
+              book.avail !== "avail"
+            ));
+          }
+          else {
+            filteredBooks = filteredBooks.filter(book => (
+              book.avail === availFilter
+            ));
+          }          
         }
 
         if (formatFilter !== null && formatFilter !== "") {
@@ -296,7 +304,7 @@ class App extends Component {
           ));
         }
 
-        if (availFilter !== null && availFilter !== "") {
+        if (subjectFilter !== null && subjectFilter !== "") {
           filteredBooks = filteredBooks.filter(book => (
             book.tags.indexOf(subjectFilter) > -1
           ));
