@@ -279,10 +279,34 @@ class App extends Component {
     
     console.log("Filters", availFilter, formatFilter, subjectFilter);
 
-    API.getFilteredBooks(availFilter, formatFilter, subjectFilter)
+    API.getAllBooks()
       .then((res) => {
+
+        let filteredBooks = res.data;
+
+        if (availFilter !== null && availFilter !== "") {
+          filteredBooks = filteredBooks.filter(book => {
+            book.avail === availFilter;
+          });
+        }
+
+        if (formatFilter !== null && formatFilter !== "") {
+          filteredBooks = filteredBooks.filter(book => {
+            book.cover === formatFilter;
+          });
+        }
+
+        if (availFilter !== null && availFilter !== "") {
+          filteredBooks = filteredBooks.filter(book => {
+            console.log(book);
+            book.tags.indexOf(subjectFilter) > -1;
+          });
+        }
+
+        console.log(filteredBooks);
+
         this.setState({
-          books: res.data,
+          books: filteredBooks,
         });
       })
       .catch((err) => {
