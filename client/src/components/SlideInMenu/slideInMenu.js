@@ -43,7 +43,7 @@ class SlideInMenu extends Component {
         }
 
         this.setState({
-            showFiltersMenu = status,
+            showFiltersMenu: status,
         });
     }
 
