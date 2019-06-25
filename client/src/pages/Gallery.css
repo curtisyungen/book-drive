@@ -68,7 +68,7 @@
     .allBooks, 
     .fiftyBooks,
     .politics {
-        max-width: 400px !important;
+        max-width: 405px !important;
     }
     
     .gallery, 
@@ -80,7 +80,7 @@
     .galleryImg {
         display: block;
         margin: 5px 5px;
-        max-width: 400px;
+        max-width: 405px;
     }
 
     .left, .right {
@@ -92,7 +92,7 @@
     .allBooks, 
     .fiftyBooks,
     .politics {
-        max-width: 365px !important;
+        max-width: 355px !important;
     }
 
     .gallery, 
@@ -104,7 +104,7 @@
     .galleryImg {
         display: block;
         margin: 5px 5px;
-        max-width: 365px;
+        max-width: 355px;
     }
 
     .left, .right {
@@ -115,7 +115,7 @@
 @media only screen and (max-width: 325px) {
     .gallery, 
     .galleryHeader {
-        max-width: 325px;
+        max-width: 310px;
         width: 100%;
     }
 
