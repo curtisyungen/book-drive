@@ -361,6 +361,7 @@ class App extends Component {
         cart: cart,
       }, () => {
         alert("Added to cart!");
+        window.location.reload();
       });
     }
 
