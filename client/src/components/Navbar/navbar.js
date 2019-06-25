@@ -34,6 +34,8 @@ class Navbar extends Component {
         if (prevProps.isLoggedIn !== this.props.isLoggedIn && !this.state.isLoggedIn) {
             this.getUserFromLocalStorage();
         }
+
+        console.log(this.props);
     }
 
     getUserFromLocalStorage = () => {

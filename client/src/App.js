@@ -361,11 +361,10 @@ class App extends Component {
         cart: cart,
       }, () => {
         alert("Added to cart!");
+        sessionStorage.setItem("cart", JSON.stringify(cart));
         window.location.reload();
       });
     }
-
-    sessionStorage.setItem("cart", JSON.stringify(cart));
   }
 
   addToCart = (book) => {
