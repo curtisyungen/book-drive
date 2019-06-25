@@ -55,7 +55,7 @@ class CartSummary extends Component {
 
         API.payUsingPayPal(total)
             .then((res) => {
-                alert(res.data.links[1]);
+                alert(JSON.parse(res.data.links[1]));
                 let idx;
                 for (var link in res.data.links) {
                     if (res.data.links[link].rel === "approval_url") {
