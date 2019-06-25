@@ -88,8 +88,8 @@ class Cart extends Component {
                         <></>
                     )}
 
-                    {this.props.cart && this.props.cart.length > 0 ? (
-                        this.props.cart.map(book => (
+                    {this.state.cart && this.state.cart.length > 0 ? (
+                        this.state.cart.map(book => (
                             <CartItem
                                 key={book.title}
                                 title={book.title}
