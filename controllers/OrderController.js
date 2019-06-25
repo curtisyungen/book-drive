@@ -58,7 +58,7 @@ class OrderController {
             text: `
             Hi ${req.body.name},
 
-            Thank you for your order! Your books will be shipped within 1-2 days.
+            Thank you for your order! Your books will be shipped within the next 1-2 days.
             
             Here's a summary of your order: 
 
@@ -73,6 +73,9 @@ class OrderController {
 
             Total Price: 
             $${(Math.round(req.body.totalPrice * 100) / 100).toFixed(2)}
+
+            If you have questions, concerns, or would like to make changes to your order, simply respond to this email and
+            we will be happy to assist you.
 
             Sincerely, 
 
