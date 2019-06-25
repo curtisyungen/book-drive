@@ -29,12 +29,12 @@ class BookSuggestions extends Component {
             displayClass: this.props.displayClass,
         });
 
-        // API.getBookSuggestions()
-        //     .then((res) => {
-        //         this.setState({
-        //             suggestions: res.data,
-        //         });
-        //     });
+        API.getBookSuggestions()
+            .then((res) => {
+                this.setState({
+                    suggestions: res.data,
+                });
+            });
     }
 
     sendToCart = (book) => {
