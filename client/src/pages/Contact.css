@@ -27,3 +27,15 @@
     text-rendering: optimizeLegibility;
     width: 100vw;
 }
+
+@media only screen and (max-width: 365px) {
+    .contactHeader {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .contactHeader {
+        font-size: 24px;
+    }
+}
