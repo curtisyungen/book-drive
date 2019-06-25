@@ -58,8 +58,8 @@
     cursor: pointer;
     font-family: "Arial";
     font-size: 12px;
-    margin-left: -5px;
-    margin-top: -20px;
+    margin-left: 0px;
+    margin-top: 15px;
 }
 
 @media only screen and (max-width: 420px) {
