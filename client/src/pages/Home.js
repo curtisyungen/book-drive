@@ -232,7 +232,7 @@ class Home extends Component {
                             {this.state.books.length}
                             &nbsp;results&nbsp;
                             {this.state.activeFilter ? (
-                                `for ${this.state.filterString}`
+                                `for ${<span className="filterString">{this.state.filterString}</span>}`
                             ) : (
                                 null
                             )}
