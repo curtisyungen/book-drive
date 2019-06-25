@@ -3,11 +3,17 @@
     border-right: 1px solid lightgray;
     color: black;
     height: auto;
-    line-height: 1.3;
-    padding: 15px;
-    padding-left: 25px;
+    line-height: 1.5;
+    padding: 10px 20px;
     position: absolute;
     top: 0;
+}
+
+.filterOptions-sidebar {
+    width: 210px;
+}
+
+.filterOptions-slideIn {
     width: 250px;
 }
 

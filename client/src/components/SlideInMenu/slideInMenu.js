@@ -97,12 +97,18 @@ class SlideInMenu extends Component {
                         </div>
 
                         {this.props.showFiltersMenu ? (
-                            <FilterOptions
-                                getAllBooks={this.props.getAllBooks}
-                                getFilteredBooks={this.props.getFilteredBooks}
-                                setFilter={this.setFilter}
-                                showFiltersMenu={this.state.showFiltersMenu}
-                            />
+
+                            <span>
+                                <div>MAIN MENU</div>
+
+                                <FilterOptions
+                                    getAllBooks={this.props.getAllBooks}
+                                    getFilteredBooks={this.props.getFilteredBooks}
+                                    setFilter={this.setFilter}
+                                    showFiltersMenu={this.state.showFiltersMenu}
+                                    source="slideIn"
+                                />
+                            </span>
                         ) : (
                             <></>
                         )}

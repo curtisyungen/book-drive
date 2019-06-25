@@ -12,6 +12,7 @@ class Sidebar extends Component {
                     getAllBooks={this.props.getAllBooks}
                     setFilter={this.props.setFilter}
                     getFilteredBooks={this.props.getFilteredBooks}
+                    source="sidebar"
                 />
             </div>
         )

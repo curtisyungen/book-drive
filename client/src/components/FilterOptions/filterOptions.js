@@ -11,12 +11,14 @@ class FilterOptions extends Component {
             formatFilter: null,
             subjectFilter: null,
             showFiltersMenu: "hide",
+            source: "sidebar",
         }
     }
 
     componentDidMount = () => {
         this.setState({
             showFiltersMenu: this.props.showFiltersMenu,
+            source: this.props.source,
         });
     }
 
@@ -24,6 +26,7 @@ class FilterOptions extends Component {
         if (prevProps.showFiltersMenu !== this.props.showFiltersMenu) {
             this.setState({
                 showFiltersMenu: this.props.showFiltersMenu,
+                source: this.props.source,
             });
         }
     }
@@ -79,7 +82,7 @@ class FilterOptions extends Component {
     render() {
         return (
             <div
-                className={`filterOptions filter-${this.state.showFiltersMenu}`}
+                className={`filterOptions-${this.state.source} filter-${this.state.showFiltersMenu}`}
             >
                 {/* AVAILABILITY OPTIONS */}
 
