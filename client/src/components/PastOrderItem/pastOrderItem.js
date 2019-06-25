@@ -22,8 +22,6 @@ class PastOrderItem extends Component {
             authorLast: this.props.authorLast,
             imageURL: this.props.imageURL,
             price: this.props.price,
-        }, () => {
-            console.log(this.state);
         });
     }
 
