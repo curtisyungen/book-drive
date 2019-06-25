@@ -61,6 +61,7 @@ class BookSuggestions extends Component {
                                 tags={book.tags}
                                 imageURL={book.imageURL}
                                 displayType="suggestion"
+                                sendToCart={this.props.sendToCart}
                             />
                             
                             {/* <img className="suggestionCover" src={book.imageURL} alt="book cover" /> */}
