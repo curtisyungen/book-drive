@@ -198,6 +198,10 @@
         top: 470px;
     }
 
+    .buyOption {
+        margin-left: 0px;
+    }
+
     .styles_modal__gNwvD {
         display: flex;
         flex-direction: column;
@@ -208,6 +212,8 @@
 
     #buyBox {
         margin: 0px auto;
-        width: 90%;
+        margin-top: 10px;
+        position: relative;
+        width: 100%;
      }
 }
