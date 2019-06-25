@@ -38,7 +38,7 @@
 
 .socialMedia {
     display: inline-block;
-    margin-left: 5px;
+    padding-left: 10px;
     text-align: center;
     width: 100%;
 }
