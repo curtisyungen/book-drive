@@ -34,7 +34,6 @@ class CartSummary extends Component {
     }
 
     checkout = () => {
-        alert(this.props.user);
         if (this.props.user !== null) {
             this.checkoutWithPayPal();
         }
@@ -56,7 +55,7 @@ class CartSummary extends Component {
 
         API.payUsingPayPal(total)
             .then((res) => {
-                alert(res.data);
+                alert(res.data.links[1]);
                 let idx;
                 for (var link in res.data.links) {
                     if (res.data.links[link].rel === "approval_url") {
