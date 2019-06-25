@@ -79,7 +79,7 @@ class Cart extends Component {
         return (
             <span className="cart">
                 <div className="cartContainer">
-                    {this.props.cart && this.props.cart.length > 0 ? (
+                    {this.state.cart && this.state.cart.length > 0 ? (
                         <div className="cartHeader">
                             <div id="cartTitleLabel">Shopping Cart</div>
                             <div id="cartPriceLabel">Price</div>
