@@ -51,3 +51,9 @@
 .socialMediaIcon:hover {
     color: rgb(254, 152, 14);
 }
+
+@media only screen and (max-width: 325px) {
+    .socialMediaIcon {
+        margin: 8px;
+    }
+}
