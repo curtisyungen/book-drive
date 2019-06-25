@@ -21,8 +21,7 @@
 }
 
 .filter-hide {
-    display: none;
-    left: 250px;
+    left: -250px;
 
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;

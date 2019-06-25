@@ -251,17 +251,6 @@ class Home extends Component {
                         </select>
                     </div>
 
-                    {/* BACK TO TOP BUTTON */}
-
-                    {/* <div>
-                        <button
-                            className="btn btn-light btn-sm scrollToTopHomeBtn"
-                            onClick={this.scrollToTop}
-                        >
-                            Back to top
-                        </button>
-                    </div> */}
-
                     {/* SIDE BAR */}
 
                     <Sidebar

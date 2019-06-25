@@ -8,24 +8,26 @@ class SlideInMenu extends Component {
         super(props);
 
         this.state = {
-            show: "show",
+            showSlideInMenu: "show",
             isLoggedIn: false,
             user: null,
+            showFiltersMenu: "hide",
         }
     }
 
     componentDidMount = () => {
         this.setState({
-            show: this.props.show,
+            showSlideInMenu: this.props.showSlideInMenu,
             isLoggedIn: this.props.isLoggedIn,
             user: this.props.user,
+            showFiltersMenu: this.props.showFiltersMenu,
         });
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.show !== this.props.show) {
+        if (prevProps.showSlideInMenu !== this.props.showSlideInMenu) {
             this.setState({
-                show: this.props.show,
+                showSlideInMenu: this.props.showSlideInMenu,
                 isLoggedIn: this.props.isLoggedIn,
                 user: this.props.user,
             })
@@ -36,21 +38,10 @@ class SlideInMenu extends Component {
         return 0;
     }
 
-    toggleFiltersMenu = () => {
-        let status = "show";
-        if (this.state.showFiltersMenu === "show") {
-            status = "hide";
-        }
-
-        this.setState({
-            showFiltersMenu: status,
-        });
-    }
-
     render() {
         return (
             <div
-                className={`slideInMenu ${this.props.show}`}
+                className={`slideInMenu ${this.props.showSlideInMenu}`}
             >
                 {this.state.isLoggedIn && this.state.user !== null ? (
                     <div className="slideInName">Hello, {this.state.user.name}</div>
@@ -98,7 +89,7 @@ class SlideInMenu extends Component {
                     <li>
                         <div
                             className="showFiltersMenuBtn"
-                            onClick={this.toggleFiltersMenu}
+                            onClick={this.props.toggleFiltersMenu}
                         >
                             Filters
                         </div>
