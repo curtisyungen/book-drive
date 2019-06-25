@@ -46,6 +46,13 @@
     width: auto;
 }
 
+.cartTitleAndAuthor {
+    display: inline;
+    max-width: 175px;
+    position: absolute;
+    white-space: normal;
+}
+
 .deleteFromCart {
     color: rgb(8, 102, 190);
     cursor: pointer;
@@ -76,13 +83,6 @@
     .cartItemInfo {
         min-width: 0px;
         width: 303px;
-    }
-
-    .cartTitleAndAuthor {
-        display: inline;
-        max-width: 200px;
-        position: absolute;
-        white-space: normal;
     }
 
     .deleteFromCart {
