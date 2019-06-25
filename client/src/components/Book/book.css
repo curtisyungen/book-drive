@@ -184,4 +184,27 @@
         height: 188px;
         width: 130px;
     }
+
+    .bookInfoHeader {
+        font-size: 16px;
+        margin: 0px;
+        min-width: 0px;
+        padding: 0;
+        top: 470px;
+    }
+
+    .styles_modal__gNwvD {
+        height: 100vh;
+        max-width: 100% !important;
+        overflow-y: scroll;
+    }
+
+    #buyBox {
+        left: 50%;
+        margin: 0px auto;
+        right: 0;
+        top: 325px;
+        transform: translate(-50%);
+        width: 90%;
+     }
 }
