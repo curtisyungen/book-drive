@@ -12,16 +12,7 @@ class Cart extends Component {
 
         this.state = {
             user: null,
-            cart: [
-                {
-                    title: "The Old Man and the Sea",
-                    authorFirst: "Ernest",
-                    authorLast: "Hemmingway",
-                    avail: "avail",
-                    price: "5.00",
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                }
-            ],
+            cart: [],
             subtotal: 0,
         }
     }
