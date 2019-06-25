@@ -8,28 +8,30 @@ class SlideInMenu extends Component {
         super(props);
 
         this.state = {
-            showSlideInMenu: "show",
             isLoggedIn: false,
             user: null,
+            showSlideInMenu: "show",
             showFiltersMenu: "hide",
         }
     }
 
     componentDidMount = () => {
         this.setState({
-            showSlideInMenu: this.props.showSlideInMenu,
             isLoggedIn: this.props.isLoggedIn,
             user: this.props.user,
+            showSlideInMenu: this.props.showSlideInMenu,
             showFiltersMenu: this.props.showFiltersMenu,
         });
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.showSlideInMenu !== this.props.showSlideInMenu) {
+        if (prevProps.showSlideInMenu !== this.props.showSlideInMenu ||
+            prevProps.showFiltersMenu !== this.props.showFiltersMenu) {
             this.setState({
-                showSlideInMenu: this.props.showSlideInMenu,
                 isLoggedIn: this.props.isLoggedIn,
                 user: this.props.user,
+                showSlideInMenu: this.props.showSlideInMenu,
+                showFiltersMenu: this.props.showFiltersMenu,
             })
         }
     }
@@ -94,7 +96,7 @@ class SlideInMenu extends Component {
                             Filters
                         </div>
 
-                        {this.state.showFiltersMenu ? (
+                        {this.props.showFiltersMenu ? (
                             <FilterOptions
                                 getAllBooks={this.props.getAllBooks}
                                 getFilteredBooks={this.props.getFilteredBooks}
