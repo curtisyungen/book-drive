@@ -13,6 +13,10 @@
     width: 1400px;
 }
 
+.successPage {
+    height: calc(100vh - 500px);
+}
+
 .thankYou {
     color: green;
     font-family: "Arial";
