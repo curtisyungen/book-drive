@@ -90,18 +90,24 @@ class FilterOptions extends Component {
                 className={`filterOptions-${this.state.source} filter-${this.state.showFiltersMenu}`}
             >
 
-                <div 
-                    className="backToMainMenu"
-                    onClick={this.props.toggleFiltersMenu}
-                >
-                    <FontAwesomeIcon className="fa-2x" icon={faArrowLeft} />
-                    MAIN MENU
-                </div>
+                {/* BACK TO MAIN MENU -- SLIDE IN ONLY */}
+
+                {this.state.source === "slideIn" ? (
+                    <div 
+                        className="backToMainMenu"
+                        onClick={this.props.toggleFiltersMenu}
+                    >
+                        <FontAwesomeIcon className="fa-1x" icon={faArrowLeft} />
+                        &nbsp;MAIN MENU
+                    </div>
+                    ) : (
+                        <></>
+                )}
 
                 {/* AVAILABILITY OPTIONS */}
 
                 <div id="availabilityOptions">
-                    <span className="title">Availability</span><br />
+                    <div className="title">Availability</div>
                     <ul>
                         {this.state.availFilter ? (
                             <li
@@ -141,7 +147,7 @@ class FilterOptions extends Component {
 
                 {/* FORMAT OPTIONS */}
                 <div id="formatOptions">
-                    <span className="title">Format</span><br />
+                    <div className="title">Format</div>
 
                     <ul>
 
@@ -183,7 +189,7 @@ class FilterOptions extends Component {
 
                 {/* SUBJECT OPTIONS */}
                 <div id="subjectOptions">
-                    <span className="title">Subject/Genre</span><br />
+                    <div className="title">Subject/Genre</div>
 
                     <ul>
                         {this.state.subjectFilter ? (
