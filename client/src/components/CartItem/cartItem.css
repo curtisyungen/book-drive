@@ -48,7 +48,7 @@
 
 .cartTitleAndAuthor {
     display: inline;
-    max-width: 175px;
+    max-width: 300px;
     position: absolute;
     white-space: normal;
 }
@@ -83,6 +83,10 @@
     .cartItemInfo {
         min-width: 0px;
         width: 303px;
+    }
+
+    .cartTitleAndAuthor {
+        max-width: 175px;
     }
 
     .deleteFromCart {
