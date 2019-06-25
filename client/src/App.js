@@ -493,7 +493,8 @@ class App extends Component {
             isLoggedIn={this.state.isLoggedIn}
             user={this.state.user}
             logoutUser={this.logoutUser}
-            outsideClickIgnoreClass={"book"}
+            disableOnClickOutside={!this.state.showSlideInMenu}
+            // outsideClickIgnoreClass={"book"}
           />
 
           <UnderConstruction />
