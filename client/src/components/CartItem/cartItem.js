@@ -49,13 +49,14 @@ class CartItem extends Component {
                         <div className="cartAuthor">
                             &nbsp;{` by ${this.props.authorFirst} ${this.props.authorLast}`}
                         </div>
+                        <div
+                            className="deleteFromCart"
+                            onClick={this.removeFromCart}
+                        >
+                            Delete
+                        </div>
                     </div>
-                    <div
-                        className="deleteFromCart"
-                        onClick={this.removeFromCart}
-                    >
-                        Delete
-                    </div>
+                    
                 </div>
 
                 <div className="cartPrice">
