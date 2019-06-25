@@ -36,6 +36,18 @@ class SlideInMenu extends Component {
         return 0;
     }
 
+    showFiltersMenu = () => {
+        this.setState({
+            showFiltersMenu: "show",
+        });
+    }
+
+    hideFiltersMenu = () => {
+        this.setState({
+            showFiltersMenu: "hide",
+        });
+    }
+
     render() {
         return (
             <div
@@ -44,8 +56,8 @@ class SlideInMenu extends Component {
                 {this.state.isLoggedIn && this.state.user !== null ? (
                     <div className="slideInName">Hello, {this.state.user.name}</div>
                 ) : (
-                    <div className="slideInName">Hello, Sign in</div>
-                )}
+                        <div className="slideInName">Hello, Sign in</div>
+                    )}
                 <ul className="slideInMenuList">
                     <li>
                         <a href="/">Home</a>
@@ -77,18 +89,27 @@ class SlideInMenu extends Component {
                             </div>
                         </li>
                     ) : (
-                        <li>
-                            <a href="/login">Sign in</a>
-                        </li>
-                    )}
+                            <li>
+                                <a href="/login">Sign in</a>
+                            </li>
+                        )}
                 </ul>
 
                 <ul>
-                    <FilterOptions 
-                        getAllBooks={this.props.getAllBooks}
-                        getFilteredBooks={this.props.getFilteredBooks}
-                        setFilter={this.setFilter}
-                    />
+                    <li>
+                        <div
+                            onClick={this.showFiltersMenu}
+                        >
+                            Filters
+                        </div>
+
+                        <FilterOptions
+                            getAllBooks={this.props.getAllBooks}
+                            getFilteredBooks={this.props.getFilteredBooks}
+                            setFilter={this.setFilter}
+                            show={this.state.showFiltersMenu}
+                        />
+                    </li>
                 </ul>
             </div>
         )

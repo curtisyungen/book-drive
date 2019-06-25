@@ -1,3 +1,25 @@
 .filterOptions {
-    line-height: 30px;
+    line-height: 1.3;
+}
+
+.filter-show {
+    display: inline;
+    left: 0px;
+    z-index: 101;
+
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+      -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+         transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.filter-hide {
+    display: none;
+    left: -320px;
+    z-index: 1;
+
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+      -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+         transition: opacity 0.3s linear, left 0.3s ease-out;
 }
