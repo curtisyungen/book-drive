@@ -185,6 +185,11 @@
         width: 130px;
     }
 
+    .bookDescription {
+        min-width: 340px;
+        max-width: 340px;
+    }
+
     .bookInfoHeader {
         font-size: 16px;
         margin: 0px;
@@ -194,17 +199,15 @@
     }
 
     .styles_modal__gNwvD {
+        display: flex;
+        flex-direction: column;
         height: 100vh;
         max-width: 100% !important;
         overflow-y: scroll;
     }
 
     #buyBox {
-        left: 50%;
         margin: 0px auto;
-        right: 0;
-        top: 325px;
-        transform: translate(-50%);
         width: 90%;
      }
 }
