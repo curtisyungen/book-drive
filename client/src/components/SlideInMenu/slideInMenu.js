@@ -36,15 +36,14 @@ class SlideInMenu extends Component {
         return 0;
     }
 
-    showFiltersMenu = () => {
-        this.setState({
-            showFiltersMenu: "show",
-        });
-    }
+    toggleFiltersMenu = () => {
+        let status = "show";
+        if (this.state.showFiltersMenu === "show") {
+            status = "hide";
+        }
 
-    hideFiltersMenu = () => {
         this.setState({
-            showFiltersMenu: "hide",
+            showFiltersMenu = status,
         });
     }
 
@@ -99,7 +98,7 @@ class SlideInMenu extends Component {
                     <li>
                         <div
                             className="showFiltersMenuBtn"
-                            onClick={this.showFiltersMenu}
+                            onClick={this.toggleFiltersMenu}
                         >
                             Filters
                         </div>

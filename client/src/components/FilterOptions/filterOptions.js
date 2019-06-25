@@ -21,9 +21,9 @@ class FilterOptions extends Component {
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.show !== this.props.show) {
+        if (prevProps.showFiltersMenu !== this.props.showFiltersMenu) {
             this.setState({
-                show: this.props.showFiltersMenu,
+                showFiltersMenu: this.props.showFiltersMenu,
             });
         }
     }
