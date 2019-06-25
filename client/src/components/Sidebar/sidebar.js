@@ -10,7 +10,6 @@ class Sidebar extends Component {
             >
                 <FilterOptions
                     getAllBooks={this.props.getAllBooks}
-                    setActiveFilter={this.props.setActiveFilter}
                     setFilter={this.props.setFilter}
                     getFilteredBooks={this.props.getFilteredBooks}
                 />
