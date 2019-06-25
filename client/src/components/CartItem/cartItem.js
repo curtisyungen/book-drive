@@ -42,11 +42,13 @@ class CartItem extends Component {
             >
                 <div className="cartItemInfo">
                     <img className="cartCover" src={this.props.imageURL} alt={this.props.title} />
-                    <a href="/" className="cartTitle">
-                        {this.props.title}
-                    </a>
-                    <div className="cartAuthor">
-                        &nbsp;{` by ${this.props.authorFirst} ${this.props.authorLast}`}
+                    <div className="cartTitleAndAuthor">
+                        <a href="/" className="cartTitle">
+                            {this.props.title}
+                        </a>
+                        <div className="cartAuthor">
+                            &nbsp;{` by ${this.props.authorFirst} ${this.props.authorLast}`}
+                        </div>
                     </div>
                     <div
                         className="deleteFromCart"

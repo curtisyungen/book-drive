@@ -1,6 +1,7 @@
 .cartAuthor {
     display: inline-block;
     font-size: 13px;
+    margin-left: -5px;
 }
 
 .cartCover {
@@ -75,6 +76,13 @@
     .cartItemInfo {
         min-width: 0px;
         width: 303px;
+    }
+
+    .cartTitleAndAuthor {
+        display: inline;
+        max-width: 200px;
+        position: absolute;
+        white-space: normal;
     }
 
     .deleteFromCart {
