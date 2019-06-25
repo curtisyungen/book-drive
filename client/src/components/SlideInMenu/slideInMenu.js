@@ -89,4 +89,4 @@ class SlideInMenu extends Component {
     }
 }
 
-export default onClickOutside(SlideInMenu);
+export default SlideInMenu;
