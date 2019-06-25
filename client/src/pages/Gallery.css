@@ -99,3 +99,9 @@
         float: none;
     }
 }
+
+@media only screen and (max-width: 325px) {
+    .galleryImg {
+        max-width: 310px !important;
+    }
+}
