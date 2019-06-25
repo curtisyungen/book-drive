@@ -51,17 +51,10 @@ class CartSummary extends Component {
             total += cart[book].price;
         }
 
-        // API.saveOrderTotal(total)
-        //     .then((res) => {
-        //         console.log(res);
-        //     });
-
         sessionStorage.setItem("total", total);
 
         API.payUsingPayPal(total)
             .then((res) => {
-                console.log(res);
-
                 let idx;
                 for (var link in res.data.links) {
                     if (res.data.links[link].rel === "approval_url") {
@@ -69,7 +62,12 @@ class CartSummary extends Component {
                     }
                 }
 
-                window.open(res.data.links[idx].href);
+                if (idx === null) {
+                    alert("Error processing payment.");
+                }
+                else {
+                    window.open(res.data.links[idx].href);
+                }                
             });
     }
 
