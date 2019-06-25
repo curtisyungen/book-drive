@@ -89,12 +89,19 @@ class SlideInMenu extends Component {
 
                 <ul>
                     <li>
-                        <div
-                            className="showFiltersMenuBtn"
-                            onClick={this.props.toggleFiltersMenu}
-                        >
-                            Filters
-                        </div>
+
+                        {/* FILTERS MENU OPTION */}
+
+                        {window.location.pathname="/" ? (
+                            <div
+                                className="showFiltersMenuBtn"
+                                onClick={this.props.toggleFiltersMenu}
+                            >
+                                Filters
+                            </div>
+                            ) : (
+                                <></>
+                        )}
 
                         {this.props.showFiltersMenu === "show" ? (
                             <FilterOptions
