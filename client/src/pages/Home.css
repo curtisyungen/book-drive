@@ -58,16 +58,15 @@
 @media only screen and (max-width: 420px) {
     .bookList {
         left: 15px;
-        margin-left: -190px;
+        margin-top: 25px;
+        max-width: 100%;
         top: 160px;
-        width: 360px;
     }
 
     .content {
         display: flex;
         flex-direction: column;
         margin: 0;
-        margin-left: 60px;
     }
 
     .resultsSummary {
