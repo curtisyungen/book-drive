@@ -1,11 +1,18 @@
 .filterOptions {
+    background: white;
+    border-right: 1px solid lightgray;
+    color: black;
+    height: auto;
     line-height: 1.3;
+    padding: 15px;
+    padding-left: 25px;
+    position: absolute;
+    top: 0;
+    width: 250px;
 }
 
 .filter-show {
-    display: inline;
     left: 0px;
-    z-index: 101;
 
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -15,8 +22,7 @@
 
 .filter-hide {
     display: none;
-    left: -320px;
-    z-index: 1;
+    left: 250px;
 
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
