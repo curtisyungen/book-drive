@@ -494,8 +494,16 @@ class App extends Component {
             user={this.state.user}
             logoutUser={this.logoutUser}
             disableOnClickOutside={!this.state.showSlideInMenu}
-            // outsideClickIgnoreClass={"book"}
           />
+
+          {this.state.showSlideInMenu === "show" ? (
+            <div 
+              className="overlay" 
+              onClick={this.hideSlideInMenu}
+            ></div>
+          ) : ( 
+            <></>
+          )}
 
           <UnderConstruction />
 
