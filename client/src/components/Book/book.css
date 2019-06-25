@@ -53,7 +53,10 @@
 }
 
 .bookStatus {
-    font-size: 12px;
+    color: rgb(206, 115, 50);
+    font-family: "Arial";
+    font-size: 17px;
+    line-height: 1.255;
     margin-bottom: 0px;
     margin-left: 15px;
     margin-top: 3px;
@@ -70,20 +73,8 @@
     white-space: normal;
 }
 
-.book-avail,
-.book-undefined, 
-.book-unavail,
-.book-hold {
-    color: #007600;
-    font-family: "Arial";
-    font-size: 17px;
-    line-height: 1.255;
-}
-
-.book-undefined, 
-.book-unavail,
-.book-hold {
-    color: rgb(206, 115, 50);
+.book-avail {
+    color: #007600 !important;
 }
 
 .button {
