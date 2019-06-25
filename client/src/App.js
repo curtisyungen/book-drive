@@ -208,6 +208,8 @@ class App extends Component {
 
     this.setState({
       isLoggedIn: false,
+    }, () => {
+      alert("You have been logged out.");
     });
 
     this.setRedirectToHome();
@@ -240,7 +242,7 @@ class App extends Component {
   searchForBook = (userInput) => {
     if (userInput !== "" && userInput !== null) {
 
-      if (window.location.href !== "/home") {
+      if (window.location.href !== "/") {
         this.setRedirectToHome();
       }
 
