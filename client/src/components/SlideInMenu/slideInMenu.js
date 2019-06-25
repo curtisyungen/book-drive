@@ -92,7 +92,7 @@ class SlideInMenu extends Component {
 
                         {/* FILTERS MENU OPTION */}
 
-                        {window.location.pathname="/" ? (
+                        {window.location.pathname === "/" ? (
                             <div
                                 className="showFiltersMenuBtn"
                                 onClick={this.props.toggleFiltersMenu}
