@@ -36,6 +36,7 @@ class App extends Component {
       redirectToLogin: false,
       redirectToSignUp: false,
       showSlideInMenu: "hide",
+      showFiltersMenu: "hide",
     }
   }
 
@@ -441,6 +442,18 @@ class App extends Component {
   hideSlideInMenu = () => {
     this.setState({
       showSlideInMenu: "hide",
+      showFiltersMenu: "hide",
+    });
+  }
+
+  toggleFiltersMenu = () => {
+    let status = "show";
+    if (this.state.showFiltersMenu === "show") {
+      status = "hide";
+    }
+
+    this.setState({
+      showFiltersMenu: status,
     });
   }
 
@@ -490,24 +503,25 @@ class App extends Component {
             )}
 
           <SlideInMenu
-            show={this.state.showSlideInMenu}
+            showSlideInMenu={this.state.showSlideInMenu}
             hideSlideInMenu={this.hideSlideInMenu}
             isLoggedIn={this.state.isLoggedIn}
             user={this.state.user}
             logoutUser={this.logoutUser}
-            disableOnClickOutside={!this.state.showSlideInMenu}
             getAllBooks={this.getAllBooks}
             getFilteredBooks={this.getFilteredBooks}
+            showFiltersMenu={this.state.showFiltersMenu}
+            toggleFiltersMenu={this.toggleFiltersMenu}
           />
 
           {this.state.showSlideInMenu === "show" ? (
-            <div 
-              className="overlay" 
+            <div
+              className="overlay"
               onClick={this.hideSlideInMenu}
             ></div>
-          ) : ( 
-            <></>
-          )}
+          ) : (
+              <></>
+            )}
 
           <UnderConstruction />
 
