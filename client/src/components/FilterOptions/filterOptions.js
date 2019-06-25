@@ -10,12 +10,13 @@ class FilterOptions extends Component {
             availFilter: null,
             formatFilter: null,
             subjectFilter: null,
+            showFiltersMenu: "hide",
         }
     }
 
     componentDidMount = () => {
         this.setState({
-            show: this.props.showFiltersMenu,
+            showFiltersMenu: this.props.showFiltersMenu,
         });
     }
 
@@ -78,7 +79,7 @@ class FilterOptions extends Component {
     render() {
         return (
             <div
-                className={`filterOptions filter-${this.state.show}`}
+                className={`filterOptions filter-${this.state.showFiltersMenu}`}
             >
                 {/* AVAILABILITY OPTIONS */}
 

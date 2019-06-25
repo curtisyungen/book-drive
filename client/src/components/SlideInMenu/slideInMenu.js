@@ -107,7 +107,7 @@ class SlideInMenu extends Component {
                             getAllBooks={this.props.getAllBooks}
                             getFilteredBooks={this.props.getFilteredBooks}
                             setFilter={this.setFilter}
-                            show={this.state.showFiltersMenu}
+                            showFiltersMenu={this.state.showFiltersMenu}
                         />
                     </li>
                 </ul>
