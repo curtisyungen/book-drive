@@ -514,6 +514,7 @@ class App extends Component {
             getFilteredBooks={this.getFilteredBooks}
             showFiltersMenu={this.state.showFiltersMenu}
             toggleFiltersMenu={this.toggleFiltersMenu}
+            cart={this.state.cart}
           />
 
           {this.state.showSlideInMenu === "show" ? (
