@@ -64,7 +64,7 @@ class SlideInMenu extends Component {
                         <a href="/contact">Contact</a>
                     </li>
                     <li>
-                        <a href="/cart">Cart</a>
+                        <a href="/cart">Cart ({this.props.cart.length})</a>
                     </li>
                     <li>
                         <a href="/orders">Orders</a>
