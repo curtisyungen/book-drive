@@ -497,6 +497,7 @@ class App extends Component {
                 logoutUser={this.logoutUser}
                 isLoggedIn={this.state.isLoggedIn}
                 showSlideInMenu={this.showSlideInMenu}
+                cart={this.state.cart}
               />
             </span>
           ) : (
