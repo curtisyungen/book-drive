@@ -18,9 +18,6 @@ class Cart extends Component {
     }
 
     componentDidMount = () => {
-
-        console.log("Cart Summary", this.props);
-
         this.setState({
             user: this.props.user,
         });
