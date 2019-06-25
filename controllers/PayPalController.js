@@ -17,7 +17,7 @@ class PayPalController {
             },
             "redirect_urls": {
                 "return_url": "https://congo-cjy.herokuapp.com/success",
-                "cancel_url": "https://congo-cjy.herokuapp.com/cancel"
+                "cancel_url": "https://congo-cjy.herokuapp.com/cart"
             },
             "transactions": [{
                 "item_list": {
