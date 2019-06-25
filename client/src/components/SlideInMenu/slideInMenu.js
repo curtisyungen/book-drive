@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import onClickOutside from "react-onclickoutside";
+import FilterOptions from "../FilterOptions/filterOptions";
 import "./slideInMenu.css";
 
 class SlideInMenu extends Component {
@@ -32,9 +32,8 @@ class SlideInMenu extends Component {
         }
     }
 
-    handleClickOutside = (event) => {
-        event.stopPropagation();
-        this.props.hideSlideInMenu();
+    setFilter = (param1, param2) => {
+        return 0;
     }
 
     render() {
@@ -82,6 +81,14 @@ class SlideInMenu extends Component {
                             <a href="/login">Sign in</a>
                         </li>
                     )}
+                </ul>
+
+                <ul>
+                    <FilterOptions 
+                        getAllBooks={this.props.getAllBooks}
+                        getFilteredBooks={this.props.getFilteredBooks}
+                        setFilter={this.setFilter}
+                    />
                 </ul>
             </div>
         )
