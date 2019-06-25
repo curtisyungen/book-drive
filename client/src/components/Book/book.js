@@ -17,7 +17,8 @@ class Book extends Component {
             cover: null,
             tags: [],
             imageURL: null,
-            openDetailView: false
+            openDetailView: false,
+            displayType: null,
         }
     }
 
@@ -38,6 +39,7 @@ class Book extends Component {
             cover: cover,
             tags: this.props.tags,
             imageURL: this.props.imageURL,
+            displayType: this.props.displayType,
         });
     }
 
@@ -82,13 +84,13 @@ class Book extends Component {
         return (
             <span>
                 <div
-                    className="book"
+                    className={`book book-${this.props.displayType}`}
                     onClick={(event) => {
                         event.preventDefault();
                         this.openDetailView();
                     }}
                 >
-                    <img className="bookCover" src={this.state.imageURL} alt={this.state.title} />
+                    <img className={`bookCover cover-${this.props.displayType}`} src={this.state.imageURL} alt={this.state.title} />
                 </div>
 
                 <Modal

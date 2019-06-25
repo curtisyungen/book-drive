@@ -9,7 +9,16 @@ class BookSuggestions extends Component {
         super(props);
 
         this.state = {
-            suggestions: null,
+            suggestions: [{
+                title: "The Old Man and the Sea",
+                authorFirst: "Ernest",
+                authorLast: "Hemingway",
+                price: "5.00",
+                avail: "avail",
+                cover: "soft",
+                tags: "fiction",
+                imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+            }],
             displayClass: null,
         }
     }
@@ -41,7 +50,20 @@ class BookSuggestions extends Component {
                 {this.state.suggestions ? (
                     this.state.suggestions.map(book => (
                         <div className="bookSuggestion">
-                            <img className="suggestionCover" src={book.imageURL} alt="book cover" />
+
+                            <Book 
+                                title={book.title}
+                                authorFirst={book.authorFirst}
+                                authorLast={book.authorLast}
+                                price={book.price}
+                                avail={book.avail}
+                                cover={book.cover}
+                                tags={book.tags}
+                                imageURL={book.imageURL}
+                                displayType="suggestion"
+                            />
+                            
+                            {/* <img className="suggestionCover" src={book.imageURL} alt="book cover" /> */}
                         
                             <span className="suggestionDetails">
                                 <p className="suggestionTitle">{book.title}</p>
