@@ -46,7 +46,7 @@ class SlideInMenu extends Component {
                 ) : (
                     <div className="slideInName">Hello, Sign in</div>
                 )}
-                <ul>
+                <ul className="slideInMenuList">
                     <li>
                         <a href="/">Home</a>
                     </li>

@@ -38,7 +38,7 @@
   border-right: 1px solid lightgray;
   color: black;
   height: auto;
-  line-height: 45px;
+  line-height: 2;
   padding: 15px;
   padding-left: 25px;
   position: absolute;
@@ -48,6 +48,10 @@
 
 .slideInMenu a {
   color: black;
+}
+
+.slideInMenuList {
+  border-bottom: 1px solid rgb(242, 242, 242);
 }
 
 .slideInName {
