@@ -1,5 +1,4 @@
 .hide {
-  display: none;
   left: -320px;
   z-index: 1;
 
@@ -50,7 +49,7 @@
 .slideInName {
   background: rgb(34, 46, 61);
   color: white;
-  height: 50px;
+  height: 40px;
   margin: 0;
   margin-left: -25px;
   margin-top: -15px;
