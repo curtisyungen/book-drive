@@ -56,3 +56,8 @@
   padding-top: 2px;
   width: 250px;
 }
+
+.slideInTitle {
+  font-size: 14px;
+  font-weight: 600;
+}

@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import "./filterOptions.css";
+
+library.add(faArrowLeft);
 
 class FilterOptions extends Component {
 
@@ -84,6 +89,15 @@ class FilterOptions extends Component {
             <div
                 className={`filterOptions-${this.state.source} filter-${this.state.showFiltersMenu}`}
             >
+
+                <div 
+                    className="backToMainMenu"
+                    onClick={this.props.toggleFiltersMenu}
+                >
+                    <FontAwesomeIcon className="fa-2x" icon={faArrowLeft} />
+                    MAIN MENU
+                </div>
+
                 {/* AVAILABILITY OPTIONS */}
 
                 <div id="availabilityOptions">
