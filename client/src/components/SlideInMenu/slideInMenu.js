@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import onClickOutside from "react-onclickoutside";
+import onClickOutside from "react-onclickoutside";
 import "./slideInMenu.css";
 
 class SlideInMenu extends Component {
@@ -32,10 +32,10 @@ class SlideInMenu extends Component {
         }
     }
 
-    // handleClickOutside = (event) => {
-    //     event.preventDefault();
-    //     this.props.hideSlideInMenu();
-    // }
+    handleClickOutside = (event) => {
+        event.stopPropagation();
+        this.props.hideSlideInMenu();
+    }
 
     render() {
         return (
@@ -89,4 +89,4 @@ class SlideInMenu extends Component {
     }
 }
 
-export default SlideInMenu;
+export default onClickOutside(SlideInMenu);
