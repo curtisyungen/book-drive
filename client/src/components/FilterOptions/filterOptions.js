@@ -107,7 +107,7 @@ class FilterOptions extends Component {
                 {/* AVAILABILITY OPTIONS */}
 
                 <div id="availabilityOptions">
-                    <span className="title">Availability</span><br />
+                    <div className="title">Availability</div>
                     <ul>
                         {this.state.availFilter ? (
                             <li
@@ -147,7 +147,7 @@ class FilterOptions extends Component {
 
                 {/* FORMAT OPTIONS */}
                 <div id="formatOptions">
-                    <span className="title">Format</span><br />
+                    <div className="title">Format</div>
 
                     <ul>
 
@@ -189,7 +189,7 @@ class FilterOptions extends Component {
 
                 {/* SUBJECT OPTIONS */}
                 <div id="subjectOptions">
-                    <span className="title">Subject/Genre</span><br />
+                    <div className="title">Subject/Genre</div>
 
                     <ul>
                         {this.state.subjectFilter ? (

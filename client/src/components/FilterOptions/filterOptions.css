@@ -1,6 +1,8 @@
 .backToMainMenu {
+    border-bottom: 1px solid rgb(242, 242, 242);
     font-size: 14px;
     font-weight: 600;
+    padding-bottom: 5px;
 }
 
 .filterOptions-sidebar,
@@ -40,4 +42,11 @@
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
       -o-transition: opacity 0.3s linear, left 0.3s ease-out;
          transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    padding-top: 10px;
 }
