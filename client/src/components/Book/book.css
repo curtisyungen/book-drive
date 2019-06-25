@@ -190,6 +190,11 @@
         max-width: 340px;
     }
 
+    .bookInfoBody {
+        min-width: 0px;
+        max-width: 420px;
+    }
+
     .bookInfoHeader {
         font-size: 16px;
         margin: 0px;
@@ -214,6 +219,8 @@
         margin: 0px auto;
         margin-top: 10px;
         position: relative;
+        right: 0;
+        top: 0;
         width: 100%;
      }
 }
