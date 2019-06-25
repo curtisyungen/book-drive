@@ -8,6 +8,12 @@
     padding: 15px 10px 0px 10px;
 }
 
+.cartQty {
+    color: rgb(253, 188, 106);
+    font-size: 12px;
+    font-weight: 400;
+}
+
 .helloUser {
     color: lightgray;
     font-size: 12px;
@@ -162,7 +168,7 @@
 }
 
 .searchBox:focus {
-    border: 2px solid gold;
+    border: 2px solid rgb(253, 188, 106);
 }
 
 .searchBtn {

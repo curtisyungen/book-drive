@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import "./navbar.css";
 
-// import logo from "../../images/congo2.png";
-
 library.add(faSearch, faShoppingCart);
 
 class Navbar extends Component {
@@ -255,6 +253,7 @@ class Navbar extends Component {
                             <a className="nav-acct-link" href="/">Try SubPrime</a>
                         </li>
                         <li className="nav-item">
+                            <span className="cartQty">{this.props.cart.length}</span>
                             <a className="nav-acct-link cartLink" href="/cart">
                                 <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
                                 &nbsp;Cart
