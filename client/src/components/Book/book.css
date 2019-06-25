@@ -77,6 +77,18 @@
     color: #007600 !important;
 }
 
+.book-suggestion {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 150px;
+    margin: 0;
+    margin-right: 8px;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+}
+
 .button {
     margin: 5px 0px;
     width: 90%;
@@ -131,6 +143,11 @@
 .buyPrice {
     color: rgb(190, 44, 6);
     display: block;
+}
+
+.cover-suggestion {
+    height: 150px;
+    width: 100px;
 }
 
 .detailBookCover {
