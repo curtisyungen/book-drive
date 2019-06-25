@@ -41,6 +41,7 @@
 
     .portfolioLink {
         font-size: 16px;
+        margin-right: 0px;
         text-align: center;
         width: auto;
     }
@@ -49,5 +50,11 @@
 @media only screen and (max-width: 380px) {
     .portfolioLink {
         font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .portfolioLink {
+        font-size: 12px;
     }
 }

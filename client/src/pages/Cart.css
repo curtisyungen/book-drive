@@ -54,3 +54,14 @@
         width: 310px;
     }
 }
+
+@media only screen and (max-width: 325px) {
+    .cartTitle {
+        font-size: 13px;
+        white-space: normal;
+    }
+    #cartTitleLabel {
+        min-width: 267px;
+        width: 267px;
+    }
+}
