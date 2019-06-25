@@ -70,7 +70,10 @@
     white-space: normal;
 }
 
-.book-avail {
+.book-avail,
+.book-undefined, 
+.book-unavail,
+.book-hold {
     color: #007600;
     font-family: "Arial";
     font-size: 17px;
@@ -81,9 +84,6 @@
 .book-unavail,
 .book-hold {
     color: rgb(206, 115, 50);
-    font-family: "Arial";
-    font-size: 17px;
-    line-height: 1.255;
 }
 
 .button {
