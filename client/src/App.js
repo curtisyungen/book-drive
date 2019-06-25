@@ -496,6 +496,8 @@ class App extends Component {
             user={this.state.user}
             logoutUser={this.logoutUser}
             disableOnClickOutside={!this.state.showSlideInMenu}
+            getAllBooks={this.getAllBooks}
+            getFilteredBooks={this.getFilteredBooks}
           />
 
           {this.state.showSlideInMenu === "show" ? (
@@ -527,12 +529,7 @@ class App extends Component {
               <Home
                 books={this.state.books}
                 getAllBooks={this.getAllBooks}
-                getAvailableBooks={this.getAvailableBooks}
-                getUnavailableBooks={this.getUnavailableBooks}
                 getFilteredBooks={this.getFilteredBooks}
-                getPaperbacks={this.getPaperbacks}
-                getHardcovers={this.getHardcovers}
-                getSubject={this.getSubject}
                 userSearch={this.state.userSearch}
                 sendToCart={this.sendToCart}
                 updateParentState={this.updateParentState}
