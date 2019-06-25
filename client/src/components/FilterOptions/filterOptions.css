@@ -1,4 +1,5 @@
-.filterOptions {
+.filterOptions-sidebar,
+.filterOptions-slideIn {
     background: white;
     border-right: 1px solid lightgray;
     color: black;
@@ -14,6 +15,7 @@
 }
 
 .filterOptions-slideIn {
+    font-size: 13px;
     width: 250px;
 }
 
