@@ -34,6 +34,7 @@ class CartSummary extends Component {
     }
 
     checkout = () => {
+        alert(this.props.user);
         if (this.props.user !== null) {
             this.checkoutWithPayPal();
         }
