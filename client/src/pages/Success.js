@@ -112,10 +112,10 @@ class Success extends Component {
 
     render() {
         return (
-            <span>
-                <div className="orderConfirmation">
+            <div>
+                <div className="successPage">
 
-                    <div>
+                    <div className="orderConfirmation">
                         <p className="thankYou">Thank you, your order has been placed.</p>
                         <p className="confirmation">Please check your email for order confirmation.</p>
                     </div>
@@ -131,7 +131,7 @@ class Success extends Component {
                 </div>
 
                 <Footer />
-            </span>
+            </div>
         )
     }
 }
