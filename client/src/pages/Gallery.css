@@ -71,6 +71,12 @@
         max-width: 400px !important;
     }
     
+    .gallery, 
+    .galleryHeader {
+        max-width: 420px;
+        width: 100%;
+    }
+
     .galleryImg {
         display: block;
         margin: 5px 5px;
@@ -88,6 +94,12 @@
     .politics {
         max-width: 365px !important;
     }
+
+    .gallery, 
+    .galleryHeader {
+        max-width: 380px;
+        width: 100%;
+    }
     
     .galleryImg {
         display: block;
@@ -101,6 +113,12 @@
 }
 
 @media only screen and (max-width: 325px) {
+    .gallery, 
+    .galleryHeader {
+        max-width: 325px;
+        width: 100%;
+    }
+
     .galleryImg {
         max-width: 310px !important;
     }
