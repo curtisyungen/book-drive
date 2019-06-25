@@ -68,15 +68,14 @@ class SlideInMenu extends Component {
                     </li>
                     {this.state.isLoggedIn ? (
                         <li>
-                            <button
-                                className="button btn-sm"
+                            <div
                                 onClick={(event) => {
                                     event.preventDefault();
                                     this.props.logoutUser();
                                 }}
                             >
                                 Sign out
-                            </button>
+                            </div>
                         </li>
                     ) : (
                         <li>
