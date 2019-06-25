@@ -98,17 +98,22 @@ class SlideInMenu extends Component {
                 <ul>
                     <li>
                         <div
+                            className="showFiltersMenuBtn"
                             onClick={this.showFiltersMenu}
                         >
                             Filters
                         </div>
 
-                        <FilterOptions
-                            getAllBooks={this.props.getAllBooks}
-                            getFilteredBooks={this.props.getFilteredBooks}
-                            setFilter={this.setFilter}
-                            showFiltersMenu={this.state.showFiltersMenu}
-                        />
+                        {this.state.showFiltersMenu ? (
+                            <FilterOptions
+                                getAllBooks={this.props.getAllBooks}
+                                getFilteredBooks={this.props.getFilteredBooks}
+                                setFilter={this.setFilter}
+                                showFiltersMenu={this.state.showFiltersMenu}
+                            />
+                        ) : (
+                            <></>
+                        )}
                     </li>
                 </ul>
             </div>
