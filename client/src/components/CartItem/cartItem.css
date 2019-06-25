@@ -74,11 +74,18 @@
 
     .cartItemInfo {
         min-width: 0px;
-        width: auto;
+        width: 303px;
     }
 
     .deleteFromCart {
         margin-left: 0px;
         margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    #cartTitleLabel {
+        min-width: 270px;
+        width: 270px;
     }
 }
