@@ -68,10 +68,11 @@ class Success extends Component {
 
                         // Add items ordered to list
                         for (var item in this.props.cart) {
-                            order.items += (`
-                                ${this.props.cart[item].title}, 
-                                by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}`
-                            );
+                            order.items += (
+                            `
+                            ${item}) ${this.props.cart[item].title} by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}
+                                
+                            `);
                         }
 
                         // Store order in database
@@ -126,16 +127,15 @@ class Success extends Component {
                     <div className="orderConfirmation">
                         <p className="thankYou">Thank you, your order has been placed.</p>
                         <p className="confirmation">Please check your email for order confirmation.</p>
+                    
+                        <OrderDetail
+                            order={this.state.order}
+                        />
+
+                        <ShippingInfo
+                            shippingAddress={this.state.shippingAddress}
+                        />
                     </div>
-
-                    <OrderDetail
-                        order={this.state.order}
-                    />
-
-                    <ShippingInfo
-                        shippingAddress={this.state.shippingAddress}
-                    />
-
                 </div>
 
                 <Footer />
