@@ -15,7 +15,6 @@ class PastOrder extends Component {
     }
 
     componentDidMount = () => {
-        console.log("Past Order Props", this.props);
         this.setState({
             date: this.props.date.split("T")[0],
             items: JSON.parse(this.props.items),
