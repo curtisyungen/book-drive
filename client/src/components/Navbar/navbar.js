@@ -71,19 +71,19 @@ class Navbar extends Component {
     }
 
     getSearchSuggestions = (bookSearch) => {
-        API.getSearchSuggestions(bookSearch)
-            .then((res) => {
-                this.setState({
-                    suggestions: res.data,
-                }, () => {
-                    this.showSearchSuggestions();
+        if (bookSearch !== null && bookSearch !== "") {
+            API.getSearchSuggestions(bookSearch)
+                .then((res) => {
+                    this.setState({
+                        suggestions: res.data,
+                    }, () => {
+                        this.showSearchSuggestions();
+                    });
                 });
-            });
-
+        }
     }
 
     showSearchSuggestions = () => {
-        console.log("Suggestions", this.state.suggestions);
         if (this.state.suggestions.length > 0) {
             this.setState({
                 showSearchSuggestions: true,
