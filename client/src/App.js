@@ -520,6 +520,12 @@ class App extends Component {
             <></>
           )}
 
+          {this.state.redirectToCreatePassword ? (
+            this.redirectToCreatePassword()
+          ) : (
+            <></>
+          )}
+
           {/* SHOW OR HIDE NAVBAR */}
 
           {(window.location.pathname !== "/login" && window.location.pathname !== "/signup" 
