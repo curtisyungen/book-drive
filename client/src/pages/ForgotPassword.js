@@ -41,10 +41,8 @@ class ForgotPassword extends Component {
                                 // Save subject email in parent state
                                 this.props.setResetEmail(email);
 
-                                console.log("Reset Code", res);
-
                                 // Email reset code to user
-                                API.sendPasswordResetCode(email, res.data);
+                                API.sendPasswordResetCode(email, res.data[0].resetCode);
 
                                 // Redirect to reset code input page
                                 this.props.setRedirectToPasswordReset();
