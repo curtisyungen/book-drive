@@ -40,14 +40,19 @@ class Contact extends Component {
 
         if (email !== null && email !== "" && message !== null && message !== "") {
 
+            // Send email to Congo inbox
             API.submitContactForm(email, message)
             .then((res) => {
-                console.log("Submit Contact Response", res);
-
                 alert("Message sent!");
 
-                this.props.setRedirectToHome();
+                // Send copy to user at email provided
+                API.sendCopyToUser(email, message) 
+                .then((res) => {
+                    this.props.setRedirectToHome();
+                });
             });
+
+            
         }
     }
 
