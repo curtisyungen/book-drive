@@ -59,8 +59,8 @@ class ResetController {
     submitResetCode(req, res) {
         db.Reset.findAll({
             where: {
-                email: req.params.email,
-                resetCode: req.params.resetCode
+                email: req.query.email,
+                resetCode: req.query.resetCode
             }})
             .then((user) => {
                 res.json(user);
