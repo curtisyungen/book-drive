@@ -39,6 +39,7 @@ class App extends Component {
       redirectToPasswordReset: false,
       showSlideInMenu: "hide",
       showFiltersMenu: "hide",
+      resetEmail: null,
     }
   }
 
@@ -469,6 +470,12 @@ class App extends Component {
     });
   }
 
+  setResetEmail = (resetEmail) => {
+    this.setState({
+      resetEmail: resetEmail,
+    });
+  }
+
   render() {
     return (
       <Router>
@@ -557,9 +564,14 @@ class App extends Component {
             <Route exact path="/forgot" render={() => 
               <ForgotPassword 
                 setRedirectToPasswordReset={this.setRedirectToPasswordReset}
+                setResetEmail={this.setResetEmail}
               />
             } />
-            <Route exact path="/reset" component={Reset} />
+            <Route exact path="/reset" render={() => 
+              <Reset 
+                email={this.state.resetEmail}
+              />
+            } />
             <Route exact path="/signup" render={() =>
               <Signup
                 createNewUser={this.createNewUser}
