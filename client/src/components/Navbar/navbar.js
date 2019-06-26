@@ -234,8 +234,9 @@ class Navbar extends Component {
                                     >
                                         <div
                                             className="btn btn-warning btn-sm popupLoginBtn"
+                                            onClick={this.setRedirectToLogin}
                                         >
-                                            <a href="/login">Sign in</a>
+                                            Sign in
                                         </div>
 
                                         <div className="popupNewCustomer">
