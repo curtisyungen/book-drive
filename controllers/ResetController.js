@@ -3,14 +3,13 @@ const db = require("../models/index.js");
 class ResetController {
 
     setResetCode(req, res) {
-        db.Reset.update(
-            { resetCode: req.body.resetCode },
-            {
-                where: {
-                    email: req.body.email,
-                }
+        db.Reset.findOrCreate({
+            where: { email: req.body.email },
+            defaults: {
+                email: req.body.email,
+                resetCode: req.body.resetCode,
             }
-        )
+        })
             .then((reset) => {
                 res.json(reset);
             });
@@ -56,18 +55,31 @@ class ResetController {
                     });
             }
         });
+    }
 
-        submitResetCode(req, res) {
-            db.Reset.findOne({
+    submitResetCode(req, res) {
+        db.Reset.findOne({
+            where: {
+                email: req.params.email,
+                resetCode: req.params.resetCode
+            }
+        })
+            .then((user) => {
+                res.json(user);
+            });
+    }
+
+    clearResetCode(req, res) {
+        db.Reset.update(
+            { resetCode: null },
+            {
                 where: {
-                    email: req.params.email,
-                    resetCode: req.params.resetCode,
+                    email: req.body.email
                 }
             })
-                .then((user) => {
-                    res.json(user);
-                });
-        }
+            .then((reset) => {
+                res.json(reset);
+            });
     }
 }
 

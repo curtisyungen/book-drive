@@ -33,7 +33,7 @@ class ForgotPassword extends Component {
                     if (res.data.length > 0) {
 
                         // Set reset code in database
-                        API.setResetCode()
+                        API.setResetCode(this.state.email)
                             .then((res) => {
 
                                 // Email reset code to user
