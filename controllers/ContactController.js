@@ -14,9 +14,11 @@ class ContactController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: "curtisyungen@gmail.com",
+            to: "congobooksales@gmail.com",
             subject: "Message from Congo user",
-            text: req.body.message,
+            text: 
+                `User Email: ${req.body.email}, 
+                User Message: ${req.body.message}`
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
