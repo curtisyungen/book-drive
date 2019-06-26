@@ -14,11 +14,9 @@ class ContactController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: "congobooksales@gmail.com",
-            subject: "Message from Congo user",
-            text: 
-            `User Email: ${req.body.email}, 
-            User Message: ${req.body.message}`
+            to: req.body.email,
+            subject: req.body.subject,
+            text: req.body.message,
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
@@ -34,7 +32,6 @@ class ContactController {
             }
         });
     }
-
 }
 
 module.exports = ContactController;
