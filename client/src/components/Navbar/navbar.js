@@ -83,6 +83,7 @@ class Navbar extends Component {
     }
 
     showSearchSuggestions = () => {
+        console.log("Suggestions", this.state.suggestions);
         if (this.state.suggestions.length > 0) {
             this.setState({
                 showSearchSuggestions: true,
