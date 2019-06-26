@@ -16,7 +16,7 @@ class ContactController {
             from: "congoserver@gmail.com",
             to: "curtisyungen@gmail.com",
             subject: "Message from Congo user",
-            text: req.params.message,
+            text: req.body.message,
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
@@ -26,8 +26,8 @@ class ContactController {
             else {
                 // Used only to fulfill axios promise
                 db.Books.findAll({})
-                    .then(() => {
-                        res.json("Sent");
+                    .then((books) => {
+                        res.json(books);
                     });
             }
         });

@@ -146,6 +146,6 @@ export default {
     },
 
     submitContactForm: function(email, message) {
-        return axios.post("/api/contact/submitContactForm", { params: { email: email, message: message }});
+        return axios.post("/api/contact/submitContactForm", { email: email, message: message });
     }
 };
