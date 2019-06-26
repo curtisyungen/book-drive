@@ -61,9 +61,17 @@ class Success extends Component {
                             email: this.state.user.email,
                             date: new Date(),
                             totalPrice: total,
-                            items: JSON.stringify(this.props.cart),
+                            items: "",
                             itemQty: this.props.cart.length,
                             shippingAddress: JSON.stringify(this.state.shippingAddress),
+                        }
+
+                        // Add items ordered to list
+                        for (var item in this.props.cart) {
+                            order.items.concat(`
+                                ${this.props.cart[item].title}, 
+                                by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}`
+                            );
                         }
 
                         // Store order in database
