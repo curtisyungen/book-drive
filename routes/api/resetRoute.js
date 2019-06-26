@@ -14,7 +14,7 @@ router.get("/submitResetCode", (req, res) => {
     controller.submitResetCode(req, res);
 });
 
-router.put("/clearResetCode", (req, res) => {
+router.delete("/clearResetCode", (req, res) => {
     controller.clearResetCode(req, res);
 });
 
