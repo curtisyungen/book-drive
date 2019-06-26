@@ -3,7 +3,7 @@
 
 Congo is a website I created to sell my extensive collection of self-help books. It is still a work in progress as of June 20, 2019. Estimated completion date is June 26, 2019.
 
-This project is deployed at https://congo-cjy.herokuapp.com.
+This project is deployed at https://congobooksales.herokuapp.com.
 
 ## Technologies Used
 1) Node.js
