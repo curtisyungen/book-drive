@@ -79,7 +79,8 @@ class OrderController {
 
             Sincerely, 
 
-            Congo`
+            Congo
+            https://congobooksales.com`
         };
 
         transporter.sendMail(mailOptions, function (err, info) {
