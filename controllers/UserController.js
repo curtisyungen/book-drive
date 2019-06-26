@@ -71,7 +71,7 @@ class UserController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: req.body.email,
+            to: req.params.email,
             subject: "Password Reset",
             text: `
             Hi ${req.body.name},
