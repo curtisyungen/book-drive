@@ -145,17 +145,18 @@ export default {
         return axios.post("/api/users/sendPasswordReset/" + email);
     },
 
-    submitContactForm: function(email, userMsg) {
+    submitContactForm: function(userEmail, userMsg) {
         let email = "congobooksales@gmail.com";
         let subject = "Message from Congo User";
         let message = 
-        `User email: ${email}
+        `User email: ${userEmail}
         User message: ${userMsg}`;
 
         return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: message });
     },
 
-    sendCopyToUser: function(email, userMsg) {
+    sendCopyToUser: function(userEmail, userMsg) {
+        let email = userEmail;
         let subject = "Your message to Congo";
         let message = 
         `Hi there, 
