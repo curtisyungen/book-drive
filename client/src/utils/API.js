@@ -145,7 +145,28 @@ export default {
         return axios.post("/api/users/sendPasswordReset/" + email);
     },
 
-    submitContactForm: function(email, message) {
-        return axios.post("/api/contact/submitContactForm", { email: email, message: message });
+    submitContactForm: function(message) {
+        let email = "congobooksales@gmail.com";
+        let subject = "Message from Congo User";
+
+        return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: message });
+    },
+
+    sendCopyToUser: function(email, message) {
+        let subject = "Your message to Congo";
+        let userMsg = 
+        `Hi there, 
+        
+        Thanks for contacting Congo. We'll be in touch with you shortly. 
+        
+        For now, here's a copy of your message: 
+        
+        ${message}
+
+        Sincerely, 
+
+        Congo`;
+
+        return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: userMsg });
     }
 };
