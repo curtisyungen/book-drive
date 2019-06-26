@@ -30,10 +30,11 @@ class Reset extends Component {
     submitResetCode = (event) => {
         event.preventDefault();
 
-        API.submitResetCode(this.state.email, this.state.resetCode)
-            .then((res) => {
+        let email = this.state.email;
+        API.submitResetCode(email, this.state.resetCode)
+            .then((res) => {                
                 if (res.data.length > 0) {
-                    API.clearResetCode(this.state.email);
+                    API.clearResetCode(email);
 
                     this.props.setRedirectToCreatePassword();
                 }
