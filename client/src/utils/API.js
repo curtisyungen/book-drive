@@ -81,6 +81,10 @@ export default {
         return axios.get("/api/users/findExistingUser/" + email);
     },
 
+    submitResetCode: function(email, resetCode) {
+        return axios.get("/api/users/submitResetCode/", { params: { email: email, resetCode: resetCode }});
+    },
+
     // CART ROUTES
     // =============================================================
 
@@ -142,7 +146,8 @@ export default {
     },
 
     sendPasswordReset: function(email) {
-        return axios.post("/api/users/sendPasswordReset/" + email);
+        let resetCode = "111111";
+        return axios.post("/api/users/sendPasswordReset", { params: { email: email, resetCode: resetCode }});
     },
 
     submitContactForm: function(userEmail, userMsg) {
