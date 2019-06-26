@@ -31,10 +31,19 @@ class ForgotPassword extends Component {
 
                     // If email is found, send password reset message
                     if (res.data.length > 0) {
-                        API.sendPasswordResetCode(this.state.email);
 
-                        this.props.setRedirectToPasswordReset();
+                        // Set reset code in database
+                        API.setResetCode()
+                            .then((res) => {
+
+                                // Email reset code to user
+                                API.sendPasswordResetCode(this.state.email, res.data);
+
+                                // Redirect to reset code input page
+                                this.props.setRedirectToPasswordReset();
+                            });       
                     }
+                    // Message if email not found in database
                     else {
                         alert("No account exists for this user.");
 
