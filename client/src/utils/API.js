@@ -154,7 +154,7 @@ export default {
 
     sendCopyToUser: function(email, message) {
         let subject = "Your message to Congo";
-        let userMsg = 
+        let message = 
         `Hi there, 
         
         Thanks for contacting Congo. We'll be in touch with you shortly. 
@@ -167,6 +167,6 @@ export default {
 
         Congo`;
 
-        return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: userMsg });
+        return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: message });
     }
 };
