@@ -61,7 +61,7 @@ class Success extends Component {
                             email: this.state.user.email,
                             date: new Date(),
                             totalPrice: total,
-                            items: JSON.parse(this.props.cart),
+                            items: JSON.stringify(this.props.cart),
                             itemList: "",
                             itemQty: this.props.cart.length,
                             shippingAddress: JSON.stringify(this.state.shippingAddress),
