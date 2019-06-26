@@ -27,12 +27,12 @@ class ResetController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: req.body.email,
+            to: req.params.email,
             subject: "Congo password assistance",
             text: `
             Hi there,
 
-            Here is your One Time Password: ${req.body.resetCode}.
+            Here is your One Time Password: ${req.params.resetCode}.
 
             If you continue to have issues, please contact us by responding to this email. 
             We'll be happy to assist you in recovering your account.
@@ -57,10 +57,10 @@ class ResetController {
     }
 
     submitResetCode(req, res) {
-        db.Reset.findOne({
+        db.Reset.findAll({
             where: {
-                email: req.body.email,
-                resetCode: req.body.resetCode
+                email: req.params.email,
+                resetCode: req.params.resetCode
             }})
             .then((user) => {
                 res.json(user);
