@@ -541,6 +541,7 @@ class App extends Component {
                 isLoggedIn={this.state.isLoggedIn}
                 showSlideInMenu={this.showSlideInMenu}
                 cart={this.state.cart}
+                setRedirectToLogin={this.setRedirectToLogin}
               />
             </span>
           ) : (
