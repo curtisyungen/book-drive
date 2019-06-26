@@ -502,7 +502,8 @@ class App extends Component {
 
           {/* SHOW OR HIDE NAVBAR */}
 
-          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup" && window.location.pathname !== "/forgot") ? (
+          {(window.location.pathname !== "/login" && window.location.pathname !== "/signup" 
+          && window.location.pathname !== "/forgot" && window.location.pathname !== "/reset") ? (
             <span>
               <BannerAd />
 

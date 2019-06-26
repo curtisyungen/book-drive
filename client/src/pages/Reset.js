@@ -29,7 +29,7 @@ class Reset extends Component {
 
     submitResetCode = (event) => {
         event.preventDefault();
-        
+
         API.submitResetCode(this.state.email, this.state.resetCode)
             .then((res) => {
                 console.log(res.data);
@@ -52,9 +52,9 @@ class Reset extends Component {
 
                 <div className="reset">
                     <form>
-                        <h4 className="formHeader">Password assistance</h4>
-                        <p className="formSubHeader">Enter the email address associated with your Congo account.</p>
-                        <p className="formLabel">Email</p>
+                        <h4 className="resetFormHeader">Authentication required</h4>
+                        <p className="formSubHeader">{`For your security, we need to authenticate your request. We've sent a One Time Password (OTP) to the email ${this.state.email}. Please enter it below.`}</p>
+                        <p className="formLabel">Enter OTP</p>
                         <input
                             autoFocus
                             className="formInput"
@@ -67,7 +67,7 @@ class Reset extends Component {
                             className="submitResetCodeBtn"
                             onClick={this.submitResetCode}
                         >
-                            Submit
+                            Continue
                         </button>
                     </form>
                 </div>
