@@ -14,4 +14,8 @@ router.post("/sendPasswordResetCode", (req, res) => {
     controller.sendPasswordResetCode(req, res);
 });
 
+router.put("/clearResetCode", (req, res) => {
+    controller.clearResetCode(req, res);
+});
+
 module.exports = router;
