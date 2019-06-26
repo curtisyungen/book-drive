@@ -9,16 +9,7 @@ class BookSuggestions extends Component {
         super(props);
 
         this.state = {
-            suggestions: [{
-                title: "The Old Man and the Sea",
-                authorFirst: "Ernest",
-                authorLast: "Hemingway",
-                price: "5.00",
-                avail: "avail",
-                cover: "soft",
-                tags: "fiction",
-                imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-            }],
+            suggestions: [],
             displayClass: null,
         }
     }
