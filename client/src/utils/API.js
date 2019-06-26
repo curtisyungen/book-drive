@@ -179,7 +179,7 @@ export default {
     },
 
     sendPasswordResetCode: function(email, resetCode) {
-        return axios.post("/api/reset/sendPasswordResetCode", { params: { email: email, resetCode: resetCode }});
+        return axios.post("/api/reset/sendPasswordResetCode", { email: email, resetCode: resetCode });
     },
 
     submitResetCode: function(email, resetCode) {

@@ -27,12 +27,12 @@ class ResetController {
 
         let mailOptions = {
             from: "congoserver@gmail.com",
-            to: req.params.email,
+            to: req.body.email,
             subject: "Congo password assistance",
             text: `
             Hi there,
 
-            Here is your One Time Password: ${req.params.resetCode}.
+            Here is your One Time Password: ${req.body.resetCode}.
 
             If you continue to have issues, please contact us by responding to this email. 
             We'll be happy to assist you in recovering your account.
