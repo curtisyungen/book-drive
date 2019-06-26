@@ -73,12 +73,12 @@ class ForgotPassword extends Component {
 
     render() {
         return (
-            <span className="loginPage">
+            <span className="forgotPage">
                 <a className="congoLogo" href="/">
                     <img className="loginLogo" src={require('../images/congo1.png')} alt="congo" />
                 </a>
 
-                <div className="login">
+                <div className="forgot">
                     <form>
                         <h4 className="formHeader">Password assistance</h4>
                         <p className="formSubHeader">Enter the email address associated with your Congo account.</p>
