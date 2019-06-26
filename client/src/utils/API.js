@@ -152,7 +152,7 @@ export default {
         return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: message });
     },
 
-    sendCopyToUser: function(email, message) {
+    sendCopyToUser: function(email, userMsg) {
         let subject = "Your message to Congo";
         let message = 
         `Hi there, 
@@ -161,7 +161,7 @@ export default {
         
         For now, here's a copy of your message: 
         
-        ${message}
+        ${userMsg}
 
         Sincerely, 
 
