@@ -68,15 +68,12 @@ class ResetController {
     }
 
     clearResetCode(req, res) {
-        db.Reset.update(
-            { resetCode: null },
-            {
-                where: {
-                    email: req.body.email
-                }
-            })
-            .then((reset) => {
-                res.json(reset);
+        db.Reset.delete({
+            where: {
+                email: req.body.email
+            }})
+            .then(() => {
+                res.json("Deleted.");
             });
     }
 }

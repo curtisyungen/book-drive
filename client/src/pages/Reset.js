@@ -32,10 +32,11 @@ class Reset extends Component {
 
         API.submitResetCode(this.state.email, this.state.resetCode)
             .then((res) => {
-                console.log("Submit Reset Code", res.data);
-
                 if (res.data.length > 0) {
                     alert("Correct code.");
+                    API.clearResetCode();
+
+                    this.props.redirectToCreatePassword();
                 }
                 else {
                     alert("Incorrect code.");
