@@ -14,5 +14,9 @@ router.post("/createNewUser", (req, res) => {
     controller.createNewUser(req, res);
 });
 
+router.put("/submitNewPassword", (req, res) => {
+    controller.submitNewPassword(req, res);
+});
+
 module.exports = router;
 

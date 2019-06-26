@@ -577,6 +577,7 @@ class App extends Component {
             <Route exact path="/createPassword" render={() => 
               <CreatePassword 
                 email={this.state.resetEmail}
+                setRedirectToLogin={this.setRedirectToLogin}
               />
             } />
             <Route exact path="/signup" render={() =>

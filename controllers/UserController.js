@@ -58,6 +58,28 @@ class UserController {
             console.log(err);
         });
     }
+
+    submitNewPassword(req, res) {
+        bcrypt.genSalt(11, function (err, salt) {
+            if (err) {
+                return console.log(err);
+            }
+
+            bcrypt.hash(req.body.password, salt, function(err, hash) {
+                db.Users.update(
+                    {password: hash},
+                    {where: {
+                        email: req.body.email,
+                    }})
+                    .then((user) => {
+                        res.json(user);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            });
+        });
+    }
 }
 
 module.exports = UserController;
