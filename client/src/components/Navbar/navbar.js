@@ -66,21 +66,24 @@ class Navbar extends Component {
         this.setState({
             [name]: value
         }, () => {
-            this.getSearchSuggestions(value);
+            if (this.state.bookSearch === null || this.state.bookSearch === "") {
+                this.hideSearchSuggestions();
+            }
+            else {
+                this.getSearchSuggestions(value);
+            }
         });
     }
 
     getSearchSuggestions = (bookSearch) => {
-        if (bookSearch !== null && bookSearch !== "") {
-            API.getSearchSuggestions(bookSearch)
-                .then((res) => {
-                    this.setState({
-                        suggestions: res.data,
-                    }, () => {
-                        this.showSearchSuggestions();
-                    });
+        API.getSearchSuggestions(bookSearch)
+            .then((res) => {
+                this.setState({
+                    suggestions: res.data,
+                }, () => {
+                    this.showSearchSuggestions();
                 });
-        }
+            });
     }
 
     showSearchSuggestions = () => {
