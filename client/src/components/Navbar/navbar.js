@@ -232,12 +232,12 @@ class Navbar extends Component {
                                         closeOnDocumentClick
                                         className="popup"
                                     >
-                                        <div
+                                        <a
                                             className="btn btn-warning btn-sm popupLoginBtn"
-                                            onClick={this.props.setRedirectToLogin}
+                                            href="/login"
                                         >
                                             Sign in
-                                        </div>
+                                        </a>
 
                                         <div className="popupNewCustomer">
                                             New customer?
