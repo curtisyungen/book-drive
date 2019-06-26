@@ -145,11 +145,6 @@ export default {
         return axios.post("/api/orders/sendConfirmationEmail", orderInfo);
     },
 
-    sendPasswordReset: function(email) {
-        let resetCode = "111111";
-        return axios.post("/api/users/sendPasswordReset", { params: { email: email, resetCode: resetCode }});
-    },
-
     submitContactForm: function(userEmail, userMsg) {
         let email = "congobooksales@gmail.com";
         let subject = "Message from Congo User";
@@ -177,5 +172,17 @@ export default {
         Congo`;
 
         return axios.post("/api/contact/submitContactForm", { email: email, subject: subject, message: message });
-    }
+    },
+
+    // PASSWORD RESET ROUTES
+    // =============================================================
+
+    sendPasswordResetCode: function(email, resetCode) {
+        return axios.post("/api/reset/sendPasswordResetCode", { email: email, resetCode: resetCode });
+    },
+
+    setResetCode: function(email) {
+        let resetCode = 111111;
+        return axios.post("/api/reset/setResetCode", { email: email, resetCode: resetCode });
+    },
 };
