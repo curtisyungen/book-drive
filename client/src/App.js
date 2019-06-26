@@ -4,6 +4,7 @@ import BannerAd from "./components/BannerAd/bannerAd";
 import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
+import Reset from "./pages/Reset";
 import Signup from "./pages/Signup";
 import SlideInMenu from "./components/SlideInMenu/slideInMenu";
 import Home from "./pages/Home";
@@ -35,6 +36,7 @@ class App extends Component {
       redirectToHome: false,
       redirectToLogin: false,
       redirectToSignUp: false,
+      redirectToPasswordReset: false,
       showSlideInMenu: "hide",
       showFiltersMenu: "hide",
     }
@@ -45,6 +47,8 @@ class App extends Component {
     this.setState({
       redirectToHome: false,
       redirectToLogin: false,
+      redirectToSignUp: false,
+      redirectToPasswordReset: false,
     });
 
     this.getAllBooks();
@@ -83,6 +87,12 @@ class App extends Component {
     });
   }
 
+  setRedirectToPasswordReset = () => {
+    this.setState({
+      redirectToPasswordReset: true,
+    });
+  }
+
   redirectToHome = () => {
     return <Redirect to="/" />
   }
@@ -93,6 +103,10 @@ class App extends Component {
 
   redirectToSignUp = () => {
     return <Redirect to="/signup" />
+  }
+
+  redirectToPasswordReset = () => {
+    return <Redirect to="/reset" />
   }
 
   updateParentState = () => {
@@ -196,8 +210,6 @@ class App extends Component {
               }
 
             });
-
-
         }
       });
   }
@@ -482,6 +494,12 @@ class App extends Component {
               <></>
             )}
 
+          {this.state.redirectToPasswordReset ? (
+            this.redirectToPasswordReset()
+          ) : (
+            <></>
+          )}
+
           {/* SHOW OR HIDE NAVBAR */}
 
           {(window.location.pathname !== "/login" && window.location.pathname !== "/signup" && window.location.pathname !== "/forgot") ? (
@@ -535,7 +553,12 @@ class App extends Component {
                 loginUser={this.loginUser}
               />
             } />
-            <Route exact path="/forgot" component={ForgotPassword} />
+            <Route exact path="/forgot" render={() => 
+              <ForgotPassword 
+                setRedirectToPasswordReset={this.setRedirectToPasswordReset}
+              />
+            } />
+            <Route exact path="/reset" component={Reset} />
             <Route exact path="/signup" render={() =>
               <Signup
                 createNewUser={this.createNewUser}

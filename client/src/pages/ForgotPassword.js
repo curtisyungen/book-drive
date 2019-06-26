@@ -20,9 +20,36 @@ class ForgotPassword extends Component {
         });
     }
 
-    sendPasswordReset = (event) => {
+    getPasswordReset = (event) => {
         event.preventDefault();
 
+        if (this.state.email !== null && this.state.email !== "") {
+            
+            // Check if email exists in database
+            API.findExistingUser(this.state.email)
+                .then((res) => {
+
+                    // If email is found, send password reset message
+                    if (res.data.length > 0) {
+                        API.sendPasswordResetCode(this.state.email);
+
+                        this.props.setRedirectToPasswordReset();
+                    }
+                    else {
+                        alert("No account exists for this user.");
+
+                        this.setState({
+                            email: "",
+                        });
+                    }
+                });
+        }
+        else {
+            alert("Please enter your email address.");
+        }
+    }
+
+    sendPasswordReset = () => {
         if (this.state.email !== null && this.state.email !== "") {
             API.sendPasswordReset(this.state.email);
         }
@@ -54,7 +81,7 @@ class ForgotPassword extends Component {
 
                         <button
                             className="submitEmailBtn"
-                            onClick={this.sendPasswordReset}
+                            onClick={this.getPasswordReset}
                         >
                             Continue
                         </button>

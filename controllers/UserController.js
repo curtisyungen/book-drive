@@ -74,9 +74,12 @@ class UserController {
             to: req.params.email,
             subject: "Password Reset",
             text: `
-            Hi ${req.body.name},
+            Hi there,
 
-            Click here to reset your password: https://congo-cjy.herokuapp.com/passwordReset
+            Here is your password reset code: ${req.params.resetCode}.
+
+            If you continue to have issues, please contact us by responding to this email. 
+            We'll be happy to assist you in recovering your account.
 
             Sincerely, 
 
@@ -96,6 +99,18 @@ class UserController {
                         res.json(order);
                     });
             }
+        });
+    }
+
+    submitResetCode(req, res) {
+        db.Users.findOne({
+            where: {
+                email: req.params.email,
+                resetCode: req.params.resetCode,
+            }
+        })
+        .then((user) => {
+            res.json(user);
         });
     }
 }
