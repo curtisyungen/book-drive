@@ -60,10 +60,9 @@ class ResetController {
     submitResetCode(req, res) {
         db.Reset.findOne({
             where: {
-                email: req.params.email,
-                resetCode: req.params.resetCode
-            }
-        })
+                email: req.body.email,
+                resetCode: req.body.resetCode
+            }})
             .then((user) => {
                 res.json(user);
             });
