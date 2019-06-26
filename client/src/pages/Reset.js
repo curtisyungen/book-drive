@@ -36,7 +36,7 @@ class Reset extends Component {
                     alert("Correct code.");
                     API.clearResetCode();
 
-                    this.props.redirectToCreatePassword();
+                    this.props.setRedirectToCreatePassword();
                 }
                 else {
                     alert("Incorrect code.");
