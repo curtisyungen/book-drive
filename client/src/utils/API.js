@@ -81,6 +81,10 @@ export default {
         return axios.get("/api/users/findExistingUser/" + email);
     },
 
+    submitNewPassword: function(email, password) {
+        return axios.put("/api/users/submitNewPassword", { email: email, password: password });
+    },
+
     // CART ROUTES
     // =============================================================
 

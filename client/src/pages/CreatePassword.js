@@ -20,7 +20,20 @@ class CreatePassword extends Component {
     }
 
     validatePassword = () => {
-        return this.state.newPassword === this.state.verifyPassword && this.state.newPassword.length > 6;
+        
+        if (this.state.newPassword === null || this.state.newPassword === "") {
+            return "blank";
+        }
+
+        if (this.state.newPassword.length < 6) {
+            return "short";
+        }
+
+        if (this.state.newPassword !== this.state.verifyPassword) {
+            return "unmatch";
+        }
+
+        return "good";
     }
 
     handleInputChange = (event) => {
@@ -31,19 +44,29 @@ class CreatePassword extends Component {
         });
     }
 
-    submitResetCode = (event) => {
-        event.preventDefault();
+    submitNewPassword = () => {
 
-        API.submitResetCode(this.state.email, this.state.resetCode)
-            .then((res) => {
-                if (res.data.length > 0) {
-                    alert("Correct code.");
-                    API.clearResetCode();
-                }
-                else {
-                    alert("Incorrect code.");
-                }
-            });
+        let valid = this.validatePassword();
+        let errMsg = "Invalid password.";
+
+        switch (valid) {
+            case "blank": errMsg = "Password cannot be blank."; break;
+            case "short": errMsg = "Password must be at least 6 characters."; break;
+            case "unmatch": errMsg = "Passwords don't match."; break;
+            default: errMsg = errMsg;
+        }
+
+        if (valid === "good") {
+            API.submitNewPassword(this.state.email, this.state.newPassword)
+                .then((res) => {
+                    console.log(res);
+
+                    this.props.setRedirectToLogin();
+                });
+        }
+        else {
+            alert(errMsg);
+        }
     }
 
     render() {
