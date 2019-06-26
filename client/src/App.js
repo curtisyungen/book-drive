@@ -19,8 +19,6 @@ import Cancel from "./pages/Cancel";
 import API from "./utils/API";
 import './App.css';
 
-import UnderConstruction from "./components/UnderConstruction/underConstruction";
-
 class App extends Component {
 
   constructor(props) {
@@ -570,8 +568,6 @@ class App extends Component {
           ) : (
               <></>
             )}
-
-          <UnderConstruction />
 
           {/* HANDLE PAGE ROUTING */}
 
