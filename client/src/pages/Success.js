@@ -68,7 +68,7 @@ class Success extends Component {
 
                         // Add items ordered to list
                         for (var item in this.props.cart) {
-                            order.items.concat(`
+                            order.items += (`
                                 ${this.props.cart[item].title}, 
                                 by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}`
                             );
