@@ -138,7 +138,7 @@ class Navbar extends Component {
                         name="bookSearch"
                         onChange={this.handleInputChange}
                         onFocus={this.handleInputChange}
-                        value={this.bookSearch}
+                        value={this.state.bookSearch}
                     />
                     <button
                         className="searchBtn"
