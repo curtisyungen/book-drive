@@ -87,8 +87,10 @@ class CreatePassword extends Component {
                             autoFocus
                             className="formInput"
                             name="newPassword"
+                            type="password"
                             value={this.state.newPassword}
                             onChange={this.handleInputChange}
+                            autoComplete="off"
                         />
                         <label className="passwordLabel">Passwords must be at least 6 characters.</label>
 
@@ -96,8 +98,10 @@ class CreatePassword extends Component {
                         <input
                             className="formInput"
                             name="verifyPassword"
+                            type="password"
                             value={this.state.verifyPassword}
                             onChange={this.handleInputChange}
+                            autoComplete="off"
                         />
 
                         <button
