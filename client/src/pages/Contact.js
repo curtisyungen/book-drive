@@ -42,7 +42,7 @@ class Contact extends Component {
 
             API.submitContactForm(email, message)
             .then((res) => {
-                console.log(res);
+                console.log("Submit Contact Response", res);
 
                 alert("Message sent!");
 
@@ -54,9 +54,6 @@ class Contact extends Component {
     render() {
         return (
             <span>
-
-
-
                 <h1 className="contactHeader">Want to get in touch with us?</h1>
 
                 <div className="contactFormDiv">
