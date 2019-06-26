@@ -191,6 +191,6 @@ export default {
     },
 
     clearResetCode: function(email) {
-        return axios.delete("/api/reset/clearResetCode", { email: email });
+        return axios.delete("/api/reset/clearResetCode/" + email);
     },
 };

@@ -70,7 +70,7 @@ class ResetController {
     clearResetCode(req, res) {
         db.Reset.destroy({
             where: {
-                email: req.body.email
+                email: req.params.email
             }})
             .then(() => {
                 res.json("Deleted.");
