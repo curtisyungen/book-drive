@@ -38,6 +38,7 @@ class App extends Component {
       redirectToLogin: false,
       redirectToSignUp: false,
       redirectToPasswordReset: false,
+      redirectToCreatePassword: false,
       showSlideInMenu: "hide",
       showFiltersMenu: "hide",
       resetEmail: null,
@@ -51,6 +52,7 @@ class App extends Component {
       redirectToLogin: false,
       redirectToSignUp: false,
       redirectToPasswordReset: false,
+      redirectToCreatePassword: false,
     });
 
     this.getAllBooks();
@@ -95,6 +97,12 @@ class App extends Component {
     });
   }
 
+  setRedirectToCreatePassword = () => {
+    this.setState({
+      redirectToCreatePassword: true,
+    });
+  }
+
   redirectToHome = () => {
     return <Redirect to="/" />
   }
@@ -109,6 +117,10 @@ class App extends Component {
 
   redirectToPasswordReset = () => {
     return <Redirect to="/reset" />
+  }
+
+  redirectToCreatePassword = () => {
+    return <Redirect to="/createPassword" />
   }
 
   updateParentState = () => {
@@ -572,6 +584,7 @@ class App extends Component {
             <Route exact path="/reset" render={() => 
               <Reset 
                 email={this.state.resetEmail}
+                setRedirectToCreatePassword={this.setRedirectToCreatePassword}
               />
             } />
             <Route exact path="/createPassword" render={() => 
