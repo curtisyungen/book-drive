@@ -61,16 +61,17 @@ class Success extends Component {
                             email: this.state.user.email,
                             date: new Date(),
                             totalPrice: total,
-                            items: "",
+                            items: JSON.parse(this.props.cart),
+                            itemList: "",
                             itemQty: this.props.cart.length,
                             shippingAddress: JSON.stringify(this.state.shippingAddress),
                         }
 
                         // Add items ordered to list
                         for (var item in this.props.cart) {
-                            order.items += (
+                            order.itemList += (
                             `
-                            ${item}) ${this.props.cart[item].title} by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}
+                            ${item + 1}) ${this.props.cart[item].title} by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}
                                 
                             `);
                         }

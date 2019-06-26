@@ -29,7 +29,6 @@ class Orders extends Component {
         if (this.props.user || this.state.user) {
             API.getUserBookOrders(this.props.user.email || this.state.user.email)
                 .then((res) => {
-                    console.log("Order data", res.data);
                     this.setState({
                         orders: res.data,
                     });
