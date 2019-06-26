@@ -185,4 +185,8 @@ export default {
         let resetCode = 111111;
         return axios.post("/api/reset/setResetCode", { email: email, resetCode: resetCode });
     },
+
+    clearResetCode: function(email) {
+        return axios.put("/api/reset/clearResetCode", { email: email });
+    }
 };
