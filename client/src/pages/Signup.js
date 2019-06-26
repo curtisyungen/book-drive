@@ -96,7 +96,13 @@ class Signup extends Component {
                         </button>
 
                         <p className="disclaimer">
-                            By continuing, you agree to Congo's <a href="/">Conditions of Use</a> and <a href="/">Privacy Notice.</a>
+                            By continuing, you agree to Congo's 
+                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088">
+                                Conditions of Use
+                            </a> and 
+                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496">
+                                Privacy Notice.
+                            </a>
                         </p>
 
                         <p className="separator"></p>
