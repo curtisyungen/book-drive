@@ -34,6 +34,8 @@ class Reset extends Component {
         API.submitResetCode(email, this.state.resetCode)
             .then((res) => {                
                 if (res.data.length > 0) {
+                    console.log(this.state);
+                    console.log(email);
                     API.clearResetCode(email);
 
                     this.props.setRedirectToCreatePassword();
