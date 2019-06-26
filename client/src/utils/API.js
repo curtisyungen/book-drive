@@ -178,7 +178,7 @@ export default {
     // =============================================================
 
     setResetCode: function(email) {
-        let resetCode = "111111";
+        let resetCode = Math.floor(100000 + Math.random() * 900000).toString();
         return axios.post("/api/reset/setResetCode", { email: email, resetCode: resetCode });
     },
 
