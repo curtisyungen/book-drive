@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/navbar";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import Reset from "./pages/Reset";
+import CreatePassword from "./pages/CreatePassword";
 import Signup from "./pages/Signup";
 import SlideInMenu from "./components/SlideInMenu/slideInMenu";
 import Home from "./pages/Home";
@@ -510,7 +511,8 @@ class App extends Component {
           {/* SHOW OR HIDE NAVBAR */}
 
           {(window.location.pathname !== "/login" && window.location.pathname !== "/signup" 
-          && window.location.pathname !== "/forgot" && window.location.pathname !== "/reset") ? (
+          && window.location.pathname !== "/forgot" && window.location.pathname !== "/reset"
+          && window.location.pathname !== "/createPassword") ? (
             <span>
               <BannerAd />
 
@@ -569,6 +571,11 @@ class App extends Component {
             } />
             <Route exact path="/reset" render={() => 
               <Reset 
+                email={this.state.resetEmail}
+              />
+            } />
+            <Route exact path="/createPassword" render={() => 
+              <CreatePassword 
                 email={this.state.resetEmail}
               />
             } />
