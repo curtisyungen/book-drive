@@ -72,7 +72,6 @@ class Success extends Component {
                             order.itemList += (
                             `
                             ${parseInt(item) + 1}) ${this.props.cart[item].title} by ${this.props.cart[item].authorFirst} ${this.props.cart[item].authorLast}
-                                
                             `);
                         }
 
