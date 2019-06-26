@@ -44,7 +44,9 @@ class CreatePassword extends Component {
         });
     }
 
-    submitNewPassword = () => {
+    submitNewPassword = (event) => {
+
+        event.preventDefault();
 
         let valid = this.validatePassword();
         let errMsg = "Invalid password.";
@@ -99,8 +101,8 @@ class CreatePassword extends Component {
                         />
 
                         <button
-                            className="submitResetCodeBtn"
-                            onClick={this.submitResetCode}
+                            className="submitNewPasswordBtn"
+                            onClick={this.submitNewPassword}
                         >
                             Save changes and Sign-In
                         </button>
