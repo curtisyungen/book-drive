@@ -32,12 +32,16 @@ class ForgotPassword extends Component {
                     // If email is found, send password reset message
                     if (res.data.length > 0) {
 
+                        let email = this.state.email;
+
                         // Set reset code in database
-                        API.setResetCode(this.state.email)
+                        API.setResetCode(email)
                             .then((res) => {
 
+                                console.log("Set Reset Code", res);
+
                                 // Email reset code to user
-                                API.sendPasswordResetCode(this.state.email, res.data);
+                                API.sendPasswordResetCode(email, res.data);
 
                                 // Redirect to reset code input page
                                 this.props.setRedirectToPasswordReset();

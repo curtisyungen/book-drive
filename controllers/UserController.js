@@ -1,6 +1,5 @@
 const db = require("../models/index.js");
 const bcrypt = require("bcrypt");
-const nodemailer = require("nodemailer");
 
 class UserController {
 

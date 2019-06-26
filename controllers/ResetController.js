@@ -1,4 +1,5 @@
 const db = require("../models/index.js");
+const nodemailer = require("nodemailer");
 
 class ResetController {
 
@@ -46,12 +47,10 @@ class ResetController {
                 console.log(err);
             }
             else {
-                console.log("Email sent: " + info.response);
-
                 // Used only to fulfill axios promise
-                db.Users.findAll({})
-                    .then((order) => {
-                        res.json(order);
+                db.Books.findAll({})
+                    .then(() => {
+                        res.json("Complete");
                     });
             }
         });
