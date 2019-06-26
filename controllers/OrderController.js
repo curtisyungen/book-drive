@@ -7,7 +7,10 @@ class OrderController {
         db.Orders.findAll({
             where: {
                 email: req.params.email,
-            }
+            },
+            order: [
+                ["date", "DESC"],
+            ],
         })
             .then((orders) => {
                 res.json(orders);
