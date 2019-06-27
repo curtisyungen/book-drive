@@ -76,14 +76,14 @@ class CartSummary extends Component {
             <div
                 className="cartSummary"
             >
-                <div className="primo">
-                    <img className="primoImg" src={require('../../images/primo.png')} />
-                    <span className="primoText">&nbsp;FREE One-Day</span>
-                </div>
-
                 <div>
                     <span className="subtotalTitle">Subtotal{this.state.cart ? (` (${this.state.cart.length}) items):`):(":")}</span>
                     <span className="subtotal">&nbsp;{`$${parseFloat(Math.round(this.state.subtotal * 100) / 100).toFixed(2)}`}</span>
+                </div>
+
+                <div className="primo">
+                    <img className="primoImg" src={require('../../images/primo.png')} />
+                    <span className="primoText">&nbsp;FREE One-Day</span>
                 </div>
 
                 <br/>
