@@ -22,17 +22,20 @@
 .technology {
     display: inline-block;
     font-size: 14px;
-    margin: 5px 5px 0px 0px;
-    padding: 2px 5px;
+    /* margin: 5px 5px 0px 0px; */
+    padding: 2px 7px;
     white-space: nowrap;
 }
 
 .dependencyList {
+    background: rgb(242, 242, 242);
+    padding: 0px 50px;
 
 }
 
 .technologyList {
-    
+    background: rgb(242, 242, 242);
+    text-align: center;
 }
 
 @media only screen and (max-width: 420px) {
