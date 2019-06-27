@@ -28,10 +28,20 @@ class About extends Component {
                     {/* ABOUT - TECHNICAL */}
                     <div className="aboutSection aboutTechnical">
                         Everything on this site was created from scratch, including all graphics, logos, page headers, button icons, and scripts.
-                        Nothing but inspiration was taken from Amazon's website.
+                        The only things taken from Amazon were the book cover images (as cited) and genuine inspiration from their beautiful and high-quality website.
 
-                        The site was built using Node.js, Express.js, and ReactJS.
+                        {/* TECHNOLOGY LIST */}
+                        <div className="aboutSection">
+                            Technologies Used
+                            <ul className="technologyList">
+                                <li className="technology">MySQL</li>
+                                <li className="technology">Express.js</li>
+                                <li className="technology">ReactJS</li>
+                                <li className="technology">Node.js</li>
+                            </ul>
+                        </div>
 
+                        {/* DEPENDENCY LIST */}
                         <div className="aboutSection">
                             Dependencies
                             <ul className="dependencyList">
