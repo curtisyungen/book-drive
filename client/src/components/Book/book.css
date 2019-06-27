@@ -1,6 +1,7 @@
 .addToCartBtn {
     background: rgb(241, 203, 112);
     border: 1px solid rgb(167, 134, 53);
+    margin-bottom: 10px;
     vertical-align: middle;
 }
 
@@ -100,7 +101,7 @@
     box-shadow: 0 0 0 4px rgba(0,0,0,.1);
     color: rgb(17, 17, 17);
     display: block;
-    height: 190px;
+    height: 180px;
     line-height: 19px;
     margin: 10px;
     position: absolute;
@@ -222,6 +223,7 @@
     font-family: "Arial";
     font-size: 13px;
     line-height: 19px;
+    margin-bottom: 5px;
     margin-left: 15px;
     margin-top: 0px;
     text-align: left;
