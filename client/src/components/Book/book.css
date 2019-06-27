@@ -110,11 +110,15 @@
     width: 270px;
 }
 
-.buyBoxBuyUsed {
+.buyUsedRadioBtn {
 
 }
 
-.buyBoxBuyUsed:checked {
+.buyUsedRadioBtn:checked {
+
+}
+
+.buyUsedLabel {
     
 }
 
