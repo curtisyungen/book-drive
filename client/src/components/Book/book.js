@@ -114,6 +114,7 @@ class Book extends Component {
                             <div className="buyOption">
                                 <span className="buyCoverType">{this.state.cover}</span>
                                 <span className="buyPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</span>
+                                <div className="primoImgBookSm"></div>
                             </div>
                         </div>
                     ) : (
@@ -123,6 +124,9 @@ class Book extends Component {
                     <div id="buyBox">
 
                         <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
+
+                        <div className="primoImgBookLg"><span className="primoImgBookLgText">FREE Shipping</span></div>
+                        {/* <div className="primoImgBookLgText">FREE Shipping</div> */}
 
                         <p className={`bookStatus book-${this.state.avail}`}>{this.state.avail === "avail" ? (`In Stock.`) : (`Out of Stock.`)}</p>
                         <p className="shipsFromCongo">{`${this.state.avail === "avail" ? ("Ships from and sold by Congo.") : ("Guess you'd better check on Amazon.")}`}</p>
