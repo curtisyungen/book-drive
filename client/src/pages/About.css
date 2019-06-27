@@ -18,8 +18,8 @@
     text-align: justify;
 }
 
-.dependencies {
-    
+.dependency {
+    display: inline;
 }
 
 .dependencyList {
