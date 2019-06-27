@@ -127,8 +127,10 @@ class Book extends Component {
                     <div id="buyBox">
 
                         {/* BUY USED RADIO BUTTON */}
-                        <input type="radio" checked={true} className="buyUsedRadioBtn" name="buyUsedRadioBtn"/>
-                        <label for="buyUsedRadioBtn" className="buyUsedLabel">Buy Used</label>
+                        <div className="buyUsedDiv">
+                            <input type="radio" checked={true} className="buyUsedRadioBtn" name="buyUsedRadioBtn"/>
+                            <label for="buyUsedRadioBtn" className="buyUsedLabel">Buy Used</label>
+                        </div>
 
                         {/* PRICE */}
                         <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
