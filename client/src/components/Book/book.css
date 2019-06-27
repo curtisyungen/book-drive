@@ -124,6 +124,10 @@
     color: rgb(230, 117, 0);
 }
 
+input[type=radio]:checked {
+    color: rgb(230, 117, 0);
+}
+
 .buyUsedLabel {
     font-family: "Arial";
     font-size: 13px;
