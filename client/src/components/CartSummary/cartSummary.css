@@ -3,7 +3,7 @@
     border: 1px solid rgb(242, 242, 242);
     border-radius: 4px;
     height: 150px;
-    padding: 20px;
+    padding: 12px 20px;
     position: absolute;
     right: 50px;
     top: 160px;
@@ -26,6 +26,23 @@
     font-size: 10px;
     text-align: center;
     width: 100%;
+}
+
+.primoDiv {
+    margin: 10px 0px;
+}
+
+.primoImg {
+    background-image: url("../../images/primo-gray.png");
+    background-repeat: no-repeat;
+    background-size: 65px;
+    display: inline-block;
+    height: 20px;
+    width: 75px;
+}
+
+.primoText {
+    font-size: 13px;
 }
 
 .proceedToCheckout {
@@ -58,5 +75,12 @@
         right: 0px;
         top: 100px;
         width: 100%;
+    }
+
+    .primoImg {
+        background-image: url("../../images/primo-white.png");
+        background-repeat: no-repeat;
+        background-size: 65px;
+        height: 20px;
     }
 }
