@@ -31,12 +31,10 @@
 .primo {
     background-image: url("../../images/primo-gray.png");
     background-repeat: no-repeat;
-    background-size: 25%;
+    background-size: 65px;
+    display: inline-block;
     height: 20px;
-}
-
-.primoImg {
-    height: 20px;
+    width: 75px;
 }
 
 .primoText {
@@ -78,7 +76,7 @@
     .primo {
         background-image: url("../../images/primo-white.png");
         background-repeat: no-repeat;
-        background-size: 17%;
+        background-size: 65px;
         height: 20px;
     }
 }
