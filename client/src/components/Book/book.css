@@ -1,7 +1,7 @@
 .addToCartBtn {
     background: rgb(241, 203, 112);
     border: 1px solid rgb(167, 134, 53);
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
     vertical-align: middle;
 }
 
