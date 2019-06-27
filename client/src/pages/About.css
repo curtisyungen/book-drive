@@ -19,7 +19,16 @@
 }
 
 .dependency {
+    border: 1px solid gray;
+    border-radius: 4px;
     display: inline;
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 2px 5px;
+}
+
+.dependency:first-child {
+    margin-left: 0;
 }
 
 .dependencyList {
