@@ -123,6 +123,8 @@ class Book extends Component {
 
                     <div id="buyBox">
 
+                        <input type="radio" checked="checked" className="buyBoxBuyUsed">Buy Used</input>
+
                         <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
 
                         <div className="primoImgBookLg"><span className="primoImgBookLgText">FREE Shipping</span></div>
