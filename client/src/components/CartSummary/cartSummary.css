@@ -28,6 +28,10 @@
     width: 100%;
 }
 
+.primo {
+    height: 20px;
+}
+
 .proceedToCheckout {
     color: black;
     text-decoration: none;
