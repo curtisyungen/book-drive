@@ -28,8 +28,12 @@
     width: 100%;
 }
 
-.primo {
+.primoImg {
     height: 20px;
+}
+
+.primoText {
+    font-size: 13px;
 }
 
 .proceedToCheckout {

@@ -78,7 +78,7 @@ class CartSummary extends Component {
             >
                 <div className="primo">
                     <img className="primoImg" src={require('../../images/primo.png')} />
-                    <span>&nbsp;FREE One-Day</span>
+                    <span className="primoText">&nbsp;FREE One-Day</span>
                 </div>
 
                 <div>
