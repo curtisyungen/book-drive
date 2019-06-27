@@ -185,7 +185,7 @@ class Navbar extends Component {
                 </div>
 
                 {/* NAVBAR DISCLAIMER */}
-                <div className="navbar-disclaimer">This site is not affiliated with Amazon.com.</div>
+                <a className="navbar-disclaimer" href="/about">This site is not affiliated with Amazon.com.</a>
 
                 {/* ACCOUNT NAV MENU */}
 
