@@ -9,7 +9,7 @@ class About extends Component {
                 <div className="about">
 
                     {/* ABOUT - INTRO */}
-                    <div className="aboutIntro">
+                    <div className="aboutSection aboutIntro">
                         Congo is a project created to sell my extensive collection of self-help books.
 
                         Over the years I've collected upwards of 470 books, most of them self-help books.
@@ -21,12 +21,12 @@ class About extends Component {
                     </div>
 
                     {/* ABOUT - BUSINESS */}
-                    <div className="aboutBusiness">
+                    <div className="aboutSection aboutBusiness">
 
                     </div>
 
                     {/* ABOUT - TECHNICAL */}
-                    <div className="aboutTechnical">
+                    <div className="aboutSection aboutTechnical">
                         Everything on this site was created from scratch, including all graphics, logos, page headers, button icons, and scripts.
                         Nothing but inspiration was taken from Amazon's website.
 
