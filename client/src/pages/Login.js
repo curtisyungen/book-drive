@@ -68,11 +68,19 @@ class Login extends Component {
                             Sign in
                         </button>
                         <p className="disclaimer">
-                            By continuing, you agree to Congo's 
-                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088">
+                            By continuing, you agree to Congo's&nbsp;
+                            <a 
+                                href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
                                 Conditions of Use
-                            </a> and 
-                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496">
+                            </a> and&nbsp;
+                            <a 
+                                href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
                                 Privacy Notice.
                             </a>
                         </p>
