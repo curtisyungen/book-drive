@@ -28,6 +28,10 @@
     width: 100%;
 }
 
+.primo {
+    background-image: url("../../images/primo-gray.png");
+}
+
 .primoImg {
     height: 20px;
 }
@@ -66,5 +70,9 @@
         right: 0px;
         top: 100px;
         width: 100%;
+    }
+
+    .primo {
+        background-image: url("../../images/primo-white.png");
     }
 }
