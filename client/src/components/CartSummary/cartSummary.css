@@ -28,7 +28,11 @@
     width: 100%;
 }
 
-.primo {
+.primoDiv {
+    margin: 10px 0px;
+}
+
+.primoImg {
     background-image: url("../../images/primo-gray.png");
     background-repeat: no-repeat;
     background-size: 65px;
@@ -73,7 +77,7 @@
         width: 100%;
     }
 
-    .primo {
+    .primoImg {
         background-image: url("../../images/primo-white.png");
         background-repeat: no-repeat;
         background-size: 65px;

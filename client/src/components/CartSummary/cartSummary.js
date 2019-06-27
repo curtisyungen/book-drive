@@ -81,11 +81,10 @@ class CartSummary extends Component {
                     <span className="subtotal">&nbsp;{`$${parseFloat(Math.round(this.state.subtotal * 100) / 100).toFixed(2)}`}</span>
                 </div>
 
-                <div className="primo"></div>
-                    {/* <img className="primoImg" src={require('../../images/primo.png')} /> */}
+                <div className="primoDiv">
+                    <div className="primoImg"></div>
                     <span className="primoText">&nbsp;FREE Shipping</span>
-
-                <br/>
+                </div>
 
                 <button
                     className="checkoutBtn"
