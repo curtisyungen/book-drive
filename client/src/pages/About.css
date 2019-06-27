@@ -12,3 +12,13 @@
     margin: 20px auto;
     width: 800px;
 }
+
+@media only screen and (max-width: 420px) {
+    .about {
+        width: 80%;
+    }
+
+    .aboutHeader {
+        width: 80%;
+    }
+}
