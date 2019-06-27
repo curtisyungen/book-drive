@@ -30,6 +30,8 @@
 
 .primo {
     background-image: url("../../images/primo-gray.png");
+    background-repeat: "no-repeat";
+    background-size: 25%;
     height: 20px;
 }
 
@@ -75,5 +77,8 @@
 
     .primo {
         background-image: url("../../images/primo-white.png");
+        background-repeat: "no-repeat";
+        background-size: 25%;
+        height: 20px;
     }
 }
