@@ -184,10 +184,8 @@ class Navbar extends Component {
                     </ul>
                 </div>
 
-                {/* NAVBAR ADVERT */}
-                <div>
-                    <p className="navbar-advert">Save 30% on men's skincare</p>
-                </div>
+                {/* NAVBAR DISCLAIMER */}
+                <div className="navbar-disclaimer">This site is not affiliated with Amazon.com.</div>
 
                 {/* ACCOUNT NAV MENU */}
 
