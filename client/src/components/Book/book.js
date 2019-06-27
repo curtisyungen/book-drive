@@ -128,7 +128,7 @@ class Book extends Component {
 
                         {/* BUY USED RADIO BUTTON */}
                         <div className="buyUsedDiv">
-                            <input type="radio" checked={true} className="buyUsedRadioBtn" name="buyUsedRadioBtn"/>
+                            <img className="buyUsedRadioBtnImg" src={require("../../images/radioBtn.png")} alt="radioBtn" />
                             <label for="buyUsedRadioBtn" className="buyUsedLabel">Buy Used</label>
                         </div>
 

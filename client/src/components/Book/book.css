@@ -110,30 +110,6 @@
     width: 270px;
 }
 
-.buyUsedDiv {
-    display: inline;
-    margin-left: 0;
-}
-
-.buyUsedRadioBtn {
-    height: 17px;
-    width: 17px;
-}
-
-.buyUsedRadioBtn:checked {
-    color: rgb(230, 117, 0);
-}
-
-input[type=radio]:checked {
-    color: rgb(230, 117, 0);
-}
-
-.buyUsedLabel {
-    font-family: "Arial";
-    font-size: 13px;
-    font-weight: 700;
-}
-
 .buyBoxPrice {
     color: rgb(190, 44, 6);
     font-family: "Arial";
@@ -168,6 +144,22 @@ input[type=radio]:checked {
 .buyPrice {
     color: rgb(190, 44, 6);
     display: block;
+}
+
+.buyUsedDiv {
+    display: inline;
+    margin-left: 0;
+}
+
+.buyUsedLabel {
+    font-family: "Arial";
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.buyUsedRadioBtnImg {
+    height: 17px;
+    width: 17px;
 }
 
 .cover-suggestion {
