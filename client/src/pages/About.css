@@ -18,21 +18,21 @@
     text-align: justify;
 }
 
-.dependency {
-    border: 1px solid gray;
-    border-radius: 4px;
-    display: inline;
+.dependency,
+.technology {
+    display: inline-block;
     font-size: 14px;
-    margin-left: 5px;
+    margin: 5px 5px 0px 0px;
     padding: 2px 5px;
-}
-
-.dependency:first-child {
-    margin-left: 0;
+    white-space: nowrap;
 }
 
 .dependencyList {
-    display: inline;
+
+}
+
+.technologyList {
+    
 }
 
 @media only screen and (max-width: 420px) {
