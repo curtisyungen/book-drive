@@ -36,15 +36,15 @@ class About extends Component {
                             Dependencies
                             <ul className="dependencyList">
                                 <li className="dependency">axios</li>
-                                <li className="dependency">>bcrypt</li>
-                                <li className="dependency">>express</li>
-                                <li className="dependency">>nodemailer</li>
-                                <li className="dependency">>paypal-rest-sdk</li>
-                                <li className="dependency">>react-dom</li>
-                                <li className="dependency">>react-responsive-modal</li>
-                                <li className="dependency">>react-router</li>
-                                <li className="dependency">>reactjs-popup</li>
-                                <li className="dependency">>sequelize</li>
+                                <li className="dependency">bcrypt</li>
+                                <li className="dependency">express</li>
+                                <li className="dependency">nodemailer</li>
+                                <li className="dependency">paypal-rest-sdk</li>
+                                <li className="dependency">react-dom</li>
+                                <li className="dependency">react-responsive-modal</li>
+                                <li className="dependency">react-router</li>
+                                <li className="dependency">reactjs-popup</li>
+                                <li className="dependency">sequelize</li>
                             </ul>
                         </div>
                     </div>
