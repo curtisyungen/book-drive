@@ -123,7 +123,7 @@ class Book extends Component {
 
                     <div id="buyBox">
 
-                        <input type="radio" checked="checked" className="buyBoxBuyUsed">Buy Used</input>
+                        <input type="radio" checked={true} className="buyBoxBuyUsed"/>Buy Used
 
                         <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
 

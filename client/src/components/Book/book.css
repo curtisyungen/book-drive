@@ -110,6 +110,14 @@
     width: 270px;
 }
 
+.buyBoxBuyUsed {
+
+}
+
+.buyBoxBuyUsed:checked {
+    
+}
+
 .buyBoxPrice {
     color: rgb(190, 44, 6);
     font-family: "Arial";
