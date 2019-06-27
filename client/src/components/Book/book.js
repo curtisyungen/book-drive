@@ -99,16 +99,19 @@ class Book extends Component {
                     className="detailView"
                 >
 
+                    {/* BOOK COVER IMAGE */}
                     <div className="detailBookImage">
                         <img name="detailBookCover" className="detailBookCover" src={this.state.imageURL} alt={this.state.title} />
                         <span for="detailBookCover" className="imageSource">Image source: Amazon.com</span>
                     </div>
 
+                    {/* TITLE + AUTHOR */}
                     <div className="bookInfoHeader">
                         <p className="bookTitle">{this.state.title}</p>
                         <span className="bookAuthor">by {this.state.authorFirst} {this.state.authorLast}</span>
                     </div>
 
+                    {/* BUY OPTIONS - PAPERBACK/HARDCOVER */}
                     {this.state.avail === "avail" ? (
                         <div className="buyOptionList">
                             <div className="buyOption">
@@ -123,17 +126,21 @@ class Book extends Component {
 
                     <div id="buyBox">
 
+                        {/* BUY USED RADIO BUTTON */}
                         <input type="radio" checked={true} className="buyUsedRadioBtn" name="buyUsedRadioBtn"/>
                         <label for="buyUsedRadioBtn" className="buyUsedLabel">Buy Used</label>
 
+                        {/* PRICE */}
                         <div className="buyBoxPrice">{`$${(Math.round(this.state.price * 100) / 100).toFixed(2)}`}</div>
 
+                        {/* PRIMO IMG + FREE SHIPPING */}
                         <div className="primoImgBookLg"><span className="primoImgBookLgText">FREE Shipping</span></div>
-                        {/* <div className="primoImgBookLgText">FREE Shipping</div> */}
 
+                        {/* IN STOCK / OUT OF STOCK */}
                         <p className={`bookStatus book-${this.state.avail}`}>{this.state.avail === "avail" ? (`In Stock.`) : (`Out of Stock.`)}</p>
                         <p className="shipsFromCongo">{`${this.state.avail === "avail" ? ("Ships from and sold by Congo.") : ("Guess you'd better check on Amazon.")}`}</p>
 
+                        {/* ADD TO CART / AMAZON BTN */}
                         {this.state.avail === "avail" ? (
                             <button
                                 className="btn btn-sm button addToCartBtn"
@@ -154,6 +161,7 @@ class Book extends Component {
                         )}
                     </div>
 
+                    {/* BOOK DESCRIPTION */}
                     <div className="bookInfoBody">
                         <p className="bookDescription">{this.state.description}</p>
                     </div>
