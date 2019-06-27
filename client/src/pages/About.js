@@ -32,20 +32,22 @@ class About extends Component {
 
                         The site was built using Node.js, Express.js, and ReactJS.
 
-                        <ul>Dependencies:
-                            <li>axios</li>
-                            <li>bcrypt</li>
-                            <li>express</li>
-                            <li>nodemailer</li>
-                            <li>paypal-rest-sdk</li>
-                            <li>react-dom</li>
-                            <li>react-responsive-modal</li>
-                            <li>react-router</li>
-                            <li>reactjs-popup</li>
-                            <li>sequelize</li>
-                        </ul>
+                        <div className="aboutSection">
+                            Dependencies
+                            <ul className="dependencyList">
+                                <li className="dependency">axios</li>
+                                <li className="dependency">>bcrypt</li>
+                                <li className="dependency">>express</li>
+                                <li className="dependency">>nodemailer</li>
+                                <li className="dependency">>paypal-rest-sdk</li>
+                                <li className="dependency">>react-dom</li>
+                                <li className="dependency">>react-responsive-modal</li>
+                                <li className="dependency">>react-router</li>
+                                <li className="dependency">>reactjs-popup</li>
+                                <li className="dependency">>sequelize</li>
+                            </ul>
+                        </div>
                     </div>
-
                 </div>
             </span>
         )
