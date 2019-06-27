@@ -13,6 +13,11 @@
     width: 800px;
 }
 
+.aboutSection {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
 @media only screen and (max-width: 420px) {
     .about {
         width: 80%;
