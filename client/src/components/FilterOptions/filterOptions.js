@@ -125,7 +125,7 @@ class FilterOptions extends Component {
                         )}
 
                         <li
-                            className={`option bold-${this.state.activeOption === "avail"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Available") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setAvailFilter("avail");
@@ -134,7 +134,7 @@ class FilterOptions extends Component {
                             Available
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "unavail"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Unavailable") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setAvailFilter("unavail");
@@ -167,7 +167,7 @@ class FilterOptions extends Component {
                             )}
 
                         <li
-                            className={`option bold-${this.state.activeOption === "paperback"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Paperback") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setFormatFilter("soft");
@@ -176,7 +176,7 @@ class FilterOptions extends Component {
                             Paperback
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "hardcover"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Hardcover") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setFormatFilter("hard");
@@ -208,7 +208,7 @@ class FilterOptions extends Component {
                             )}
 
                         <li
-                            className={`option bold-${this.state.activeOption === "biography"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Biography") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("biography");
@@ -217,7 +217,7 @@ class FilterOptions extends Component {
                             Biography
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "business"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Business") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();;
                                 this.setSubjectFilter("business");
@@ -226,7 +226,7 @@ class FilterOptions extends Component {
                             Business
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "economics"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Economics") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("economics");
@@ -235,7 +235,7 @@ class FilterOptions extends Component {
                             Economics
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "fiction"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Fiction") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("fiction");
@@ -244,7 +244,7 @@ class FilterOptions extends Component {
                             Fiction
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "health"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Health") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("health");
@@ -253,7 +253,7 @@ class FilterOptions extends Component {
                             Health
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "history"}`}
+                            className={`option bold-${this.props.filterString.indexOf("History") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("history");
@@ -262,7 +262,7 @@ class FilterOptions extends Component {
                             History
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "humor"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Humor") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("humor");
@@ -271,7 +271,7 @@ class FilterOptions extends Component {
                             Humor
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "leadership"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Leadership") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("leadership");
@@ -280,7 +280,7 @@ class FilterOptions extends Component {
                             Leadership
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "marketing"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Marketing") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("marketing");
@@ -289,7 +289,7 @@ class FilterOptions extends Component {
                             Marketing
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "money"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Money") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("money");
@@ -298,7 +298,7 @@ class FilterOptions extends Component {
                             Money/Investing
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "nonfict"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Non-fiction") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("nonfict");
@@ -307,7 +307,7 @@ class FilterOptions extends Component {
                             Non-fiction
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "philosophy"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Philosophy") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("philosophy");
@@ -316,7 +316,7 @@ class FilterOptions extends Component {
                             Philosophy
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "political"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Political") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("political");
@@ -325,7 +325,7 @@ class FilterOptions extends Component {
                             Political
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "programming"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Programming") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("programming");
@@ -334,7 +334,7 @@ class FilterOptions extends Component {
                             Programming
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "psychology"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Psychology") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("psychology");
@@ -343,7 +343,7 @@ class FilterOptions extends Component {
                             Psychology
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "speaking"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Speaking") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("speaking");
@@ -352,7 +352,7 @@ class FilterOptions extends Component {
                             Public Speaking
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "real estate"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Real Estate") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("real estate");
@@ -361,7 +361,7 @@ class FilterOptions extends Component {
                             Real Estate
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "selfhelp"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Self-Help") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("selfhelp");
@@ -370,7 +370,7 @@ class FilterOptions extends Component {
                             Self Help
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "selling"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Selling") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("selling");
@@ -379,7 +379,7 @@ class FilterOptions extends Component {
                             Selling
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "sex"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Sex") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("sex");
@@ -388,7 +388,7 @@ class FilterOptions extends Component {
                             Sex
                         </li>
                         <li
-                            className={`option bold-${this.state.activeOption === "social"}`}
+                            className={`option bold-${this.props.filterString.indexOf("Social") -1}`}
                             onClick={(event) => {
                                 event.preventDefault();
                                 this.setSubjectFilter("social");
