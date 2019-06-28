@@ -18,6 +18,10 @@
     text-align: justify;
 }
 
+.aboutTitle {
+    font-size: 18px;
+}
+
 .dependency,
 .technology {
     display: inline-block;
@@ -30,7 +34,11 @@
 .dependencyList {
     background: rgb(242, 242, 242);
     padding: 0px 50px;
+}
 
+.highlightText {
+    color: rgb(254, 152, 14);
+    font-weight: 700;
 }
 
 .technologyList {
