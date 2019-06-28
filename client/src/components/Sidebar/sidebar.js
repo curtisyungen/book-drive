@@ -13,7 +13,7 @@ class Sidebar extends Component {
                     setFilter={this.props.setFilter}
                     getFilteredBooks={this.props.getFilteredBooks}
                     source="sidebar"
-                    filterString={this.props.filterString}
+                    filterString={this.props.filterString || "Blank"}
                 />
             </div>
         )
