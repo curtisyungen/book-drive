@@ -78,8 +78,15 @@ class About extends Component {
 
                     <h4 className="aboutTitle">The Inspiration</h4>
                     <div className="aboutSection">
-                        This website was born from a love of two things: reading and coding, as well as a deep admiration for Amazon and its amazing website. 
-                        The highest form of flattery is imitation. 
+                        This website was born from a love of two things: reading and coding. These combined with a deep admiration for Amazon
+                        fueled the creation of Congo. 
+                    </div>
+
+                    <h4 className="aboutTitle">The Namesake</h4>
+                    <div className="aboutSection">
+                        The Congo is the second largest rainforest in the world, spanning 1.5 million square miles of Central Africa.
+                        It is home to the Congo River as well as over 10,000 animal species. 
+                        It has been referred to as the Heart of Darkness, though there is no link between that title and this innocent online bookstore.
                     </div>
                 </div>
             </span>
