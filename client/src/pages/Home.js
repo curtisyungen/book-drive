@@ -173,6 +173,9 @@ class Home extends Component {
             else if (this.state.sortOption === "priceDesc") {
                 this.sortByPriceDesc();
             }
+            else {
+                this.updateParentState();
+            }
         });
     }
 
