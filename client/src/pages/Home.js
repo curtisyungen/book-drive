@@ -229,7 +229,7 @@ class Home extends Component {
             return 0;
         }
         else {
-            return (a.authorLast < b.authorLast) ? -1 : 1;
+            return (a.price < b.price) ? -1 : 1;
         }
     }
 
@@ -248,7 +248,7 @@ class Home extends Component {
             return 0;
         }
         else {
-            return (a.authorLast > b.authorLast) ? -1 : 1;
+            return (a.price > b.price) ? -1 : 1;
         }
     }
 
