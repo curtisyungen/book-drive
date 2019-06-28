@@ -111,6 +111,7 @@ class SlideInMenu extends Component {
                                 showFiltersMenu={this.state.showFiltersMenu}
                                 toggleFiltersMenu={this.props.toggleFiltersMenu}
                                 source="slideIn"
+                                filterString={"Blank"}
                             />
                         ) : (
                             <></>
