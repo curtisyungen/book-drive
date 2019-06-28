@@ -14,7 +14,7 @@
 }
 
 .aboutSection {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: justify;
 }
 
@@ -25,20 +25,13 @@
 .dependency,
 .technology {
     display: inline-block;
-    font-size: 14px;
-    /* margin: 5px 5px 0px 0px; */
-    padding: 2px 7px;
+    padding: 2px 8px;
     white-space: nowrap;
 }
 
 .dependencyList {
     background: rgb(242, 242, 242);
     padding: 0px 50px;
-}
-
-.highlightText {
-    color: rgb(254, 152, 14);
-    font-weight: 700;
 }
 
 .technologyList {

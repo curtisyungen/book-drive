@@ -11,7 +11,7 @@ class About extends Component {
 
                     {/* ABOUT - INTRO */}
                     <div className="aboutSection aboutIntro">
-                        Congo is a project created to sell my extensive collection of self-help books.
+                        Congo is a project created to sell my extensive collection of books.
 
                         Over the years I've collected upwards of 460 books, most of them self-help books.
                         I haven't read many but not all of them. A good number have been partially read, and others haven't even been opened.
@@ -26,11 +26,11 @@ class About extends Component {
                         The only things taken from Amazon were the book cover images (as cited) and genuine inspiration from their beautiful and high-quality website.
                     </div>
 
-                    {/* ABOUT - BUSINESS */}
+                    {/* ABOUT - BOOKS */}
                     <h4 className="aboutTitle">The Books</h4>
                     <div className="aboutSection aboutBusiness">
                         All books are used, but their conditions vary widely. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
-                        Every book is listed at a discounted rate than the normal market rate. Shipping is free. The actual book covers may vary from the 
+                        Every book is listed at a discounted rate than the normal market rate. Shipping is free. The actual book covers may vary from the
                         cover shown on the website.
 
                         Books will be up for sale until August 1, 2019. After that, they will be donated to a local charity.
@@ -39,8 +39,8 @@ class About extends Component {
                     {/* ABOUT - TECHNICAL */}
                     <h4 className="aboutTitle">The Technology</h4>
                     <div className="aboutSection">
-                        Payments are handled by PayPal rather than on Congo. 
-                        User passwords are encrypted. 
+                        Payments are handled by PayPal rather than directly by Congo.
+                        User data is private and all passwords are encrypted.
                     </div>
 
                     <div className="aboutSection">
@@ -69,9 +69,17 @@ class About extends Component {
                         </ul>
                     </div>
 
+                    {/* ABOUT - CREATOR */}
+                    <h4 className="aboutTitle">The Person</h4>
+                    <div className="aboutSection aboutCreator">
+                        This website was designed and built by Curtis Yungen. Curtis is a Boeing engineer and web developer, designing planes by day and websites by night. 
+                        Check out his <a href="https://curtisyungen.github.io/Portfolio" target="_blank" rel="noopener noreferrer">online portfolio</a>.
+                    </div>
+
                     <h4 className="aboutTitle">The Inspiration</h4>
                     <div className="aboutSection">
-
+                        This website was born from a love of two things: reading and coding, as well as a deep admiration for Amazon and its amazing website. 
+                        The highest form of flattery is imitation. 
                     </div>
                 </div>
             </span>
