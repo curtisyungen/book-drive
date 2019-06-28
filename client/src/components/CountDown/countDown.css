@@ -1,9 +1,9 @@
 .countDown {
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     left: 50%;
     position: absolute;
-    top: 165px;
+    top: 160px;
     transform: translate(-50%);
     z-index: 500;
 }
