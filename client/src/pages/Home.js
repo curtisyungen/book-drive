@@ -217,14 +217,14 @@ class Home extends Component {
     sortByPriceAsc = () => {
         let books = this.state.books;
 
-        books.sort(this.comparePrice);
+        books.sort(this.comparePriceAsc);
 
         this.setState({
             books: books,
         });
     }
 
-    comparePrice = (a, b) => {
+    comparePriceAsc = (a, b) => {
         if (a.price === b.price) {
             return 0;
         }
@@ -236,14 +236,14 @@ class Home extends Component {
     sortByPriceDesc = () => {
         let books = this.state.books;
 
-        books.sort(this.comparePrice);
+        books.sort(this.comparePriceDesc);
 
         this.setState({
             books: books,
         });
     }
 
-    comparePrice = (a, b) => {
+    comparePriceDesc = (a, b) => {
         if (a.price === b.price) {
             return 0;
         }
