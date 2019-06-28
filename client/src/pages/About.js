@@ -54,6 +54,14 @@ class About extends Component {
                     </div>
 
                     <div className="aboutSection">
+                        APIs Used
+                        <ul className="technologyList">
+                            <li className="technology">PayPal API</li>
+                            <li className="technology">Google Books API</li>
+                        </ul>
+                    </div>
+
+                    <div className="aboutSection">
                         Dependencies
                         <ul className="dependencyList">
                             <li className="dependency">axios</li>
