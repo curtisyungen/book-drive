@@ -24,6 +24,8 @@ import selfesteem from "../images/selfesteem.JPG";
 import design from "../images/design.JPG";
 import anxiety from "../images/anxiety.JPG";
 import controlling from "../images/controlling.JPG";
+import stacks from "../images/stacks.jpg";
+import stacks2 from "../images/stacks2.jpg";
 import "./Gallery.css";
 
 class Gallery extends Component {
@@ -119,12 +121,24 @@ class Gallery extends Component {
                     </div>
 
                     <div>
-                        <img className="anxiety galleryImg col-4 right" src={anxiety} alt="anxiety" />
+                        <img className="stacks2 galleryImg col-4 right" src={stacks2} alt="stacks2" />
                     </div>
 
                     <div>
-                        <img className="controlling galleryImg col-4 left" src={controlling} alt="controlling" />
+                        <img className="anxiety galleryImg col-4 left" src={anxiety} alt="anxiety" />
                     </div>
+
+                    
+
+                    <div>
+                        <img className="stacks galleryImg col-4 left" src={stacks} alt="stacks" />
+                    </div>
+
+                    <div>
+                        <img className="controlling galleryImg col-4 right" src={controlling} alt="controlling" />
+                    </div>
+
+                    
 
                     <div>
                         <img className="allBooks galleryImg col-8" src={allBooks} alt="All Books" />

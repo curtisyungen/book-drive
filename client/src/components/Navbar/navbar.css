@@ -42,13 +42,14 @@
     color: #fff !important;
     cursor: pointer;
     font-family: "Arial";
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     position: absolute;
     right: 50px;
     text-decoration: none;
     top: 15px;
     white-space: nowrap;
+    width: auto;
     z-index: 102;
 }
 
