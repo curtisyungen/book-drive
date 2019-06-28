@@ -23,29 +23,30 @@ class CountDown extends Component {
         this.setState({
             targetDate: targetDate,
         }, () => {
-            setInterval(function() {
-                this.calculateTime();
-            }, 1000);
+            this.calculateTime();
         });
     }
 
     calculateTime = () => {
-        let currDate = new Date().getTime();
-        let remaining = this.state.targetDate - currDate;
+        setInterval(function () {
 
-        let days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+            let currDate = new Date().getTime();
+            let remaining = this.state.targetDate - currDate;
 
-        this.setState({
-            currDate: currDate,
-            remaining: remaining,
-            days: days,
-            hours: hours,
-            minutes: minutes,
-            seconds: seconds,
-        });
+            let days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+            this.setState({
+                currDate: currDate,
+                remaining: remaining,
+                days: days,
+                hours: hours,
+                minutes: minutes,
+                seconds: seconds,
+            });
+        }, 1000);
     }
 
     render() {
