@@ -5,6 +5,10 @@
     padding-bottom: 5px;
 }
 
+.bold-true {
+    font-weight: 700;
+}
+
 .filterOptions-sidebar,
 .filterOptions-slideIn {
     background: white;
