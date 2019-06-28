@@ -1,11 +1,12 @@
 .countDown {
-    background: rgb(255, 153, 0);
+    background: rgb(242, 242, 242);
     border: 1px solid gray;
+    border-radius: 4px;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     position: fixed;
-    right: 50px;
+    right: 40px;
     top: 205px;
     z-index: 500;
 }
