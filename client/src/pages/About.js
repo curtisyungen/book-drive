@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import stack2 from "../images/stacks2.jpg";
+import Footer from "../components/Footer/footer";
 import "./About.css";
 
 class About extends Component {
@@ -89,6 +89,8 @@ class About extends Component {
                         It has been referred to as the Heart of Darkness, though there is no link between that title and this innocent online bookstore.
                     </div>
                 </div>
+
+                <Footer />
             </span>
         )
     }
