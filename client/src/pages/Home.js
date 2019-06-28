@@ -304,6 +304,7 @@ class Home extends Component {
                         setActiveFilter={this.setActiveFilter}
                         setFilter={this.setFilter}
                         getFilteredBooks={this.props.getFilteredBooks}
+                        filterString={this.state.filterString}
                     />
 
                     {/* BOOK LIST */}
