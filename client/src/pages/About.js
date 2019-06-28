@@ -14,7 +14,7 @@ class About extends Component {
                         Congo is a project created to sell my extensive collection of books.
 
                         Over the years I've collected upwards of 460 books, most of them self-help books.
-                        I haven't read many but not all of them. A good number have been partially read, and others haven't even been opened.
+                        I have read many but not all of them. A good number have been partially read, and others haven't even been opened.
 
                         Now the books serve only to impress visitors to my apartment as they sit piled on the floor collecting dust.
 
@@ -29,11 +29,11 @@ class About extends Component {
                     {/* ABOUT - BOOKS */}
                     <h4 className="aboutTitle">The Books</h4>
                     <div className="aboutSection aboutBusiness">
-                        All books are used, but their conditions vary widely. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
-                        Every book is listed at a discounted rate than the normal market rate. Shipping is free. The actual book covers may vary from the
+                        All books are used but their conditions vary. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
+                        Every book is listed at a discounted rate than the normal market rate. Shipping is always free. The actual book covers may vary from the
                         cover shown on the website.
 
-                        Books will be up for sale until August 1, 2019. After that, they will be donated to a local charity.
+                        Books will be up for sale until August 1, 2019.
                     </div>
 
                     {/* ABOUT - TECHNICAL */}
