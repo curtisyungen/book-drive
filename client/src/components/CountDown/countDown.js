@@ -28,8 +28,7 @@ class CountDown extends Component {
     }
 
     calculateTime = () => {
-        setInterval(function () {
-
+        setInterval(() => {
             let currDate = new Date().getTime();
             let remaining = this.state.targetDate - currDate;
 
