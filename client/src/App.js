@@ -8,6 +8,7 @@ import Reset from "./pages/Reset";
 import CreatePassword from "./pages/CreatePassword";
 import Signup from "./pages/Signup";
 import SlideInMenu from "./components/SlideInMenu/slideInMenu";
+import CountDown from "./components/CountDown/countDown";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
@@ -569,6 +570,8 @@ class App extends Component {
           ) : (
               <></>
             )}
+
+          <CountDown />
 
           {/* HANDLE PAGE ROUTING */}
 
