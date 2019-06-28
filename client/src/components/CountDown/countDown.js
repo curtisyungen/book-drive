@@ -51,7 +51,11 @@ class CountDown extends Component {
     render() {
         return (
             <div className="countDown">
-                {`${this.state.days}:${this.state.hours}:${this.state.minutes}:${this.state.seconds}`}
+                {this.state.days ? (
+                    `${this.state.days}:${this.state.hours}:${this.state.minutes}:${this.state.seconds}`
+                ) : (
+                    `Loading...`
+                )}
             </div>
         )
     }
