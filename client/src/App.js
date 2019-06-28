@@ -573,7 +573,7 @@ class App extends Component {
 
           {/* COUNTDOWN TIMER */}
 
-          {/* <CountDown /> */}
+          <CountDown />
 
           {/* HANDLE PAGE ROUTING */}
 
