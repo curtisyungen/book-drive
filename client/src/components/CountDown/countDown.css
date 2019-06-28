@@ -3,10 +3,11 @@
     border: 1px solid gray;
     border-radius: 4px;
     color: black;
-    font-size: 16px;
-    padding: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
     position: fixed;
     right: 40px;
+    text-align: center;
     top: 205px;
     z-index: 500;
 }
