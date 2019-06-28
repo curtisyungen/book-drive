@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import stack2 from "../images/stacks2.jpg";
 import "./About.css";
 
 class About extends Component {
