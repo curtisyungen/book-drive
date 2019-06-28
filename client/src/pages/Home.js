@@ -167,6 +167,12 @@ class Home extends Component {
             else if (this.state.sortOption === "author") {
                 this.sortByAuthor();
             }
+            else if (this.state.sortOption === "priceAsc") {
+                this.sortByPriceAsc();
+            }
+            else if (this.state.sortOption === "priceDesc") {
+                this.sortByPriceDesc();
+            }
         });
     }
 
@@ -208,6 +214,44 @@ class Home extends Component {
         }
     }
 
+    sortByPriceAsc = () => {
+        let books = this.state.books;
+
+        books.sort(this.comparePrice);
+
+        this.setState({
+            books: books,
+        });
+    }
+
+    comparePrice = (a, b) => {
+        if (a.price === b.price) {
+            return 0;
+        }
+        else {
+            return (a.authorLast < b.authorLast) ? -1 : 1;
+        }
+    }
+
+    sortByPriceDesc = () => {
+        let books = this.state.books;
+
+        books.sort(this.comparePrice);
+
+        this.setState({
+            books: books,
+        });
+    }
+
+    comparePrice = (a, b) => {
+        if (a.price === b.price) {
+            return 0;
+        }
+        else {
+            return (a.authorLast > b.authorLast) ? -1 : 1;
+        }
+    }
+
     scrollToTop = () => {
         window.scrollTo(0, 0);
     }
@@ -245,9 +289,11 @@ class Home extends Component {
                             onChange={this.handleSortOption}
                             value={this.state.sortOption}
                         >
-                            <option value="" disabled selected>Sort by:</option>
+                            <option value="" selected>Sort by:</option>
                             <option value="title">Alpabetical by Title</option>
                             <option value="author">Alpabetical by Author Last</option>
+                            <option value="priceAsc">Price - Low to High</option>
+                            <option value="priceDesc">Price - High to Low</option>
                         </select>
                     </div>
 
