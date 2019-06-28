@@ -52,7 +52,12 @@ class CountDown extends Component {
         return (
             <div className="countDown">
                 {this.state.days ? (
-                    `${this.state.days}:${this.state.hours}:${this.state.minutes}:${this.state.seconds}`
+                    `
+                    ${this.state.days} days 
+                    ${this.state.hours} hours 
+                    ${this.state.minutes} minutes 
+                    ${this.state.seconds} seconds
+                    `
                 ) : (
                     `Loading...`
                 )}
