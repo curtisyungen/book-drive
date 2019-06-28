@@ -571,7 +571,9 @@ class App extends Component {
               <></>
             )}
 
-          <CountDown />
+          {/* COUNTDOWN TIMER */}
+
+          {/* <CountDown /> */}
 
           {/* HANDLE PAGE ROUTING */}
 
