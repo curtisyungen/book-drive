@@ -27,6 +27,10 @@
     width: 180px;
 }
 
+.bookCover:hover {
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+}
+
 .bookDescription {
     font-size: 12px;
     margin-bottom: 0px !important;
