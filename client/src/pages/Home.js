@@ -174,7 +174,7 @@ class Home extends Component {
                 this.sortByPriceDesc();
             }
             else {
-                this.updateParentState();
+                this.props.updateParentState();
             }
         });
     }
