@@ -59,4 +59,10 @@
     .aboutHeader {
         width: 80%;
     }
+
+    .curtisAmazonImg {
+        height: auto;
+        margin-top: 15px;
+        width: 100%;
+    }
 }
