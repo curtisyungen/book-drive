@@ -44,10 +44,10 @@
     font-family: "Arial";
     font-size: 18px;
     font-weight: 400;
-    position: absolute;
-    right: 50px;
+    margin-left: -100px;
+    margin-right: 20px;
+    margin-top: -40px;
     text-decoration: none;
-    top: 15px;
     white-space: nowrap;
     width: auto;
     z-index: 102;
@@ -206,6 +206,17 @@
 @media only screen and (max-width: 1200px) {
     .searchBox {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-disclaimer {
+        font-size: 16px;
+        margin-left: -110px;
+    }
+
+    .searchBox {
+        width: 400px;
     }
 }
 
