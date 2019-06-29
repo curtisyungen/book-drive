@@ -18,6 +18,17 @@
     text-align: justify;
 }
 
+.curtisAmazon {
+    height: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.curtisAmazonImg {
+    border: 1px solid black;
+    height: 530px;
+}
+
 .aboutTitle {
     font-size: 18px;
 }
@@ -31,11 +42,13 @@
 
 .dependencyList {
     background: rgb(242, 242, 242);
+    border: 1px dashed rgb(222, 222, 222);
     padding: 0px 50px;
 }
 
 .technologyList {
     background: rgb(242, 242, 242);
+    border: 1px dashed rgb(222, 222, 222);
     text-align: center;
 }
 

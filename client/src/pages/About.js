@@ -53,7 +53,7 @@ class About extends Component {
                     <h4 className="aboutTitle">The Books</h4>
                     <div className="aboutSection aboutBusiness">
                         <p>
-                        All books are pre-owned but their conditions vary widely. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
+                        All books are pre-owned and their conditions vary widely. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
                         Rest assured that no book on Congo has ever been read in the bathroom.
                         </p>
                     </div>
@@ -121,6 +121,10 @@ class About extends Component {
 
                     <div className="aboutSection">
                         If you have any questions or concerns, reach out to Curtis via the platforms below or the <a href="/contact">Contact page</a>.
+                    </div>
+
+                    <div className="aboutSection curtisAmazon">
+                        <img className="curtisAmazonImg" src={require("../images/curtisAmazon.png")} alt="Curtis Amazon" />
                     </div>
                 </div>
 
