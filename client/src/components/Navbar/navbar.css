@@ -220,6 +220,12 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .navbar-disclaimer {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 420px) {
 
     .logo {
