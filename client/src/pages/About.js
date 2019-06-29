@@ -14,11 +14,17 @@ class About extends Component {
                         Congo is a project created to sell my extensive collection of books.
 
                         Over the years I've collected upwards of 460 books, most of them self-help books.
-                        I have read many but not all of them. A good number have been partially read, and others haven't even been opened.
+                        I haven't read many but not all of them. A good number have been partially read, and others haven't even been opened.
 
                         Now the books serve only to impress visitors to my apartment as they sit piled on the floor collecting dust.
 
                         I'm done helping myself; now I'd like to help you get your hands on some books...at a discount.
+                    </div>
+                    
+                    <h4 className="aboutTitle">The Inspiration</h4>
+                    <div className="aboutSection">
+                        This website was born from a love of two things: reading and coding. These combined with a deep admiration and respect for Amazon
+                        fueled the creation of Congo. 
                     </div>
 
                     <div className="aboutSection aboutTechnical">
@@ -29,11 +35,11 @@ class About extends Component {
                     {/* ABOUT - BOOKS */}
                     <h4 className="aboutTitle">The Books</h4>
                     <div className="aboutSection aboutBusiness">
-                        All books are used but their conditions vary. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
-                        Every book is listed at a discounted rate than the normal market rate. Shipping is always free. The actual book covers may vary from the
+                        All books are used, but their conditions vary widely. Some books may be brand new and unblemished; others may have dog-eared pages, highlights, or tear stains.
+                        Every book is listed at a discounted rate than the normal market rate. Shipping is free. The actual book covers may vary from the
                         cover shown on the website.
 
-                        Books will be up for sale until August 1, 2019.
+                        Books will be up for sale until August 1, 2019. After that, they will be donated to a local charity.
                     </div>
 
                     {/* ABOUT - TECHNICAL */}
@@ -82,12 +88,6 @@ class About extends Component {
                     <div className="aboutSection aboutCreator">
                         This website was designed and built by Curtis Yungen. Curtis is a Boeing engineer and web developer, designing planes by day and websites by night. 
                         Check out his <a href="https://curtisyungen.github.io/Portfolio" target="_blank" rel="noopener noreferrer">online portfolio</a>.
-                    </div>
-
-                    <h4 className="aboutTitle">The Inspiration</h4>
-                    <div className="aboutSection">
-                        This website was born from a love of two things: reading and coding. These combined with a deep admiration and respect for Amazon
-                        fueled the creation of Congo. 
                     </div>
 
                     <h4 className="aboutTitle">The Namesake</h4>
