@@ -61,43 +61,45 @@ class Contact extends Component {
             <span>
                 <h1 className="contactHeader">Want to get in touch with us?</h1>
 
-                <div className="contactFormDiv">
-                    <form className="contactForm">
-                        <div class="form-group">
-                            <label for="contactEmail">Your email address</label>
-                            <input 
-                                type="email" 
-                                class="form-control" 
-                                id="contactEmail" 
-                                aria-describedby="emailHelp" 
-                                name="contactEmail" 
-                                onChange={this.handleInputChange}
-                                autoComplete="off"
-                            />
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMessage">Message</label>
-                            <textarea 
-                                type="text" 
-                                class="form-control" 
-                                id="contactMessage" 
-                                name="contactMessage" 
-                                maxLength="1000" 
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            class="btn btn-warning btn-sm"
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.submitContactForm();
-                            }}
-                        >
-                            Submit
-                        </button>
-                    </form>
+                <div className="contactFormContainer">
+                    <div className="contactFormDiv">
+                        <form className="contactForm">
+                            <div class="form-group">
+                                <label for="contactEmail">Your email address</label>
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    id="contactEmail" 
+                                    aria-describedby="emailHelp" 
+                                    name="contactEmail" 
+                                    onChange={this.handleInputChange}
+                                    autoComplete="off"
+                                />
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="contactMessage" 
+                                    name="contactMessage" 
+                                    maxLength="1000" 
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-warning btn-sm"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    this.submitContactForm();
+                                }}
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
                 <Footer />

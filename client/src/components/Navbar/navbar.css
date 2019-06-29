@@ -79,11 +79,15 @@
     font-size: 14px;
     font-weight: 700;
     margin: 0;
-    margin-right: -160px;
     position: absolute;
-    right: 5px;
-    top: 80px;
+    right: 15px;
+    top: 62px;
     z-index: 99;
+}
+
+.navbarAcctMenuList {
+    display: flex;
+    flex-direction: row;
 }
 
 #navbarMenu {

@@ -20,7 +20,43 @@ class Home extends Component {
                     avail: "avail",
                     price: 0.00,
                     imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                }
+                },
+                {
+                    title: "Testing a Very Long Book Title Like This One",
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    cover: "hard",
+                    avail: "avail",
+                    price: 0.00,
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+                },
+                {
+                    title: "Testing a Very Long Book Title Like This One",
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    cover: "hard",
+                    avail: "avail",
+                    price: 0.00,
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+                },
+                {
+                    title: "Testing a Very Long Book Title Like This One",
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    cover: "hard",
+                    avail: "avail",
+                    price: 0.00,
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+                },
+                {
+                    title: "Testing a Very Long Book Title Like This One",
+                    authorFirst: "Test",
+                    authorLast: "Test",
+                    cover: "hard",
+                    avail: "avail",
+                    price: 0.00,
+                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
+                },
             ],
             message: "Loading...",
             userSearch: "",
@@ -42,7 +78,7 @@ class Home extends Component {
         }
 
         this.setState({
-            books: this.props.books,
+            // books: this.props.books,
             message: message,
             userSearch: this.props.userSearch,
             sortOption: "",
@@ -54,7 +90,7 @@ class Home extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps !== this.props) {
             this.setState({
-                books: this.props.books,
+                // books: this.props.books,
                 userSearch: this.props.userSearch,
             });
         }
@@ -268,7 +304,7 @@ class Home extends Component {
             <span>
                 <div className="content">
 
-                    <CountDown />
+                    {/* <CountDown /> */}
 
                     {/* RESULTS SUMMARY */}
 
