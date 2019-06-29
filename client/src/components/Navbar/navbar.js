@@ -189,8 +189,8 @@ class Navbar extends Component {
 
                 {/* ACCOUNT NAV MENU */}
 
-                <div className="collapse navbar-collapse" id="navbarAcctMenu">
-                    <ul className="navbar-nav">
+                <div id="navbarAcctMenu">
+                    <ul className="navbarAcctMenuList">
                         <li className="nav-item">
                             {this.getLoginStatus() ? (
                                 <span>

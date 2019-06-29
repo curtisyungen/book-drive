@@ -8,9 +8,15 @@
     width: auto;
 }
 
+.contactFormContainer {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+
 .contactFormDiv {
     background: rgb(242, 242, 242);
-    height: auto;
+    height: 330px;
     margin: 30px 0px;
     padding: 25px;
     width: 100vw;
