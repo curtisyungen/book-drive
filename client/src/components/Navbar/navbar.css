@@ -210,13 +210,32 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
+    .logo {
+        left: 80px;
+        margin-top: -40px;
+    }
+
     .navbar-disclaimer {
         font-size: 16px;
         margin-left: -110px;
     }
 
+    .navbar-toggler {
+        left: 15px;
+        top: 15px;
+        position: absolute;
+    }
+
     .searchBox {
-        width: 400px;
+        width: 350px;
+    }
+
+    .searchForm {
+        left: 50px;
+        position: absolute;
+        top: 50px;
+        width: 350px;
     }
 }
 
