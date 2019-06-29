@@ -14,8 +14,8 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Orders from "./pages/Orders";
 import Cart from "./pages/Cart";
+import Error from "./pages/Error";
 import Success from "./pages/Success";
-import Cancel from "./pages/Cancel";
 import API from "./utils/API";
 import './App.css';
 
@@ -647,7 +647,8 @@ class App extends Component {
               />
             }
             />
-            <Route exact path="/cancel" component={Cancel} />
+
+            <Route component={Error} />
             } />
           </Switch>
         </span>
