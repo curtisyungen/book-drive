@@ -31,7 +31,7 @@
     line-height: 1.2;
     margin: 20px auto;
     margin-bottom: -25px;
-    width: 800px;
+    width: auto;
 }
 
 .galleryImg {
@@ -58,6 +58,22 @@
 
 .right {
     float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .allBooks, 
+    .fiftyBooks,
+    .politics {
+        width: 100% !important;
+    }
+    
+    .gallery {
+        width: 100%;
+    }
+
+    .galleryImg {
+        width: 49%;
+    }
 }
 
 @media only screen and (max-width: 420px) {
