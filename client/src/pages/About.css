@@ -54,11 +54,9 @@
 }
 
 @media only screen and (max-width: 420px) {
-    .about {
-        width: 80%;
-    }
-
+    .about,
     .aboutHeader {
+        padding: 0;
         width: 80%;
     }
 
@@ -66,5 +64,10 @@
         height: auto;
         margin-top: 15px;
         width: 100%;
+    }
+
+    .dependencyList,
+    .technologyList {
+        padding: 5px;
     }
 }

@@ -76,62 +76,22 @@
     }
 }
 
-@media only screen and (max-width: 420px) {
-    .allBooks, 
-    .fiftyBooks,
-    .politics {
-        max-width: 405px !important;
-    }
-    
+@media only screen and (max-width: 420px) {   
     .gallery, 
     .galleryHeader {
-        max-width: 420px;
+        max-width: 100%;
         width: 100%;
     }
 
     .galleryImg {
         display: block;
-        margin: 5px 5px;
-        max-width: 405px;
+        margin: 0px;
+        margin-bottom: 5px;
+        max-width: 100%;
+        width: 100%;
     }
 
     .left, .right {
         float: none;
-    }
-}
-
-@media only screen and (max-width: 380px) {
-    .allBooks, 
-    .fiftyBooks,
-    .politics {
-        max-width: 355px !important;
-    }
-
-    .gallery, 
-    .galleryHeader {
-        max-width: 380px;
-        width: 100%;
-    }
-    
-    .galleryImg {
-        display: block;
-        margin: 5px 5px;
-        max-width: 355px;
-    }
-
-    .left, .right {
-        float: none;
-    }
-}
-
-@media only screen and (max-width: 325px) {
-    .gallery, 
-    .galleryHeader {
-        max-width: 310px;
-        width: 100%;
-    }
-
-    .galleryImg {
-        max-width: 310px !important;
     }
 }
