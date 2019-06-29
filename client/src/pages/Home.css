@@ -73,28 +73,6 @@
     .content {
         margin-left: 15px;
     }
-
-    .logo {
-        left: 80px;
-        margin-top: -40px;
-    }
-
-    .navbar-toggler {
-        left: 15px;
-        top: 15px;
-        position: absolute;
-    }
-
-    .searchBox {
-        width: 350px;
-    }
-
-    .searchForm {
-        left: 225px;
-        position: absolute;
-        top: 30px;
-        width: 350px;
-    }
 }
 
 @media only screen and (max-width: 420px) {
