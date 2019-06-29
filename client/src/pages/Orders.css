@@ -18,7 +18,13 @@
     margin: 20px auto;
     margin-bottom: 18px;
     margin-left: -40px;
-    width: 920px;
+    width: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .ordersPage {
+        width: auto;
+    }
 }
 
 @media only screen and (max-width: 420px) {

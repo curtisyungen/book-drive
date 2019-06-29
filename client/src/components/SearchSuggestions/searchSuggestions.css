@@ -15,6 +15,14 @@
     z-index: 101;
 }
 
+@media only screen and (max-width: 1024px) {
+    .searchSuggestions {
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        width: 350px;
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .searchSuggestions {
         left: 7%;
