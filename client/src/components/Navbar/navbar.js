@@ -254,7 +254,7 @@ class Navbar extends Component {
                             )}                            
                         </li>
                         <li className="nav-item">
-                            <a className="nav-acct-link" href="/">Try Primo</a>
+                            <a className="nav-acct-link" href="https://www.primoseattle.com/" target="_blank" rel="noopener noreferrer">Try Primo</a>
                         </li>
                         <li className="nav-item">
                             <span className="cartQty">{this.props.cart.length}</span>
