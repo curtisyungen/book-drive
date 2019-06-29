@@ -55,7 +55,7 @@ class CreatePassword extends Component {
             case "blank": errMsg = "Password cannot be blank."; break;
             case "short": errMsg = "Password must be at least 6 characters."; break;
             case "unmatch": errMsg = "Passwords don't match."; break;
-            default: errMsg = errMsg;
+            default: errMsg = "Invalid password.";
         }
 
         if (valid === "good") {

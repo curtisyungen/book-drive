@@ -1,14 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer/footer";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faInstagram, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import "./Contact.css";
 import API from "../utils/API";
-
-library.add(faTwitter, faInstagram, faLinkedin);
-
-
 
 class Contact extends Component {
 
