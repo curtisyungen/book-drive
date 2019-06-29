@@ -295,7 +295,7 @@
     }
 
     .searchBox {
-        left: 7%;
+        /* left: 7%; */
         margin: 0;
         position: absolute;
         top: 87px;
@@ -307,5 +307,12 @@
         position: absolute;
         top: 87px;
         z-index: 99;
+    }
+
+    .searchForm {
+        left: 50%;
+        margin-left: 0px;
+        margin-top: -50px;
+        transform: translate(-47%);
     }
 }
