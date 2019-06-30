@@ -70,7 +70,7 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 5) Login, Create Account, Forgot Password: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
 
-![](client/src/images/screenshots/login.png)
+![](client/src/images/screenshots/signin.png)
 ![](client/src/images/screenshots/create.png)
 ![](client/src/images/screenshots/forgot.png)
 
