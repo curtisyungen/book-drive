@@ -4,11 +4,13 @@
 Congo is a website I created to sell my extensive collection of self-help books. Check it out by visiting https://congobooksales.com.
 
 **The Project**
+
 Over the years I've collected upwards of 460 books, most of them self-help books. I've read many but not all of them. A good number have been partially read, and others haven't even been opened. Now the books serve only to impress visitors to my apartment as they sit piled on the floor collecting dust.
 
 These books have helped me; now they can help you, and at a great discount!
 
 **The Inspiration**
+
 This website was born from a love of two things: reading and coding. These combined with a deep admiration and respect for Amazon fueled the creation of Congo.
 
 Everything on this site was created from scratch including all graphics, logos, page headers, button icons, and scripts. The only things taken from Amazon were the book cover images (as cited) and genuine inspiration from their beautiful and high-quality website.
