@@ -90,3 +90,5 @@ Forgot Password page: provides a way to recover user's account if password is fo
 
 ![](client/src/images/screenshots/slideInMenu.png)
 Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Left: navigation options. Right: filter options.
+
+There is also an About page that details the story and inspiration behind the website, and also a Gallery page that showcases the many photos I've taken of the book collection over the years. 
