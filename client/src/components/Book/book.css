@@ -237,6 +237,16 @@
     max-width: 900px !important;
 }
 
+@media only screen and (max-width: 960px) {
+    .bookDescription {
+        width: 85%;
+    }
+    
+    #buyBox {
+        right: 10%;
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .book {
         height: 200px;
