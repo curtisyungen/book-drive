@@ -52,37 +52,32 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 ### Screenshots
 
-First image: Home page. This page shows all books as well as filter options for exploring the inventory. 
-Second image: The search box will provide search suggestions based on user's text input.
-
 ![](client/src/images/screenshots/home.png)
-![](client/src/images/screenshots/suggestions.png)
+Home page. This page shows all books as well as filter options for exploring the inventory. 
 
-Book Detail View: clicking a book on the home page will open a modal showing the book's details such as cover image, title, author, availability, and price, as well as an option to add the book to the user's cart if it is in stock. The book's description is ascertained by calling the Google Books API.
+![](client/src/images/screenshots/suggestions.png)
+Search box: provides clickable search suggestions based on user's text input.
 
 ![](client/src/images/screenshots/book.png)
-
-Cart: available for both logged in users and guests, the cart stores books the user is looking to purchase. It contains a sidebar that displays other book suggestions as well as a summary of items currently in the cart. User must be logged in to make a purchase.
+Book Detail View: clicking a book on the home page will open a modal showing the book's details such as cover image, title, author, availability, and price, as well as an option to add the book to the user's cart if it is in stock. The book's description is ascertained by calling the Google Books API.
 
 ![](client/src/images/screenshots/cart.png)
-
-Orders: available only for logged in users. Summarizes past orders in reverse chronological order. Also displays a sidebar with book suggestions.
+Cart: available for both logged in users and guests, the cart stores books the user is looking to purchase. It contains a sidebar that displays other book suggestions as well as a summary of items currently in the cart. User must be logged in to make a purchase.
 
 ![](client/src/images/screenshots/orders.png)
-
-Contact: this page provides a way for users to contact me directly.
+Orders: available only for logged in users. Summarizes past orders in reverse chronological order. Also displays a sidebar with book suggestions.
 
 ![](client/src/images/screenshots/contact.png)
-
-Login, Create Account, Forgot Password: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
+Contact: this page provides a way for users to contact me directly.
 
 ![](client/src/images/screenshots/signin.png)
+Login page: allows existing users to sign in to their account. Redirects to Sign up page if email doesn't exist in database.
+
 ![](client/src/images/screenshots/create.png)
+Sign up page: allows new users to sign up for an account. Redirects to Login Page if email already exists in database. All passwords are encrypted in database.
+
 ![](client/src/images/screenshots/forgot.png)
-
-Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Contains links to all pages on the site as well as a separate menu to display book filters for sorting on the home page.
-
-Left: Navigation options in slide-in menu
-Right: Filter options in slide-in menu
+Forgot Password page: provides a way to recover user's account if password is forgotten. Sends 6-digit code to email provided. Once code is verified, allows user to reset their password. All passwords are encrypted in database.
 
 ![](client/src/images/screenshots/slideInMenu.png)
+Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Left: navigation options. Right: filter options.
