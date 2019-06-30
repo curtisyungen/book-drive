@@ -56,6 +56,9 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 ![](client/src/images/screenshots/home.png)
 
+The search box will provide search suggestions based on user's text input.
+![](client/src/images/screenshots/suggestions.png)
+
 2) Book Detail View: clicking a book on the home page will open a modal showing the book's details such as cover image, title, author, availability, and price, as well as an option to add the book to the user's cart if it is in stock. The book's description is ascertained by calling the Google Books API.
 
 ![](client/src/images/screenshots/book.png)
@@ -68,13 +71,17 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 ![](client/src/images/screenshots/orders.png)
 
-5) Login, Create Account, Forgot Password: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
+5) Contact: this page provides a way for users to contact me directly.
+
+![](client/src/images/screenshots/contact.png)
+
+6) Login, Create Account, Forgot Password: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
 
 ![](client/src/images/screenshots/signin.png)
 ![](client/src/images/screenshots/create.png)
 ![](client/src/images/screenshots/forgot.png)
 
-6) Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Contains links to all pages on the site as well as a separate menu to display book filters for sorting on the home page.
+7) Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Contains links to all pages on the site as well as a separate menu to display book filters for sorting on the home page.
 
 Left: Navigation options in slide-in menu
 Right: Filter options in slide-in menu
