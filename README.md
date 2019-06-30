@@ -53,4 +53,4 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 **Screenshots**
 
 1) Home Page
-![](client/src/images/home.png)
+![](client/src/images/screenshots/home.png)
