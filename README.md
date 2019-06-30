@@ -49,3 +49,8 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 7) Install all dependencies by running the command "npm install"
 8) Start the program by typing the command "npm start" in your terminal
 9) The program will open locally in your browser
+
+**Screenshots**
+
+1) Home Page
+![](client/src/images/home.png)
