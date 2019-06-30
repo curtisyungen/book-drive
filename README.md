@@ -3,7 +3,7 @@
 
 Congo is a website I created to sell my extensive collection of self-help books. Check it out by visiting https://congobooksales.com.
 
-##The Project##
+##The Project
 
 Over the years I've collected upwards of 460 books, most of them self-help books. I've read many but not all of them. A good number have been partially read, and others haven't even been opened. Now the books serve only to impress visitors to my apartment as they sit piled on the floor collecting dust.
 
