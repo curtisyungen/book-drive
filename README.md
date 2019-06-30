@@ -76,4 +76,4 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 Left: Navigation options in slide-in menu
 Right: Filter options in slide-in menu
-![](client/src/images/screenshots/slideIn1.png)
+![](client/src/images/screenshots/slideInMenu.png)
