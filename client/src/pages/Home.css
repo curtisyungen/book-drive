@@ -59,9 +59,9 @@
     width: 90px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1325px) {
     .bookList {
-        max-width: 750px;
+        width: 75vw;
     }
 }
 

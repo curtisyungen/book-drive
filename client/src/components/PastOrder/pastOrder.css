@@ -8,6 +8,12 @@
     width: calc(100vw - 597px);
 }
 
+@media only screen and (max-width: 900px) {
+    .pastOrder {
+        width: calc(100vw - 390px);
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .pastOrder {
         margin: 0;
