@@ -65,7 +65,7 @@ Book Detail View: clicking a book on the home page will open a modal showing the
 <br/><br/> 
 
 ![](client/src/images/screenshots/cart.png)
-Cart: available for both logged in users and guests, the cart stores books the user is looking to purchase. It contains a sidebar that displays other book suggestions as well as a summary of items currently in the cart. User must be logged in to make a purchase.  
+Cart: available for both logged in users and guests, the cart stores books the user is looking to purchase. It contains a sidebar that displays other book suggestions as well as a summary of items currently in the cart. User must be logged in to make a purchase. Clicking Checkout with PayPal will open PayPal in a new window. Once purchase is complete, user is redirected to a page notifying them of the successful transaction and order summary. An email is dispatched to both the user and the Congo server with an order summary.
 <br/><br/> 
 
 ![](client/src/images/screenshots/orders.png)
