@@ -54,3 +54,12 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 1) Home Page
 ![](client/src/images/screenshots/home.png)
+
+2) Book Detail View
+![](client/src/images/screenshots/book.png)
+
+3) Cart
+![](client/src/images/screenshots/cart.png)
+
+4) Login Page
+![](client/src/images/screenshots/login.png)
