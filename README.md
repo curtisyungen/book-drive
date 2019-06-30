@@ -3,7 +3,7 @@
 
 Congo is a website I created to sell my extensive collection of self-help books. Check it out by visiting https://congobooksales.com.
 
-##The Project
+### The Project
 
 Over the years I've collected upwards of 460 books, most of them self-help books. I've read many but not all of them. A good number have been partially read, and others haven't even been opened. Now the books serve only to impress visitors to my apartment as they sit piled on the floor collecting dust.
 
@@ -11,11 +11,11 @@ These books have helped me; now they can help you, and at a great discount!
 
 Visit https://congobooksales.com/about for more information on this project. 
 
-**The Technology**
+### The Technology
 
 Payments are handled by PayPal rather than directly by Congo. User data is private and all passwords are encrypted.
 
-**Technologies**
+### Technologies
 1) Node.js
 2) Express.js
 3) ReactJS
@@ -23,7 +23,7 @@ Payments are handled by PayPal rather than directly by Congo. User data is priva
 5) PayPal API
 6) Google Books API
 
-**Dependencies**
+### Dependencies
 1) axios
 2) bcrypt
 3) express
@@ -35,7 +35,7 @@ Payments are handled by PayPal rather than directly by Congo. User data is priva
 9) reactjs-popup
 10) sequelize
 
-**Download Instructions**
+### Download Instructions
 
 *Ensure that you have installed a Code Editor such as Visual Studio Code as well as Node.js.
 Installation instructions for Node.js can be found here: https://nodejs.org/en/download/*
@@ -50,30 +50,36 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 8) Start the program by typing the command "npm start" in your terminal
 9) The program will open locally in your browser
 
-**Screenshots**
+### Screenshots
 
 1) Home Page: this page shows all books as well as filter options for exploring the inventory. 
 
 ![](client/src/images/screenshots/home.png)
 
-The search box will provide search suggestions based on user's text input.
+
+**The search box will provide search suggestions based on user's text input.**
 ![](client/src/images/screenshots/suggestions.png)
+
 
 2) Book Detail View: clicking a book on the home page will open a modal showing the book's details such as cover image, title, author, availability, and price, as well as an option to add the book to the user's cart if it is in stock. The book's description is ascertained by calling the Google Books API.
 
 ![](client/src/images/screenshots/book.png)
 
+
 3) Cart: available for both logged in users and guests, the cart stores books the user is looking to purchase. It contains a sidebar that displays other book suggestions as well as a summary of items currently in the cart. User must be logged in to make a purchase.
 
 ![](client/src/images/screenshots/cart.png)
+
 
 4) Orders: available only for logged in users. Summarizes past orders in reverse chronological order. Also displays a sidebar with book suggestions.
 
 ![](client/src/images/screenshots/orders.png)
 
+
 5) Contact: this page provides a way for users to contact me directly.
 
 ![](client/src/images/screenshots/contact.png)
+
 
 6) Login, Create Account, Forgot Password: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
 
@@ -81,8 +87,10 @@ The search box will provide search suggestions based on user's text input.
 ![](client/src/images/screenshots/create.png)
 ![](client/src/images/screenshots/forgot.png)
 
+
 7) Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Contains links to all pages on the site as well as a separate menu to display book filters for sorting on the home page.
 
-Left: Navigation options in slide-in menu
-Right: Filter options in slide-in menu
+**Left: Navigation options in slide-in menu
+Right: Filter options in slide-in menu**
+
 ![](client/src/images/screenshots/slideInMenu.png)
