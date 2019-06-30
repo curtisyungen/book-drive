@@ -52,14 +52,28 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 **Screenshots**
 
-1) Home Page
+1) Home Page: this page shows all books as well as filter options for exploring the inventory. 
+
 ![](client/src/images/screenshots/home.png)
 
-2) Book Detail View
+2) Book Detail View: clicking a book on the home page will open a modal showing the book's details such as cover image, title, author, availability, and price, as well as an option to add the book to the user's cart if it is in stock. The book's description is ascertained by calling the Google Books API.
+
 ![](client/src/images/screenshots/book.png)
 
-3) Cart
+3) Cart: available for both logged in users and guests, the cart stores books the user is looking to purchase. It contains a sidebar that displays other book suggestions as well as a summary of items currently in the cart. User must be logged in to make a purchase.
+
 ![](client/src/images/screenshots/cart.png)
 
-4) Login Page
+4) Orders: available only for logged in users. Summarizes past orders in reverse chronological order. Also displays a sidebar with book suggestions.
+
+5) Login Page: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
+
 ![](client/src/images/screenshots/login.png)
+
+6) Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Contains links to all pages on the site as well as a separate menu to display book filters for sorting on the home page.
+
+Navigation options in slide-in menu
+![](client/src/images/screenshots/slideIn1.png)
+
+Filters pane in slide-in menu
+![](client/src/images/screenshots/slideIn2.png)
