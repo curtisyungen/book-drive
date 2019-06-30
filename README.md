@@ -53,8 +53,8 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 ### Screenshots
 
 ![](client/src/images/screenshots/home.png)
-Home page. This page shows all books as well as filter options for exploring the inventory.  <br/> 
-
+Home page. This page shows all books as well as filter options for exploring the inventory.  
+<br/> <br/> 
 ![](client/src/images/screenshots/suggestions.png)
 Search box: provides clickable search suggestions based on user's text input.  
 
