@@ -68,9 +68,11 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 
 ![](client/src/images/screenshots/orders.png)
 
-5) Login Page: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
+5) Login, Create Account, Forgot Password: the login page allows existing users to sign in to their account, or new users to create a new account. There is also a Forgot Password route that will send a randomly generated 6-digit code to the user's email address which, when entered correctly into the confirmation page, will allow the user to reset their password.
 
 ![](client/src/images/screenshots/login.png)
+![](client/src/images/screenshots/create.png)
+![](client/src/images/screenshots/forgot.png)
 
 6) Slide-in Menu: shown in certain mobile responsive views when the normal side bar is hidden. Contains links to all pages on the site as well as a separate menu to display book filters for sorting on the home page.
 
