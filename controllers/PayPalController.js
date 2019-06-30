@@ -2,9 +2,9 @@ const db = require("../models/index.js");
 const paypal = require("paypal-rest-sdk");
 
 paypal.configure({
-    "mode": "live",
-    "client_id": process.env.PAYPAL_LIVE_CLIENT_ID, 
-    "client_secret": process.env.PAYPAL_LIVE_CLIENT_SECRET,
+    "mode": "sandbox",
+    "client_id": process.env.PAYPAL_SANDBOX_CLIENT_ID, 
+    "client_secret": process.env.PAYPAL_SANDBOX_CLIENT_SECRET,
 });
 
 class PayPalController {
