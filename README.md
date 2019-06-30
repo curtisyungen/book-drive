@@ -70,13 +70,13 @@ Orders: available only for logged in users. Summarizes past orders in reverse ch
 ![](client/src/images/screenshots/contact.png)
 Contact: this page provides a way for users to contact me directly.
 
-![](client/src/images/screenshots/signin.png)
+![](client/src/images/screenshots/signin.png)  
 Login page: allows existing users to sign in to their account. Redirects to Sign up page if email doesn't exist in database.
 
-![](client/src/images/screenshots/create.png)
+![](client/src/images/screenshots/create.png)  
 Sign up page: allows new users to sign up for an account. Redirects to Login Page if email already exists in database. All passwords are encrypted in database.
 
-![](client/src/images/screenshots/forgot.png)
+![](client/src/images/screenshots/forgot.png)  
 Forgot Password page: provides a way to recover user's account if password is forgotten. Sends 6-digit code to email provided. Once code is verified, allows user to reset their password. All passwords are encrypted in database.
 
 ![](client/src/images/screenshots/slideInMenu.png)
