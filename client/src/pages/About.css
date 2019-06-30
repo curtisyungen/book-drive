@@ -1,9 +1,8 @@
 .about {
+    margin: 0px auto;
     margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 15px;
-    width: auto;
+    width: 800px;
 }
 
 .aboutHeader {
@@ -12,7 +11,7 @@
     line-height: 1.2;
     margin: 20px auto;
     padding-left: 15px;
-    width: auto;
+    width: 800px;
 }
 
 .aboutSection {
@@ -53,11 +52,19 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    .about,
+    .aboutHeader {
+        padding: 0px 25px;
+        width: auto;
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .about,
     .aboutHeader {
         padding: 0;
-        width: 80%;
+        width: 85%;
     }
 
     .curtisAmazonImg {
