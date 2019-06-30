@@ -53,10 +53,10 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 ### Screenshots
 
 ![](client/src/images/screenshots/home.png)
-Home page. This page shows all books as well as filter options for exploring the inventory.  
+Home page. This page shows all books as well as filter options for exploring the inventory. / 
 
 ![](client/src/images/screenshots/suggestions.png)
-Search box: provides clickable search suggestions based on user's text input.  
+Search box: provides clickable search suggestions based on user's text input.  /
 
 ![](client/src/images/screenshots/book.png)
 Book Detail View: clicking a book on the home page will open a modal showing the book's details such as cover image, title, author, availability, and price, as well as an option to add the book to the user's cart if it is in stock. The book's description is ascertained by calling the Google Books API.  
