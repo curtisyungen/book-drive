@@ -22,6 +22,7 @@ Payments are handled by PayPal rather than directly by Congo. User data is priva
 4) MySQL
 5) PayPal API
 6) Google Books API
+7) Heroku
 
 ### Dependencies
 1) axios
