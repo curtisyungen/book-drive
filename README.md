@@ -24,11 +24,11 @@ Payments are handled by PayPal rather than directly by Congo. User data is priva
 6) Google Books API
 7) Heroku
 
-### Dependencies
+### NPM Dependencies
 1) axios
 2) bcrypt
 3) express
-4) nodemailer
+4) nodemailer 
 5) paypal-rest-sdk
 6) react-dom
 7) react-responsive-modal
