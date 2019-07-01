@@ -16,6 +16,8 @@ class SearchSuggestions extends Component {
         if (prevProps.suggestions !== this.props.suggestions) {
             this.setState({
                 suggestions: this.props.suggestions,
+            }, () => {
+                console.log("Suggestions", this.props.suggestions);
             });
         }
     }
@@ -30,7 +32,7 @@ class SearchSuggestions extends Component {
             <div
                 className="searchSuggestions"
             >
-                {this.state.suggestions.constructor === Array && this.state.suggestions.length > 0 && this.state.suggestions.indexOf("<") === -1 ? (
+                {this.state.suggestions.length > 0 && this.state.suggestions.indexOf("<") === -1 ? (
                     this.state.suggestions.map(suggestion => (
                         <div 
                             className="suggestion"
