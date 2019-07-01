@@ -31,11 +31,12 @@ class Navbar extends Component {
         this.getLoginStatus();
     }
 
-    componentDidUpdate = (prevProps) => {
+    componentDidUpdate = (prevProps, prevState) => {
         if (prevProps.isLoggedIn !== this.props.isLoggedIn && !this.state.isLoggedIn) {
             this.getUserFromLocalStorage();
-            this.getBooksInCart(this.state.email);
         }
+
+        this.getBooksInCart(this.state.email);
 
         console.log("Update", this.state);
     }
