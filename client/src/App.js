@@ -238,6 +238,7 @@ class App extends Component {
     });
 
     this.setRedirectToHome();
+    window.location.reload();
   }
 
   // BOOK FILTERING
