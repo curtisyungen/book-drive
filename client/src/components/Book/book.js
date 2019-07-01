@@ -103,8 +103,8 @@ class Book extends Component {
                 >
 
                     {this.state.loadingDetailView ? (
-                        <div>
-                            <img src={require("../../images/loading.png")} alt="loading" className="modalLoading" />
+                        <div className="modalLoadingDiv">
+                            <img src={require("../../images/loading.png")} alt="loading" className="modalLoadingImg" />
                         </div>
                     ) : (
                         
