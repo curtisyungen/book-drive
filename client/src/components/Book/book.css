@@ -193,6 +193,11 @@
     text-align: left;
 }
 
+.modalLoading {
+    padding: 15px;
+    width: 200px;
+}
+
 .primoImgBookSm {
     background-image: url("../../images/primo-yellow.png");
     background-repeat: no-repeat;
