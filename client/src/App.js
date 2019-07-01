@@ -191,7 +191,6 @@ class App extends Component {
             .then((res) => {
 
               if (res.data !== "Incorrect password.") {
-                alert("Logged in successfully!");
 
                 // Save login status in Local Storage
                 localStorage.setItem("isLoggedIn", true);
@@ -233,8 +232,6 @@ class App extends Component {
 
     this.setState({
       isLoggedIn: false,
-    }, () => {
-      alert("You have been logged out.");
     });
 
     this.setRedirectToHome();
@@ -384,7 +381,6 @@ class App extends Component {
       this.setState({
         cart: cart,
       }, () => {
-        alert("Added to cart!");
         sessionStorage.setItem("cart", JSON.stringify(cart));
         window.location.reload();
       });
@@ -394,7 +390,6 @@ class App extends Component {
   addToCart = (book) => {
     API.addToCart(book, this.state.user.email)
       .then((res) => {
-        alert("Added to cart!");
         this.getBooksInCart(this.state.user.email);
         window.location.reload();
       });
@@ -404,7 +399,6 @@ class App extends Component {
     if (this.state.isLoggedIn && localStorage.getItem("isLoggedIn") === "true") {
       API.deleteFromCart(book)
         .then((res) => {
-          alert("Removed from cart!");
           this.getBooksInCart(this.state.user.email);
           window.location.reload();
         });
@@ -422,9 +416,6 @@ class App extends Component {
         }
 
         sessionStorage.setItem("cart", JSON.stringify(cart));
-
-        alert("Removed from cart!");
-
         window.location.reload();
       }
     }
