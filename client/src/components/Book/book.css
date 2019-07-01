@@ -170,10 +170,6 @@
     width: 17px;
 }
 
-.close {
-    display: none;
-}
-
 .cover-suggestion {
     height: 150px;
     width: 100px;
@@ -247,6 +243,10 @@
     margin-left: 15px;
     margin-top: 0px;
     text-align: left;
+}
+
+.styles_closeButton__20ID4 {
+    display: none;
 }
 
 .styles_modal__gNwvD {
