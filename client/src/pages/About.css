@@ -43,7 +43,7 @@
 .dependencyList {
     background: rgb(242, 242, 242);
     border: 1px dashed rgb(222, 222, 222);
-    padding: 0px 50px;
+    text-align: center;
 }
 
 .technologyList {
