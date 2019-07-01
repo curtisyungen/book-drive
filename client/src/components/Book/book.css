@@ -314,10 +314,15 @@
         margin-left: 0px;
     }
 
+    .styles_closeButton__20ID4 {
+        display: inline;
+    }
+
     .styles_modal__gNwvD {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: auto;
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
