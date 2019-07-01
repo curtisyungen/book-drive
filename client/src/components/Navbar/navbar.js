@@ -184,7 +184,7 @@ class Navbar extends Component {
 
                     {/* SEARCH SUGGESTIONS */}
 
-                    {this.state.showSearchSuggestions && this.state.suggestions && this.state.suggestions.length > 0 ? (
+                    {this.state.showSearchSuggestions && this.state.suggestions.constructor === Array && this.state.suggestions.length > 0 ? (
                         <SearchSuggestions
                             suggestions={this.state.suggestions}
                             chooseSearchSuggestion={this.chooseSearchSuggestion}
