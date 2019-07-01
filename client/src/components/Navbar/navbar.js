@@ -35,6 +35,8 @@ class Navbar extends Component {
             this.getUserFromLocalStorage();
             this.getBooksInCart(this.state.email);
         }
+
+        console.log("Update", this.state);
     }
 
     getBooksInCart = (email) => {
@@ -189,7 +191,7 @@ class Navbar extends Component {
                         />
                     ) : (
                             <></>
-                        )}
+                    )}
                 </form>
 
                 {/* NAV MENU */}
@@ -284,7 +286,7 @@ class Navbar extends Component {
                             <a className="nav-acct-link" href="https://www.primoseattle.com/" target="_blank" rel="noopener noreferrer">Try Primo</a>
                         </li>
                         <li className="nav-item">
-                            <span className="cartQty">{this.state.cart.length}</span>
+                            <span className="cartQty">{this.state.cart ? (this.state.cart.length):(0)}</span>
                             <a className="nav-acct-link cartLink" href="/cart">
                                 <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
                                 &nbsp;Cart
