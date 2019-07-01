@@ -258,7 +258,7 @@ class Navbar extends Component {
                             <a className="nav-acct-link" href="https://www.primoseattle.com/" target="_blank" rel="noopener noreferrer">Try Primo</a>
                         </li>
                         <li className="nav-item">
-                            <span className="cartQty">{this.props.cart.length}</span>
+                            <span className="cartQty">{this.props.cart ? (this.props.cart.length):(0)}</span>
                             <a className="nav-acct-link cartLink" href="/cart">
                                 <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
                                 &nbsp;Cart
