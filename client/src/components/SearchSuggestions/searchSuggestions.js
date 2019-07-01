@@ -30,7 +30,7 @@ class SearchSuggestions extends Component {
             <div
                 className="searchSuggestions"
             >
-                {this.state.suggestions.constructor === Array && this.state.suggestions.length > 0 ? (
+                {this.state.suggestions.constructor === Array && this.state.suggestions.length > 0 && this.state.suggestions.indexOf("<") === -1 ? (
                     this.state.suggestions.map(suggestion => (
                         <div 
                             className="suggestion"
