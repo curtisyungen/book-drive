@@ -33,8 +33,33 @@ class Navbar extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps.isLoggedIn !== this.props.isLoggedIn && !this.state.isLoggedIn) {
             this.getUserFromLocalStorage();
+            this.getBooksInCart(this.state.email);
         }
     }
+
+    getBooksInCart = (email) => {
+        // Get books in guest cart from session storage
+        if (!this.props.isLoggedIn) {
+          let cart;
+          if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+            cart = (sessionStorage.getItem("cart"));
+    
+            this.setState({
+              cart: cart,
+            });
+          }
+        }
+    
+        // Get books in logged in user's cart from database
+        else {
+          API.getBooksInCart(email)
+          .then((res) => {
+            this.setState({
+              cart: res.data,
+            });
+          });
+        }
+      }
 
     getUserFromLocalStorage = () => {
         if (localStorage.getItem("isLoggedIn") === "true" && localStorage.getItem("user") !== null) {
@@ -43,6 +68,8 @@ class Navbar extends Component {
             this.setState({
                 name: user.name.split(" ", 1),
                 email: user.email,
+            }, () => {
+                this.getBooksInCart(this.state.email);
             });
         }
         else {
@@ -257,7 +284,7 @@ class Navbar extends Component {
                             <a className="nav-acct-link" href="https://www.primoseattle.com/" target="_blank" rel="noopener noreferrer">Try Primo</a>
                         </li>
                         <li className="nav-item">
-                            <span className="cartQty">{this.props.cart.length}</span>
+                            <span className="cartQty">{this.state.cart.length}</span>
                             <a className="nav-acct-link cartLink" href="/cart">
                                 <FontAwesomeIcon className="fa-2x shoppingCart" icon="shopping-cart" />
                                 &nbsp;Cart
