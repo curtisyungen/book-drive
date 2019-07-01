@@ -44,8 +44,6 @@ class Navbar extends Component {
             this.setState({
                 name: user.name.split(" ", 1),
                 email: user.email,
-            }, () => {
-                this.getBooksInCart(this.state.email);
             });
         }
         else {
