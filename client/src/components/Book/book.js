@@ -103,7 +103,7 @@ class Book extends Component {
                 >
 
                     {this.state.loadingDetailView ? (
-                        <p>Loading...</p>
+                        <div className="modalLoading">Loading...</div>
                     ) : (
                         
                     <span>
