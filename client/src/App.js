@@ -66,6 +66,9 @@ class App extends Component {
         this.getBooksInCart(this.state.user.email);
       });
     }
+    else {
+      this.getBooksInCart("");
+    }
   }
 
   // REDIRECT HANDLING
@@ -379,12 +382,11 @@ class App extends Component {
     else {
       cart.push(book);
 
-      console.log("Guest cart", cart);
-
       this.setState({
         cart: cart,
       }, () => {
         sessionStorage.setItem("cart", JSON.stringify(cart));
+        this.getBooksInCart("");
         // window.location.reload();
       });
     }
@@ -425,12 +427,28 @@ class App extends Component {
   }
 
   getBooksInCart = (email) => {
-    API.getBooksInCart(email)
+
+    // Get books in guest cart from session storage
+    if (!this.state.isLoggedIn) {
+      let cart;
+      if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
+        cart = (sessionStorage.getItem("cart"));
+
+        this.setState({
+          cart: cart,
+        });
+      }
+    }
+
+    // Get books in logged in user's cart from database
+    else {
+      API.getBooksInCart(email)
       .then((res) => {
         this.setState({
           cart: res.data,
         });
       });
+    }
   }
 
   // Pulls cart items from session storage and add to cart in database
