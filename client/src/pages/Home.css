@@ -75,6 +75,12 @@
     }
 }
 
+@media only screen and (max-width: 670px) {
+    .bookList {
+        width: 600px;
+    }
+}
+
 @media only screen and (max-width: 420px) {
     .bookList {
         left: 15px;
