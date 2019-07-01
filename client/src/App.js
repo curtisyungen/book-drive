@@ -432,7 +432,7 @@ class App extends Component {
     if (!this.state.isLoggedIn) {
       let cart;
       if (sessionStorage.getItem("cart") && sessionStorage.getItem("cart") !== null) {
-        cart = (sessionStorage.getItem("cart"));
+        cart = JSON.parse(sessionStorage.getItem("cart"));
 
         this.setState({
           cart: cart,
