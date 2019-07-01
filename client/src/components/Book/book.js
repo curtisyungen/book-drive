@@ -54,7 +54,7 @@ class Book extends Component {
         API.getBookByTitle(this.state.title)
             .then((res) => {
                 this.setState({
-                    description: res.data.items[0].volumeInfo.description.replace('\ufffd', ''),
+                    description: res.data.items[0].volumeInfo.description.replace(/[^\x00-\x7F]/g, ""),
                     loadingDetailView: false,
                 });
             });
