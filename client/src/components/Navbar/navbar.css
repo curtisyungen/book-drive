@@ -174,8 +174,9 @@
     border-right: none;
     border-radius: 5px 0px 0px 5px;
     height: 38px;
+    min-width: 70vh;
     padding: 5px;
-    width: 870px;
+    width: auto;
 }
 
 .searchBox:focus {
