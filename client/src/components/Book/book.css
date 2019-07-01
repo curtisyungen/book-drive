@@ -170,6 +170,10 @@
     width: 17px;
 }
 
+.close {
+    display: none;
+}
+
 .cover-suggestion {
     height: 150px;
     width: 100px;
