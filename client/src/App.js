@@ -372,11 +372,14 @@ class App extends Component {
       }
     }
 
+    // If not duplicate, add book to guest cart
     if (idx !== -1 && cart !== []) {
       alert("Book is already in cart.");
     }
     else {
       cart.push(book);
+
+      console.log("Guest cart", cart);
 
       this.setState({
         cart: cart,
