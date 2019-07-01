@@ -54,7 +54,7 @@ class Book extends Component {
         API.getBookByTitle(this.state.title)
             .then((res) => {
                 this.setState({
-                    description: res.data.items[0].volumeInfo.description,
+                    description: res.data.items[0].volumeInfo.description.replace('\ufffc', ''),
                     loadingDetailView: false,
                 });
             });
