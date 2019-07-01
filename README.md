@@ -51,6 +51,9 @@ Installation instructions for Node.js can be found here: https://nodejs.org/en/d
 8) Start the program by typing the command "npm start" in your terminal
 9) The program will open locally in your browser
 
+### Lessons Learned
+When I started this project, I decided to write all customized CSS. As it turns out, making this site mobile responsive was a bit of a challenge as well as fairly tedious. If I was to rebuild Congo, I'd definitely use Bootstrap. 
+
 ### Screenshots
 
 ![](client/src/images/screenshots/home.png)
