@@ -19,6 +19,7 @@ class Navbar extends Component {
             isLoggedIn: false,
             name: "Sign in",
             email: "",
+            cart: null,
             showSearchSuggestions: false,
             suggestions: [],
             scrollPosition: 0,
