@@ -385,7 +385,7 @@ class App extends Component {
         cart: cart,
       }, () => {
         sessionStorage.setItem("cart", JSON.stringify(cart));
-        window.location.reload();
+        // window.location.reload();
       });
     }
   }
