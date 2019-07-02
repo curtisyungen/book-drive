@@ -51,7 +51,7 @@ class CartSummary extends Component {
             total += cart[book].price;
         }
 
-        sessionStorage.setItem("total", total);
+        localStorage.setItem("total", total);
 
         API.payUsingPayPal(total)
             .then((res) => {
