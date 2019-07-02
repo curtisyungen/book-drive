@@ -26,7 +26,7 @@ class Success extends Component {
         let paymentId = parameters[0].split("=")[1];
         let payerId = parameters[2].split("=")[1];
 
-        let total = sessionStorage.getItem("total");
+        let total = localStorage.getItem("total");
 
         // Process payment
         API.successfulPayment(paymentId, payerId, total)
