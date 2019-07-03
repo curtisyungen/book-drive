@@ -231,6 +231,7 @@ class App extends Component {
   logoutUser = () => {
     localStorage.setItem("isLoggedIn", false);
     localStorage.setItem("user", null);
+    localStorage.setItem("total", 0);
     sessionStorage.setItem("cart", null);
 
     this.setState({
