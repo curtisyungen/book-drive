@@ -29,6 +29,13 @@ import stacks2 from "../images/stacks2.jpg";
 import "./Gallery.css";
 
 class Gallery extends Component {
+
+    componentDidMount = () => {
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+    }
+    
     render() {
         return (
             <span>

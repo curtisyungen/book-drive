@@ -21,6 +21,10 @@ class Success extends Component {
 
     componentDidMount = () => {
 
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+
         // Get payment info from URL
         let parameters = window.location.href.split("?")[1].split("&");
         let paymentId = parameters[0].split("=")[1];

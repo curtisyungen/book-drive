@@ -14,6 +14,12 @@ class Signup extends Component {
         }
     }
 
+    componentDidMount = () => {
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+    }
+
     validateForm = () => {
         return (
             this.state.email.length > 0 && this.state.password.length > 0 &&

@@ -14,6 +14,10 @@ class CreatePassword extends Component {
     }
 
     componentDidMount = () => {
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+        
         this.setState({
             email: this.props.email,
         });
