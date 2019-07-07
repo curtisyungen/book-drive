@@ -5,9 +5,11 @@ import "./About.css";
 class About extends Component {
 
     componentDidMount = () => {
-        console.log(window.location.protocol);
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
     }
-    
+
     render() {
         return (
             <span>
