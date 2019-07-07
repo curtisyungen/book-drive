@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import EnablePopUps from "../EnablePopUps/enablePopUps";
 import API from "../../utils/API";
 import "./cartSummary.css";
 
@@ -15,7 +16,6 @@ class CartSummary extends Component {
     }
 
     componentDidMount = () => {
-
         this.setState({
             user: this.props.user,
             cart: this.props.cart,
@@ -76,6 +76,9 @@ class CartSummary extends Component {
             <div
                 className="cartSummary"
             >
+
+                <EnablePopUps />
+                
                 <div>
                     <span className="subtotalTitle">Subtotal{this.state.cart ? (` (${this.state.cart.length}) items):`):(":")}</span>
                     <span className="subtotal">&nbsp;{`$${parseFloat(Math.round(this.state.subtotal * 100) / 100).toFixed(2)}`}</span>

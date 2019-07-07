@@ -1,0 +1,12 @@
+.enablePopUps {
+    color: black;
+    display: none;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 420px) {
+    .enablePopUps {
+        display: inline-block;
+    }
+}

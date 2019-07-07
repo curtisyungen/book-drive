@@ -74,6 +74,7 @@
     .cartSummary {
         background: #fff;
         border-radius: 0px;
+        height: 210px;
         right: 0px;
         top: 100px;
         width: 100%;
