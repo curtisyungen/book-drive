@@ -5,7 +5,7 @@ class EnablePopUps extends Component {
     render() {
         return (
             <div className="enablePopUps">
-                <p>Head's up: to continue to PayPal, you must enable pop ups in browser's settings.</p>
+                <p>Head's up: to continue to PayPal, you must enable pop ups in your browser's settings.</p>
             </div>
         )
     }
