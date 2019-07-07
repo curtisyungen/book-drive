@@ -50,8 +50,8 @@ class About extends Component {
                     <h4 className="aboutTitle">The Namesake</h4>
                     <div className="aboutSection">
                         <p>
-                        The Congo is the second largest rainforest in the world, spanning 1.5 million square miles of Central Africa.
-                        It is home to the Congo River as well as over 10,000 animal species. 
+                        The Congo is one of the largest rainforests in the world, second only to some other rainforest called the Amazon (sp?).
+                        The Congo spans 1.5 million square miles of Central Africa and is home to the Congo River as well as over 10,000 animal species. 
                         It has been referred to as the Heart of Darkness, though there is no correlation between that title and this innocent little online bookstore.
                         </p>
                     </div>
