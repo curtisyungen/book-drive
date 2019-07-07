@@ -31,6 +31,15 @@ class About extends Component {
                         These books have helped me; now they can help you, and at a great discount!
                         </p>
                     </div>
+                 
+                    <h4 className="aboutTitle">The Namesake</h4>
+                    <div className="aboutSection">
+                        <p>
+                        The Congo is one of the largest rainforests in the world, second only to some other rainforest called the Amazon (sp?).
+                        The Congo spans 1.5 million square miles of Central Africa and is home to the Congo River as well as over 10,000 animal species. 
+                        It has been referred to as the Heart of Darkness, though there is no correlation between that title and this innocent little online bookstore.
+                        </p>
+                    </div>
                     
                     <h4 className="aboutTitle">The Inspiration</h4>
                     <div className="aboutSection">
@@ -44,15 +53,6 @@ class About extends Component {
                         <p>
                         Everything on this site was created from scratch including all graphics, logos, page headers, button icons, and scripts.
                         The only things taken from Amazon were the book cover images (as cited) and genuine inspiration from their beautiful and high-quality website.
-                        </p>
-                    </div>
-                    
-                    <h4 className="aboutTitle">The Namesake</h4>
-                    <div className="aboutSection">
-                        <p>
-                        The Congo is one of the largest rainforests in the world, second only to some other rainforest called the Amazon (sp?).
-                        The Congo spans 1.5 million square miles of Central Africa and is home to the Congo River as well as over 10,000 animal species. 
-                        It has been referred to as the Heart of Darkness, though there is no correlation between that title and this innocent little online bookstore.
                         </p>
                     </div>
 
