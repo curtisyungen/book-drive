@@ -72,7 +72,7 @@ class About extends Component {
                         </p>
 
                         <p>
-                        Books will be up for sale until August 1, 2019.
+                        Books will be up for sale until August 1, 2019 after which they will be donated to the Seattle School for the Blind.
                         </p>
                     </div>
 
