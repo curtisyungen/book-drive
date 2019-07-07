@@ -3,6 +3,11 @@ import Footer from "../components/Footer/footer";
 import "./About.css";
 
 class About extends Component {
+
+    componentDidMount = () => {
+        console.log(window.location.protocol);
+    }
+    
     render() {
         return (
             <span>
