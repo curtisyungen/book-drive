@@ -1,6 +1,8 @@
 # Congo
 **by Curtis Yungen**
 
+July 2019
+
 Congo is a website I created to sell my extensive collection of self-help books. Check it out by visiting https://congobooksales.com.
 
 ### The Project
