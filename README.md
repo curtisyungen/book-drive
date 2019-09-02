@@ -7,7 +7,7 @@
 
 July 2019
 
-Congo is a website I created to sell my extensive collection of self-help books. Check it out by visiting https://congobooksales.com.
+Congo is a website I created to sell my extensive collection of self-help books. Check it out by visiting https://congobooksales.herokuapp.com.
 
 ### The Project
 
@@ -15,7 +15,7 @@ Over the years I've collected upwards of 460 books, most of them self-help books
 
 These books have helped me; now they can help you, and at a great discount!
 
-Visit https://congobooksales.com/about for more information on this project. 
+Visit https://congobooksales.herokuapp.com/about for more information on this project. 
 
 ### The Technology
 
