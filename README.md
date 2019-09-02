@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="./client/src/images/congo-square.png" alt="logo"/>
+</p>
+
+<br/>
+
 # Congo
 **by Curtis Yungen**
 
