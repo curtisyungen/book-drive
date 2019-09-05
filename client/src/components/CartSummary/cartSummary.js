@@ -93,12 +93,12 @@ class CartSummary extends Component {
                     className="checkoutBtn"
                     onClick={(event) => {
                         event.preventDefault();
-                        this.checkout();
                     }}
+                    disabled
                 >
                     Checkout with PayPal
                 </button>
-                <p className="payPalCaption">Will open PayPal in new window</p>
+                <p className="payPalCaption">Disabled. Book Sale is over. Sorry!</p>
             </div>
         )
     }
