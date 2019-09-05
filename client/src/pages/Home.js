@@ -11,53 +11,7 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            books: [
-                {
-                    title: "Testing a Very Long Book Title Like This One",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    cover: "hard",
-                    avail: "avail",
-                    price: 0.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                },
-                {
-                    title: "Testing a Very Long Book Title Like This One",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    cover: "hard",
-                    avail: "avail",
-                    price: 0.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                },
-                {
-                    title: "Testing a Very Long Book Title Like This One",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    cover: "hard",
-                    avail: "avail",
-                    price: 0.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                },
-                {
-                    title: "Testing a Very Long Book Title Like This One",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    cover: "hard",
-                    avail: "avail",
-                    price: 0.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                },
-                {
-                    title: "Testing a Very Long Book Title Like This One",
-                    authorFirst: "Test",
-                    authorLast: "Test",
-                    cover: "hard",
-                    avail: "avail",
-                    price: 0.00,
-                    imageURL: "https://images-na.ssl-images-amazon.com/images/I/61Lc9Qd0vgL.jpg",
-                },
-            ],
+            books: [],
             message: "Loading...",
             userSearch: "",
             sortOption: "",
@@ -78,7 +32,7 @@ class Home extends Component {
         let message = "";
 
         if (this.props.books.length === 0) {
-            message = "No books found.";
+            message = "Book sale ended August 1, 2019. No books available.";
         }
 
         this.setState({
