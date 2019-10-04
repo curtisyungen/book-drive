@@ -47,6 +47,12 @@ Payments are handled by PayPal rather than directly by Congo. User data is priva
 *Ensure that you have installed a Code Editor such as Visual Studio Code as well as Node.js.
 Installation instructions for Node.js can be found here: https://nodejs.org/en/download/*
 
+METHOD 1, Command Line:
+
+Open terminal and run *git clone https://github.com/curtisyungen/congo
+
+METHOD 2, GitHub Web Interface:
+
 1) Visit https://github.com/curtisyungen/congo
 2) Click on the green button labeled Clone or download
 3) Select Download ZIP
